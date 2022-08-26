@@ -38,9 +38,7 @@ ul {
     list-style: none;
 }
 
-.websitename{
-    font-size: 12px !important;
-}
+
 
 .section {
     background: var(--bg-black-900);
@@ -857,7 +855,12 @@ h3.my-profession {
     padding: 0px 50px;
 }
 
-
+@media (min-width:1199px) {
+    .websitename{
+        font-size: 12px !important;
+    }
+    
+}
 @media (max-width:1199px) {
 
     .section .container{
