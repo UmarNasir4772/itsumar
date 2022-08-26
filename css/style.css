@@ -38,6 +38,10 @@ ul {
     list-style: none;
 }
 
+.websitename{
+    font-size: 12px;
+}
+
 .section {
     background: var(--bg-black-900);
     min-height: 100vh;
@@ -986,6 +990,5 @@ h3.my-profession {
     }
 }
 
-.websitename{
-    font-size: 12px;
+
 
