@@ -1,0 +1,722 @@
+/*_______________Google Font________________________*/
+@font-face {
+  font-family: "Supermercado";
+  src: url(/Google_Font/SupermercadoOne-Regular.ttf);
+}
+
+/*_______________Body background color________________________*/
+
+body {
+  background-color: #f0f0f0;
+}
+
+/*_______________Header________________________*/
+
+header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: black;
+  color: white;
+  padding: 10px 0px;
+}
+
+.header-top,
+.header-bottom-items,
+.header-bottom-right {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.header-top {
+  padding: 20px 70px;
+}
+.header-top > .top-header-left > h1 {
+  font-family: "Supermercado", sans-serif;
+}
+
+.header-top > .top-header-right > .btn {
+  color: black;
+  border-radius: 20px;
+  background-color: white;
+}
+
+.header-bottom {
+  background-color: #f0f0f0;
+}
+
+.navbar {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+.nav-link {
+  color: black;
+  font-size: 14px;
+}
+.nav-link:hover {
+  color: black;
+}
+.header-bottom-right {
+  padding: 0.4rem 1rem;
+  justify-content: space-between;
+}
+.header-bottom-right > .email > a {
+  color: black;
+  font-size: 14px;
+  padding: 0px 20px;
+  text-decoration: underline;
+}
+.header-bottom-right > .login {
+  display: flex;
+  flex-direction: row;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.header-bottom-right > .login > .login-btn > a {
+  font-size: 14px;
+  text-decoration: none;
+  color: black;
+  padding: 0px;
+}
+
+.fill-color {
+  fill: #d20c2a;
+  margin-right: 8px;
+}
+
+.email-icon {
+  background-color: #d20c2a;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: none;
+  justify-content: center;
+  padding: 12px 0px;
+  font-size: 27px;
+  color: white;
+}
+@media (max-width: 768px) {
+  .navbar-toggler-icon {
+    padding: 5px 0px;
+  }
+}
+
+@media (max-width: 425px) {
+  .header-top {
+    padding: 20px 20px;
+    flex-direction: column;
+    text-align: center;
+  }
+  .header-top > .top-header-left > h1 {
+    font-size: 35px;
+  }
+  .header-bottom-right {
+    padding: 5px 10px;
+  }
+  .navbar,
+  .header-bottom-items {
+    padding: 0px;
+  }
+  .header-bottom-right > .email {
+    display: none;
+  }
+  .header-top > .top-header-right {
+    display: none;
+  }
+  .email-icon {
+    display: flex;
+  }
+  .navbar-nav {
+    padding-left: 20px;
+  }
+  .nav-link {
+    padding: 3px 0px;
+  }
+}
+
+/*_______________First Section________________________*/
+
+.fisrt-main-section {
+  position: relative;
+  background: url(../Image/Fast_Food.jpg) fixed center;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.fisrt-main-section::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.fisrt-main-section .details {
+  padding: 10% 30%;
+  color: white;
+  text-align: center;
+}
+.fisrt-main-section .details h1 {
+  font-family: "Supermercado", sans-serif;
+  font-size: 50px;
+}
+
+@media (max-width: 768px) {
+  .fisrt-main-section .details {
+    padding: 10% 10%;
+  }
+}
+@media (max-width: 425px) {
+  .fisrt-main-section .details {
+    padding: 10% 0px;
+  }
+}
+
+/*_______________Second Section________________________*/
+
+.second-section {
+  padding: 60px 150px;
+  padding-bottom: 15px;
+  text-align: center;
+}
+.our-story-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.our-story-info h1 {
+  font-family: "Supermercado", sans-serif;
+  font-size: 50px;
+  padding: 20px 0px;
+}
+
+.our-story-info h2 {
+  text-transform: uppercase;
+  padding: 20px 0px;
+  color: #d20c2a;
+}
+
+.our-story-info a {
+  text-decoration: underline;
+  color: black;
+}
+
+.our-story-info .btn {
+  display: block;
+  text-decoration: none;
+  background-color: #d20c2a;
+  border-radius: 20px;
+  width: 180px;
+  border-color: #d20c2a;
+  margin: 8px 0px;
+  padding: 10px 5px;
+  color: white;
+  box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px,
+    rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+}
+
+@media (max-width: 768px) {
+  .second-section {
+    padding: 30px 50px;
+  }
+}
+@media (max-width: 425px) {
+  .second-section {
+    padding: 30px 20px;
+  }
+}
+
+/*_______________Third Section________________________*/
+.third-section {
+  text-align: center;
+  padding: 80px 200px;
+  background-color: #fba808;
+}
+
+.third-section h1 {
+  text-decoration: underline;
+  color: white;
+  font-size: 60px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .third-section {
+    padding: 80px 100px;
+  }
+}
+@media (max-width: 425px) {
+  .third-section {
+    padding: 40px 20px;
+  }
+  .third-section h1 {
+    font-size: 30px;
+  }
+}
+/*_______________Contact Section________________________*/
+
+.contact-info {
+  padding: 20px 0px;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.contact-info > h2 {
+  color: #d20c2a;
+  padding: 20px 0px;
+  text-transform: uppercase;
+}
+
+.contact-info > p {
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.contact-info > a {
+  text-decoration: underline;
+  color: black;
+}
+
+.contact-form > form {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 60px;
+}
+
+.contact-form > form > input,
+.contact-form > form > textarea {
+  background-color: #f0f0f0;
+  border: 1px solid #f0f0f0;
+  border-bottom: 1px solid black;
+  padding: 10px 3px;
+  margin-bottom: 10px;
+}
+.contact-form > form > textarea:hover,
+.contact-form > form > input:hover {
+  border: 1px solid black;
+}
+.contact-form > form > textarea:focus,
+.contact-form > form > input:focus {
+  border: 1px solid black;
+}
+.contact-form > form > textarea {
+  width: 100%;
+  height: 150px;
+  background-color: #f0f0f0;
+}
+
+.contact-form > form > input[type="submit"] {
+  border: 1px solid black;
+  background-color: black;
+  color: white;
+  margin-top: 20px;
+  border-radius: 0px;
+  font-size: 18px;
+}
+
+.contact-form > form > input[type="submit"]:hover {
+  background-color: rgb(184, 178, 178);
+  border-color: rgb(184, 178, 178);
+}
+
+.contact-map {
+  padding: 20px 5%;
+}
+
+@media (max-width: 425px) {
+  .contact-form > form {
+    padding: 20px 0px;
+  }
+}
+
+@media (max-width: 375px) {
+  .contact-info > a {
+    font-size: 14px;
+  }
+}
+@media (max-width: 320px) {
+  .contact-info > a {
+    font-size: 12px;
+  }
+  .contact-form {
+    padding: 0px 0px;
+  }
+}
+
+/*_______________Footer________________________*/
+
+footer {
+  background-color: black;
+  color: white;
+  padding: 60px 0px;
+  text-align: center;
+}
+
+.footer-contant > h1 {
+  font-family: "Supermercado", sans-serif;
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+
+.footer-contant > a {
+  text-decoration: underline;
+  color: white;
+}
+
+.footer-contant > p {
+  margin-top: 25px;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+.footer-contant > p > span {
+  text-transform: uppercase;
+}
+.footer-contant > p > a {
+  text-decoration: underline;
+  color: white;
+}
+
+/*_______________start contact us________________________*/
+
+/*_______________Contact First Section________________________*/
+
+.fisrt-contact-section {
+  position: relative;
+  background: url(../Image/contact_us.jpg) fixed center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.fisrt-contact-section::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.fisrt-contact-section .contact-details {
+  padding: 10% 30%;
+  color: white;
+  text-align: center;
+}
+.fisrt-contact-section .contact-details h1 {
+  font-family: "Supermercado", sans-serif;
+  font-size: 50px;
+}
+
+.fisrt-contact-section .contact-details .btn {
+  color: white;
+  background-color: #d20c2a;
+  border-radius: 0px;
+  padding: 10px 10px;
+  margin-top: 20px;
+}
+.fisrt-contact-section .contact-details .btn:hover {
+  background-color: #d20c2ac7;
+}
+
+@media (max-width: 768px) {
+  .fisrt-contact-section .contact-details {
+    padding: 10% 10%;
+  }
+}
+@media (max-width: 425px) {
+  .fisrt-contact-section .contact-details {
+    padding: 10% 0px;
+  }
+}
+
+/*_______________Contact second Section________________________*/
+
+.contact-second-section {
+  padding: 80px 150px;
+  font-size: 16px;
+}
+.contact-second-section p a {
+  color: black;
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .contact-second-section {
+    padding: 30px 50px;
+  }
+}
+@media (max-width: 425px) {
+  .contact-second-section {
+    padding: 30px 20px;
+  }
+}
+
+/*_______________Contact Third Section________________________*/
+
+.contact-third-section {
+  text-align: center;
+  padding: 120px 200px;
+  background-color: #fba808;
+}
+
+.contact-third-section h1 {
+  color: white;
+  font-size: 60px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .contact-third-section {
+    padding: 80px 100px;
+  }
+}
+@media (max-width: 425px) {
+  .contact-third-section {
+    padding: 40px 20px;
+  }
+  .contact-third-section h1 {
+    font-size: 30px;
+  }
+}
+
+/*_______________End contact us________________________*/
+
+/*_______________start Menu and Price________________________*/
+
+/*_______________Menu First Section________________________*/
+
+.fisrt-menu-section {
+  position: relative;
+  background: url(../Image/menu.jpg) fixed center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.fisrt-menu-section::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.fisrt-menu-section .menu-details {
+  padding: 10% 30%;
+  color: white;
+  text-align: center;
+}
+.fisrt-menu-section .menu-details h1 {
+  font-family: "Supermercado", sans-serif;
+  font-size: 50px;
+}
+@media (max-width: 1024px) {
+  .fisrt-menu-section .menu-details {
+    padding: 10% 20%;
+  }
+}
+@media (max-width: 768px) {
+  .fisrt-menu-section .menu-details {
+    padding: 10% 10%;
+  }
+}
+@media (max-width: 425px) {
+  .fisrt-menu-section .menu-details {
+    padding: 10% 0px;
+  }
+}
+/*_______________Menu Second Section________________________*/
+
+.second-menu-section {
+  padding: 120px 0px;
+  text-align: center;
+}
+/*_______________End Menu and Price________________________*/
+
+/*_______________start About US________________________*/
+
+.fisrt-aboutus-section {
+  position: relative;
+  background: url(../Image/aboutus.jpg) fixed center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.fisrt-aboutus-section::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.fisrt-aboutus-section .aboutus-details {
+  padding: 10% 30%;
+  color: white;
+  text-align: center;
+}
+.fisrt-aboutus-section .aboutus-details h1 {
+  font-family: "Supermercado", sans-serif;
+  font-size: 50px;
+}
+
+@media (max-width: 768px) {
+  .fisrt-aboutus-section .aboutus-details {
+    padding: 10% 10%;
+  }
+}
+@media (max-width: 425px) {
+  .fisrt-aboutus-section .aboutus-details {
+    padding: 10% 0px;
+  }
+}
+
+/*_______________ About US second section________________________*/
+.second-aboutus-details {
+  text-align: center;
+}
+
+.second-aboutus-details .row {
+  margin: 30px 0px;
+}
+.second-aboutus-details img {
+  max-width: 100%;
+  height: auto;
+}
+
+.second-aboutus-details h3 {
+  margin-top: 60px;
+  font-family: "Supermercado", sans-serif;
+  padding: 20px 0px;
+}
+.second-aboutus-details p {
+  padding: 10px 20px;
+}
+@media (max-width: 1024px) {
+  .second-aboutus-details h3 {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 786px) {
+  .second-aboutus-details h3 {
+    margin-top: 0px;
+    padding: 0px;
+  }
+  .second-aboutus-details-row {
+    flex-direction: column-reverse;
+  }
+  .second-aboutus-details p {
+    padding: 10px 0px;
+  }
+
+  .second-aboutus-details > .row {
+    border-bottom: 1px solid darkgray;
+    padding-bottom: 30px;
+  }
+}
+/*_______________End About US________________________*/
+
+/*_______________start Opening Hours________________________*/
+
+.fisrt-openinghours-section {
+  position: relative;
+  background: url(../Image/timetable.jpg) fixed center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.fisrt-openinghours-section::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.fisrt-openinghours-section .openinghours-details {
+  padding: 10% 30%;
+  color: white;
+  text-align: center;
+}
+.fisrt-openinghours-section .openinghours-details h1 {
+  font-family: "Supermercado", sans-serif;
+  font-size: 50px;
+}
+
+.fisrt-openinghours-section .openinghours-details .btn {
+  color: white;
+  background-color: #d20c2a;
+  border-radius: 0px;
+  padding: 10px 20px;
+  margin-top: 20px;
+}
+.fisrt-openinghours-section .openinghours-details .btn:hover {
+  background-color: #d20c2ac7;
+}
+
+@media (max-width: 768px) {
+  .fisrt-openinghours-section .openinghours-details {
+    padding: 10% 10%;
+  }
+}
+@media (max-width: 425px) {
+  .fisrt-openinghours-section .openinghours-details {
+    padding: 10% 0px;
+  }
+}
+
+/*_______________ Opening Hours second section________________________*/
+
+.second-openinghours-section {
+  padding: 40px 200px;
+}
+
+.second-openinghours-section h2 {
+  text-align: center;
+  font-family: "Supermercado", sans-serif;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-color: #d20c2a;
+}
+
+.second-openinghours-section .openinghour {
+  display: flex;
+  flex-direction: column;
+  vertical-align: middle;
+}
+
+.second-openinghours-section .openinghour .day {
+  display: flex;
+  flex-direction: row;
+  padding: 5px 0px;
+  margin-top: 20px;
+  justify-content: space-between;
+  vertical-align: middle;
+  border-bottom: 1px solid #bdbbbb;
+}
+
+.second-openinghours-section .openinghour .day h3 {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .second-openinghours-section {
+    padding: 40px 50px;
+  }
+}
+@media (max-width: 425px) {
+  .second-openinghours-section {
+    padding: 30px 40px;
+  }
+}
+@media (max-width: 375px) {
+  .second-openinghours-section {
+    padding: 20px 30px;
+  }
+}

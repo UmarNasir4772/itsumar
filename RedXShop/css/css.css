@@ -1,0 +1,1009 @@
+/***************** Google font include *********************/
+@font-face {
+  font-family: logo-style;
+  src: url(../font/Ephesis-Regular.ttf);
+}
+
+@font-face {
+  font-family: IM-FELL;
+  src: url(../font/IMFellEnglishSC-Regular.ttf);
+}
+
+@font-face {
+  font-family: Owner;
+  src: url(../font/IndieFlower-Regular.ttf);
+}
+
+/***************** Page Header *********************/
+
+#header {
+  background: url("../image/Header-1.jpg") no-repeat 0 0;
+  background-size: cover;
+}
+
+#header head {
+  display: inline-block;
+}
+#header img {
+  width: 200px;
+  height: 200px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+#header h1 {
+  cursor: pointer;
+  color: #830606;
+  font-size: 80px;
+  font-family: "logo-style";
+  font-weight: 600;
+}
+
+#nav {
+  background-color: hsla(0, 91%, 27%, 0.9);
+}
+.nav-item {
+  margin-right: 20px;
+  text-align: center;
+}
+.nav-link {
+  color: white;
+}
+
+.nav-link:hover {
+  background-color: rgb(245, 242, 242);
+  color: black;
+}
+
+#nav .login-icon {
+  font-size: 23px;
+  color: white;
+  cursor: pointer;
+  text-align: right;
+}
+#nav .login-icon span {
+  margin-left: 5px;
+  text-decoration: underline;
+  text-decoration-color: white;
+}
+
+@media (min-width: 1024px) {
+  #nav .login-icon {
+    font-size: 20px;
+  }
+}
+
+/***************** Page Header 2 *********************/
+header.header-2 .header-2-contant .logo-name,
+header.header-2 .header-2-contant {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+header.header-2 .header-2-contant {
+  justify-content: space-between;
+  padding: 5px;
+}
+header.header-2 .header-2-contant .toglar-icon {
+  font-size: 25px;
+  cursor: pointer;
+}
+header.header-2 .header-2-contant .logo-name img {
+  width: 40px;
+  height: 40px;
+}
+header.header-2 .header-2-contant .logo-name h1 {
+  font-size: 30px;
+  font-family: logo-style;
+  font-weight: 900;
+  color: #830606;
+  margin: 3px 10px;
+}
+
+header.header-2 .header-2-contant .log-in-icon {
+  font-size: 16px;
+  cursor: pointer;
+}
+header.header-2 .header-2-contant .log-in-icon i {
+  color: #830606;
+}
+header.header-2 .header-2-contant .log-in-icon span {
+  margin-left: 5px;
+  text-decoration: underline;
+  text-decoration-color: #830606;
+}
+
+@media (min-width: 769px) {
+  header.header-2 {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  header.header-2 {
+    margin: 20px 0px;
+  }
+  #header {
+    display: none;
+  }
+}
+
+/***************** Company INfo *********************/
+
+section.company-info img {
+  width: 200px;
+  height: 200px;
+}
+
+section.company-info #logo {
+  font-family: "logo-style";
+  color: #830606;
+  font-size: 40px;
+}
+
+/***************** Top Rated Mobile's *********************/
+section.Top-Rated-Mobile-Accessories,
+section.Top-Rated-Mobile {
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+section.Top-Rated-Mobile-Accessories h1,
+section.Top-Rated-Mobile h1 {
+  font-family: IM-FELL;
+  text-align: center;
+  color: #121212;
+}
+
+section.Top-Rated-Mobile-Accessories hr {
+  border-top: 2px solid #830606;
+  text-align: center;
+  width: 40%;
+  margin-top: -8px;
+  margin-bottom: 40px;
+}
+section.Top-Rated-Mobile hr {
+  border-top: 2px solid #830606;
+  text-align: center;
+  width: 21%;
+  margin-top: -8px;
+  margin-bottom: 40px;
+}
+section.Top-Rated-Mobile-Accessories .Top-rated-product-card,
+section.Top-Rated-Mobile .Top-rated-product-card {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+section.Top-Rated-Mobile .card {
+  width: 270px;
+}
+
+section.Top-Rated-Mobile-Accessories .card {
+  width: 240px;
+}
+section.Top-Rated-Mobile-Accessories .card .card-img-top {
+  height: 250px;
+}
+section.Top-Rated-Mobile .card .card-img-top {
+  height: 330px;
+  width: auto;
+}
+
+section.Top-Rated-Mobile-Accessories .card .card-body,
+section.Top-Rated-Mobile .card .card-body {
+  text-align: center;
+  padding: 15px;
+}
+
+section.Top-Rated-Mobile-Accessories .card .card-body h5,
+section.Top-Rated-Mobile .card .card-body h5 {
+  color: #830606;
+}
+
+section.Top-Rated-Mobile-Accessories .card .card-body h5 {
+  font-size: 16px;
+}
+
+section.Top-Rated-Mobile-Accessories .card .card-body h4 {
+  font-size: 19px;
+}
+
+section.Top-Rated-Mobile-Accessories .card .card-body ul,
+section.Top-Rated-Mobile .card .card-body ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  padding: 0px;
+}
+section.Top-Rated-Mobile-Accessories .card .card-body ul li,
+section.Top-Rated-Mobile .card .card-body ul li {
+  color: #ffe600;
+  padding: 5px;
+}
+
+section.Top-Rated-Mobile-Accessories .card .card-body ul li {
+  font-size: 12px;
+}
+section.Top-Rated-Mobile-Accessories .card .card-body ul li.no-star,
+section.Top-Rated-Mobile .card .card-body ul li.no-star {
+  color: lightgray;
+}
+
+section.Top-Rated-Mobile-Accessories .card .card-body .btn,
+section.Top-Rated-Mobile .card .card-body .btn {
+  background-color: #830606;
+  color: white;
+  border: 1px solid #830606;
+  width: 80%;
+}
+section.Top-Rated-Mobile-Accessories .card .card-body .btn:hover,
+section.Top-Rated-Mobile .card .card-body .btn:hover {
+  background-color: rgb(245, 242, 242);
+  color: black;
+  border: 1px solid black;
+}
+
+@media (max-width: 1024px) {
+  section.Top-Rated-Mobile-Accessories .card,
+  section.Top-Rated-Mobile .card {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  section.Top-Rated-Mobile-Accessories .Top-rated-product-card,
+  section.Top-Rated-Mobile .Top-rated-product-card {
+    justify-content: space-evenly;
+  }
+  section.Top-Rated-Mobile-Accessories .card {
+    width: 250px;
+  }
+  section.Top-Rated-Mobile-Accessories hr {
+    width: 60%;
+  }
+  section.Top-Rated-Mobile hr {
+    width: 30%;
+  }
+}
+@media (max-width: 425px) {
+  section.Top-Rated-Mobile-Accessories hr {
+    width: 40%;
+  }
+  section.Top-Rated-Mobile hr {
+    width: 50%;
+  }
+}
+
+/***************** Mobile Company's *********************/
+section.Mobile-Accessories,
+section.Mobile-Company {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+section.Mobile-Accessories a,
+section.Mobile-Company a {
+  text-decoration: none;
+}
+section.Mobile-Accessories h1,
+section.Mobile-Company h1 {
+  font-family: IM-FELL;
+  text-align: center;
+  color: #121212;
+}
+section.Mobile-Accessories hr,
+section.Mobile-Company hr {
+  border-top: 2px solid #830606;
+  text-align: center;
+  width: 21%;
+  margin-top: -8px;
+  margin-bottom: 40px;
+}
+section.Mobile-Accessories .Mobile-Accessories-Card,
+section.Mobile-Company .Mobile-Company-Card {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+section.Mobile-Accessories .card {
+  width: 200px;
+  border: none;
+}
+section.Mobile-Company .card {
+  width: 260px;
+  border: none;
+}
+section.Mobile-Accessories .card .card-img-top {
+  height: 180px;
+}
+section.Mobile-Company .card .card-img-top {
+  height: 150px;
+  width: auto;
+}
+
+section.Mobile-Accessories .card .card-body .card-title {
+  text-decoration: none;
+  color: black;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+section.Mobile-Accessories .card .card-body .card-title:hover {
+  text-decoration: underline;
+  text-decoration-color: black;
+  text-decoration-thickness: 1px;
+}
+
+@media (max-width: 768px) {
+  section.Mobile-Accessories .Mobile-Accessories-Card,
+  section.Mobile-Company .Mobile-Company-Card {
+    justify-content: space-evenly;
+  }
+
+  section.Mobile-Accessories .card {
+    width: 250px;
+    border: none;
+  }
+  section.Mobile-Accessories hr,
+  section.Mobile-Company hr {
+    width: 30%;
+  }
+}
+@media (max-width: 768px) {
+  section.Mobile-Accessories hr,
+  section.Mobile-Company hr {
+    width: 60%;
+  }
+}
+
+/******** Footer *********/
+
+footer {
+  background-color: rgba(0, 0, 0, 1);
+  color: white;
+  padding: 15px 0px;
+  text-align: center;
+}
+
+footer .footer-contant img {
+  width: 150px;
+  height: auto;
+}
+.footer-contant > h1 {
+  font-family: logo-style;
+  font-size: 40px;
+  margin-bottom: 30px;
+  color: #830606;
+}
+
+footer .footer-social-link {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 20px;
+  font-size: 25px;
+}
+footer .footer-social-link a {
+  text-decoration: none;
+  color: white;
+  margin: 0px 15px 0px 15px;
+}
+
+footer .footer-social-link a i.fa-facebook-f:hover {
+  color: rgb(49, 49, 219);
+}
+footer .footer-social-link a i.fa-twitter-square:hover {
+  color: rgb(103, 192, 228);
+}
+footer .footer-social-link a i.fa-instagram:hover {
+  color: #830606;
+}
+.footer-contant > a {
+  text-decoration: underline;
+  color: white;
+}
+
+.footer-contant > p {
+  margin-top: 25px;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+.footer-contant > p > span {
+  text-transform: uppercase;
+}
+.footer-contant > p > a {
+  text-decoration: underline;
+  color: white;
+}
+
+/*_______________start contact us________________________*/
+
+/*_______________Contact First Section________________________*/
+
+.fisrt-contact-section {
+  position: relative;
+  background: url(../Image/contact_us.jpg) fixed center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.fisrt-contact-section::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.fisrt-contact-section .contact-details {
+  padding: 5% 20%;
+  color: white;
+  text-align: center;
+}
+.fisrt-contact-section .contact-details h1 {
+  font-family: IM-FELL;
+  font-size: 50px;
+}
+
+@media (max-width: 768px) {
+  .fisrt-contact-section .contact-details {
+    padding: 10% 10%;
+  }
+}
+@media (max-width: 425px) {
+  .fisrt-contact-section .contact-details {
+    padding: 10% 0px;
+  }
+  .fisrt-contact-section .contact-details h1 {
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 320px) {
+  .fisrt-contact-section .contact-details h1 {
+    font-size: 30px;
+  }
+  .fisrt-contact-section .contact-details p {
+    font-size: 15px;
+  }
+  .fisrt-contact-section .contact-details {
+    padding: 10% 5px;
+  }
+}
+
+/*_______________Contact Section________________________*/
+
+.contact-info {
+  padding: 20px 0px;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.contact-info > h2 {
+  color: hsl(0, 77%, 40%);
+  padding: 20px 0px;
+  text-transform: uppercase;
+}
+
+.contact-info > p {
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.contact-info > a {
+  text-decoration: underline;
+  color: black;
+}
+
+.contact-form > form {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 60px;
+}
+
+.contact-form > form > input,
+.contact-form > form > textarea {
+  background-color: white;
+  border: 1px solid white;
+  border-bottom: 1px solid black;
+  padding: 10px 3px;
+  margin-bottom: 10px;
+}
+.contact-form > form > textarea:hover,
+.contact-form > form > input:hover {
+  border: 1px solid black;
+}
+.contact-form > form > textarea:focus,
+.contact-form > form > input:focus {
+  border: 1px solid black;
+}
+.contact-form > form > textarea {
+  width: 100%;
+  height: 150px;
+  background-color: white;
+}
+
+.contact-form > form > input[type="submit"] {
+  border: 1px solid #830606;
+  background-color: #830606;
+  color: white;
+  font-weight: 400;
+  margin-top: 20px;
+  border-radius: 0px;
+  font-size: 18px;
+}
+
+.contact-form > form > input[type="submit"]:hover {
+  background-color: white;
+  border-color: black;
+  color: black;
+}
+
+.contact-map {
+  padding: 20px 5%;
+}
+
+@media (max-width: 425px) {
+  .contact-form > form {
+    padding: 20px 0px;
+  }
+}
+
+@media (max-width: 375px) {
+  .contact-info > a {
+    font-size: 14px;
+  }
+}
+@media (max-width: 320px) {
+  .contact-info > a {
+    font-size: 12px;
+  }
+  .contact-form {
+    padding: 0px 0px;
+  }
+}
+
+/*_______________End contact us________________________*/
+
+/*_______________start About US________________________*/
+
+.fisrt-aboutus-section {
+  position: relative;
+  background: url(../Image/aboutus.jpg) fixed center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.fisrt-aboutus-section::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.fisrt-aboutus-section .aboutus-details {
+  padding: 8% 30%;
+  color: white;
+  text-align: center;
+}
+.fisrt-aboutus-section .aboutus-details h1 {
+  font-family: IM-FELL;
+  font-size: 70px;
+}
+
+@media (max-width: 768px) {
+  .fisrt-aboutus-section .aboutus-details {
+    padding: 10% 10%;
+  }
+}
+@media (max-width: 425px) {
+  .fisrt-aboutus-section .aboutus-details {
+    padding: 10% 0px;
+  }
+}
+@media (max-width: 425px) {
+  .fisrt-aboutus-section .aboutus-details h1 {
+    font-size: 50px;
+  }
+}
+/*_______________ About US second section________________________*/
+.second-aboutus-details {
+  text-align: center;
+}
+
+.second-aboutus-details .row {
+  margin: 30px 0px;
+}
+.second-aboutus-details img {
+  max-width: 100%;
+  height: auto;
+}
+
+.second-aboutus-details h3 {
+  margin-top: 20px;
+  font-weight: 900;
+  color: #830606;
+  font-size: 50px;
+  font-family: logo-style;
+  padding: 20px 0px;
+}
+.second-aboutus-details p {
+  padding: 10px 20px;
+}
+@media (max-width: 1024px) {
+  .second-aboutus-details h3 {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 786px) {
+  .second-aboutus-details h3 {
+    margin-top: 0px;
+    padding: 0px;
+  }
+  .second-aboutus-details-row {
+    flex-direction: column-reverse;
+  }
+  .second-aboutus-details p {
+    padding: 10px 0px;
+  }
+
+  .second-aboutus-details > .row {
+    border-bottom: 1px solid darkgray;
+    padding-bottom: 30px;
+  }
+}
+/*_______________End About US________________________*/
+
+/*_______________Cart Icon________________________*/
+.shoping-cart-card {
+  width: 50px;
+  cursor: pointer;
+  height: 50px;
+  position: fixed;
+  right: 2.5%;
+  bottom: 7%;
+  color: hsl(44, 100%, 51%);
+  font-size: 40px;
+}
+
+/*_______________Login Card________________________*/
+
+.login-drop-down {
+  width: 400px;
+  padding: 40px 30px;
+  height: 100vh;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  display: none;
+}
+.menu-card {
+  width: 360px;
+  padding: 35px 0px;
+  height: 100vh;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  display: none;
+}
+.menu-card ul {
+  display: flex;
+  justify-content: left;
+  flex-direction: column;
+  padding: 0px;
+}
+
+.menu-card ul li {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  padding: 5px 10px;
+  border-bottom: 1px solid #830606;
+  cursor: pointer;
+}
+
+.menu-card ul a {
+  text-decoration: none;
+  color: black;
+}
+.menu-card ul li i {
+  padding: 5px 0px;
+  color: #830606;
+}
+#menu-close-icon,
+.login-drop-down i {
+  position: absolute;
+  top: 2%;
+  right: 3%;
+  cursor: pointer;
+}
+
+.login-drop-down h1 {
+  text-transform: uppercase;
+  font-family: IM-FELL;
+}
+
+.login-drop-down form {
+  margin: 20px 0px;
+}
+
+.login-drop-down form span {
+  color: red;
+}
+.login-drop-down form input {
+  width: 100%;
+  border-radius: 0px;
+  padding: 15px;
+}
+
+.login-drop-down form button {
+  width: 100%;
+  border-radius: 0px;
+  padding: 15px;
+  background-color: #830606;
+  color: white;
+  border: 1px solid #830606;
+  margin: 15px 0px;
+  text-transform: uppercase;
+}
+
+.login-drop-down form button:hover {
+  background-color: white;
+  color: #830606;
+  border: 1px solid #830606;
+}
+@media (max-width: 425px) {
+  .login-drop-down {
+    width: 380px;
+    padding: 20px 20px;
+  }
+  .menu-card {
+    width: 350px;
+  }
+}
+@media (max-width: 375px) {
+  .login-drop-down {
+    width: 320px;
+    padding: 10px 10px;
+  }
+  .menu-card {
+    width: 300px;
+  }
+}
+@media (max-width: 320px) {
+  .login-drop-down {
+    width: 280px;
+    padding: 10px 10px;
+  }
+  .menu-card {
+    width: 250px;
+  }
+}
+
+/*_______________overlay________________________*/
+
+.overlay {
+  display: none;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/*_______________Cart Menu Section________________________*/
+
+.cart-menu-section {
+  overflow: scroll;
+  width: 80%;
+  padding: 20px;
+  height: 80%;
+  margin: 5% 10%;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  display: none;
+}
+
+#close-Cart {
+  cursor: pointer;
+  position: absolute;
+  font-size: 25px;
+  top: 3%;
+  right: 3%;
+  z-index: 3;
+  padding: 5px;
+}
+
+.cart-row {
+  padding: 10px 0px;
+}
+
+.cart-menu-section h2 {
+  font-family: IM-FELL;
+  color: #830606;
+  margin: 0px;
+}
+
+.cart-menu-section .cart-details-col {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.cart-menu-section .amount-details {
+  width: 30%;
+}
+.cart-menu-section .product-details {
+  width: 60%;
+}
+.cart-menu-section .product-details > h5,
+.cart-menu-section .amount-details > h5 {
+  padding: 7px 5px;
+  width: 100%;
+  background-color: #f5f5f5;
+  text-align: center;
+}
+
+.cart-menu-section .amount-details > p {
+  padding: 5px 3px;
+  width: 100%;
+  text-align: center;
+}
+.cart-menu-section .amount-details > p > span {
+  margin: 0px 3px;
+}
+
+.cart-menu-section .amount-details .amount {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.cart-menu-section .amount-details form {
+  margin: 20px 0px;
+  padding: 0px;
+}
+
+.cart-menu-section .amount-details form .form-check {
+  padding: 5px 0px;
+  margin-left: 20px;
+}
+.cart-menu-section .amount-details form .form-check a {
+  color: black;
+  text-decoration: underline;
+}
+
+.cart-menu-section .amount-details form button {
+  width: 100%;
+  border-radius: 0px;
+  padding: 15px;
+  margin: 10px 0px;
+  color: white;
+  background-color: #830606;
+  border: 1px solid #830606;
+}
+
+.cart-menu-section .amount-details form button:hover {
+  background-color: white;
+  color: #830606;
+}
+
+.product-details img {
+  width: 100px;
+  height: auto;
+}
+
+.product-details h5 {
+  font-size: 18px;
+  user-select: none;
+}
+.product-details p {
+  user-select: none;
+}
+.product-details p span {
+  display: inline-block;
+  margin-left: 5px;
+}
+
+.product-details i {
+  cursor: pointer;
+}
+.product-details input {
+  width: 60%;
+}
+.product-details .row {
+  border-bottom: 1px solid hsl(0, 10%, 84%);
+}
+
+@media (max-width: 768px) {
+  .cart-menu-section {
+   
+    width: 90%;
+    padding: 15px;
+    height: 90%;
+    margin: 5% 5%;
+  }
+  .product-details img {
+    width: 80px;
+  }
+  .product-details h5 {
+    font-size: 14px;
+  }
+
+  .cart-price{
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 425px) {
+  .cart-menu-section .amount-details {
+    width: 100%;
+  }
+  .cart-menu-section .product-details {
+    width: 100%;
+  }
+  .cart-menu-section .cart-details-col {
+    flex-direction: column-reverse;
+  }
+}
+
+
+/*_______________Product category Section________________________*/
+
+.category {
+  margin: 20px 0px;
+}
+
+.category .btn {
+  width: 100%;
+  background-color: #830606;
+  color: white;
+  border-radius: 0px;
+  border: 1px solid #830606;
+  font-family: IM-FELL;
+  padding: 10px 0px;
+  font-size: 20px;
+}
+
+.category .btn:hover {
+  background-color: white;
+  color: #830606;
+}
+
+.category .enabled-btn {
+  background-color: white;
+  color: #830606;
+}
+
+@media (max-width: 425px) {
+  .category .btn{
+    margin-bottom: 20px;
+    width: 80%;
+    margin-left: 10%;
+  }
+  .category {
+    margin: 0px 0px;
+  }
+}
+
+@media (max-width: 320px) {
+  .category .btn{
+    font-size: 14px;
+  }
+  
+}

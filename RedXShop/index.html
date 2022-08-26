@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RedXShop</title>
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/css.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    />
+
+    <script src="js/js.js"></script>
+  </head>
+  <body>
+    <!-----------------Header Section---------------->
+    <header id="header">
+      <section>
+        <div class="container">
+          <div class="row py-5">
+            <div class="col-md-5 float-left text-md-right">
+              <img src="image/logo.png" alt="RedXsoft" />
+            </div>
+            <div class="col-md-7 float-right text-md-left mt-md-5">
+              <h1>RedXShop</h1>
+            </div>
+          </div>
+        </div>
+      </section>
+      <nav id="nav">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <ul class="nav nav-fill mr-auto nav-pills my-md-2">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="product.html">Product</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="abouteus.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contactus.html">Contect Us</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-4">
+              <form class="form-inline float-md-right my-md-2">
+                <input
+                  type="search"
+                  class="form-control mr-lg-2 mr-xl-3"
+                  placeholder="Search"
+                />
+                <button class="btn btn-outline-light">Search</button>
+              </form>
+            </div>
+            <div class="col-md-2 login-icon my-auto">
+              <i
+                onclick="showloginform()"
+                class="fa fa-user"
+                aria-hidden="true"
+              ></i>
+              <span onclick="showloginform()">login</span>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <header class="header-2">
+      <div class="container">
+        <div class="row">
+          <div class="col header-2-contant">
+            <div onclick="showMenu()" class="toglar-icon my-auto">
+              <i class="fa fa-bars" aria-hidden="true"></i>
+            </div>
+            <div class="logo-name my-auto">
+              <img src="image/logo.png" alt="logo" />
+              <h1>RedXShop</h1>
+            </div>
+            <div onclick="showloginform()" class="log-in-icon my-auto">
+              <i class="fa fa-user" aria-hidden="true"></i>
+              <span>login</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-----------------Company info Section---------------->
+    <section class="company-info">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 py-lg-5 py-md-3 py-sm-2 text-center">
+            <img src="image/logo.png" alt="RedXsoft" />
+            <h3 id="logo"><b>RedXShop</b></h3>
+          </div>
+          <div
+            class="col-lg-9 py-lg-5 py-md-3 mt-lg-5 py-sm-5 text-center text-lg-left"
+          >
+            <h3>
+              Welcome to RedXShop – Fastest Growing Online Mobile Shop Company
+            </h3>
+            <p class="text-justify mt-sm-3">
+              RedXShop is an online mobile shop Company founded in Sep 2018 in
+              UK. We are offering different mobiles that you buy online with
+              handsome price. RedXShop is a top online mobile shop in UK and
+              also a registered Company from UK Government. We are responsible
+              for the dealing, and we try to keep the best relationship with our
+              customers. As a Leading Online Mobile Shop in UK, We have hundreds
+              of Mobile for our clients with a handsome price. Our Company is
+              spreading the best services in the industry of E-Commerece from
+              last four years.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <hr />
+
+    <!-----------------Top Rated Product Section---------------->
+    <section class="Top-Rated-Mobile">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <h1>Top Rated Mobile's</h1>
+            <hr />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="Top-rated-product-card">
+              <div class="card">
+                <img
+                  class="card-img-top shop-item-image"
+                  src="image/product-1.1.jpg"
+                  alt="CardImage"
+                />
+                <div class="card-body">
+                  <h4 class="shop-item-title">Xiaomi 12 | 5G</h4>
+                  <h5 class="shop-item-price">$300.00</h5>
+                  <ul class="rating-star">
+                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                    <li><i class="fa fa-star-half" aria-hidden="true"></i></li>
+                  </ul>
+                  <div class="btn btn-primary shop-item-button">
+                    Add to Cart
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <img
+                  class="card-img-top shop-item-image"
+                  src="image/product-2.1.jpg "
+                  alt="CardImage"
+                />
+                <div class="card-body">
+                  <h4 class="shop-item-title">Samsung Galaxy S22</h4>
+                  <h5 class="shop-item-price">$280.00</h5>
+                  <ul class="rating-star">
+                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                    <li><i class="fa fa-star-half" aria-hidden="true"></i></li>
+                    <li class="no-star">
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                    </li>
+                  </ul>
+                  <div class="btn btn-primary shop-item-button">
+                    Add to Cart
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <img
+                  class="card-img-top shop-item-image"
+                  src="image/product-3.1.jpg"
+                  alt="CardImage"
+                />
+                <div class="card-body">
+                  <h4 class="shop-item-title">Oppo F21 Pro</h4>
+                  <h5 class="shop-item-price">$350.00</h5>
+                  <ul class="rating-star">
+                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                    <li class="no-star">
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                    </li>
+                    <li class="no-star">
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                    </li>
+                  </ul>
+                  <div class="btn btn-primary shop-item-button">
+                    Add to Cart
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <img
+                  class="card-img-top shop-item-image"
+                  src="image/product-4.1.jpg"
+                  alt="CardImage"
+                />
+                <div class="card-body">
+                  <h4 class="shop-item-title">Vivo V23e</h4>
+                  <h5 class="shop-item-price">$400.00</h5>
+                  <ul class="rating-star">
+                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                    <li class="no-star">
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                    </li>
+                  </ul>
+                  <div class="btn btn-primary shop-item-button">
+                    Add to Cart
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <hr />
+
+    <!-----------------Mobile company section Section---------------->
+    <section class="Mobile-Company">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <h1>Mobile Brand's</h1>
+            <hr />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="Mobile-Company-Card">
+              <a href="#">
+                <div class="card">
+                  <img
+                    class="card-img-top"
+                    src="image/Oppo-Logo.png"
+                    alt="CardImage"
+                  />
+                </div>
+              </a>
+              <a href="#">
+                <div class="card">
+                  <img
+                    class="card-img-top"
+                    src="image/Samsung-Logo.png"
+                    alt="CardImage"
+                  />
+                </div>
+              </a>
+              <a href="#">
+                <div class="card">
+                  <img
+                    class="card-img-top"
+                    src="image/Vivo-Logo.png"
+                    alt="CardImage"
+                  />
+                </div>
+              </a>
+              <a href="#">
+                <div class="card">
+                  <img
+                    class="card-img-top"
+                    src="image/Xiaomi-Logo.png"
+                    alt="CardImage"
+                  />
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <hr />
+
+    <!-----------------Mobile Accessories Section---------------->
+
+    <section class="Mobile-Accessories">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <h1>Mobile Accessories</h1>
+            <hr />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="Mobile-Accessories-Card">
+              <a href="#">
+                <div class="card">
+                  <img
+                    class="card-img-top"
+                    src="image/Accessories-1.jpg"
+                    alt="CardImage"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Mobile Charger & Adapter</h5>
+                  </div>
+                </div>
+              </a>
+              <a href="#">
+                <div class="card">
+                  <img
+                    class="card-img-top"
+                    src="image/Accessories-2.jpg"
+                    alt="CardImage"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Mobile Cover's & Cases</h5>
+                  </div>
+                </div>
+              </a>
+              <a href="#">
+                <div class="card">
+                  <img
+                    class="card-img-top"
+                    src="image/Accessories-3.jpg"
+                    alt="CardImage"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Mobile Power Bank</h5>
+                  </div>
+                </div>
+              </a>
+              <a href="#">
+                <div class="card">
+                  <img
+                    class="card-img-top"
+                    src="image/Accessories-4.jpg"
+                    alt="CardImage"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Mobile Earbud's</h5>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <hr />
+
+    <!-----------------Top Rated Accessories Product Section---------------->
+
+    <section class="Top-Rated-Mobile-Accessories">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <h1>Top Rated Mobile Accessories</h1>
+            <hr />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="Top-rated-product-card">
+              <div class="card">
+                <img
+                  class="card-img-top shop-item-image"
+                  src="image/Accessories-product-1.jpg"
+                  alt="CardImage"
+                />
+                <div class="card-body">
+                  <h4 class="shop-item-title">
+                    Mpow X3 Version 2.0 True Wireless Earbuds
+                  </h4>
+                  <h5 class="shop-item-price">$300.00</h5>
+                  <ul class="rating-star">
+                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                    <li><i class="fa fa-star-half" aria-hidden="true"></i></li>
+                  </ul>
+                  <div class="btn btn-primary shop-item-button">
+                    Add to Cart
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <img
+                  class="card-img-top shop-item-image"
+                  src="image/Accessories-product-2.png"
+                  alt="CardImage"
+                />
+                <div class="card-body">
+                  <h4 class="shop-item-title">Fast Wireless Charger - Black</h4>
+                  <h5 class="shop-item-price">$280.00</h5>
+                  <ul class="rating-star">
+                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                    <li><i class="fa fa-star-half" aria-hidden="true"></i></li>
+                    <li class="no-star">
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                    </li>
+                  </ul>
+                  <div class="btn btn-primary shop-item-button">
+                    Add to Cart
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <img
+                  class="card-img-top shop-item-image"
+                  src="image/Accessories-product-3.jpg"
+                  alt="CardImage"
+                />
+                <div class="card-body">
+                  <h4 class="shop-item-title">Charging Power Bank 20000mAh</h4>
+                  <h5 class="shop-item-price">$350.00</h5>
+                  <ul class="rating-star">
+                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                    <li class="no-star">
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                    </li>
+                    <li class="no-star">
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                    </li>
+                  </ul>
+                  <div class="btn btn-primary shop-item-button">
+                    Add to Cart
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <img
+                  class="card-img-top shop-item-image"
+                  src="image/Accessories-4.jpg"
+                  alt="CardImage"
+                />
+                <div class="card-body">
+                  <h4 class="shop-item-title">iPhone 13 Heldro Phone Case</h4>
+                  <h5 class="shop-item-price">$400.00</h5>
+                  <ul class="rating-star">
+                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                    <li class="no-star">
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                    </li>
+                  </ul>
+                  <div class="btn btn-primary shop-item-button">
+                    Add to Cart
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-----------------Footer Section---------------->
+
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col footer-contant">
+            <img src="image/logo.png" alt="LOGO" />
+            <h1><b>RedXShop</b></h1>
+            <div class="footer-social-link">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter-square"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+            <p>
+              Chancerygate Industrial Cent,<br />
+              Horton Close, West Drayton UB7 8EW, <br />
+              United Kingdom <br />
+              Tel: 00000000000
+            </p>
+            <p>
+              <span>RedXShop LTD</span>, registered as a limited company in UK
+            </p>
+            <p>
+              <a href="#">Terms of Use</a> |
+              <a href="#">Privacy & Cookie Policy</a> |
+              <a href="#">Trading Terms</a> | Powered by
+              <a href="#">SELF</a>
+            </p>
+            <p>
+              © April, 2021. The content on this website is owned by us and our
+              licensors. Do not copy any content (including images) without our
+              consent.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-----------------SHopping cart Section---------------->
+
+    <div class="shoping-cart-card">
+      <i onclick="showCartMenu()" class="fa fa-shopping-cart"></i>
+    </div>
+
+    <!-----------------Login Card Section---------------->
+
+    <div class="login-drop-down">
+      <i onclick="hideloginform()" class="fa fa-times" aria-hidden="true"></i>
+      <h1>login</h1>
+
+      <form>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email Address <span>*</span></label>
+          <input
+            type="email"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            placeholder="Email Address"
+          />
+          <small id="emailHelp" class="form-text text-muted"
+            >We'll never share your email with anyone else.</small
+          >
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password <span>*</span></label>
+          <input
+            type="password"
+            class="form-control"
+            id="exampleInputPassword1"
+            placeholder="Password"
+          />
+        </div>
+        <button type="submit" class="btn btn-primary">login</button>
+        <small id="emailHelp" class="form-text text-muted"
+          >Forgot your password?</small
+        >
+        <button type="submit" class="btn btn-primary">Create An Account</button>
+      </form>
+    </div>
+
+    <!-----------------Overlay Section---------------->
+
+    <div id="overlay" class="overlay"></div>
+
+    <!-----------------Menu Section---------------->
+
+    <div class="menu-card">
+      <i
+        id="menu-close-icon"
+        onclick="hideMenu()"
+        class="fa fa-times"
+        aria-hidden="true"
+      ></i>
+      <ul>
+        <a href="index.html"
+          ><li>
+            <span> Home</span
+            ><i class="fa fa-angle-right" aria-hidden="true"></i></li
+        ></a>
+        <a href="product.html"
+          ><li>
+            <span> Product</span
+            ><i class="fa fa-angle-right" aria-hidden="true"></i></li
+        ></a>
+        <a href="abouteus.html"
+          ><li>
+            <span> Aboute Us</span
+            ><i class="fa fa-angle-right" aria-hidden="true"></i></li
+        ></a>
+        <a href="contactus.html"
+          ><li>
+            <span> Contact Us</span
+            ><i class="fa fa-angle-right" aria-hidden="true"></i></li
+        ></a>
+      </ul>
+    </div>
+
+    <!-----------------Cart Menu Section---------------->
+    <div class="cart-menu-section">
+      <i
+        onclick="hideCartMenu()"
+        id="close-Cart"
+        class="fa fa-times"
+        aria-hidden="true"
+      ></i>
+      <div class="container">
+        <div class="row">
+          <div class="col text-center">
+            <h2>Cart Details</h2>
+          </div>
+        </div>
+        <hr />
+        <div class="row">
+          <div class="col cart-details-col">
+            <div class="amount-details">
+              <h5>Amount Details</h5>
+              <p><span>0</span>items in your shopping cart.</p>
+              <div class="amount">
+                <span>Total:</span>
+                <p>$ <span class="cart-total-price">00.00</span></p>
+              </div>
+
+              <form>
+                <div class="form-check">
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    id="exampleCheck1"
+                  />
+                  <label class="form-check-label" for="exampleCheck1"
+                    >I agree with the <a href="#">Terms & conditions</a>
+                  </label>
+                </div>
+                <button
+                  id="Proceed-to-payment-btn"
+                  type="submit"
+                  class="btn btn-primary btn-purchase"
+                  disabled
+                >
+                  Proceed to Payment
+                </button>
+              </form>
+            </div>
+            <div class="product-details">
+              <h5>Product Details</h5>
+              <div class="container-fluid cart-items">
+                <!-- <div class="row cart-row">
+                  <div class="col-3 my-auto text-center">
+                    <img src="image/product-1.1.jpg" alt="Prodcut" />
+                  </div>
+
+                  <div class="col-3 my-auto text-center">
+                    <h5>Xiaomi 12 | 5G</h5>
+                  </div>
+
+                  <div class="col-2 my-auto text-center">
+                    <p>$<span class="cart-price">400.00</span></p>
+                  </div>
+
+                  <div class="col-2 my-auto text-center">
+                    <input
+                      class="cart-quantity-input"
+                      type="number"
+                      value="1"
+                    />
+                  </div>
+
+                  <div class="col-2 my-auto text-center">
+                    <i
+                      class="fa fa-times remove-product"
+                      aria-hidden="true"
+                    ></i>
+                  </div>
+                </div>
+                <div class="row cart-row">
+                  <div class="col-3 my-auto text-center">
+                    <img src="image/product-1.1.jpg" alt="Prodcut" />
+                  </div>
+
+                  <div class="col-3 my-auto text-center">
+                    <h5>Xiaomi 12 | 5G</h5>
+                  </div>
+
+                  <div class="col-2 my-auto text-center">
+                    <p>$<span class="cart-price">400.00</span></p>
+                  </div>
+
+                  <div class="col-2 my-auto text-center">
+                    <input
+                      class="cart-quantity-input"
+                      type="number"
+                      value="1"
+                    />
+                  </div>
+
+                  <div class="col-2 my-auto text-center">
+                    <i
+                      class="fa fa-times remove-product"
+                      aria-hidden="true"
+                    ></i>
+                  </div>
+                </div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
