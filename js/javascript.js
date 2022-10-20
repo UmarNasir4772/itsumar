@@ -7,6 +7,13 @@ var typed = new Typed(".typing", {
     loop: true
 })
 
+    var typed = new Typed(".S_typing", {
+    strings:["","Web Designer","Web Developer","Freelancer","Application Developer"],
+    typeSpeed: 100,
+    BackSpeed: 50,
+    loop: true
+    })
+
 /*               Nav link Color                    */
 
 const nav = document.querySelector(".nav"),
