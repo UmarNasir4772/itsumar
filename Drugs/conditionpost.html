@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drug.com</title>
+
+    <!-- ================ Animation Css =================-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- ================ Font Awesome =================-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- ================ Slick Slider CSS =================-->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"
+        integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"
+        integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- ================ Bootstrap =================-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
+
+    <!-- ================ CSS File =================-->
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body id="drug-info-page" data-spy="scroll" data-target=".side-bar-link" data-offset="60">
+    <!-- ================ Wrapper =================-->
+    <div class="wrapper container-fluid d-none"></div>
+
+
+    <!-- ================ Header-2 =================-->
+
+    <div class="header-main-2 container-fluid overflow-hidden">
+        <div class="container-xl">
+            <div class="row header-2-top">
+                <div class="col-3 h-2-l">
+                    <div class="header-2-logo">
+                        <a href="index.html">
+                            <img src="image/logo-bg-white.png" alt="Drug.com" />
+                        </a>
+                    </div>
+                </div>
+                <div class="col-7 col-sm-8  align-self-center">
+                    <div class="input-group">
+                        <input type="search" class="form-control" placeholder="Search" aria-label="Search"
+                            aria-describedby="search-addon" />
+                        <button type="button" class="btn">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </div>
+                    <div class="search-below-section">
+                        <p> Browse All medications:
+                            <a href="searchbyletter.html">A</a><a href="#">B</a><a href="#">C</a><a href="#">D</a><a
+                                href="#">E</a><a href="#">F</a>
+                            <a href="#">G</a><a href="#">I</a><a href="#">J</a><a href="#">K</a><a href="#">L</a><a
+                                href="#">M</a>
+                            <a href="#">N</a><a href="#">O</a><a href="#">P</a><a href="#">Q</a><a href="#">R</a><a
+                                href="#">S</a>
+                            <a href="#">T</a><a href="#">U</a><a href="#">V</a><a href="#">W</a><a href="#">X</a><a
+                                href="#">Y</a>
+                            <a href="#">Z</a>
+                        </p>
+                    </div>
+
+                    <div class="search-bar-sm text-end">
+                        <div class="search-icon">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                    </div>
+                    <div class="search-bar-input d-none">
+                        <div class="input-group">
+                            <button type="button" class="btn">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                            <input type="search" class="form-control" placeholder="Search" aria-label="Search"
+                                aria-describedby="search-addon" />
+                            <button type="button" class="btn searbar-sm-close">
+                                <i class="fa-solid fa-xmark"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2 col-sm-1 align-self-center">
+                    <div class="login-opetion position-relative align-baseline">
+
+                        <div class="nav-toggle-block-2">
+                            <i class="fa-solid fa-bars"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row header-2-bottom">
+                <div class="col-12">
+                    <nav class="navbar navbar-expand">
+
+                        <div class="container-fluid justify-content-center">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">Drug A-Z</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">Pill Finder</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">Health Guides</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">Latest News</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================ Drugs Information =================-->
+    <section class="single-drug-info">
+        <div class="container-fluid">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-xl-3 position-relative">
+                        <div class="drug-info-side-bar">
+                            <h5>On This Page</h5>
+                            <ul id="drugs-link-list" class="list-group">
+                                <li><a class="list-group-item list-group-item-action"
+                                        href="#condition-causes">Causes</a></li>
+                                <li><a class="list-group-item list-group-item-action" href="#condition-risk">Risk</a>
+                                </li>
+                                <li><a class="list-group-item list-group-item-action"
+                                        href="#condition-symptoms">Symptoms</a></li>
+                                <li><a class="list-group-item list-group-item-action"
+                                        href="#condition-diagnosed">Diagnosed</a></li>
+                                <li><a class="list-group-item list-group-item-action"
+                                        href="#condition-treated">Treated</a></li>
+                                <li><a class="list-group-item list-group-item-action"
+                                        href="#condition-prevent">Prevent</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-10 col-xl-8">
+                        <div id="drug-info-sec" data-bs-spy="scroll" data-bs-target="#drugs-link-list"
+                            data-bs-smooth-scroll="true" tabindex="0" class="drug-content">
+                            <section class="Drug-name">
+                                <h2>Acne</h2>
+                            </section>
+                            <section class="Drug-link">
+                                <ul>
+                                    <li><a href="#condition-causes">Causes</a></li>
+                                    <li><a href="#condition-risk">Risk</a></li>
+                                    <li><a href="#condition-symptoms">Symptoms</a></li>
+                                    <li><a href="#condition-diagnosed">Diagnosed</a></li>
+                                    <li><a href="#condition-treated">Treated</a></li>
+                                    <li><a href="#condition-prevent">Prevent</a></li>
+                                </ul>
+                            </section>
+                            <section class="conditon-img">
+                                <img src="image/condition-acne.webp" alt="">
+                            </section>
+                            <section class="condition-info">
+                                <h2>What is acne?</h2>
+                                <p>Acne is a skin condition caused by dead skin cells sticking together and clogging up
+                                    pores. Bacteria can play a role, too. A big trigger for the onset of acne is
+                                    puberty.
+
+                                    Better nutrition and living standards have seen the age of puberty, especially in
+                                    girls, decrease significantly over the past 40 years. It is now not uncommon for
+                                    girls as young as 7 to develop acne.
+
+                                    Acne is also affecting more adults later in life and doctors are not sure why. A
+                                    growing number of women have acne in their 30s, 40s, 50s, and beyond.</p>
+
+                            </section>
+                            <section id="condition-causes">
+                                <h2>What causes acne?</h2>
+                                <p>Our body constantly makes and sheds skin. Normally, dead skin cells rise to the
+                                    surface of the pore and just flake off our body. At puberty, hormones trigger the
+                                    production of sebum - an oily substance that helps moisturize our skin.
+
+                                    Sebum sticks dead skin cells together, increasing their chances of becoming trapped
+                                    inside a pore. Clogged pores become blackheads, whiteheads, or pimples. If bacteria
+                                    are also present, redness and swelling can occur resulting in the progression of the
+                                    pimple into a cyst or nodule..</p>
+                            </section>
+                            <section id="condition-risk">
+                                <h2>Who is more at risk of acne?</span></h2>
+                                <p>
+                                    Unfortunately, some people suffer from acne worse than others. Bad acne tends to run
+                                    in families - your mother, father, aunt or uncle probably had severe breakouts when
+                                    they were a teenager.
+
+                                    Some people also have naturally higher hormone levels and make more sebum, so their
+                                    skin pores are always clogging up.
+
+                                    If you live in an area that gets very humid or have a job which exposes you to moist
+                                    heat (such as in a food kitchen), grease or tar (a mechanic or road worker) then you
+                                    are more likely to get acne.
+
+                                    Chin straps, headbands, and even hair products applied too close to the skin can
+                                    precipitate a break out as can several different medicines - most notably
+                                    prednisone, phenytoin, and certain hormonal contraceptives that are high in
+                                    androgens (for example, Microgestin 1.5/30 and the Depo-Provera shot).
+                                </p>
+                            </section>
+                            <section id="condition-symptoms">
+                                <h2>What are the symptoms of acne?</h2>
+                                <p>
+                                    Acne may appear on the face, forehead, chest, upper back, or shoulders.
+
+                                    The symptoms and severity of acne vary from person to person but may include:
+
+                                    Whiteheads
+                                    Blackheads
+                                    Papules (small, red, tender bumps)
+                                    Pimples (papules with pus at their tips)
+                                    Nodules (large solid painful lumps beneath the skin surface)
+                                    Cystic lesions (painful pus-filled lumps beneath the skin’s surface)
+                                </p>
+                            </section>
+                            <section id="condition-diagnosed">
+                                <h2>How is acne diagnosed?</h2>
+                                <p>
+                                    If your acne makes you shy or embarrassed, if you have a lot of acne, cysts or
+                                    nodules on your face or back, or if over-the-counter products do not seem to work,
+                                    see your doctor or a dermatologist as soon as you can. They can prescribe stronger
+                                    topical or oral treatments that are much more effective than the products you can
+                                    buy at a drug store.
+
+                                    Your doctor will look at your skin and ask about the history of your acne. It is a
+                                    myth that you have to let acne run its course. Treatment helps prevent dark spots
+                                    and permanent scars from forming as the acne clears.
+                                </p>
+                            </section>
+                            <section id="condition-treated">
+                                <h2>How is acne treated?</h2>
+                                <p>
+                                    The most important thing you can do to reduce the chance of breakouts is to take
+                                    good care of your skin.
+
+                                    This doesn't mean scrubbing it raw several times a day with soap. It means gently
+                                    cleansing it with a mild soap-free wash twice a day, every day. If you play a lot of
+                                    sport or work in a greasy or humid environment, cleanse your skin as soon as you
+                                    finish training or right after work.
+
+                                    Be gentle. Aim to cleanse away excess sebum and dead skin cells so they don't clog
+                                    up your pores. Try not to irritate your skin even further. Look for a cleanser that
+                                    is soap-free and does not contain any harsh detergents such as sodium lauryl or
+                                    laureth sulfates, which can cause redness, irritation, and inflammation. Avoid
+                                    pore-clogging ingredients as well, such as algae extract, carrageenan, lanolin,
+                                    myristyl myristate, octyl palmitate, octyl stearate-5, and oleth-3.
+                                </p>
+                            </section>
+                            <section id="condition-prevent">
+                                <h2>How can I prevent acne?</h2>
+                                <p>Gently wash your face twice a day and after sweating.
+                                    Shampoo your hair regularly.
+                                    Do not pick or squeeze your acne; this increases the risk of scars.
+                                    Keep your hands off your face. Wash your hands before applying make-up.
+                                    Be careful what you put on your face, and avoid ingredients that promote acne.
+                                    Stay out of the sun and off tanning beds; excess tanning can damage your skin.
+                                    See a dermatologist if you feel embarrassed about your acne or if over-the-counter
+                                    products don't work.
+                                </p>
+                            </section>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="container-fluid recent-news-post latest-post-section pb-4 overflow-hidden">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h3 class="latest-story-heading">Read This Next</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-lg-9">
+                    <div class="post-content" data-aos="flip-down" data-aos-duration="1500">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <a class="post-img" href="#"><img src="image/recent-news-1.jpg" alt="" /></a>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="inner-content clearfix">
+                                    <h3><a href='#'>Lorem ipsum dolor sit amet, consectetur adipiscing elit</a></h3>
+
+                                    <p class="description">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Non ex voluptatibus
+                                        quam nesciunt, nisi,
+                                        quo,
+                                        laborum ratione totam vel dolorem iusto sit facere illo qui expedita vitae
+                                        corporis sequi! Eius?.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post-content" data-aos="flip-down" data-aos-duration="1500">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <a class="post-img" href="#"><img src="image/recent-news-2.jpg" alt="" /></a>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="inner-content clearfix">
+                                    <h3><a href='#'>Lorem ipsum dolor sit amet, consectetur adipiscing elit</a></h3>
+
+                                    <p class="description">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Non ex voluptatibus
+                                        quam nesciunt, nisi,
+                                        quo,
+                                        laborum ratione totam vel dolorem iusto sit facere illo qui expedita vitae
+                                        corporis sequi! Eius?.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post-content" data-aos="flip-down" data-aos-duration="1500">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <a class="post-img" href="#"><img src="image/recent-news-3.jpg" alt="" /></a>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="inner-content clearfix">
+                                    <h3><a href='#'>Lorem ipsum dolor sit amet, consectetur adipiscing elit</a></h3>
+
+                                    <p class="description">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Non ex voluptatibus
+                                        quam nesciunt, nisi,
+                                        quo,
+                                        laborum ratione totam vel dolorem iusto sit facere illo qui expedita vitae
+                                        corporis sequi! Eius?.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container-fluid bg-white">
+        <div class="row">
+            <div class="col-12">
+                <div class="more-article-button">
+                    <a href="#" class="btn">Read More Article</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- ================ Footer Section =================-->
+    <footer class="container-fluid footer-section">
+        <div class="container-xl">
+            <div class="row">
+                <div class="col-xl-3 text-center">
+                    <a href="index.html">
+                        <img src="image/footer-logo.png" class="footer-logo" alt="Drug.com">
+                    </a>
+                </div>
+                <div class="col-md-4 col-xl-3 footer-link">
+                    <h4>Support</h4>
+                    <a href="#">Help Center</a>
+                    <a href="#">Site Map</a>
+                    <a href="#">Contact Us</a>
+                </div>
+                <div class="col-md-4 col-xl-3 footer-link">
+                    <h4>About</h4>
+                    <a href="#">About Drugs.com</a>
+                    <a href="#">Advertising Policy</a>
+                    <a href="#">Attribution & Citations</a>
+                </div>
+                <div class="col-md-4 col-xl-3 footer-link">
+                    <h4>TERMS & PRIVACY</h4>
+                    <a href="#">Editorial Policy</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Use</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 text-center">
+                    <div class="footer-icon">
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#"><i class="fa-solid fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="row">
+                    <p class="text-center">Copyright © 2000-2023 Drugs.com. All rights reserved.</p>
+                </div>
+            </div>
+    </footer>
+
+    <!-- ================ Side Nav Bar Section =================-->
+    <div class="side-nav-bar d-none">
+        <img src="image/logo.png" alt="Drugs.com">
+        <ul>
+            <li><a href="#">Drugs A-Z</a></li>
+            <li><a href="#">Pill Identifier</a></li>
+            <li><a href="#">Drugs News</a></li>
+            <li><a href="#">Pro Edition</a></li>
+        </ul>
+        <i class="fa-regular fa-rectangle-xmark close-side-bar"></i>
+    </div>
+
+
+    <!-- ================ Bootstrap CDN =================-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <!-- ================ JQuery CDN =================-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- ================ Slick Slider CDN=================-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+        integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- ================ Animation js=================-->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <script type="text/javascript">
+
+        document.getElementsByClassName("wrapper")[0].addEventListener("click", function () {
+            document.getElementsByClassName("side-nav-bar")[0].classList.toggle("d-none");
+            this.classList.toggle("d-none");
+        });
+
+        document.getElementsByClassName("nav-toggle-block-2")[0].addEventListener("click", function () {
+            document.getElementsByClassName("side-nav-bar")[0].classList.toggle("d-none");
+            document.getElementsByClassName("wrapper")[0].classList.toggle("d-none");
+        });
+
+        document.getElementsByClassName("close-side-bar")[0].addEventListener("click", function () {
+            document.getElementsByClassName("side-nav-bar")[0].classList.toggle("d-none");
+            document.getElementsByClassName("wrapper")[0].classList.toggle("d-none");
+        });
+
+        document.getElementsByClassName("searbar-sm-close")[0].addEventListener("click", function () {
+            document.getElementsByClassName("search-bar-input")[0].classList.toggle("d-none");
+        });
+        document.getElementsByClassName("search-bar-sm")[0].addEventListener("click", function () {
+            document.getElementsByClassName("search-bar-input")[0].classList.toggle("d-none");
+        });
+
+    </script>
+</body>
+
+</html>

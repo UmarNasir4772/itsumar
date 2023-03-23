@@ -1,11 +1,11 @@
 /*               Set Typing                    */
 
-var typed = new Typed(".typing", {
-    strings:["","Web Designer","web Developer","Freelancer"],
-    typeSpeed: 100,
-    BackSpeed: 50,
-    loop: true
-})
+    var typed = new Typed(".typing", {
+        strings:["","Web Designer","Web Developer","Freelancer","Application Developer"],
+        typeSpeed: 100,
+        BackSpeed: 50,
+        loop: true
+    })
 
     var typed = new Typed(".S_typing", {
     strings:["","Web Designer","Web Developer","Freelancer","Application Developer"],
@@ -13,7 +13,6 @@ var typed = new Typed(".typing", {
     BackSpeed: 50,
     loop: true
     })
-
 /*               Nav link Color                    */
 
 const nav = document.querySelector(".nav"),

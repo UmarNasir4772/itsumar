@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drug.com</title>
+
+    <!-- ================ Animation Css =================-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- ================ Font Awesome =================-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- ================ Slick Slider CSS =================-->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"
+        integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"
+        integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- ================ Bootstrap =================-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
+
+    <!-- ================ CSS File =================-->
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body id="drug-info-page" data-spy="scroll" data-target=".side-bar-link" data-offset="60">
+    <!-- ================ Wrapper =================-->
+    <div class="wrapper container-fluid d-none"></div>
+
+    <!-- ================ Header-2 =================-->
+
+    <div class="header-main-2 container-fluid overflow-hidden">
+        <div class="container-xl">
+            <div class="row header-2-top">
+                <div class="col-3 h-2-l">
+                    <div class="header-2-logo">
+                        <a href="index.html">
+                            <img src="image/logo-bg-white.png" alt="Drug.com" />
+                        </a>
+                    </div>
+                </div>
+                <div class="col-7 col-sm-8 align-self-center">
+                    <div class="input-group">
+                        <input type="search" class="form-control" placeholder="Search" aria-label="Search"
+                            aria-describedby="search-addon" />
+                        <button type="button" class="btn">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </div>
+                    <div class="search-below-section">
+                        <p>
+                            Browse All medications: <a href="searchbyletter.html">A</a><a href="searchbyletter.html">B</a><a
+                                href="searchbyletter.html">C</a><a href="searchbyletter.html">D</a><a href="searchbyletter.html">E</a><a href="searchbyletter.html">F</a> <a href="searchbyletter.html">G</a><a
+                                href="searchbyletter.html">I</a><a href="searchbyletter.html">J</a><a href="searchbyletter.html">K</a><a href="searchbyletter.html">L</a><a href="searchbyletter.html">M</a> <a
+                                href="searchbyletter.html">N</a><a href="searchbyletter.html">O</a><a href="searchbyletter.html">P</a><a href="searchbyletter.html">Q</a><a href="searchbyletter.html">R</a><a
+                                href="searchbyletter.html">S</a> <a href="searchbyletter.html">T</a><a href="searchbyletter.html">U</a><a href="searchbyletter.html">V</a><a href="searchbyletter.html">W</a><a
+                                href="searchbyletter.html">X</a><a href="searchbyletter.html">Y</a>
+                            <a href="searchbyletter.html">Z</a>
+                        </p>
+                    </div>
+
+                    <div class="search-bar-sm text-end">
+                        <div class="search-icon">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                    </div>
+                    <div class="search-bar-input d-none">
+                        <div class="input-group">
+                            <button type="button" class="btn">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                            <input type="search" class="form-control" placeholder="Search" aria-label="Search"
+                                aria-describedby="search-addon" />
+                            <button type="button" class="btn searbar-sm-close">
+                                <i class="fa-solid fa-xmark"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2 col-sm-1 align-self-center">
+                    <div class="login-opetion position-relative align-baseline">
+                        <div class="nav-toggle-block-2">
+                            <i class="fa-solid fa-bars"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row header-2-bottom">
+                <div class="col-12">
+                    <nav class="navbar navbar-expand">
+                        <div class="container-fluid justify-content-center">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a href="drugs_inforation.html" class="nav-link">Drug A-Z</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="javascript:void(0)" class="nav-link">Pill Finder</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="healthandguide.html" class="nav-link">Health Guides</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="news.html" class="nav-link">Latest News</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================ News Section =================-->
+
+    <section class="container-fluid single-news">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-8">
+                    <h1>What are the health benefits of tea?</h1>
+                    <img src="image/single-news.webp" alt="">
+                    <p>Tea is a popular beverage consumed worldwide. Drinking tea regularly is thought to benefit your
+                        health in a number of ways and may help prevent cardiovascular disease and stroke, lower your
+                        risk of dementia and certain cancers, and even help you live longer.</p>
+                    <h2>Why does tea have health benefits?</h2>
+                    <p>Tea comes from the plant Camellia sinensis. Three common types of tea are green tea, black tea,
+                        and oolong tea. These teas differ in the way they are produced and processed. Green tea is not
+                        fermented, for example, whereas black tea is fermented and oolong is semi-fermented.<br><br>
+
+                        Tea contains a range of chemicals including polyphenols, alkaloids such as caffeine, and other
+                        compounds. The chemical composition of tea varies based on the species of plant, the season, the
+                        climate and differences in the way the tea plants are grown, harvested and processed.<br><br>
+
+                        Polyphenols are the main active chemical compounds found in tea and these are thought to provide
+                        its health benefits. Polyphenols are micronutrients found in plants and are powerful
+                        antioxidants that help to prevent and reverse cell damage. They help protect your body against
+                        oxidative stress that causes cell and tissue damage, which increases your risk of developing
+                        chronic diseases. Tea also has anti-inflammatory properties.<br><br>
+
+                        Polyphenols include flavonols, theaflavins, catechins and more. The total amount of polyphenolic
+                        compounds in green and black tea is similar, but the type of compounds varies. Green tea is
+                        richer in catechins (including epigallocatechin-3-gallate (EGCG), epigallocatechin,
+                        epicatechin-3-gallate and epicatechin, gallocatechins and gallocatechin gallate), whereas black
+                        tea contains thearubigins, theaflavins, flavonols and catechins.</p>
+                    <h2>Which health conditions does tea drinking help?</h2>
+                    <h3>Tea may lower your risk of dementia</h3>
+                    <p>Drinking a moderate amount of tea significantly reduces your risk of dementia, including
+                        Alzheimer’s disease and vascular dementia, according to the results of a large study that
+                        followed 377, 592 people for about 9 years.<br><br>
+
+                        Participants who drank 1 to 4 cups of tea a day were 16 to 19 percent less likely to develop
+                        Alzheimer’s disease. Vascular dementia was also reduced by 25 to 29 percent in participants who
+                        drank 1 to 6 cups of tea a day. Drinking more tea, however, was not associated with any
+                        additional benefit.<br><br>
+
+                        Drinking three cups of tea a day was found to provide the strongest protection against dementia.
+                        Middle-aged participants and men appeared to benefit the most.</p>
+                    <h3>Tea may help you live longer</h3>
+                    <p>Drinking 2 or more cups of tea a day resulted in a modest decrease in the risk of dying among
+                        nearly 500,000 participants in a study who were followed-up for a median of 11.2 years after
+                        completing a questionnaire about their tea intake. The study looked at death from all causes,
+                        including cancer, cardiovascular disease, ischemic heart disease, stroke and respiratory
+                        disease.<br><br>
+
+                        The researchers commented that the results suggest tea can be part of a healthy diet, even when
+                        quite a lot is consumed.</p>
+                    <h3>Tea may keep your heart healthy</h3>
+                    <p>People who drank 1 to 3 cups of green tea a day were found to have a reduced risk of heart attack
+                        and stroke compared with people who drank less than a cup of green tea a day, when researchers
+                        looked at the results from 9 studies involving nearly 260,000 participants.<br><br>
+
+                        Various studies have also shown that the polyphenolic compounds in tea may help prevent
+                        atherosclerosis, the build-up of plaque in your arteries, and reduce ‘bad’ low-density
+                        lipoprotein (LDL) cholesterol. Tea may also help slow the natural decrease of ‘good’
+                        high-density lipoprotein (HDL) cholesterol that happens as you get older. Regular long-term
+                        consumption of black tea may even lower your blood pressure, helping to keep your heart healthy.
+                    </p>
+                    <h3>Tea may reduce your risk of certain cancers</h3>
+                    <p>Although results from studies have been inconclusive, drinking tea, especially green tea, may
+                        also help prevent or slow the growth of cancer. It’s not known exactly how tea helps, but it may
+                        be due to its antioxidant properties.<br><br>
+
+                        Some studies have linked tea drinking to a reduction in the risk of certain cancer including
+                        colon, lung, prostate, ovary, breast and other cancers.<br><br>
+
+                        An analysis of several studies conducted in participants with breast cancer indicated that
+                        drinking three or more cups of green tea a day may lower the recurrence of breast cancer,
+                        particularly in women that have stage I or II breast cancer.<br><br>
+
+                        A high intake of green tea (> 10 cups/day) was also associated with a lower risk of colon,
+                        liver, and lung cancers.<br><br>
+
+                        The benefits of black tea on cancer have not been studied as extensively as green tea. However,
+                        a small study found that people consuming hot black tea with citrus peel had a significant
+                        reduction in squamous cell carcinoma of the skin, a type of skin cancer.<br><br>
+
+                        Black tea may also help reduce the risk of colon cancer and may provide a protective effect
+                        against lung cancer in non-smoking women.</p>
+                    <h3>Tea may lower your risk of diabetes</h3>
+                    <p>Tea may also help prevent diabetes mellitus and complications such as diabetic retinopathy and
+                        diabetic nephropathy. The antidiabetic properties of tea are attributed to the theaflavins,
+                        catechins, polysaccharides and caffeine it contains.<br><br>
+
+                        Tea may help to lower your risk of diabetes in a number of ways, such as by inhibiting
+                        inflammation, promoting the production and secretion of insulin, and improving insulin
+                        resistance and sensitivity.<br><br>
+
+                        According to the combined results of 17 trials involving 1133 participants, green tea lowers
+                        fasting glucose levels and hemoglobin A1c (Hb A1c) concentrations. Hb A1c is measured to assess
+                        how well diabetes is being controlled over time.<br><br>
+
+                        The Women's Health Study, which included 39,876 women aged 45 years and older, found that women
+                        who drank 4 or more cups of green tea per day had a 30 percent lower risk of type 2 diabetes
+                        than women who did not drink tea.</p>
+                    <h3>Tea may help lower your risk of rheumatoid arthritis</h3>
+                    <p>Consuming 3 or more cups of tea per day may help prevent the onset of rheumatoid arthritis,
+                        according to the results of a study involving 31,336 women. Rheumatoid arthritis is an
+                        autoimmune disease that causes joints to become inflamed and the surrounding cartilage and bone
+                        to be worn away. The disease affects more women than men.<br><br>
+
+                        Tea also appears to help increase bone mineral density in older women. Low bone density can
+                        cause people with rheumatoid arthritis and others to be more at risk of fractures and
+                        osteoporosis, a condition that weakens bone.<br><br>
+
+                        The anti-inflammatory properties of tea may help reduce the inflammation associated with
+                        rheumatoid arthritis.</p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ================ Footer Section =================-->
+    <footer class="container-fluid footer-section">
+        <div class="container-xl">
+            <div class="row">
+                <div class="col-xl-3 text-center">
+                    <a href="index.html">
+                        <img src="image/footer-logo.png" class="footer-logo" alt="Drug.com">
+                    </a>
+                </div>
+                <div class="col-md-4 col-xl-3 footer-link">
+                    <h4>Support</h4>
+                    <a href="javascript:void(0)">Help Center</a>
+                    <a href="javascript:void(0)">Site Map</a>
+                    <a href="javascript:void(0)">Contact Us</a>
+                </div>
+                <div class="col-md-4 col-xl-3 footer-link">
+                    <h4>About</h4>
+                    <a href="javascript:void(0)">About Drugs.com</a>
+                    <a href="javascript:void(0)">Advertising Policy</a>
+                    <a href="javascript:void(0)">Attribution & Citations</a>
+                </div>
+                <div class="col-md-4 col-xl-3 footer-link">
+                    <h4>TERMS & PRIVACY</h4>
+                    <a href="javascript:void(0)">Editorial Policy</a>
+                    <a href="javascript:void(0)">Privacy Policy</a>
+                    <a href="javascript:void(0)">Terms of Use</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 text-center">
+                    <div class="footer-icon">
+                        <a href="javascript:void(0)"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="javascript:void(0)"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="javascript:void(0)"><i class="fa-brands fa-pinterest"></i></a>
+                        <a href="javascript:void(0)"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="javascript:void(0)"><i class="fa-solid fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="row">
+                    <p class="text-center">Copyright © 2000-2023 Drugs.com. All rights reserved.</p>
+                </div>
+            </div>
+    </footer>
+
+    <!-- ================ Side Nav Bar Section =================-->
+    <div class="side-nav-bar d-none">
+        <img src="image/logo.png" alt="Drugs.com">
+        <ul>
+            <li><a href="drugs_inforation.html">Drugs A-Z</a></li>
+            <li><a href="javascript:void(0)">Pill Identifier</a></li>
+            <li><a href="news.html">Drugs News</a></li>
+            <li><a href="healthandguide.html">Health Guides</a></li>
+        </ul>
+        <i class="fa-regular fa-rectangle-xmark close-side-bar"></i>
+    </div>
+
+
+    <!-- ================ Bootstrap CDN =================-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <!-- ================ JQuery CDN =================-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- ================ Slick Slider CDN=================-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+        integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- ================ Animation js=================-->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <script type="text/javascript">
+        AOS.init();
+
+        document.getElementsByClassName("wrapper")[0].addEventListener("click", function () {
+            document.getElementsByClassName("side-nav-bar")[0].classList.toggle("d-none");
+            this.classList.toggle("d-none");
+        });
+
+        document.getElementsByClassName("nav-toggle-block-2")[0].addEventListener("click", function () {
+            document.getElementsByClassName("side-nav-bar")[0].classList.toggle("d-none");
+            document.getElementsByClassName("wrapper")[0].classList.toggle("d-none");
+        });
+
+        document.getElementsByClassName("close-side-bar")[0].addEventListener("click", function () {
+            document.getElementsByClassName("side-nav-bar")[0].classList.toggle("d-none");
+            document.getElementsByClassName("wrapper")[0].classList.toggle("d-none");
+        });
+
+        document.getElementsByClassName("searbar-sm-close")[0].addEventListener("click", function () {
+            document.getElementsByClassName("search-bar-input")[0].classList.toggle("d-none");
+        });
+        document.getElementsByClassName("search-bar-sm")[0].addEventListener("click", function () {
+            document.getElementsByClassName("search-bar-input")[0].classList.toggle("d-none");
+        });
+
+    </script>
+</body>
+
+</html>

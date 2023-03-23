@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Drug.com</title>
+
+  <!-- ================ Animation Css =================-->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <!-- ================ Font Awesome =================-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- ================ Slick Slider CSS =================-->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"
+    integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"
+    integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- ================ Bootstrap =================-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
+
+  <!-- ================ CSS File =================-->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <!-- ================ Wrapper =================-->
+  <div class="wrapper container-fluid d-none"></div>
+
+
+  <!-- ================ Header =================-->
+
+  <div class="header-main overflow-hidden">
+    <div class="container-fluid">
+      <div class="row header-top">
+        <div class=" col-5 col-md-3">
+          <div class="header-logo">
+            <a href="index.html">
+              <img src="image/logo.png" alt="Drug.com" />
+            </a>
+          </div>
+        </div>
+        <div class="col-3 col-md-7">
+          <nav class="navbar justify-content-center">
+
+            <div class="navbar-nav">
+              <a href="drugs_inforation.html">Drug A-Z</a>
+              <a href="#">Pill Finder</a>
+              <a href="healthandguide.html">Health
+                Guides</a>
+              <a href="news.html">Latest News</a>
+            </div>
+
+          </nav>
+        </div>
+        <div class="col-4 col-md-2">
+          <div class="login-opetion position-relative">
+            <div class="nav-toggle-block">
+              <i class="fa-solid fa-bars"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header-bottom">
+        <div class="row">
+          <div class="col-12">
+            <h1>Find Drugs & Conditions</h1>
+          </div>
+          <div class="col-12">
+            <div class="input-group">
+              <input type="search" class="form-control rounded"
+                placeholder="Enter a drug name, condition, pill imprint, etc." aria-label="Search"
+                aria-describedby="search-addon" />
+              <button type="button" class="btn">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================ Hero Banner =================-->
+
+  <section class="hero-banner overflow-hidden m-0 p-0">
+    <div class="container-fluid overflow-hidden m-0 p-0">
+      <div class="row overflow-hidden m-0 p-0">
+        <div class="col-12 home-hero-banner m-0 p-0 overflow-hidden">
+          <div class="card">
+            <!-- <img src="image/main-banner-1.jpg" class="card-img" alt="Banner Image"> -->
+            <div class="card-img" style="background-image: url(image/main-banner-1.jpg);"></div>
+            <div class="card-img-overlay">
+              <h4 class="card-title">We GIVE YOU</h4>
+              <h1>Real Information <span>Better Living</span></h1>
+              <p class="card-text">To find out more about the more information about our company simply click the link
+                below.</p>
+              <a href="#" class="btn">About Us</a>
+            </div>
+          </div>
+          <div class="card theme-2-banner">
+            <div class="card-img" style="background-image: url(image/main-banner-2.jpg);"></div>
+            <div class="card-img-overlay">
+              <h4 class="card-title">WE PROVIDE YOU</h4>
+              <h1>24,000+ Drugs<span>Information</span></h1>
+              <p class="card-text">To find out more about the more information about our company simply click the link
+                below.</p>
+              <a href="drugs_inforation.html" class="btn">Drugs Information</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-img" style="background-image: url(image/main-banner-4.jpg);"></div>
+            <div class="card-img-overlay">
+              <h4 class="card-title">WE PROVIDE YOU</h4>
+              <h1>Updated News <span>Related Drugs & Diseases</span></h1>
+              <p class="card-text">To find out more about the more information about Drugs & Diseases simply click the
+                link
+                below.</p>
+              <a href="drugs_inforation.html" class="btn">Drugs A-Z</a>
+            </div>
+          </div>
+          <div class="card theme-2-banner">
+            <div class="card-img" style="background-image: url(image/main-banner-3.jpg);"></div>
+            <div class="card-img-overlay">
+              <h4 class="card-title">How Can We Help?</h4>
+              <h1>Need something?<span>The Drugs.com is here to help!</span></h1>
+              <p class="card-text">Please select a topic below related to your inquiry. If you don’t find what you need,
+                simply click the link
+                below.</p>
+              <a href="#" class="btn">Contact Us</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================ Drugs Search Tab =================-->
+
+  <section class="search-tab-section overflow-hidden">
+    <div class="container drugs-search-tabs">
+      <div class="row" data-aos="fade-up" data-aos-duration="2000">
+        <div class="col-12 col-md-6">
+          <div class="tab">
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs mb-lg-3" id="ex1" role="tablist">
+              <li class="nav-item" role="presentation">
+                <a class="nav-link active" id="ex1-tab-1" data-bs-toggle="tab" href="#ex1-tabs-1" role="tab"
+                  aria-controls="ex1-tabs-1" aria-selected="true">Browse Drugs</a>
+              </li>
+              <li class="nav-item" role="presentation">
+                <a class="nav-link" id="ex1-tab-2" data-bs-toggle="tab" href="#ex1-tabs-2" role="tab"
+                  aria-controls="ex1-tabs-2" aria-selected="false">Browse Diseases</a>
+              </li>
+            </ul>
+            <!-- Tab panes -->
+            <div class="tab-content tabs" id="ex1-content">
+              <div class="tab-pane fade show active" id="ex1-tabs-1" role="tabpanel" aria-labelledby="ex1-tab-1">
+
+                <p><a href="drugs_inforation.html">A</a><a href="drugs_inforation.html">B</a><a href="drugs_inforation.html">C</a><a href="drugs_inforation.html">D</a><a href="drugs_inforation.html">E</a><a
+                    href="drugs_inforation.html">F</a>
+                  <a href="drugs_inforation.html">G</a><a href="drugs_inforation.html">I</a><a href="drugs_inforation.html">J</a><a href="drugs_inforation.html">K</a><a href="drugs_inforation.html">L</a><a href="drugs_inforation.html">M</a>
+                  <a href="drugs_inforation.html">N</a><a href="drugs_inforation.html">O</a><a href="drugs_inforation.html">P</a><a href="drugs_inforation.html">Q</a><a href="drugs_inforation.html">R</a><a href="drugs_inforation.html">S</a>
+                  <a href="drugs_inforation.html">T</a><a href="drugs_inforation.html">U</a><a href="drugs_inforation.html">V</a><a href="drugs_inforation.html">W</a><a href="drugs_inforation.html">X</a><a href="drugs_inforation.html">Y</a>
+                  <a href="drugs_inforation.html">Z</a>
+                </p>
+
+              </div>
+              <div class="tab-pane fade" id="ex1-tabs-2" role="tabpanel" aria-labelledby="ex1-tab-2">
+
+                <p><a href="conditionAtoZ.html">A</a><a href="conditionAtoZ.html">B</a><a href="conditionAtoZ.html">C</a><a href="conditionAtoZ.html">D</a><a href="conditionAtoZ.html">E</a><a
+                    href="conditionAtoZ.html">F</a>
+                  <a href="conditionAtoZ.html">G</a><a href="conditionAtoZ.html">I</a><a href="conditionAtoZ.html">J</a><a href="conditionAtoZ.html">K</a><a href="conditionAtoZ.html">L</a><a href="conditionAtoZ.html">M</a>
+                  <a href="conditionAtoZ.html">N</a><a href="conditionAtoZ.html">O</a><a href="conditionAtoZ.html">P</a><a href="conditionAtoZ.html">Q</a><a href="conditionAtoZ.html">R</a><a href="conditionAtoZ.html">S</a>
+                  <a href="conditionAtoZ.html">T</a><a href="conditionAtoZ.html">U</a><a href="conditionAtoZ.html">V</a><a href="conditionAtoZ.html">W</a><a href="conditionAtoZ.html">X</a><a href="conditionAtoZ.html">Y</a>
+                  <a href="conditionAtoZ.html">Z</a>
+                </p>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6">
+          <div class="tab">
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs mb-lg-3" id="ex1" role="tablist">
+              <li class="nav-item" role="presentation">
+                <a class="nav-link active" id="ex2-tab-1" data-bs-toggle="tab" href="#ex2-tabs-1" role="tab"
+                  aria-controls="ex2-tabs-1" aria-selected="true">Browse by Site Section</a>
+              </li>
+            </ul>
+            <!-- Tab panes -->
+            <div class="tab-content tabs" id="ex2-content">
+              <div class="tab-pane fade show active" id="ex1-tabs-1" role="tablist" aria-labelledby="ex2-tab-1">
+
+                <div class="row">
+                  <div class="col-md-6 Browse-SS">
+                    <a href="drugs_inforation.html">Drugs A-Z</a>
+                    <a href="conditionAtoZ.html">Dosage Guidelines</a>
+                  </div>
+                  <div class="col-md-6 Browse-SS">
+                    <a href="conditionAtoZ.html">Health Guides</a>
+                    <a href="news.html">Medical News</a>
+                  </div>
+                </div class="row">
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+  <!-- ================ News Post =================-->
+
+  <section class="news-post-section overflow-hidden">
+    <div class="container">
+      <div class="row" data-aos="fade-left" data-aos-duration="2000">
+        <div class="col-12 col-md-4">
+          <a class="card" href="singlenews.html">
+            <div class="card-image" style="background-image: url(image/tile-banner-fda.jpg);">
+            </div>
+            <div class="card-content">
+              <span class="card-title text-danger">FDA Medwatch Alerts</span>
+              <h2 class="card-heading">GFA Production (Xiamen) Co., Ltd. Issues Voluntary Nationwide Recall of Easy
+                Care First Aid® Burn Cream and First Aid Kits Due to Microbial Contamination</h2>
+            </div>
+          </a>
+        </div>
+        <div class="col-12 col-md-4">
+          <a class="card" href="singlenews.html">
+            <div class="card-image" style="background-image: url(image/tile-banner-new-drugs.jpg);"></div>
+            <div class="card-content">
+              <span class="card-title">Medical News</span>
+              <h2 class="card-heading">FDA Says Retail Pharmacies Can Now Offer Abortion Pills</h2>
+            </div>
+          </a>
+        </div>
+        <div class="col-12 col-md-4">
+          <a class="card" href="singlenews.html">
+            <div class="card-image" style="background-image: url(image/post-4.webp);"></div>
+            <div class="card-content">
+              <span class="card-title">New Drug Approvals</span>
+              <h2 class="card-heading">FDA Approves Briumvi (ublituximab-xiiy) for the Treatment of Relapsing Forms of
+                Multiple Sclerosis</h2>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================ Recent News link Section =================-->
+  <section class="container-fluid recent-news-post overflow-hidden">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-lg-6" data-aos="slide-right" data-aos-duration="1500">
+          <div class="post-content">
+            <div class="row sigle-recent-news-post p-0">
+              <div class="col-12">
+                <a class="post-img text-center" href="singlenews.html"><img src="image/recent-news-4.jpg" alt="" /></a>
+              </div>
+              <div class="col-12">
+                <div class="inner-content clearfix">
+                  <h3><a href="singlenews.html">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a></h3>
+
+                  <p class="description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Non ex voluptatibus quam nesciunt, nisi,
+                    quo,
+                    laborum ratione totam vel dolorem iusto sit facere illo qui expedita vitae corporis sequi! Eius?.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-lg-6" data-aos="slide-left" data-aos-duration="1500">
+          <div class="post-content">
+            <div class="row">
+              <div class="col-md-4">
+                <a class="post-img" href="singlenews.html"><img src="image/recent-news-1.jpg" alt="" /></a>
+              </div>
+              <div class="col-md-8">
+                <div class="inner-content clearfix">
+                  <h3><a href="singlenews.html">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a></h3>
+
+                  <p class="description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Non ex voluptatibus quam nesciunt, nisi,
+                    quo,
+                    laborum ratione totam vel dolorem iusto sit facere illo qui expedita vitae corporis sequi! Eius?.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="post-content">
+            <div class="row">
+              <div class="col-md-4">
+                <a class="post-img" href="singlenews.html"><img src="image/recent-news-2.jpg" alt="" /></a>
+              </div>
+              <div class="col-md-8">
+                <div class="inner-content clearfix">
+                  <h3><a href="singlenews.html">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a></h3>
+
+                  <p class="description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Non ex voluptatibus quam nesciunt, nisi,
+                    quo,
+                    laborum ratione totam vel dolorem iusto sit facere illo qui expedita vitae corporis sequi! Eius?.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="post-content">
+            <div class="row">
+              <div class="col-md-4">
+                <a class="post-img" href="singlenews.html"><img src="image/recent-news-3.jpg" alt="" /></a>
+              </div>
+              <div class="col-md-8">
+                <div class="inner-content clearfix">
+                  <h3><a href="singlenews.html">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a></h3>
+
+                  <p class="description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Non ex voluptatibus quam nesciunt, nisi,
+                    quo,
+                    laborum ratione totam vel dolorem iusto sit facere illo qui expedita vitae corporis sequi! Eius?.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================ Latest Story Section =================-->
+  <section class="container-fluid recent-news-post latest-post-section overflow-hidden">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h3 class="latest-story-heading">Lastest Story</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12 col-lg-9">
+          <div class="post-content" data-aos="flip-down" data-aos-duration="2000">
+            <div class="row">
+              <div class="col-md-4">
+                <a class="post-img" href="singlenews.html"><img src="image/recent-news-1.jpg" alt="" /></a>
+              </div>
+              <div class="col-md-8">
+                <div class="inner-content clearfix">
+                  <h3><a href="singlenews.html">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a></h3>
+
+                  <p class="description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Non ex voluptatibus quam nesciunt, nisi,
+                    quo,
+                    laborum ratione totam vel dolorem iusto sit facere illo qui expedita vitae corporis sequi! Eius?.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="post-content" data-aos="flip-down" data-aos-duration="2000">
+            <div class="row">
+              <div class="col-md-4">
+                <a class="post-img" href="singlenews.html"><img src="image/recent-news-2.jpg" alt="" /></a>
+              </div>
+              <div class="col-md-8">
+                <div class="inner-content clearfix">
+                  <h3><a href="singlenews.html">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a></h3>
+
+                  <p class="description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Non ex voluptatibus quam nesciunt, nisi,
+                    quo,
+                    laborum ratione totam vel dolorem iusto sit facere illo qui expedita vitae corporis sequi! Eius?.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="post-content" data-aos="flip-down" data-aos-duration="2000">
+            <div class="row">
+              <div class="col-md-4">
+                <a class="post-img" href="singlenews.html"><img src="image/recent-news-3.jpg" alt="" /></a>
+              </div>
+              <div class="col-md-8">
+                <div class="inner-content clearfix">
+                  <h3><a href="singlenews.html">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a></h3>
+
+                  <p class="description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Non ex voluptatibus quam nesciunt, nisi,
+                    quo,
+                    laborum ratione totam vel dolorem iusto sit facere illo qui expedita vitae corporis sequi! Eius?.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="post-content" data-aos="flip-down" data-aos-duration="2000">
+            <div class="row">
+              <div class="col-md-4">
+                <a class="post-img" href="singlenews.html"><img src="image/recent-news-1.jpg" alt="" /></a>
+              </div>
+              <div class="col-md-8">
+                <div class="inner-content clearfix">
+                  <h3><a href="singlenews.html">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a></h3>
+
+                  <p class="description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Non ex voluptatibus quam nesciunt, nisi,
+                    quo,
+                    laborum ratione totam vel dolorem iusto sit facere illo qui expedita vitae corporis sequi! Eius?.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="post-content" data-aos="flip-down" data-aos-duration="2000">
+            <div class="row">
+              <div class="col-md-4">
+                <a class="post-img" href="singlenews.html"><img src="image/recent-news-2.jpg" alt="" /></a>
+              </div>
+              <div class="col-md-8">
+                <div class="inner-content clearfix">
+                  <h3><a href="singlenews.html">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a></h3>
+
+                  <p class="description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Non ex voluptatibus quam nesciunt, nisi,
+                    quo,
+                    laborum ratione totam vel dolorem iusto sit facere illo qui expedita vitae corporis sequi! Eius?.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="post-content" data-aos="flip-down" data-aos-duration="2000">
+            <div class="row">
+              <div class="col-md-4">
+                <a class="post-img" href="singlenews.html"><img src="image/recent-news-3.jpg" alt="" /></a>
+              </div>
+              <div class="col-md-8">
+                <div class="inner-content clearfix">
+                  <h3><a href="singlenews.html">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a></h3>
+
+                  <p class="description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Non ex voluptatibus quam nesciunt, nisi,
+                    quo,
+                    laborum ratione totam vel dolorem iusto sit facere illo qui expedita vitae corporis sequi! Eius?.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ================ News Post =================-->
+
+  <section class="news-post-section disease-info-section overflow-hidden">
+    <div class="container">
+      <div class="row">
+        <h3>
+          FEATURED HEALTH GUIDES
+        </h3>
+        <p>
+          Browse our list of detailed information guides that group together a variety of articles for frequently
+          diagnosed conditions.
+        </p>
+      </div>
+      <div class="row" data-aos="fade-right" data-aos-duration="1500">
+        <div class="col-md-6 col-lg-3">
+          <a class="card" href="conditionpost.html">
+            <div class="card-image" style="background-image: url(image/diseases-pic-1.jpg);">
+            </div>
+            <div class="card-content">
+              <h2 class="card-heading">Allergies</h2>
+              <p>Allergies are an overreaction by your immune system to a substance or food that is not considered
+                harmful to most other people. Substances that cause allergies are called allergens or “triggers”.</p>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <a class="card" href="conditionpost.html">
+            <div class="card-image" style="background-image: url(image/diseases-pic-2.jpg);">
+            </div>
+            <div class="card-content">
+              <h2 class="card-heading">Asthma</h2>
+              <p>Allergies are an overreaction by your immune system to a substance or food that is not considered
+                harmful to most other people. Substances that cause allergies are called allergens or “triggers”.</p>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <a class="card" href="conditionpost.html">
+            <div class="card-image" style="background-image: url(image/diseases-pic-3.jpg);">
+            </div>
+            <div class="card-content">
+              <h2 class="card-heading">COVID-19</h2>
+              <p>Allergies are an overreaction by your immune system to a substance or food that is not considered
+                harmful to most other people. Substances that cause allergies are called allergens or “triggers”.</p>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <a class="card" href="conditionpost.html">
+            <div class="card-image" style="background-image: url(image/diseases-pic-4.jpg);">
+            </div>
+            <div class="card-content">
+              <h2 class="card-heading">Diabetes</h2>
+              <p>Allergies are an overreaction by your immune system to a substance or food that is not considered
+                harmful to most other people. Substances that cause allergies are called allergens or “triggers”.</p>
+            </div>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================ Footer Section =================-->
+  <footer class="container-fluid footer-section">
+    <div class="container-xl">
+      <div class="row">
+        <div class="col-xl-3 text-center">
+          <a href="index.html">
+            <img src="image/footer-logo.png" class="footer-logo" alt="Drug.com">
+          </a>
+        </div>
+        <div class="col-md-4 col-xl-3 footer-link">
+          <h4>Support</h4>
+          <a href="#">Help Center</a>
+          <a href="#">Site Map</a>
+          <a href="#">Contact Us</a>
+        </div>
+        <div class="col-md-4 col-xl-3 footer-link">
+          <h4>About</h4>
+          <a href="#">About Drugs.com</a>
+          <a href="#">Advertising Policy</a>
+          <a href="#">Attribution & Citations</a>
+        </div>
+        <div class="col-md-4 col-xl-3 footer-link">
+          <h4>TERMS & PRIVACY</h4>
+          <a href="#">Editorial Policy</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 text-center">
+          <div class="footer-icon">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#"><i class="fa-solid fa-envelope"></i></a>
+          </div>
+        </div>
+        <div class="row">
+          <p class="text-center">Copyright © 2000-2023 Drugs.com. All rights reserved.</p>
+        </div>
+      </div>
+  </footer>
+
+  <!-- ================ Side Nav Bar Section =================-->
+  <div class="side-nav-bar d-none">
+    <img src="image/logo.png" alt="Drugs.com">
+    <ul>
+      <li><a href="#">Drugs A-Z</a></li>
+      <li><a href="#">Pill Identifier</a></li>
+      <li><a href="#">Drugs News</a></li>
+      <li><a href="#">Pro Edition</a></li>
+    </ul>
+    <i class="fa-regular fa-rectangle-xmark close-side-bar"></i>
+  </div>
+
+
+  <!-- ================ Bootstrap CDN =================-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"></script>
+  <!-- ================ JQuery CDN =================-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- ================ Slick Slider CDN=================-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+    integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- ================ Animation js=================-->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+  <script type="text/javascript">
+
+    $('.home-hero-banner').slick({
+      dots: true,
+      infinite: true,
+      speed: 600,
+      slidesToShow: 1,
+      autoplay: true,
+      arrows: false,
+      autoplaySpeed: 3000,
+
+    });
+
+    document.getElementsByClassName("wrapper")[0].addEventListener("click", function () {
+      document.getElementsByClassName("side-nav-bar")[0].classList.toggle("d-none");
+      this.classList.toggle("d-none");
+    });
+
+    document.getElementsByClassName("nav-toggle-block")[0].addEventListener("click", function () {
+      document.getElementsByClassName("side-nav-bar")[0].classList.toggle("d-none");
+      document.getElementsByClassName("wrapper")[0].classList.toggle("d-none");
+    });
+
+    document.getElementsByClassName("close-side-bar")[0].addEventListener("click", function () {
+      document.getElementsByClassName("side-nav-bar")[0].classList.toggle("d-none");
+      document.getElementsByClassName("wrapper")[0].classList.toggle("d-none");
+    });
+  </script>
+</body>
+
+</html>
