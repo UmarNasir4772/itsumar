@@ -1,0 +1,305 @@
+/* Body styling start */
+body {
+    margin-left: 15%;
+    width: 70%;
+    padding-top: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Body styling End */
+
+/* comman Styling start */
+
+h3, h4 {
+    text-transform: uppercase;
+    color: #002C42;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* comman Styling End */
+
+
+/* ----------------------------------------------------------------------------------------- */
+
+/*                                   Report Page Style                                       */
+
+/* ----------------------------------------------------------------------------------------- */
+
+/* Header Styling start */
+header {
+    top: 90px;
+    position: absolute;
+    background-color: #ffbd17;
+    padding: 40px 40px;
+    width: 30%;
+    z-index: 1;
+    text-transform: uppercase;
+}
+
+header h1.firstname {
+    color: white;
+    font-size: 1.5em;
+    margin: 0px;
+}
+
+header h1.lastname {
+    color: black;
+    font-size: 1.8em;
+    font-weight: bolder;
+    margin: 10px 0px;
+}
+
+header hr {
+    border: 2px solid white;
+}
+
+header h2 {
+    color: black;
+    font-size: 1.1em;
+    font-weight: lighter;
+    text-transform: uppercase;
+    margin: 0;
+    padding-top: 10px;
+}
+
+/* Header Styling End */
+
+
+/* Main Styling start */
+main {
+    display: flex;
+}
+
+main hr {
+    border: 1.5px solid #ffbd17;
+}
+
+main div.leftSec {
+    flex-basis: 30%;
+    background-color: #fff9eb;
+    padding-top: 250px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+main div.rightSec {
+    flex-basis: 65%;
+    background-color: white;
+}
+
+main div.gapsec {
+    flex-basis: 5%;
+}
+
+
+/* -----------------Left Section in Main--------------------- */
+
+main div.leftSec section.contact {
+    padding-bottom: 20px;
+}
+
+main div.leftSec section.contact p {
+    font-size: 0.85em;
+    letter-spacing: 0.1em;
+}
+
+
+main div.leftSec section.contact i {
+    color: #ffbd17;
+    padding-right: 15px;
+}
+
+main div.leftSec section.education article {
+    padding-bottom: 20px;
+}
+
+main div.leftSec section.education article p, h4 {
+    margin: 0px;
+    padding: 3px 0px;
+}
+
+main div.leftSec section.education article h4 {
+    color: #002C42;
+}
+
+main div.leftSec section.skill ul {
+    padding-inline-start: 20px;
+}
+
+main div.leftSec section.skill ul li {
+    line-height: 1.85em;
+}
+
+/* -----------------Right Section in Main--------------------- */
+
+main div.rightSec div.imagesec {
+    width: 100%;
+    height: 400px;
+    text-align: center;
+    background-color: #B1B2AC;
+}
+
+main div.rightSec div.imagesec img {
+    height: 100%;
+}
+
+main div.rightSec section.profilesec {
+    padding-bottom: 20px;
+}
+
+main div.rightSec section.profilesec p {
+    font-size: 0.85em;
+    line-height: 1.5em;
+}
+
+main div.rightSec section.worksec div.workflow {
+    display: grid;
+    grid-template-columns: 20% 80%;
+}
+
+main div.rightSec section.worksec div.workflow section.left {
+    border-right: 1px solid #ffbd17;
+}
+
+main div.rightSec section.worksec div.workflow section.right {
+    border-left: 1px solid #ffbd17;
+
+}
+
+main div.rightSec section.worksec div.workflow .left1, .left2, .left3 {
+    border-right: 2px solid #ffbd17;
+}
+
+main div.rightSec section.worksec div.workflow .right1, .right2, .right3 {
+    padding: 0px 40px;
+}
+
+main div.rightSec section.worksec div.workflow p {
+    margin: 8px 0px;
+}
+
+main div.rightSec section.worksec div.workflow p a {
+    text-transform: capitalize;
+    text-decoration: underline;
+}
+
+main div.rightSec section.worksec div.workflow article {
+    padding-bottom: 20px;
+}
+
+main div.rightSec section.worksec div.workflow article p.company {
+    
+    color: black;
+    text-transform: capitalize;
+}
+
+main div.rightSec section.worksec div.workflow article p.address {
+    font-size: 0.85em;
+    text-transform: capitalize;
+}
+
+main div.rightSec section.worksec div.workflow article p.address span {
+    font-weight: bold;
+}
+
+main div.rightSec section.worksec div.workflow article p.description {
+    font-size: 0.85em;
+    line-height: 1.5em;
+}
+
+/* Main Styling End */
+
+
+/* Footer Styling start */
+
+footer {
+    background-color: #ffbd17;
+    padding: 5px 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+footer div.icon {
+    width: 20%;
+    padding: 5px 12px;
+    display: inline-block;
+}
+
+footer div.icon i {
+    cursor: pointer;
+    color: white;
+}
+
+footer div.icon i:hover {
+    color: #002C42;
+}
+
+footer form.btn button {
+    background-color: #002C42;
+    color: white;
+    border: 1px solid white;
+    padding: 5px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+footer form.btn button:hover {
+    background-color: white;
+    color: #002C42;
+    border: 1px solid #002C42;
+}
+
+/* Footer Styling End */
+
+
+/* ----------------------------------------------------------------------------------------- */
+
+
+/*                                   Report Page Style                                       */
+body#body {
+    width: 80% !important;
+    margin-left: 10% !important
+}
+
+nav {
+    padding: 20px 0px;
+
+}
+
+nav a {
+    background-color: #002C42;
+    color: white;
+    border: 1px solid #ffbd17;
+    padding: 5px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #ffbd17;
+    color: #002C42;
+    border: 1px solid #002C42;
+}
+
+section.report-Header {
+    width: 100%;
+    background-color: #ffbd17;
+    text-align: center;
+}
+
+section.report-Header h1.name {
+    color: white;
+    display: inline-block;
+    font-size: 1.8em;
+    text-transform: uppercase;
+}
+
+section.report-Header h1.name span {
+    color: black;
+}
+
+section.challeng p {
+    text-align: justify;
+}
