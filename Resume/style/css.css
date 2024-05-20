@@ -1,9 +1,9 @@
 /* Body styling start */
 body {
-    margin-left: 15%;
-    width: 70%;
-    padding-top: 40px;
-    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 15% !important;
+    width: 70%  !important;
+    padding-top: 40px !important;
+    font-family: Arial, Helvetica, sans-serif !important;
 }
 
 /* Body styling End */
@@ -67,7 +67,7 @@ header h2 {
 
 /* Main Styling start */
 main {
-    display: flex;
+    display: flex !important;
 }
 
 main hr {
