@@ -170,34 +170,158 @@ header {
         display: none;
     }    
 }
-@media (max-width: 768px) {
-    
+
+@media (max-width: 576px) {
+    .navbar{
+        padding: 0;
+    }
+    .navbar-brand .h-logo {
+        width: 60px;
+    }
+
+    .nav-link {
+        margin-right: 10px;
+    }
+
+    .nav-item {
+        margin-bottom: 5px;
+    }
+
+    /* Hero Section */
     .hero h1 {
-        font-size: 2rem;
+        font-size: 1.75rem;
     }
 
     .hero p {
         font-size: 1rem;
     }
+    .hero a {
+        margin-top: 10px;
+    }
 
-    .services h4,
+    /* Services Section */
+    .services .col-md-4 {
+        margin-bottom: 1rem;
+    }
+
+    .services h4 {
+        font-size: 1.25rem;
+    }
+
+    /* Portfolio Section */
+    .portfolio img {
+        border-radius: 5px;
+        margin: 5px 0;
+    }
+
+    /* Why Choose Us Section */
+    .why-choose-us .col-md-3 {
+        margin-bottom: 1rem;
+    }
+
     .why-choose-us h4 {
         font-size: 1.25rem;
     }
 
-    .portfolio h2 {
-        font-size: 1.5rem;
+    /* Contact Section */
+    .contact p {
+        margin-top: 15px;
+        font-size: 14px;
+    }
+    .contact form .form-control {
+        font-size: 0.875rem;
+    }
+
+}
+
+/* Tablets */
+@media (min-width: 577px) and (max-width: 768px) {
+    /* Header */
+    .navbar{
+        padding: 0;
+    }
+    .navbar-brand .h-logo {
+        width: 70px;
+    }
+
+    .nav-link {
+        margin-right: 15px;
+    }
+
+    /* Hero Section */
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.125rem;
+    }
+
+    /* Services Section */
+    .services .col-md-4 {
+        margin-bottom: 1.5rem;
+    }
+
+    .services h4 {
+        font-size: 1.375rem;
+    }
+
+    /* Portfolio Section */
+    .portfolio img {
+        border-radius: 8px;
+    }
+
+    /* Why Choose Us Section */
+    .why-choose-us .col-md-3 {
+        margin-bottom: 1.5rem;
+    }
+
+    .why-choose-us h4 {
+        font-size: 1.375rem;
+    }
+
+    /* Contact Section */
+    .contact form .form-control {
+        font-size: 0.9rem;
     }
 }
 
-@media (max-width: 576px) {
-    .services,
-    .why-choose-us {
-        text-align: center;
+/* Desktops */
+@media (min-width: 769px) {
+    /* Hero Section */
+    .hero h1 {
+        font-size: 3rem;
     }
 
-    .services .col-md-4,
+    .hero p {
+        font-size: 1.25rem;
+    }
+
+    /* Services Section */
+    .services .col-md-4 {
+        margin-bottom: 2rem;
+    }
+
+    .services h4 {
+        font-size: 1.5rem;
+    }
+
+    /* Portfolio Section */
+    .portfolio img {
+        border-radius: 10px;
+    }
+
+    /* Why Choose Us Section */
     .why-choose-us .col-md-3 {
-        margin-bottom: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .why-choose-us h4 {
+        font-size: 1.5rem;
+    }
+
+    /* Contact Section */
+    .contact form .form-control {
+        font-size: 1rem;
     }
 }
