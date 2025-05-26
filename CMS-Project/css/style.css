@@ -141,3 +141,127 @@ a:hover {
   }
 }
 
+
+/*           Dashbord Style         */
+.dashboard-page{
+  display: flex;
+  flex-direction: row;
+}
+
+/* Sidebar Style */
+.sidebar {
+  width: 20%;
+  background: #ffffff;
+  min-height: 100vh;
+  padding-top: 30px;
+  border-right: 0.5px solid #4ca1af;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+}
+
+.sidebar .nav-link {
+  font-size: 1rem;
+  color: #333;
+  padding: 0.7rem 2rem;
+  border-bottom: .5px solid #4ca1af;
+}
+
+.sidebar .nav-link.active,
+.sidebar .nav-link:hover {
+  background-color: #4ca1af;
+  color: white;
+  text-decoration: none;
+}
+
+.dashboard-page .main-content{
+  min-height: 100vh;
+  width: 80%;
+  position: relative;
+  top: 0;
+  left: 20%;
+}
+
+/* Header */
+
+
+header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1;
+    padding: 12px 24px;
+}
+
+header .admin-pic{
+    border-radius: 50%;
+    border: 1px solid #4ca1af;
+}
+
+header .h-logo, .admin-pic{
+    width: auto;
+    height: 50px;
+}
+footer{
+  padding: 16px 0px;
+}
+
+/* footer{
+  min-width: 80%;
+  position: fixed;
+  bottom: 0;
+  left: 20%;
+  padding: 12px 24px;
+} */
+
+/* Responsive Fixes */
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+  header .h-logo, .admin-pic{
+    width: auto;
+    height: 40px;
+}
+.dashboard-page .main-content{
+  width: 100%;
+  left: 0;
+}
+/* footer{
+  min-width: 100%;
+  position: relative;
+  left: 0;
+  padding: 12px 24px;
+} */
+}
+@media (max-width: 425px) {
+  .sidebar {
+    display: none;
+  }
+  header .h-heading{
+    display: none;
+  }
+  header .h-logo{
+    width: auto;
+    height: 40px;
+}
+header{
+    padding: 10px 15px;
+}
+/* footer{
+  padding: 12px 0px;
+} */
+}
+
+/* Main Content */
+
+canvas {
+  max-height: 250px;
+}
+.card canvas {
+  max-height: 250px;
+  height: 250px;
+  width: 100% !important;
+}
+
