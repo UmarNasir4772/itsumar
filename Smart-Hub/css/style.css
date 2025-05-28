@@ -274,6 +274,10 @@ body {
     transition: var(--transition);
 }
 
+.file-upload-card.active{
+    border-color: red;
+}
+
 .file-upload-card:hover {
     border-color: var(--primary-color);
 }

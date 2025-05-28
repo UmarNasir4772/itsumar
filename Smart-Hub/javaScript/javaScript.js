@@ -116,6 +116,9 @@ document.addEventListener("DOMContentLoaded", function () {
             resetFormSteps();
             resetForms();
           }, 1500);
+        } else {
+          validateForm(documentsForm);
+          validateFileUploads();
         }
       });
     }
