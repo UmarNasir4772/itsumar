@@ -11,9 +11,9 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log("click");
   });
 
-  blackWall.addEventListener("click", function(){
-    sidebar.classList.remove('active');
-    this.classList.add('d-none');
+  blackWall.addEventListener("click", function () {
+    sidebar.classList.remove("active");
+    this.classList.add("d-none");
   });
 
   // Navigation functionality
@@ -75,6 +75,7 @@ function generateTableData() {
       phone: "(555) 123-4567",
       email: "john@tech.com",
       status: "Pending",
+      pStatus: "Pending",
     },
     {
       id: 1002,
@@ -83,6 +84,7 @@ function generateTableData() {
       phone: "(555) 234-5678",
       email: "sarah@digital.com",
       status: "Pending",
+      pStatus: "Pending",
     },
     {
       id: 1003,
@@ -91,6 +93,7 @@ function generateTableData() {
       phone: "(555) 345-6789",
       email: "michael@web.com",
       status: "Pending",
+      pStatus: "Pending",
     },
     {
       id: 1004,
@@ -99,6 +102,7 @@ function generateTableData() {
       phone: "(555) 456-7890",
       email: "emily@data.com",
       status: "Pending",
+      pStatus: "Pending",
     },
     {
       id: 1005,
@@ -107,6 +111,7 @@ function generateTableData() {
       phone: "(555) 567-8901",
       email: "robert@cloud.com",
       status: "Pending",
+      pStatus: "Pending",
     },
   ];
 
@@ -119,6 +124,7 @@ function generateTableData() {
       phone: "(555) 678-9012",
       email: "jennifer@software.com",
       status: "Approved",
+      pStatus: "Approved",
     },
     {
       id: 2002,
@@ -127,6 +133,7 @@ function generateTableData() {
       phone: "(555) 789-0123",
       email: "david@app.com",
       status: "Approved",
+      pStatus: "Approved",
     },
     {
       id: 2003,
@@ -135,6 +142,7 @@ function generateTableData() {
       phone: "(555) 890-1234",
       email: "lisa@code.com",
       status: "Approved",
+      pStatus: "Approved",
     },
     {
       id: 2004,
@@ -143,6 +151,7 @@ function generateTableData() {
       phone: "(555) 901-2345",
       email: "james@pixel.com",
       status: "Approved",
+      pStatus: "Approved",
     },
     {
       id: 2005,
@@ -151,6 +160,7 @@ function generateTableData() {
       phone: "(555) 012-3456",
       email: "patricia@ui.com",
       status: "Approved",
+      pStatus: "Approved",
     },
   ];
 
@@ -213,10 +223,10 @@ function generateTableData() {
             <td>${client.phone}</td>
             <td>${client.email}</td>
             <td>
-                <button class="tableBtn btn btn-sm btn-success me-1">Approve</button>
-                <button class="tableBtn btn btn-sm btn-primary">Assign</button>
+                <button data-Cid="${client.id}" class="tableBtn btn btn-sm btn-primary">Assign</button>
             </td>
             <td><span class="tdBadge badge bg-danger">${client.status}</span></td>
+            <td><span class="tdBadge badge bg-danger">${client.pStatus}</span></td>
         `;
     newClientsTable.appendChild(row);
   });
@@ -236,6 +246,7 @@ function generateTableData() {
                 <button class="tableBtn btn btn-sm btn-warning">Edit</button>
             </td>
             <td><span class="tdBadge badge bg-success">${client.status}</span></td>
+            <td><span class="tdBadge badge bg-success">${client.pStatus}</span></td>
         `;
     clientsTable.appendChild(row);
   });

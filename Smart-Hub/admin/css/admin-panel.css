@@ -75,7 +75,7 @@ body {
 }
 
 .navbar {
-    position: relative;
+  position: relative;
   padding: 15px 10px;
   background: white;
   border: none;
@@ -83,8 +83,8 @@ body {
   margin-bottom: 40px;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 }
-.navbar .adminSec{
-    margin-left: auto;
+.navbar .adminSec {
+  margin-left: auto;
 }
 .navbar .headerLogo,
 .adminIMG {
@@ -148,6 +148,11 @@ body {
   width: 50px;
 }
 
+.table {
+  text-wrap: nowrap;
+  text-align: center;
+}
+
 .footer {
   text-align: center;
 }
@@ -203,8 +208,6 @@ body {
   color: var(--danger-color);
 }
 
-
-
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
   #content {
@@ -213,19 +216,19 @@ body {
   .chart-container {
     height: 150px;
   }
-  .navbar{
+  .navbar {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1;
   }
-  .pagecontent{
+  .pagecontent {
     margin-top: 100px;
   }
-  .navbar .adminSec{
+  .navbar .adminSec {
     margin: 0;
-}
+  }
 }
 
 /* Animations */
@@ -286,7 +289,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.7);
   z-index: 2;
 }
 @media (max-width: 768px) {
@@ -312,13 +315,10 @@ body {
     display: block;
     color: white;
   }
-  .table{
-    text-wrap: nowrap;
-  }
 }
 
 @media (max-width: 425px) {
-  .navbar .headerLogo{
+  .navbar .headerLogo {
     display: none;
   }
 }
@@ -327,5 +327,235 @@ body {
     min-width: 220px;
     max-width: 220px;
     left: -225px;
+  }
+}
+
+/* Floating Search with Icon */
+.search-box {
+  max-width: 100%;
+  margin: 0 auto 1.5rem;
+}
+
+.search-box .form-floating {
+  position: relative;
+}
+
+.search-box .search-icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--dark-color);
+  z-index: 3;
+}
+
+.search-box .form-control {
+  padding-left: 2.5rem;
+  height: calc(3.5rem + 2px);
+  border-radius: 0.375rem;
+  transition: all 0.2s ease;
+}
+
+.search-box .form-control:focus {
+  border-color: var(--primary-color);
+  box-shadow: none;
+}
+
+.search-box .form-control:focus ~ .search-icon {
+  color: var(--primary-color);
+}
+
+/* Floating label adjustments */
+.search-box .form-floating > label {
+  left: 2.5rem;
+  color: var(--dark-color);
+}
+
+.search-box .form-floating > .form-control:focus ~ label,
+.search-box .form-floating > .form-control:not(:placeholder-shown) ~ label {
+  transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
+  color: var(--primary-color);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .search-box {
+    max-width: 100%;
+  }
+
+  .search-box .form-control {
+    height: calc(3rem + 2px);
+  }
+}
+
+/* Pofile Model */
+
+.profileModal,
+.pSetModal {
+  width: 80%;
+  height: 80%;
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  background-color: var(--light-color);
+  border-radius: 20px;
+  overflow: hidden;
+  z-index: 4;
+  transition: all 0.3s;
+}
+
+.profileModal .info {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.profileModal .info .closeBTN,
+.pSetModal .details .closeBTN {
+  background-color: var(--info-color);
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  border-radius: 50%;
+  border: 1px solid var(--info-color);
+}
+
+.profileModal .info .closeBTN:hover,
+.pSetModal .details .closeBTN:hover {
+  background-color: var(--dark-color);
+  color: var(--light-color);
+  border-color: var(--dark-color);
+}
+
+.profileModal .info img {
+  width: 30%;
+  height: auto;
+  border: 1px solid var(--info-color);
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.profileModal .info .adminName {
+  padding: 5px 0px;
+  margin: 5px 0px;
+  font-family: fantasy;
+}
+
+.profileModal .info .designation {
+  font-family: times;
+}
+
+.profileModal .info .Updatebtn {
+  background-color: var(--primary-color);
+  color: var(--light-color);
+  padding: 5px 20px;
+  font-weight: 500;
+  text-align: center;
+  border: 1px solid var(--primary-color);
+}
+
+.profileModal .info .Updatebtn:hover {
+  background-color: var(--info-color);
+}
+
+@media (max-width: 786px) {
+  .profileModal {
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+  }
+}
+
+@media (max-width: 425px) {
+  .profileModal .info img {
+    width: 50%;
+  }
+}
+
+/* Profile Update Form Styles */
+
+.pSetModal {
+  overflow: scroll;
+  width: 80%;
+  height: 90%;
+  top: 5%;
+  left: 10%;
+}
+.pSetModal .card-header {
+  background-color: var(--primary-color);
+}
+
+.pSetModal #profileUpdateForm .form-control {
+  transition: all 0.3s ease;
+}
+
+#profileUpdateForm .form-control:focus {
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.15);
+  border-color: var(--info-color);
+}
+
+#profileUpdateForm .form-floating > label {
+  color: var(--dark-color);
+  transition: all 0.2s ease;
+}
+
+#profileUpdateForm .form-floating > .form-control:focus ~ label,
+#profileUpdateForm
+  .form-floating
+  > .form-control:not(:placeholder-shown)
+  ~ label {
+  transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
+  color: var(--info-color);
+}
+
+#profileImage {
+  transition: all 0.3s ease;
+  object-fit: cover;
+  border: 3px solid var(--primary-color);
+}
+
+#passUpdate {
+  color: var(--info-color);
+}
+
+#profileImage:hover {
+  opacity: 0.9;
+}
+
+.password-strength .progress {
+  background-color: var(--dark-color);
+}
+
+.password-strength .progress-bar {
+  transition: width 0.3s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767.98px) {
+  .card-body {
+    padding: 1.5rem !important;
+  }
+
+  #profileImage {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .card-header h4 {
+    font-size: 1.25rem;
+  }
+
+  .btn-lg {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
   }
 }
