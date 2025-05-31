@@ -15,6 +15,10 @@ body {
   overflow-x: hidden;
 }
 
+input:focus {
+  box-shadow: none !important;
+}
+
 /* Sidebar Styles */
 .wrapper {
   display: flex;
@@ -155,6 +159,20 @@ body {
 
 .footer {
   text-align: center;
+}
+
+.table .assignTo button {
+  color: white;
+  background-color: var(--primary-color);
+}
+
+.table .assignTo button:hover {
+  background-color: var(--info-color);
+}
+
+.table .assignTo .dropdown-item:hover {
+  color: white;
+  background-color: var(--primary-color);
 }
 
 /* Status Badges */
@@ -332,6 +350,7 @@ body {
 
 /* Floating Search with Icon */
 .search-box {
+  z-index: 0;
   max-width: 100%;
   margin: 0 auto 1.5rem;
 }
@@ -346,7 +365,7 @@ body {
   top: 50%;
   transform: translateY(-50%);
   color: var(--dark-color);
-  z-index: 3;
+  z-index: 0;
 }
 
 .search-box .form-control {
@@ -389,7 +408,6 @@ body {
 }
 
 /* Pofile Model */
-
 .profileModal,
 .pSetModal {
   width: 80%;
@@ -414,8 +432,7 @@ body {
   height: 100%;
 }
 
-.profileModal .info .closeBTN,
-.pSetModal .details .closeBTN {
+.closeBTN {
   background-color: var(--info-color);
   color: white;
   cursor: pointer;
@@ -424,10 +441,10 @@ body {
   right: 15px;
   border-radius: 50%;
   border: 1px solid var(--info-color);
+  z-index: 3;
 }
 
-.profileModal .info .closeBTN:hover,
-.pSetModal .details .closeBTN:hover {
+.closeBTN:hover {
   background-color: var(--dark-color);
   color: var(--light-color);
   border-color: var(--dark-color);
@@ -538,18 +555,27 @@ body {
 }
 
 /* Responsive adjustments */
-@media (max-width: 767.98px) {
-  .card-body {
-    padding: 1.5rem !important;
+@media (max-width: 768px) {
+  .pSetModal .card-body {
+    padding: 1.5rem;
+  }
+
+  .pSetModal .container {
+    padding: 35px 20px !important;
   }
 
   #profileImage {
     width: 100px;
     height: 100px;
   }
+
+  .pSetModal .details .closeBTN {
+    top: 5px;
+    right: 5px;
+  }
 }
 
-@media (max-width: 575.98px) {
+@media (max-width: 576px) {
   .card-header h4 {
     font-size: 1.25rem;
   }
@@ -557,5 +583,304 @@ body {
   .btn-lg {
     padding: 0.5rem 1rem;
     font-size: 1rem;
+  }
+
+  .pSetModal {
+    width: 90%;
+    height: 95%;
+    top: 2.5%;
+    left: 5%;
+  }
+}
+
+/* Client Details Container */
+.add-staff-container,
+.staff-update-container,
+.Staff-details-container,
+.client-details-container {
+  background-color: var(--light-color);
+  border-radius: 0.5rem;
+  box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
+  overflow: scroll;
+  padding: 20px;
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  width: 90%;
+  height: 90%;
+  z-index: 3;
+}
+
+/* Section Styling */
+.Staff-section,
+.client-section {
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--dark-color);
+}
+
+.Staff-section:last-child,
+.client-section:last-child {
+  border-bottom: none;
+}
+
+.section-header {
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--dark-color);
+}
+
+.section-header h2 {
+  font-size: 1.5rem;
+  color: var(--info-color);
+  margin: 0;
+}
+
+/* Information Items */
+.info-item {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.info-label {
+  font-weight: 600;
+  color: #5a5c69;
+  min-width: 160px;
+  margin-right: 0.5rem;
+}
+
+.info-value {
+  color: #6c757d;
+  flex: 1;
+}
+
+/* Documents Grid */
+.documents-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.document-card {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  background-color: #f8f9fc;
+  border-radius: 0.35rem;
+  transition: all 0.3s ease;
+  border: 1px solid #e3e6f0;
+}
+
+.document-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+.document-icon {
+  width: 40px;
+  height: 40px;
+  background-color: #e9ecef;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+  color: var(--info-color);
+}
+
+.document-info {
+  flex: 1;
+}
+
+.document-title {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  color: var(--info-color);
+}
+
+.view-btn {
+  width: 100%;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 767.98px) {
+  .info-item {
+    flex-direction: column;
+  }
+
+  .info-label {
+    margin-bottom: 0.25rem;
+  }
+
+  .documents-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .client-section {
+    padding: 1rem;
+  }
+
+  .section-header h2 {
+    font-size: 1.25rem;
+  }
+}
+
+/* Staff Update Container */
+.staff-update-container {
+  padding: 40px;
+}
+.staff-update-container h3 {
+  color: var(--info-color);
+}
+
+.staff-update-container .card-header {
+  background-color: var(--info-color);
+}
+
+/* Form Floating Label Adjustments */
+.staff-update-container .form-floating > label {
+  color: #6c757d;
+  transition: all 0.2s ease;
+}
+
+.staff-update-container .form-floating > .form-control:focus ~ label,
+.staff-update-container
+  .form-floating
+  > .form-control:not(:placeholder-shown)
+  ~ label,
+.staff-update-container .form-floating > .form-select:focus ~ label,
+.staff-update-container
+  .form-floating
+  > .form-select:not(:placeholder-shown)
+  ~ label {
+  transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
+  color: var(--info-color);
+}
+
+/* Password Strength Indicator */
+.password-strength .progress {
+  background-color: #e9ecef;
+}
+
+.password-strength .progress-bar {
+  transition: width 0.3s ease;
+}
+
+/* Toggle Password Button */
+.toggle-password {
+  color: #6c757d;
+  z-index: 5;
+}
+
+.toggle-password:hover {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 767.98px) {
+  .staff-update-container {
+    padding: 40px 20px;
+  }
+  .staff-update-container .closeBTN {
+    top: 5px;
+    right: 5px;
+  }
+  .card-body {
+    padding: 1.5rem !important;
+  }
+
+  .d-flex.justify-content-end {
+    flex-direction: column;
+    gap: 1rem !important;
+  }
+
+  .d-flex.justify-content-end .btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .card-header h2 {
+    font-size: 1.25rem;
+  }
+
+  h3.h5 {
+    font-size: 1.1rem;
+  }
+}
+
+/* Add Staff Container */
+.add-staff-container {
+  padding: 40px;
+}
+
+.add-staff-container h3 {
+  color: var(--info-color);
+}
+
+.add-staff-container .card-header {
+  background-color: var(--primary-color);
+}
+
+/* Form Floating Label Adjustments */
+.add-staff-container .form-floating > label {
+  color: #6c757d;
+  transition: all 0.2s ease;
+}
+
+.add-staff-container .form-floating > .form-control:focus ~ label,
+.add-staff-container
+  .form-floating
+  > .form-control:not(:placeholder-shown)
+  ~ label,
+.add-staff-container .form-floating > .form-select:focus ~ label,
+.add-staff-container
+  .form-floating
+  > .form-select:not(:placeholder-shown)
+  ~ label {
+  transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
+  color: var(--info-color);
+}
+
+/* Password Strength Indicator */
+.add-staff-container .password-strength .progress {
+  background-color: #e9ecef;
+}
+
+.add-staff-container .password-strength .progress-bar {
+  transition: width 0.3s ease;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 767.98px) {
+  .add-staff-container {
+    padding: 0 15px;
+  }
+
+  .add-staff-container .card-body {
+    padding: 1.5rem !important;
+  }
+
+  .add-staff-container .d-flex.justify-content-end {
+    flex-direction: column;
+    gap: 1rem !important;
+  }
+
+  .add-staff-container .d-flex.justify-content-end .btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .add-staff-container .card-header h2 {
+    font-size: 1.25rem;
+  }
+
+  .add-staff-container h3.h5 {
+    font-size: 1.1rem;
   }
 }

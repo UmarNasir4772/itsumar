@@ -160,11 +160,11 @@
                     <input
                       type="search"
                       class="form-control ps-5"
-                      id="floatingSearch"
+                      id="NewClientSearch"
                       placeholder=" "
                       aria-label="Search"
                     />
-                    <label for="floatingSearch">Search Records...</label>
+                    <label for="NewClientSearch">Search Records...</label>
                     <i class="fas fa-search search-icon"></i>
                   </div>
                 </div>
@@ -203,11 +203,11 @@
                     <input
                       type="search"
                       class="form-control ps-5"
-                      id="floatingSearch"
+                      id="ClientSearch"
                       placeholder=" "
                       aria-label="Search"
                     />
-                    <label for="floatingSearch">Search Records...</label>
+                    <label for="ClientSearch">Search Records...</label>
                     <i class="fas fa-search search-icon"></i>
                   </div>
                 </div>
@@ -266,7 +266,7 @@
           <section id="staff" class="page-section d-none">
             <div class="d-flex justify-content-between align-items-center mb-4">
               <h3>Staff</h3>
-              <button class="btn btn-primary">Add Staff</button>
+              <button id="ShowModal" class="btn btn-primary">Add Staff</button>
             </div>
             <div class="card">
               <div class="card-body">
@@ -295,7 +295,6 @@
             <div class="d-flex justify-content-between align-items-center mb-4">
               <h3>Reports</h3>
               <div>
-                <button class="btn btn-primary me-2">Export</button>
                 <button class="btn btn-secondary">Filter</button>
               </div>
             </div>
@@ -375,7 +374,7 @@
                     <i class="fas fa-user-edit me-2"></i>Update Profile
                   </h4>
                 </div>
-                <div class="card-body p-4">
+                <div class="card-body">
                   <form id="profileUpdateForm">
                     <!-- Profile Image Upload -->
                     <div class="text-center mb-4">
@@ -501,6 +500,693 @@
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- clients Details View Modal -->
+    <div id="client-details" class="client-details-container d-none">
+      <button id="cSetBTN" class="closeBTN">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <!-- Client Information Section -->
+      <div class="client-section">
+        <div class="section-header">
+          <h2><i class="fas fa-user-tie me-2"></i>Client Information</h2>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="info-item">
+              <span class="info-label">Name:</span>
+              <span class="info-value">John Smith</span>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="info-item">
+              <span class="info-label">Company Name:</span>
+              <span class="info-value">Tech Solutions Inc.</span>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="info-item">
+              <span class="info-label">Phone Number:</span>
+              <span class="info-value">+1 (555) 123-4567</span>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="info-item">
+              <span class="info-label">Email:</span>
+              <span class="info-value">john.smith@techsolutions.com</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Company Information Section -->
+      <div class="client-section">
+        <div class="section-header">
+          <h2><i class="fas fa-building me-2"></i>Company Information</h2>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="info-item">
+              <span class="info-label">Manager Name:</span>
+              <span class="info-value">Sarah Johnson</span>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="info-item">
+              <span class="info-label">Manager Email:</span>
+              <span class="info-value">sarah.j@techsolutions.com</span>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="info-item">
+              <span class="info-label">Manager Phone:</span>
+              <span class="info-value">+1 (555) 987-6543</span>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="info-item">
+              <span class="info-label">Trade License No:</span>
+              <span class="info-value">TL-2023-456789</span>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="info-item">
+              <span class="info-label">Representative Name:</span>
+              <span class="info-value">Michael Brown</span>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="info-item">
+              <span class="info-label">Representative Email:</span>
+              <span class="info-value">michael.b@techsolutions.com</span>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="info-item">
+              <span class="info-label">Representative Phone:</span>
+              <span class="info-value">+1 (555) 456-7890</span>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="info-item">
+              <span class="info-label">Address:</span>
+              <span class="info-value"
+                >123 Business Ave, Suite 400, Tech City, TC 12345, United
+                States</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Documents Section -->
+      <div class="client-section">
+        <div class="section-header">
+          <h2><i class="fas fa-file-alt me-2"></i>Documents</h2>
+        </div>
+        <div class="documents-grid">
+          <!-- Manager Documents -->
+          <div class="document-card">
+            <div class="document-icon">
+              <i class="fas fa-id-card"></i>
+            </div>
+            <div class="document-info">
+              <span class="document-title">Manager ID (Front)</span>
+              <button
+                class="btn btn-sm btn-outline-primary view-btn"
+                data-doc="manager_id_front.jpg"
+              >
+                <i class="fas fa-eye me-1"></i> View
+              </button>
+            </div>
+          </div>
+
+          <div class="document-card">
+            <div class="document-icon">
+              <i class="fas fa-id-card"></i>
+            </div>
+            <div class="document-info">
+              <span class="document-title">Manager ID (Back)</span>
+              <button
+                class="btn btn-sm btn-outline-primary view-btn"
+                data-doc="manager_id_back.jpg"
+              >
+                <i class="fas fa-eye me-1"></i> View
+              </button>
+            </div>
+          </div>
+
+          <div class="document-card">
+            <div class="document-icon">
+              <i class="fas fa-passport"></i>
+            </div>
+            <div class="document-info">
+              <span class="document-title">Manager Passport</span>
+              <button
+                class="btn btn-sm btn-outline-primary view-btn"
+                data-doc="manager_passport.jpg"
+              >
+                <i class="fas fa-eye me-1"></i> View
+              </button>
+            </div>
+          </div>
+
+          <!-- Representative Documents -->
+          <div class="document-card">
+            <div class="document-icon">
+              <i class="fas fa-passport"></i>
+            </div>
+            <div class="document-info">
+              <span class="document-title">Representative Passport</span>
+              <button
+                class="btn btn-sm btn-outline-primary view-btn"
+                data-doc="rep_passport.jpg"
+              >
+                <i class="fas fa-eye me-1"></i> View
+              </button>
+            </div>
+          </div>
+
+          <!-- Company Documents -->
+          <div class="document-card">
+            <div class="document-icon">
+              <i class="fas fa-file-contract"></i>
+            </div>
+            <div class="document-info">
+              <span class="document-title">Trade License</span>
+              <button
+                class="btn btn-sm btn-outline-primary view-btn"
+                data-doc="trade_license.pdf"
+              >
+                <i class="fas fa-eye me-1"></i> View
+              </button>
+            </div>
+          </div>
+
+          <div class="document-card">
+            <div class="document-icon">
+              <i class="fas fa-file-signature"></i>
+            </div>
+            <div class="document-info">
+              <span class="document-title">Company Letterhead</span>
+              <button
+                class="btn btn-sm btn-outline-primary view-btn"
+                data-doc="letterhead.pdf"
+              >
+                <i class="fas fa-eye me-1"></i> View
+              </button>
+            </div>
+          </div>
+
+          <div class="document-card">
+            <div class="document-icon">
+              <i class="fas fa-receipt"></i>
+            </div>
+            <div class="document-info">
+              <span class="document-title">Company VAT</span>
+              <button
+                class="btn btn-sm btn-outline-primary view-btn"
+                data-doc="vat_certificate.pdf"
+              >
+                <i class="fas fa-eye me-1"></i> View
+              </button>
+            </div>
+          </div>
+
+          <div class="document-card">
+            <div class="document-icon">
+              <i class="fas fa-image"></i>
+            </div>
+            <div class="document-info">
+              <span class="document-title">Company Logo</span>
+              <button
+                class="btn btn-sm btn-outline-primary view-btn"
+                data-doc="company_logo.png"
+              >
+                <i class="fas fa-eye me-1"></i> View
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Button Section -->
+      <div class="client-section">
+        <button class="btn btn-primary w-100 m-2">Approved</button>
+        <button class="btn btn-danger w-100 m-2">Rejected</button>
+      </div>
+    </div>
+
+    <!-- Document Viewer Modal -->
+    <div
+      class="modal fade"
+      id="documentViewerModal"
+      tabindex="-1"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="documentModalLabel">Document Viewer</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body text-center">
+            <div id="documentViewerContent">
+              <img
+                id="documentImage"
+                src=""
+                class="img-fluid"
+                style="max-height: 70vh"
+                alt="Document"
+              />
+              <iframe
+                id="documentPdf"
+                src=""
+                style="width: 100%; height: 70vh; display: none"
+              ></iframe>
+              <div id="unsupportedDocument" class="d-none">
+                <i class="fas fa-file-excel fa-5x text-muted mb-3"></i>
+                <p>This document format is not supported for preview.</p>
+                <a href="#" id="downloadDocument" class="btn btn-primary">
+                  <i class="fas fa-download me-2"></i>Download Document
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <a href="#" id="downloadBtn" class="btn btn-primary">
+              <i class="fas fa-download me-2"></i>Download
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Staff Details View Modal -->
+    <div id="Staff-details" class="Staff-details-container d-none">
+      <button id="StaffSetBTN" class="closeBTN">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <!-- Client Information Section -->
+      <div class="Staff-section">
+        <div class="section-header">
+          <h2><i class="fas fa-user-tie me-2"></i>Staff Information</h2>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="info-item">
+              <span class="info-label">Name:</span>
+              <span class="info-value">John Smith</span>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="info-item">
+              <span class="info-label">Role:</span>
+              <span class="info-value">Ducoment Controler</span>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="info-item">
+              <span class="info-label">Phone Number:</span>
+              <span class="info-value">+1 (555) 123-4567</span>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="info-item">
+              <span class="info-label">Email:</span>
+              <span class="info-value">john.smith@techsolutions.com</span>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="info-item">
+              <span class="info-label">Assign Clients:</span>
+              <span class="info-value">10</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Staff Details edit Modal -->
+    <div id="StaffUpdate" class="staff-update-container d-none">
+      <button id="SUpBTN" class="closeBTN">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="card border-0 shadow">
+        <!-- Form Header -->
+        <div class="card-header text-white py-3">
+          <h2 class="mb-0">
+            <i class="fas fa-user-edit me-2"></i>Update Staff Information
+          </h2>
+        </div>
+
+        <!-- Form Body -->
+        <div class="card-body p-4">
+          <form id="staffUpdateForm">
+            <!-- Staff Information Section -->
+            <div class="mb-4 pb-3 border-bottom">
+              <h3 class="h5 mb-3">
+                <i class="fas fa-user-tie me-2"></i>Staff Information
+              </h3>
+
+              <div class="row g-3">
+                <!-- Name Field -->
+                <div class="col-md-6">
+                  <div class="form-floating">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="staffName"
+                      placeholder=" "
+                      value="Sarah Johnson"
+                      required
+                    />
+                    <label for="staffName">Full Name</label>
+                  </div>
+                </div>
+
+                <!-- Phone Field -->
+                <div class="col-md-6">
+                  <div class="form-floating">
+                    <input
+                      type="tel"
+                      class="form-control"
+                      id="staffPhone"
+                      placeholder=" "
+                      value="+1 (555) 123-4567"
+                      required
+                    />
+                    <label for="staffPhone">Phone Number</label>
+                  </div>
+                </div>
+
+                <!-- Email Field -->
+                <div class="col-md-6">
+                  <div class="form-floating">
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="staffEmail"
+                      placeholder=" "
+                      value="sarah.johnson@example.com"
+                      required
+                    />
+                    <label for="staffEmail">Email Address</label>
+                  </div>
+                </div>
+
+                <!-- Role Field -->
+                <div class="col-md-6">
+                  <div class="form-floating">
+                    <select class="form-select" id="staffRole" required>
+                      <option value="">Select Role</option>
+                      <option value="admin" selected>Administrator</option>
+                      <option value="manager">Manager</option>
+                      <option value="supervisor">Supervisor</option>
+                      <option value="staff">Staff Member</option>
+                      <option value="support">Support</option>
+                    </select>
+                    <label for="staffRole">Role</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Password Update Section -->
+            <div class="mb-4">
+              <h3 class="h5 mb-3">
+                <i class="fas fa-lock me-2"></i>Update Password
+              </h3>
+
+              <div class="row g-3">
+                <!-- Current Password -->
+                <div class="col-md-6">
+                  <div class="form-floating">
+                    <input
+                      type="password"
+                      class="form-control"
+                      id="staffcurrentPassword"
+                      placeholder=" "
+                      required
+                    />
+                    <label for="staffcurrentPassword">Current Password</label>
+                    <div class="form-text">Required to change password</div>
+                  </div>
+                </div>
+
+                <!-- Spacer Column -->
+                <div class="col-md-6"></div>
+
+                <!-- New Password -->
+                <div class="col-md-6">
+                  <div class="form-floating position-relative">
+                    <input
+                      type="password"
+                      class="form-control"
+                      id="staffnewPassword"
+                      placeholder=" "
+                    />
+                    <label for="staffnewPassword">New Password</label>
+                    <button
+                      type="button"
+                      class="btn btn-link position-absolute end-0 top-0 pt-3 pe-3 toggle-password"
+                    >
+                      <i class="fas fa-eye"></i>
+                    </button>
+                    <div class="staff-password-strength mt-2 small">
+                      <div class="progress" style="height: 4px">
+                        <div
+                          class="staff-progress-bar"
+                          role="progressbar"
+                          style="width: 0%"
+                        ></div>
+                      </div>
+                      <div class="text-muted">Password strength</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Confirm Password -->
+                <div class="col-md-6">
+                  <div class="form-floating position-relative">
+                    <input
+                      type="password"
+                      class="form-control"
+                      id="staffconfirmPassword"
+                      placeholder=" "
+                    />
+                    <label for="staffconfirmPassword"
+                      >Confirm New Password</label
+                    >
+                    <button
+                      type="button"
+                      class="btn btn-link position-absolute end-0 top-0 pt-3 pe-3 toggle-password"
+                    >
+                      <i class="fas fa-eye"></i>
+                    </button>
+                    <div class="invalid-feedback">Passwords must match</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Form Actions -->
+            <div class="d-flex justify-content-end gap-3 pt-2">
+              <button type="reset" class="btn btn-outline-secondary px-4">
+                <i class="fas fa-undo me-2"></i>Reset
+              </button>
+              <button type="submit" class="btn btn-primary px-4">
+                <i class="fas fa-save me-2"></i>Update Staff
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Add Staff Modal -->
+    <div id="addStaff" class="add-staff-container d-none">
+      <button id="AddStaffTN" class="closeBTN">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="card border-0 shadow">
+        <!-- Card Header -->
+        <div class="card-header py-3">
+          <h3 class="mb-0 text-white">
+            <i class="fas fa-user-plus me-2"></i>Add New Staff Member
+          </h3>
+        </div>
+
+        <!-- Form Body -->
+        <div class="card-body p-4">
+          <form id="addStaffForm" novalidate>
+            <!-- Staff Information Section -->
+            <div class="mb-4 pb-3 border-bottom">
+              <h3 class="h5 mb-3">
+                <i class="fas fa-user-tie me-2"></i>Staff Information
+              </h3>
+
+              <div class="row g-3">
+                <!-- Name Field -->
+                <div class="col-md-6">
+                  <div class="form-floating">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="addStaffName"
+                      placeholder=" "
+                      required
+                    />
+                    <label for="addStaffName">Full Name</label>
+                    <div class="invalid-feedback">
+                      Please enter a valid name
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Phone Field -->
+                <div class="col-md-6">
+                  <div class="form-floating">
+                    <input
+                      type="tel"
+                      class="form-control"
+                      id="addStaffPhone"
+                      placeholder=" "
+                      required
+                    />
+                    <label for="addStaffPhone">Phone Number</label>
+                    <div class="invalid-feedback">
+                      Please enter a valid phone number
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Email Field -->
+                <div class="col-md-6">
+                  <div class="form-floating">
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="addStaffEmail"
+                      placeholder=" "
+                      required
+                    />
+                    <label for="addStaffEmail">Email Address</label>
+                    <div class="invalid-feedback">
+                      Please enter a valid email
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Role Field -->
+                <div class="col-md-6">
+                  <div class="form-floating">
+                    <select class="form-select" id="addStaffRole" required>
+                      <option value="" selected disabled>Select Role</option>
+                      <option value="admin">Administrator</option>
+                      <option value="manager">Manager</option>
+                      <option value="supervisor">Supervisor</option>
+                      <option value="staff">Staff Member</option>
+                      <option value="support">Support</option>
+                    </select>
+                    <label for="addStaffRole">Role</label>
+                    <div class="invalid-feedback">Please select a role</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Account Setup Section -->
+            <div class="mb-4">
+              <h3 class="h5 mb-3">
+                <i class="fas fa-lock me-2"></i>Account Setup
+              </h3>
+
+              <div class="row g-3">
+                <!-- Password -->
+                <div class="col-md-6">
+                  <div class="form-floating position-relative">
+                    <input
+                      type="password"
+                      class="form-control"
+                      id="addStaffPassword"
+                      placeholder=" "
+                      required
+                      minlength="8"
+                    />
+                    <label for="addStaffPassword">Password</label>
+                    <button
+                      type="button"
+                      class="btn btn-link position-absolute end-0 top-0 pt-3 pe-3 toggle-password"
+                    >
+                      <i class="fas fa-eye"></i>
+                    </button>
+                    <div class="password-strength mt-2 small">
+                      <div class="progress" style="height: 4px">
+                        <div
+                          class="progress-bar"
+                          role="progressbar"
+                          style="width: 0%"
+                        ></div>
+                      </div>
+                      <div class="text-muted">Password strength</div>
+                    </div>
+                    <div class="invalid-feedback">
+                      Minimum 8 characters required
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Confirm Password -->
+                <div class="col-md-6">
+                  <div class="form-floating position-relative">
+                    <input
+                      type="password"
+                      class="form-control"
+                      id="addStaffConfirmPassword"
+                      placeholder=" "
+                      required
+                    />
+                    <label for="addStaffConfirmPassword"
+                      >Confirm Password</label
+                    >
+                    <button
+                      type="button"
+                      class="btn btn-link position-absolute end-0 top-0 pt-3 pe-3 toggle-password"
+                    >
+                      <i class="fas fa-eye"></i>
+                    </button>
+                    <div class="invalid-feedback">Passwords must match</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Form Actions -->
+            <div class="d-flex justify-content-end gap-3 pt-2">
+              <button type="reset" class="btn btn-outline-secondary px-4">
+                <i class="fas fa-undo me-2"></i>Reset
+              </button>
+              <button type="submit" class="btn btn-primary px-4">
+                <i class="fas fa-save me-2"></i>Add Staff
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     </div>

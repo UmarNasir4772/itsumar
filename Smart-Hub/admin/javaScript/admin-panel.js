@@ -223,7 +223,15 @@ function generateTableData() {
             <td>${client.phone}</td>
             <td>${client.email}</td>
             <td>
-                <button data-Cid="${client.id}" class="tableBtn btn btn-sm btn-primary">Assign</button>
+              <div class="dropdown assignTo">
+                <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                  Assign To
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                  <li><a class="dropdown-item" href="#">Staff 1</a></li>
+                  <li><a class="dropdown-item" href="#">Staff 1</a></li>
+                </ul>
+              </div>
             </td>
             <td><span class="tdBadge badge bg-danger">${client.status}</span></td>
             <td><span class="tdBadge badge bg-danger">${client.pStatus}</span></td>
@@ -242,8 +250,7 @@ function generateTableData() {
             <td>${client.phone}</td>
             <td>${client.email}</td>
             <td>
-                <button class="tableBtn btn btn-sm btn-info me-1">View</button>
-                <button class="tableBtn btn btn-sm btn-warning">Edit</button>
+                <button id="ClientView" data-Cid="${client.id}" class="tableBtn btn btn-sm btn-info me-1">View</button>
             </td>
             <td><span class="tdBadge badge bg-success">${client.status}</span></td>
             <td><span class="tdBadge badge bg-success">${client.pStatus}</span></td>
@@ -277,8 +284,8 @@ function generateTableData() {
             <td>${staff.role}</td>
             <td>${staff.clients}</td>
             <td>
-                <button class="veBtn btn btn-sm btn-info me-1">View</button>
-                <button class="veBtn btn btn-sm btn-warning">Edit</button>
+                <button id="StaffView" data-Cid="${staff.id}" class="veBtn btn btn-sm btn-info me-1">View</button>
+                <button id="StaffEdit" data-Cid="${staff.id}" class="veBtn btn btn-sm btn-warning">Edit</button>
             </td>
         `;
     staffTable.appendChild(row);
