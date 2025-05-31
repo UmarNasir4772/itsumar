@@ -858,7 +858,12 @@ input:focus {
 /* Responsive Adjustments */
 @media (max-width: 767.98px) {
   .add-staff-container {
-    padding: 35 15px;
+    padding: 40px 15px;
+  }
+
+  .add-staff-container .closeBTN {
+    top: 5px;
+    right: 5px;
   }
 
   .add-staff-container .card-body {
