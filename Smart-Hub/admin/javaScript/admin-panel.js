@@ -70,48 +70,48 @@ function generateTableData() {
   const newClientsData = [
     {
       id: 1001,
+      date: "01-01-2025",
       name: "John Smith",
       company: "Tech Solutions",
       phone: "(555) 123-4567",
       email: "john@tech.com",
-      status: "Pending",
-      pStatus: "Pending",
+      status: 1,
     },
     {
       id: 1002,
+      date: "01-01-2025",
       name: "Sarah Johnson",
       company: "Digital Creations",
       phone: "(555) 234-5678",
       email: "sarah@digital.com",
-      status: "Pending",
-      pStatus: "Pending",
+      status: 2,
     },
     {
       id: 1003,
+      date: "01-01-2025",
       name: "Michael Brown",
       company: "Web Innovators",
       phone: "(555) 345-6789",
       email: "michael@web.com",
-      status: "Pending",
-      pStatus: "Pending",
+      status: 3,
     },
     {
       id: 1004,
+      date: "01-01-2025",
       name: "Emily Davis",
       company: "Data Systems",
       phone: "(555) 456-7890",
       email: "emily@data.com",
-      status: "Pending",
-      pStatus: "Pending",
+      status: 1,
     },
     {
       id: 1005,
+      date: "01-01-2025",
       name: "Robert Wilson",
       company: "Cloud Services",
       phone: "(555) 567-8901",
       email: "robert@cloud.com",
-      status: "Pending",
-      pStatus: "Pending",
+      status: 2,
     },
   ];
 
@@ -119,48 +119,53 @@ function generateTableData() {
   const clientsData = [
     {
       id: 2001,
+      date: "01-01-2025",
       name: "Jennifer Lee",
       company: "Software Plus",
       phone: "(555) 678-9012",
       email: "jennifer@software.com",
-      status: "Approved",
-      pStatus: "Approved",
+      status: 1,
+      assignedTo: "Accountant 1",
     },
     {
       id: 2002,
+      date: "01-01-2025",
       name: "David Miller",
       company: "App Developers",
       phone: "(555) 789-0123",
       email: "david@app.com",
-      status: "Approved",
-      pStatus: "Approved",
+      status: 1,
+      assignedTo: "Accountant 2",
     },
     {
       id: 2003,
+      date: "01-01-2025",
       name: "Lisa Taylor",
       company: "Code Masters",
       phone: "(555) 890-1234",
       email: "lisa@code.com",
-      status: "Approved",
-      pStatus: "Approved",
+      status: 1,
+      assignedTo: "Manager 1",
     },
     {
       id: 2004,
+      date: "01-01-2025",
       name: "James Anderson",
       company: "Pixel Perfect",
       phone: "(555) 901-2345",
       email: "james@pixel.com",
-      status: "Approved",
-      pStatus: "Approved",
+      status: 1,
+      assignedTo: "Manager 2",
     },
     {
       id: 2005,
+      date: "01-01-2025",
       name: "Patricia Thomas",
       company: "UI Experts",
       phone: "(555) 012-3456",
       email: "patricia@ui.com",
-      status: "Approved",
-      pStatus: "Approved",
+      status: 1,
+      assignedTo: "Support One",
     },
   ];
 
@@ -168,38 +173,38 @@ function generateTableData() {
   const accountsData = [
     {
       id: "PAY-3001",
+      date: "01-01-2025",
       name: "Jennifer Lee",
       amount: "$1,200.00",
       status: "Received",
-      date: "2023-05-15",
     },
     {
       id: "PAY-3002",
+      date: "01-01-2025",
       name: "David Miller",
       amount: "$850.00",
       status: "Pending",
-      date: "2023-05-18",
     },
     {
       id: "PAY-3003",
+      date: "01-01-2025",
       name: "Lisa Taylor",
       amount: "$2,500.00",
       status: "Received",
-      date: "2023-05-20",
     },
     {
       id: "PAY-3004",
+      date: "01-01-2025",
       name: "James Anderson",
       amount: "$1,750.00",
       status: "Received",
-      date: "2023-05-22",
     },
     {
       id: "PAY-3005",
+      date: "01-01-2025",
       name: "Patricia Thomas",
       amount: "$3,000.00",
       status: "Pending",
-      date: "2023-05-25",
     },
   ];
 
@@ -218,6 +223,7 @@ function generateTableData() {
     row.className = "slide-in";
     row.innerHTML = `
             <td>${client.id}</td>
+            <td>${client.date}</td>
             <td>${client.name}</td>
             <td>${client.company}</td>
             <td>${client.phone}</td>
@@ -233,8 +239,26 @@ function generateTableData() {
                 </ul>
               </div>
             </td>
-            <td><span class="tdBadge badge bg-danger">${client.status}</span></td>
-            <td><span class="tdBadge badge bg-danger">${client.pStatus}</span></td>
+            <td><span class="tdBadge badge ${(() => {
+              switch (client.status) {
+                case 1:
+                  return "bg-success";
+                case 2:
+                  return "bg-danger";
+                default:
+                  return "bg-warning";
+              }
+            })()}">${(() => {
+      switch (client.status) {
+        case 1:
+          return "Active";
+        case 2:
+          return "InActive";
+        case "Inactive":
+        default:
+          return "Document Require";
+      }
+    })()}</span></td>
         `;
     newClientsTable.appendChild(row);
   });
@@ -245,15 +269,28 @@ function generateTableData() {
     row.className = "slide-in";
     row.innerHTML = `
             <td>${client.id}</td>
+            <td>${client.date}</td>
             <td>${client.name}</td>
             <td>${client.company}</td>
             <td>${client.phone}</td>
             <td>${client.email}</td>
             <td>
-                <button id="ClientView" data-Cid="${client.id}" class="tableBtn btn btn-sm btn-info me-1">View</button>
+                <button id="ClientView" data-Cid="${
+                  client.id
+                }" class="tableBtn btn btn-sm btn-info me-1">View</button>
             </td>
-            <td><span class="tdBadge badge bg-success">${client.status}</span></td>
-            <td><span class="tdBadge badge bg-success">${client.pStatus}</span></td>
+            <td><span class="tdBadge badge bg-success">${(() => {
+              switch (client.status) {
+                case 1:
+                  return "Active";
+                case 2:
+                  return "InActive";
+                case "Inactive":
+                default:
+                  return "Document Require";
+              }
+            })()}</span></td>
+            <td><span> ${client.assignedTo}</span></td>
         `;
     clientsTable.appendChild(row);
   });
@@ -266,10 +303,10 @@ function generateTableData() {
       account.status === "Received" ? "bg-success" : "bg-warning";
     row.innerHTML = `
             <td>${account.id}</td>
+            <td>${account.date}</td>
             <td>${account.name}</td>
             <td>${account.amount}</td>
             <td><span class="tdBadge badge ${statusClass}">${account.status}</span></td>
-            <td>${account.date}</td>
         `;
     accountsTable.appendChild(row);
   });

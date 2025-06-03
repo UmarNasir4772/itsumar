@@ -173,13 +173,13 @@
                     <thead>
                       <tr>
                         <th>ID</th>
+                        <th>Date</th>
                         <th>Name</th>
                         <th>Company Name</th>
                         <th>Phone Number</th>
                         <th>Email</th>
                         <th>Action</th>
                         <th>Status</th>
-                        <th>Payment Status</th>
                       </tr>
                     </thead>
                     <tbody id="new-clients-table">
@@ -217,13 +217,14 @@
                     <thead>
                       <tr>
                         <th>ID</th>
+                        <th>Date</th>
                         <th>Name</th>
                         <th>Company Name</th>
                         <th>Phone Number</th>
                         <th>Email</th>
                         <th>Action</th>
                         <th>Status</th>
-                        <th>Payment Status</th>
+                        <th>Assigned To</th>
                       </tr>
                     </thead>
                     <tbody id="clients-table">
@@ -239,6 +240,9 @@
           <section id="accounts" class="page-section d-none">
             <div class="d-flex justify-content-between align-items-center mb-4">
               <h3>Accounts</h3>
+              <button id="ShowPayModal" class="btn btn-primary">
+                Add Payment
+              </button>
             </div>
             <div class="card">
               <div class="card-body">
@@ -247,10 +251,10 @@
                     <thead>
                       <tr>
                         <th>Payment ID</th>
+                        <th>Payment Date</th>
                         <th>Client Name</th>
                         <th>Amount</th>
                         <th>Payment Status</th>
-                        <th>Payment Date</th>
                       </tr>
                     </thead>
                     <tbody id="accounts-table">
@@ -1184,6 +1188,111 @@
               </button>
               <button type="submit" class="btn btn-primary px-4">
                 <i class="fas fa-save me-2"></i>Add Staff
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- Add Payment Modal -->
+    <div id="addPayment" class="add-staff-container d-none">
+      <button id="closePayModal" class="closeBTN">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="card border-0 shadow">
+        <!-- Card Header -->
+        <div class="card-header py-3">
+          <h3 class="mb-0 text-white">
+            <i class="fa-solid fa-credit-card me-2"></i>Add Payement
+          </h3>
+        </div>
+
+        <!-- Form Body -->
+        <div class="card-body p-4">
+          <form id="addPaymentForm" novalidate>
+            <!-- Staff Information Section -->
+            <div class="mb-4 pb-3 border-bottom">
+              <h3 class="h5 mb-3">
+                <i class="fa-solid fa-money-check-dollar me-2"></i>Payemnt
+                Information
+              </h3>
+
+              <div class="row g-3">
+                <!-- Date Field -->
+                <div class="col-md-6">
+                  <div class="form-floating">
+                    <input
+                      type="date"
+                      class="form-control"
+                      id="PayDate"
+                      required
+                    />
+                    <label for="PayDate">Payment Date</label>
+                    <div class="invalid-feedback">
+                      Please enter a valid Date
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Payment Client Name Field -->
+                <div class="col-md-6">
+                  <div class="form-floating">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="PayClentName"
+                      placeholder=" "
+                      required
+                    />
+                    <label for="PayClentName">Client Name</label>
+                    <div class="invalid-feedback">
+                      Please enter a valid Client Name
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Email Field -->
+                <div class="col-md-6">
+                  <div class="form-floating">
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="addPayEmail"
+                      placeholder=" "
+                      required
+                    />
+                    <label for="addPayEmail">Email Address</label>
+                    <div class="invalid-feedback">
+                      Please enter a valid email
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Receipt Field -->
+                <div class="col-md-12">
+                  <div class="form-floating">
+                    <input
+                      type="file"
+                      class="form-control"
+                      id="PayReceipt"
+                      required
+                    />
+                    <label for="PayReceipt">Add Receipt</label>
+                    <div class="invalid-feedback">
+                      Please Add valid Payment Receipt
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Form Actions -->
+            <div class="d-flex justify-content-end gap-3 pt-2">
+              <button type="reset" class="btn btn-outline-secondary px-4">
+                <i class="fas fa-undo me-2"></i>Reset
+              </button>
+              <button type="submit" class="btn btn-primary px-4">
+                <i class="fas fa-save me-2"></i>Add Payment Receipt
               </button>
             </div>
           </form>

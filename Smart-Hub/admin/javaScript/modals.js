@@ -28,6 +28,11 @@ document.addEventListener("DOMContentLoaded", function () {
   const ModalcloseBtn = this.getElementById("AddStaffTN");
   const AddStaffBTn = this.getElementById("ShowModal");
 
+  // Payment Modal
+  const PaymentModal = this.getElementById("addPayment");
+  const closePayModal = this.getElementById("closePayModal");
+  const ShowPayModal = this.getElementById("ShowPayModal");
+
   // BackGround Color Black variable
   const bgBlack = this.getElementById("blackWall");
   const closeBtn = this.getElementById("closeBTN");
@@ -36,6 +41,16 @@ document.addEventListener("DOMContentLoaded", function () {
   ProBtn.addEventListener("click", function () {
     ShowProModal();
     showBlack();
+  });
+
+  ShowPayModal.addEventListener("click", function () {
+    PaymentModal.classList.remove("d-none");
+    showBlack();
+  });
+
+  closePayModal.addEventListener("click", function () {
+    PaymentModal.classList.add("d-none");
+    HideBlack();
   });
 
   AddStaffBTn.addEventListener("click", function () {
@@ -91,6 +106,10 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     if (!AddStaffModal.classList.contains("d-none")) {
       AddStaffModal.classList.add("d-none");
+    }
+
+    if (!PaymentModal.classList.contains("d-none")) {
+      PaymentModal.classList.add("d-none");
     }
 
     HideBlack();
@@ -548,4 +567,165 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("addPaymentForm");
+  const payDate = document.getElementById("PayDate");
+  const payClientName = document.getElementById("PayClentName");
+  const payEmail = document.getElementById("addPayEmail");
+  const payReceipt = document.getElementById("PayReceipt");
+
+  // Validate date (not in future)
+  function validateDate() {
+    const selectedDate = new Date(payDate.value);
+    const today = new Date();
+    today.setHours(0, 0, 0, 0); // Reset time part for accurate comparison
+
+    if (!payDate.value) {
+      payDate.classList.add("is-invalid");
+      console.log(payDate);
+      return false;
+    }
+
+    if (selectedDate > today) {
+      payDate.classList.add("is-invalid");
+      payDate.nextElementSibling.nextElementSibling.textContent =
+        "Date cannot be in the future";
+      return false;
+    }
+
+    payDate.classList.remove("is-invalid");
+    return true;
+  }
+
+  // Validate client name (minimum 2 characters)
+  function validateClientName() {
+    if (!payClientName.value.trim() || payClientName.value.trim().length < 2) {
+      payClientName.classList.add("is-invalid");
+      return false;
+    }
+    payClientName.classList.remove("is-invalid");
+    return true;
+  }
+
+  // Validate email format
+  function validateEmail() {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(payEmail.value)) {
+      payEmail.classList.add("is-invalid");
+      return false;
+    }
+    payEmail.classList.remove("is-invalid");
+    return true;
+  }
+
+  // Validate receipt file (PDF, JPG, PNG)
+  function validateReceipt() {
+    if (!payReceipt.files || payReceipt.files.length === 0) {
+      payReceipt.classList.add("is-invalid");
+      return false;
+    }
+
+    const allowedTypes = ["application/pdf", "image/jpeg", "image/png"];
+    const file = payReceipt.files[0];
+
+    if (!allowedTypes.includes(file.type)) {
+      payReceipt.classList.add("is-invalid");
+      payReceipt.nextElementSibling.textContent =
+        "Only PDF, JPG, or PNG files allowed";
+      return false;
+    }
+
+    // Optional: Validate file size (2MB max)
+    if (file.size > 2 * 1024 * 1024) {
+      payReceipt.classList.add("is-invalid");
+      payReceipt.nextElementSibling.textContent =
+        "File size must be less than 2MB";
+      return false;
+    }
+
+    payReceipt.classList.remove("is-invalid");
+    return true;
+  }
+
+  // Real-time validation as user types
+  payDate.addEventListener("change", validateDate);
+  payClientName.addEventListener("input", validateClientName);
+  payEmail.addEventListener("input", validateEmail);
+  payReceipt.addEventListener("change", validateReceipt);
+
+  // Form submission handler
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    // Validate all fields
+    const isDateValid = validateDate();
+    const isNameValid = validateClientName();
+    const isEmailValid = validateEmail();
+    const isReceiptValid = validateReceipt();
+
+    if (isDateValid && isNameValid && isEmailValid && isReceiptValid) {
+      // Prepare form data for submission
+      const formData = {
+        date: payDate.value,
+        clientName: payClientName.value.trim(),
+        email: payEmail.value.trim(),
+        receipt: payReceipt.files[0].name,
+        // For actual submission, you would use FormData
+      };
+
+      console.log("Form data valid for submission:", formData);
+
+      // Show success message
+      showToast("success", "Payment receipt added successfully!");
+
+      // Optional: Reset form after successful submission
+      setTimeout(() => {
+        form.reset();
+      }, 2000);
+    } else {
+      // Show error message
+      showToast("error", "Please correct the errors in the form");
+    }
+  });
+
+  // Reset form handler
+  form.addEventListener("reset", function () {
+    // Clear all validation states
+    [payDate, payClientName, payEmail, payReceipt].forEach((field) => {
+      field.classList.remove("is-invalid");
+    });
+  });
+
+  // Helper function to show toast messages
+  function showToast(type, message) {
+    const toastContainer = document.createElement("div");
+    toastContainer.className = "position-fixed bottom-0 end-0 p-3";
+    toastContainer.style.zIndex = "1100"; // Above everything
+
+    const toastClass =
+      type === "success" ? "bg-success text-white" : "bg-danger text-white";
+
+    toastContainer.innerHTML = `
+      <div class="toast show" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header ${toastClass}">
+          <strong class="me-auto">${
+            type === "success" ? "Success" : "Error"
+          }</strong>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+          ${message}
+        </div>
+      </div>
+    `;
+
+    document.body.appendChild(toastContainer);
+
+    // Auto-remove toast after 5 seconds
+    setTimeout(() => {
+      toastContainer.remove();
+    }, 5000);
+  }
 });

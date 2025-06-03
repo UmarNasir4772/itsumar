@@ -144,7 +144,7 @@ input:focus {
 
 .table .tdBadge {
   padding: 10px 15px;
-  width: 80px;
+  width: auto;
   text-align: center;
 }
 
@@ -858,12 +858,7 @@ input:focus {
 /* Responsive Adjustments */
 @media (max-width: 767.98px) {
   .add-staff-container {
-    padding: 40px 15px;
-  }
-
-  .add-staff-container .closeBTN {
-    top: 5px;
-    right: 5px;
+    padding: 0 15px;
   }
 
   .add-staff-container .card-body {
