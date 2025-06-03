@@ -782,9 +782,11 @@ input:focus {
 
 /* Responsive Adjustments */
 @media (max-width: 767.98px) {
+  .add-staff-container,
   .staff-update-container {
     padding: 40px 20px;
   }
+  .add-staff-container .closeBTN,
   .staff-update-container .closeBTN {
     top: 5px;
     right: 5px;
@@ -858,9 +860,8 @@ input:focus {
 /* Responsive Adjustments */
 @media (max-width: 767.98px) {
   .add-staff-container {
-    padding: 0 15px;
+    padding: 40px 20px;
   }
-
   .add-staff-container .card-body {
     padding: 1.5rem !important;
   }
