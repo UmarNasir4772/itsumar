@@ -31,11 +31,43 @@ document.addEventListener("DOMContentLoaded", function () {
   // Payment Modal
   const PaymentModal = this.getElementById("addPayment");
   const closePayModal = this.getElementById("closePayModal");
-  const ShowPayModal = this.getElementById("ShowPayModal");
+  // const ShowPayModal = this.getElementById("ShowPayModal");
 
   // BackGround Color Black variable
   const bgBlack = this.getElementById("blackWall");
   const closeBtn = this.getElementById("closeBTN");
+
+  // Product Modals
+  const productViewModal = this.getElementById("Product-details");
+  const productUpadateModal = this.getElementById("Product-Update");
+  const prodcutaddModal = this.getElementById("Product-Add");
+  const ProductViewBTN = this.getElementById("ProductView");
+  const ProductEditBTN = this.getElementById("ProductEdit");
+  const ProductAddBTN = this.getElementById("ShowProductModal");
+  const closeProductModal = this.querySelectorAll("#Product-Modal-btn");
+
+  ProductAddBTN.addEventListener("click", function () {
+    prodcutaddModal.classList.remove("d-none");
+    showBlack();
+  });
+  ProductEditBTN.addEventListener("click", function () {
+    productUpadateModal.classList.remove("d-none");
+    showBlack();
+  });
+  ProductViewBTN.addEventListener("click", function () {
+    productViewModal.classList.remove("d-none");
+    showBlack();
+  });
+
+  closeProductModal.forEach((BTN) => {
+    BTN.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      // view client detials
+      BTN.parentElement.classList.add("d-none");
+      HideBlack();
+    });
+  });
 
   // clink Event Funtion for all
   ProBtn.addEventListener("click", function () {
@@ -43,10 +75,10 @@ document.addEventListener("DOMContentLoaded", function () {
     showBlack();
   });
 
-  ShowPayModal.addEventListener("click", function () {
-    PaymentModal.classList.remove("d-none");
-    showBlack();
-  });
+  // ShowPayModal.addEventListener("click", function () {
+  //   PaymentModal.classList.remove("d-none");
+  //   showBlack();
+  // });
 
   closePayModal.addEventListener("click", function () {
     PaymentModal.classList.add("d-none");
@@ -83,6 +115,7 @@ document.addEventListener("DOMContentLoaded", function () {
     HideClientSetModal();
     HideBlack();
   });
+
   sSetBTN.addEventListener("click", function () {
     HideStaffModal();
     HideBlack();
@@ -287,12 +320,82 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("documentViewerModal")
   );
   const viewButtons = document.querySelectorAll(".view-btn");
+  const DelButtons = document.querySelectorAll(".del-btn");
   const documentImage = document.getElementById("documentImage");
   const documentPdf = document.getElementById("documentPdf");
   const unsupportedDocument = document.getElementById("unsupportedDocument");
   const downloadBtn = document.getElementById("downloadBtn");
   const downloadDocument = document.getElementById("downloadDocument");
   const documentModalLabel = document.getElementById("documentModalLabel");
+
+  // Delete button functionality
+  DelButtons.forEach((button) => {
+    button.addEventListener("click", async function () {
+      const docId = this.getAttribute("data-doc-id");
+      const docName = this.getAttribute("data-doc-name");
+      const row = this.closest("tr"); // Get the table row for removal
+
+      try {
+        // Show confirmation dialog
+        const isConfirmed = confirm(
+          `Are you sure you want to delete ${docName}?`
+        );
+        if (!isConfirmed) return;
+
+        // API call to delete document (replace with your actual endpoint)
+        const response = await fetch(`/api/documents/${docId}`, {
+          method: "DELETE",
+          headers: {
+            "Content-Type": "application/json",
+            "X-CSRF-TOKEN": document.querySelector('meta[name="csrf-token"]')
+              .content,
+          },
+        });
+
+        if (!response.ok) throw new Error("Failed to delete document");
+
+        // Remove the row from UI
+        row.remove();
+
+        // Show success toast
+        showToast("success", `${docName} deleted successfully`);
+      } catch (error) {
+        console.error("Delete error:", error);
+        showToast("error", `Failed to delete ${docName}`);
+      }
+    });
+  });
+
+  // Toast notification function (reusable)
+  function showToast(type, message) {
+    const toastContainer = document.createElement("div");
+    toastContainer.className = "position-fixed bottom-0 end-0 p-3";
+    toastContainer.style.zIndex = "1100";
+
+    const toastClass =
+      type === "success" ? "bg-success text-white" : "bg-danger text-white";
+
+    toastContainer.innerHTML = `
+    <div class="toast show" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header ${toastClass}">
+        <strong class="me-auto">${
+          type === "success" ? "Success" : "Error"
+        }</strong>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body">
+        ${message}
+      </div>
+    </div>
+  `;
+
+    document.body.appendChild(toastContainer);
+
+    // Auto-remove toast after 5 seconds
+    setTimeout(() => {
+      toastContainer.remove();
+    }, 5000);
+  }
 
   viewButtons.forEach((button) => {
     button.addEventListener("click", function () {
@@ -573,7 +676,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("addPaymentForm");
   const payDate = document.getElementById("PayDate");
   const payClientName = document.getElementById("PayClentName");
-  const payEmail = document.getElementById("addPayEmail");
   const payReceipt = document.getElementById("PayReceipt");
 
   // Validate date (not in future)
@@ -609,17 +711,6 @@ document.addEventListener("DOMContentLoaded", function () {
     return true;
   }
 
-  // Validate email format
-  function validateEmail() {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(payEmail.value)) {
-      payEmail.classList.add("is-invalid");
-      return false;
-    }
-    payEmail.classList.remove("is-invalid");
-    return true;
-  }
-
   // Validate receipt file (PDF, JPG, PNG)
   function validateReceipt() {
     if (!payReceipt.files || payReceipt.files.length === 0) {
@@ -652,7 +743,6 @@ document.addEventListener("DOMContentLoaded", function () {
   // Real-time validation as user types
   payDate.addEventListener("change", validateDate);
   payClientName.addEventListener("input", validateClientName);
-  payEmail.addEventListener("input", validateEmail);
   payReceipt.addEventListener("change", validateReceipt);
 
   // Form submission handler
@@ -662,15 +752,13 @@ document.addEventListener("DOMContentLoaded", function () {
     // Validate all fields
     const isDateValid = validateDate();
     const isNameValid = validateClientName();
-    const isEmailValid = validateEmail();
     const isReceiptValid = validateReceipt();
 
-    if (isDateValid && isNameValid && isEmailValid && isReceiptValid) {
+    if (isDateValid && isNameValid && isReceiptValid) {
       // Prepare form data for submission
       const formData = {
         date: payDate.value,
         clientName: payClientName.value.trim(),
-        email: payEmail.value.trim(),
         receipt: payReceipt.files[0].name,
         // For actual submission, you would use FormData
       };
@@ -693,7 +781,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Reset form handler
   form.addEventListener("reset", function () {
     // Clear all validation states
-    [payDate, payClientName, payEmail, payReceipt].forEach((field) => {
+    [payDate, payClientName, payReceipt].forEach((field) => {
       field.classList.remove("is-invalid");
     });
   });

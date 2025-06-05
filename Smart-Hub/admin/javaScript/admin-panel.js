@@ -65,6 +65,7 @@ function generateTableData() {
   const clientsTable = document.getElementById("clients-table");
   const accountsTable = document.getElementById("accounts-table");
   const staffTable = document.getElementById("staff-table");
+  const productTable = document.getElementById("Product-table");
 
   // Sample data for new clients
   const newClientsData = [
@@ -169,6 +170,23 @@ function generateTableData() {
     },
   ];
 
+  // Sample data for products
+
+  const productData = [
+    {
+      id: 4001,
+      productType: "Basic",
+    },
+    {
+      id: 4002,
+      productType: "Standerd",
+    },
+    {
+      id: 4003,
+      productType: "Premium",
+    },
+  ];
+
   // Sample data for accounts
   const accountsData = [
     {
@@ -242,11 +260,11 @@ function generateTableData() {
             <td><span class="tdBadge badge ${(() => {
               switch (client.status) {
                 case 1:
-                  return "bg-success";
+                  return "text-success";
                 case 2:
-                  return "bg-danger";
+                  return "text-danger";
                 default:
-                  return "bg-warning";
+                  return "text-warning";
               }
             })()}">${(() => {
       switch (client.status) {
@@ -279,7 +297,7 @@ function generateTableData() {
                   client.id
                 }" class="tableBtn btn btn-sm btn-info me-1">View</button>
             </td>
-            <td><span class="tdBadge badge bg-success">${(() => {
+            <td><span class="tdBadge badge text-success">${(() => {
               switch (client.status) {
                 case 1:
                   return "Active";
@@ -301,15 +319,57 @@ function generateTableData() {
     row.className = "slide-in";
     const statusClass =
       account.status === "Received" ? "bg-success" : "bg-warning";
+    const isPending = account.status !== "Received";
     row.innerHTML = `
-            <td>${account.id}</td>
-            <td>${account.date}</td>
-            <td>${account.name}</td>
-            <td>${account.amount}</td>
-            <td><span class="tdBadge badge ${statusClass}">${account.status}</span></td>
-        `;
+           <td>${account.id}</td>
+    <td>${account.date}</td>
+    <td>${account.name}</td>
+    <td>${account.amount}</td>
+    <td>
+      <span class="tdBadge badge ${statusClass} ${
+      isPending ? "clickable-status" : ""
+    }" 
+            data-payment-id="${account.id}"
+            data-client-name="${account.name}"
+            data-amount="${account.amount}">
+        ${account.status}
+      </span>
+    </td>
+  `;
     accountsTable.appendChild(row);
   });
+
+  // Add event listeners for pending payment statuses
+  document.addEventListener("click", function (e) {
+    if (e.target.classList.contains("clickable-status")) {
+      const paymentId = e.target.getAttribute("data-payment-id");
+      const clientName = e.target.getAttribute("data-client-name");
+      const amount = e.target.getAttribute("data-amount");
+
+      // Show the payment details modal
+      showPaymentDetailsModal(paymentId, clientName, amount);
+    }
+  });
+
+  // Function to show payment details modal
+  function showPaymentDetailsModal(paymentId, clientName, amount) {
+    // Get modal elements (replace with your actual modal IDs)
+    const PaymentModal = document.getElementById("addPayment");
+    const clientNameEl = document.getElementById("PayClentName");
+    const clientIDEl = document.getElementById("ClentPayId");
+    const amountEl = document.getElementById("PayClentAmount");
+    const modalTitle = document.getElementById("paymentModalTitle");
+    const bgBlack = document.getElementById("blackWall");
+
+    // Populate modal with data
+    modalTitle.innerText = `Payment of ${clientName}`;
+    clientNameEl.setAttribute("value", clientName);
+    amountEl.setAttribute("value", amount);
+    clientIDEl.setAttribute("value", paymentId);
+
+    PaymentModal.classList.remove("d-none");
+    bgBlack.classList.remove("d-none");
+  }
 
   // Populate staff table
   staffData.forEach((staff) => {
@@ -326,6 +386,21 @@ function generateTableData() {
             </td>
         `;
     staffTable.appendChild(row);
+  });
+
+  // Populate Products table
+  productData.forEach((product) => {
+    const row = document.createElement("tr");
+    row.className = "slide-in";
+    row.innerHTML = `
+              <td>${product.id}</td>
+              <td>${product.productType}</td>
+              <td>
+                  <button id="ProductView" data-Cid="${product.id}" class="veBtn btn btn-sm btn-info me-1">View</button>
+                  <button id="ProductEdit" data-Cid="${product.id}" class="veBtn btn btn-sm btn-warning">Edit</button>
+              </td>
+          `;
+    productTable.appendChild(row);
   });
 
   // Add event listeners to buttons

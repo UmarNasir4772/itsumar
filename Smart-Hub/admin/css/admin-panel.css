@@ -14,7 +14,8 @@ body {
   background-color: var(--light-color);
   overflow-x: hidden;
 }
-
+.form-select,
+textarea:focus,
 input:focus {
   box-shadow: none !important;
 }
@@ -146,6 +147,16 @@ input:focus {
   padding: 10px 15px;
   width: auto;
   text-align: center;
+}
+
+.clickable-status {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.clickable-status:hover {
+  transform: scale(1.05);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .table .veBtn {
@@ -603,7 +614,7 @@ input:focus {
   box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
   overflow: scroll;
   padding: 20px;
-  position: absolute;
+  position: fixed;
   top: 5%;
   left: 5%;
   width: 90%;
@@ -698,7 +709,7 @@ input:focus {
   margin-bottom: 0.25rem;
   color: var(--info-color);
 }
-
+.del-btn,
 .view-btn {
   width: 100%;
 }
@@ -884,4 +895,9 @@ input:focus {
   .add-staff-container h3.h5 {
     font-size: 1.1rem;
   }
+}
+#ProductText,
+#ProductTextarea {
+  min-height: 150px;
+  max-height: fit-content;
 }
