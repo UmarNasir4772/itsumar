@@ -176,14 +176,17 @@ function generateTableData() {
     {
       id: 4001,
       productType: "Basic",
+      cost: "1200",
     },
     {
       id: 4002,
       productType: "Standerd",
+      cost: "1500",
     },
     {
       id: 4003,
       productType: "Premium",
+      cost: "2000",
     },
   ];
 
@@ -194,35 +197,45 @@ function generateTableData() {
       date: "01-01-2025",
       name: "Jennifer Lee",
       amount: "$1,200.00",
+      method: "Cash",
       status: "Received",
+      PayDate: "01-01-2025",
     },
     {
       id: "PAY-3002",
       date: "01-01-2025",
       name: "David Miller",
       amount: "$850.00",
+      method: "Cash",
       status: "Pending",
+      PayDate: " ",
     },
     {
       id: "PAY-3003",
       date: "01-01-2025",
       name: "Lisa Taylor",
       amount: "$2,500.00",
+      method: "Cash",
       status: "Received",
+      PayDate: "01-01-2025",
     },
     {
       id: "PAY-3004",
       date: "01-01-2025",
       name: "James Anderson",
       amount: "$1,750.00",
+      method: "Cash",
       status: "Received",
+      PayDate: "01-01-2025",
     },
     {
       id: "PAY-3005",
       date: "01-01-2025",
       name: "Patricia Thomas",
       amount: "$3,000.00",
+      method: "Cash",
       status: "Pending",
+      PayDate: " ",
     },
   ];
 
@@ -325,6 +338,7 @@ function generateTableData() {
     <td>${account.date}</td>
     <td>${account.name}</td>
     <td>${account.amount}</td>
+    <td>${account.method}</td>
     <td>
       <span class="tdBadge badge ${statusClass} ${
       isPending ? "clickable-status" : ""
@@ -335,6 +349,8 @@ function generateTableData() {
         ${account.status}
       </span>
     </td>
+    <td>${account.PayDate}</td>
+    <td><a target="_blank" href="#">View</a></td>
   `;
     accountsTable.appendChild(row);
   });
@@ -395,6 +411,7 @@ function generateTableData() {
     row.innerHTML = `
               <td>${product.id}</td>
               <td>${product.productType}</td>
+              <td>${product.cost}</td>
               <td>
                   <button id="ProductView" data-Cid="${product.id}" class="veBtn btn btn-sm btn-info me-1">View</button>
                   <button id="ProductEdit" data-Cid="${product.id}" class="veBtn btn btn-sm btn-warning">Edit</button>
