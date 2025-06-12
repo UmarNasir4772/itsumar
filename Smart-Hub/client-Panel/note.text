@@ -1,0 +1,293 @@
+<!-- Profile Section -->
+<div class="container-fluid px-4 mt-4">
+  <h5 class="fw-bold text-primary mb-3">Profile | <span class="text-muted">Update your information</span></h5>
+  <div class="row g-4">
+    
+    <!-- Sidebar -->
+    <div class="col-md-4">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <p><strong>Company Name:</strong><br> Daw Al Jabal Technical Services (Dubai)</p>
+          <p><strong>Email Address:</strong><br> xyz@gmail.com</p>
+          <p><strong>Contact Number:</strong><br> +971-507648636</p>
+          <p><strong>Location:</strong><br> Office HMD120-380B, Cold Crown Business Center, Deira, Dubai</p>
+          <p><strong>Client Status:</strong><br> <span class="badge bg-success">Approved</span></p>
+          <hr>
+          <ul class="list-unstyled">
+            <li><a href="#" class="profile-link active" data-section="company">Company Information</a></li>
+            <li><a href="#" class="profile-link" data-section="contractor">Contractor Details</a></li>
+            <li><a href="#" class="profile-link" data-section="package">Package Details</a></li>
+            <li><a href="#" class="profile-link" data-section="history">Payment History</a></li>
+            <li><a href="#" class="profile-link" data-section="password">Change Password</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dynamic Profile Content -->
+    <div class="col-md-8">
+      <div class="card shadow-sm">
+        <div class="card-body" id="profile-content">
+          <!-- Dynamic content loads here -->
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<div class="container-fluid px-4 mt-4">
+          <h5 class="fw-bold text-primary mb-3">
+            Profile | <span class="text-muted">Update your information</span>
+          </h5>
+          <div class="row g-4">
+            <!-- Sidebar -->
+            <div class="col-md-4">
+              <div class="card shadow-sm">
+                <div class="card-body">
+                  <p>
+                    <strong>Company Name:</strong><br />
+                    Daw Al Jabal Technical Services (Dubai)
+                  </p>
+                  <p>
+                    <strong>Email Address:</strong><br />
+                    xyz@gmail.com
+                  </p>
+                  <p>
+                    <strong>Contact Number:</strong><br />
+                    +971-507648636
+                  </p>
+                  <p>
+                    <strong>Location:</strong><br />
+                    Office HMD120-380B, Cold Crown Business Center, Deira, Dubai
+                  </p>
+                  <p>
+                    <strong>Client Status:</strong><br />
+                    <span class="badge bg-success">Approved</span>
+                  </p>
+                  <hr />
+                  <!-- Sidebar Navigation -->
+                  <ul class="list-unstyled">
+                    <li>
+                      <a
+                        href="#"
+                        class="profile-link active"
+                        data-section="company-section"
+                        >Company Information</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="profile-link"
+                        data-section="contractor-section"
+                        >Contractor Details</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="profile-link"
+                        data-section="package-section"
+                        >Package Details</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="profile-link"
+                        data-section="history-section"
+                        >Payment History</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="profile-link"
+                        data-section="password-section"
+                        >Change Password</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Dynamic Content Panel -->
+            <div class="col-md-8">
+              <div class="card shadow-sm">
+                <div class="card-body" id="profile-content">
+                  <!-- Company Information -->
+                  <div id="company-section" class="profile-tab">
+                    <div
+                      class="d-flex justify-content-between align-items-center mb-3"
+                    >
+                      <h5 class="fw-bold">Company Information</h5>
+                      <button
+                        class="btn btn-outline-primary btn-sm"
+                        onclick="openModal('Edit Company Info')"
+                      >
+                        Edit
+                      </button>
+                    </div>
+                    <div class="row g-3">
+                      <div class="col-md-6 form-floating">
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="tradeNo"
+                          value="Daw Al Jabal Technical Services"
+                          placeholder="Trade License No"
+                        />
+                        <label for="tradeNo">Trade License No</label>
+                      </div>
+                      <div class="col-md-6 form-floating">
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="expiryDate"
+                          value="01-01-2026"
+                          placeholder="Expiry"
+                        />
+                        <label for="expiryDate">Trade License Expiry</label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Contractor Details -->
+                  <div id="contractor-section" class="profile-tab d-none">
+                    <div
+                      class="d-flex justify-content-between align-items-center mb-3"
+                    >
+                      <h5 class="fw-bold">Contractor Details</h5>
+                      <button
+                        class="btn btn-outline-primary btn-sm"
+                        onclick="openModal('Edit Contractor Details')"
+                      >
+                        Edit
+                      </button>
+                    </div>
+                    <h6 class="text-primary">Manager Details</h6>
+                    <div class="row g-3">
+                      <div class="col-md-6 form-floating">
+                        <input
+                          type="text"
+                          class="form-control"
+                          value="Ali Khan"
+                          disabled
+                        />
+                        <label>Manager Name</label>
+                      </div>
+                      <div class="col-md-6 form-floating">
+                        <input
+                          type="text"
+                          class="form-control"
+                          value="+971507648636"
+                          disabled
+                        />
+                        <label>Contact No</label>
+                      </div>
+                      <div class="col-md-6">
+                        <label class="form-label d-block">Passport Copy</label>
+                        <button class="btn btn-outline-secondary btn-sm">
+                          View
+                        </button>
+                      </div>
+                    </div>
+                    <hr />
+                    <h6 class="text-primary">Representative Details</h6>
+                    <!-- Same format as above -->
+                  </div>
+
+                  <!-- Package Details -->
+                  <div id="package-section" class="profile-tab d-none">
+                    <div
+                      class="d-flex justify-content-between align-items-center mb-3"
+                    >
+                      <h5 class="fw-bold">Package Details</h5>
+                      <button
+                        class="btn btn-outline-primary btn-sm"
+                        onclick="openModal('Edit Package Details')"
+                      >
+                        Edit
+                      </button>
+                    </div>
+                    <p><strong>Package Type:</strong> Standard</p>
+                    <p>
+                      <strong>Description:</strong> Access to dashboard,
+                      reporting & storage
+                    </p>
+                    <p><strong>Amount:</strong> AED 500</p>
+                  </div>
+
+                  <!-- Payment History -->
+                  <div id="history-section" class="profile-tab d-none">
+                    <h5 class="fw-bold mb-3">Payment History</h5>
+                    <table class="table table-bordered table-striped">
+                      <thead class="table-light">
+                        <tr>
+                          <th>Date</th>
+                          <th>Amount (AED)</th>
+                          <th>Method</th>
+                          <th>Status</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>2025-05-01</td>
+                          <td>500.00</td>
+                          <td>Credit Card</td>
+                          <td><span class="badge bg-success">Paid</span></td>
+                        </tr>
+                        <tr>
+                          <td>2025-04-01</td>
+                          <td>500.00</td>
+                          <td>Bank Transfer</td>
+                          <td>
+                            <span class="badge bg-success">Pending</span>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <!-- Change Password -->
+                  <div id="password-section" class="profile-tab d-none">
+                    <h5 class="fw-bold mb-3">Change Password</h5>
+                    <div class="form-floating mb-3">
+                      <input
+                        type="password"
+                        class="form-control"
+                        id="currentPassword"
+                        placeholder="Current Password"
+                      />
+                      <label for="currentPassword">Current Password</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                      <input
+                        type="password"
+                        class="form-control"
+                        id="newPassword"
+                        placeholder="New Password"
+                      />
+                      <label for="newPassword">New Password</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                      <input
+                        type="password"
+                        class="form-control"
+                        id="confirmPassword"
+                        placeholder="Confirm Password"
+                      />
+                      <label for="confirmPassword">Confirm Password</label>
+                    </div>
+                    <div class="text-end">
+                      <button class="btn btn-success">Update Password</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
