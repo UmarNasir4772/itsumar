@@ -19,7 +19,20 @@ document.addEventListener("DOMContentLoaded", function () {
 function enableEdit(sectionId) {
   const section = document.getElementById(sectionId);
   const inputs = section.querySelectorAll("input, textarea, select");
-  inputs.forEach((i) => i.removeAttribute("readonly"));
+  
+  
+  if (sectionId == "company-section" || sectionId == "contractor-section") {
+    inputs.forEach((i) => i.classList.remove("d-none"));
+    inputs.forEach((i) => i.removeAttribute("readonly"));
+    const btn = section.querySelectorAll(".viewbtn");
+    btn.forEach((i) => i.classList.add("d-none"));
+  }
+
+  if (sectionId == "package-section") {
+    inputs[0].removeAttribute("readonly");
+  }
+
+
   section
     .querySelector(`#${sectionId.replace("-section", "")}-save`)
     .classList.remove("d-none");

@@ -1,2754 +1,1979 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Smart Hub Client Panel</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/style.css" />
-    <style></style>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Hub Client Panel</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style></style>
+</head>
 
-  <body>
-    <div id="blackwrapper" class="blackwrapper d-none"></div>
-    <div class="d-flex" id="wrapper">
-      <!-- Sidebar -->
-      <div class="bg-dark" id="sidebar-wrapper">
-        <button id="sibebarclose" class="sibebarclose">
-          <i class="fa-solid fa-xmark"></i>
-        </button>
-        <div
-          class="sidebar-heading d-flex align-items-center justify-content-center  text-white text-center py-4 fs-4 fw-bold border-bottom"
-        >
-          <img height="30px"  class="me-3" src="images/logo-icon.ico" alt="Smart Hub Logo"></i>SMART HUB
-        </div>
-        <div class="list-group list-group-flush my-3">
-          <a
-            href="#"
-            class="list-group-item list-group-item-action NavLink bg-dark text-white"
-            data-target="dashboard"
-            id="dashboardLink"
-          >
-            <i class="fas fa-tachometer-alt me-2"></i> Dashboard
-          </a>
-          <a
-            href="#"
-            class="list-group-item list-group-item-action NavLink bg-dark text-white"
-            data-target="profile"
-            id="profileLink"
-          >
-            <i class="fas fa-user me-2"></i> Profile
-          </a>
-
-          <!-- Sales Department -->
-          <a
-            class="list-group-item list-group-item-action showsub bg-dark text-white"
-            data-bs-toggle="collapse"
-            href="#salesSubmenu"
-            role="button"
-            aria-expanded="false"
-          >
-            <i class="fas fa-chart-line me-2"></i> Sales Department
-          </a>
-          <div class="collapse" id="salesSubmenu">
-            <a
-              href="#"
-              class="list-group-item bg-dark ps-5 text-white"
-              data-target="quotation"
-              >➤ Quotations</a
-            >
-          </div>
-
-          <!-- Purchase Department -->
-          <a
-            class="list-group-item list-group-item-action showsub bg-dark text-white"
-            data-bs-toggle="collapse"
-            href="#purchaseSubmenu"
-            role="button"
-            aria-expanded="false"
-          >
-            <i class="fas fa-shopping-cart me-2"></i> Purchase Department
-          </a>
-          <div class="collapse" id="purchaseSubmenu">
-            <a
-              href="#"
-              class="list-group-item bg-dark ps-5 text-white"
-              data-target="expenses"
-              >➤ Expenses</a
-            >
-          </div>
-
-          <!-- Accounts Department -->
-          <a
-            class="list-group-item list-group-item-action showsub bg-dark text-white"
-            data-bs-toggle="collapse"
-            href="#accountsSubmenu"
-            role="button"
-            aria-expanded="false"
-          >
-            <i class="fas fa-file-invoice-dollar me-2"></i> Account Department
-          </a>
-          <div class="collapse" id="accountsSubmenu">
-            <a
-              href="#"
-              class="list-group-item bg-dark ps-5 text-white"
-              data-target="invoice"
-              >➤ Invoices</a
-            >
-            <a
-              href="#"
-              class="list-group-item bg-dark ps-5 text-white"
-              data-target="tex-invoice"
-              >➤ Tax Invoices</a
-            >
-          </div>
-
-          <!--  Hr Department -->
-          <a
-            data-bs-toggle="collapse"
-            href="#hrdptSubmenu"
-            class="list-group-item list-group-item-action showsub bg-dark text-white"
-            role="button"
-            aria-expanded="false"
-          >
-            <i class="fas fa-users me-2"></i> HR Department
-          </a>
-          <div class="collapse" id="hrdptSubmenu">
-            <a
-              href="#"
-              class="list-group-item bg-dark ps-5 text-white"
-              data-target="hrdeparment"
-              >➤ Employees</a
-            >
-          </div>
-
-          <!-- Admin Department -->
-          <a
-            class="list-group-item list-group-item-action showsub bg-dark text-white"
-            data-bs-toggle="collapse"
-            href="#adminSubmenu"
-            role="button"
-            aria-expanded="false"
-          >
-            <i class="fas fa-cogs me-2"></i> Admin Department
-          </a>
-          <div class="collapse" id="adminSubmenu">
-            <a
-              href="#"
-              class="list-group-item bg-dark ps-5 text-white"
-              data-target="useraccess"
-              >➤ User Access</a
-            >
-            <a
-              href="#"
-              class="list-group-item bg-dark ps-5 text-white"
-              data-target="vehicleSection"
-              >➤ Vehicles</a
-            >
-          </div>
-
-          <a
-            href="#"
-            class="list-group-item list-group-item-action NavLink bg-dark text-white"
-            data-target="reportSection"
-          >
-            <i class="fas fa-chart-pie me-2"></i> Reports
-          </a>
-        </div>
+<body>
+  <div id="blackwrapper" class="blackwrapper d-none"></div>
+  <div class="d-flex" id="wrapper">
+    <!-- Sidebar -->
+    <div class="bg-dark" id="sidebar-wrapper">
+      <button id="sibebarclose" class="sibebarclose">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div
+        class="sidebar-heading d-flex flex-column align-items-center justify-content-center text-white text-center py-2 fs-4 fw-bold border-bottom">
+        <img height="40px" class="my-2 rounded-circle" src="images/logo-icon.ico" alt="Smart Hub Logo" />
+        <h4>SMART HUB</h4>
       </div>
+      <div class="list-group list-group-flush my-3">
+        <a href="#" class="list-group-item list-group-item-action NavLink bg-dark text-white" data-target="dashboard"
+          id="dashboardLink">
+          <i class="fas fa-tachometer-alt me-2"></i> Dashboard
+        </a>
+        <!-- Sales Department -->
+        <a class="list-group-item list-group-item-action showsub bg-dark text-white" data-bs-toggle="collapse"
+          href="#salesSubmenu" role="button" aria-expanded="false">
+          <i class="fas fa-chart-line me-2"></i> Sales Department
+        </a>
+        <div class="collapse" id="salesSubmenu">
+          <a href="#" class="list-group-item bg-dark ps-5 text-white" data-target="quotation"><span class="me-1"
+              style="font-size: 15px;">&#10687</span>Quotations</a>
+        </div>
 
-      <!-- /#sidebar-wrapper -->
+        <!-- Purchase Department -->
+        <a class="list-group-item list-group-item-action showsub bg-dark text-white" data-bs-toggle="collapse"
+          href="#purchaseSubmenu" role="button" aria-expanded="false">
+          <i class="fas fa-shopping-cart me-2"></i> Purchase Department
+        </a>
+        <div class="collapse" id="purchaseSubmenu">
+          <a href="#" class="list-group-item bg-dark ps-5 text-white" data-target="expenses"><span class="me-1"
+              style="font-size: 15px;">&#10687</span>Expenses</a>
+        </div>
 
-      <!-- Page Content -->
-      <div id="page-content-wrapper">
-        <!-- Header/Navbar -->
-        <nav
-          class="navbar navbar-expand-lg navbar-light bg-light border-bottom sticky-top px-4 py-2 shadow-sm"
-        >
-          <div class="container-fluid">
-            <button id="toggleBar" class="active">
-              <i class="fa-solid fa-bars"></i>
-            </button>
-            <div class="nav-NL d-flex flex-row">
-              <img height="40px" class="me-3" src="images/logo-icon.ico" alt="Smart-Hub">
-              <h5>Smart Hub | Client Management Services</h5>
-            </div>
+        <!-- Accounts Department -->
+        <a class="list-group-item list-group-item-action showsub bg-dark text-white" data-bs-toggle="collapse"
+          href="#accountsSubmenu" role="button" aria-expanded="false">
+          <i class="fas fa-file-invoice-dollar me-2"></i> Account Department
+        </a>
+        <div class="collapse" id="accountsSubmenu">
+          <a href="#" class="list-group-item bg-dark ps-5 text-white" data-target="invoice"><span class="me-1"
+              style="font-size: 15px;">&#10687</span>Invoices</a>
+          <a href="#" class="list-group-item bg-dark ps-5 text-white" data-target="tex-invoice"><span class="me-1"
+              style="font-size: 15px;">&#10687</span>Tax Invoices</a>
+        </div>
 
-            <div class="d-flex align-items-center">
-              <!-- <button class="btn btn-light me-3 position-relative">
-                <i class="fas fa-bell fa-lg text-dark"></i>
-                <span
-                  class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
-                >
-                  3
-                  <span class="visually-hidden">unread messages</span>
-                </span>
+        <!--  Hr Department -->
+        <a data-bs-toggle="collapse" href="#hrdptSubmenu"
+          class="list-group-item list-group-item-action showsub bg-dark text-white" role="button" aria-expanded="false">
+          <i class="fas fa-users me-2"></i> HR Department
+        </a>
+        <div class="collapse" id="hrdptSubmenu">
+          <a href="#" class="list-group-item bg-dark ps-5 text-white" data-target="hrdeparment"><span class="me-1"
+              style="font-size: 15px;">&#10687</span>Employees</a>
+        </div>
+
+        <!-- Admin Department -->
+        <a class="list-group-item list-group-item-action showsub bg-dark text-white" data-bs-toggle="collapse"
+          href="#adminSubmenu" role="button" aria-expanded="false">
+          <i class="fas fa-cogs me-2"></i> Admin Department
+        </a>
+        <div class="collapse" id="adminSubmenu">
+          <a href="#" class="list-group-item bg-dark ps-5 text-white" data-target="useraccess"><span class="me-1"
+              style="font-size: 15px;">&#10687</span>User Access</a>
+          <a href="#" class="list-group-item bg-dark ps-5 text-white" data-target="vehicleSection"><span class="me-1"
+              style="font-size: 15px;">&#10687</span>Vehicles</a>
+        </div>
+
+        <a href="#" class="list-group-item list-group-item-action NavLink bg-dark text-white"
+          data-target="reportSection">
+          <i class="fas fa-chart-pie me-2"></i> Reports
+        </a>
+
+        <a href="#" class="list-group-item list-group-item-action NavLink bg-dark text-white" data-target="profile"
+          id="profileLink">
+          <i class="fas fa-user me-2"></i> Management
+        </a>
+      </div>
+    </div>
+
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+      <!-- Header/Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom sticky-top px-4 py-2 shadow-sm">
+        <div class="container-fluid">
+          <button id="toggleBar" class="active">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <div class="nav-NL d-flex flex-row">
+            <img height="40px" class="me-3" src="images/logo-icon.ico" alt="Smart-Hub" />
+            <h5>SMART HUB | Management Services</h5>
+          </div>
+
+          <div class="d-flex align-items-center">
+            <div class="dropdown">
+              <button class="btn btn-light dropdown-toggle d-flex align-items-center" type="button" id="profileDropdown"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="https://i.pravatar.cc/40?img=3" alt="User" class="rounded-circle me-2" width="35"
+                  height="35" />
+                <span class="fw-semibold">Athar Gul</span>
               </button>
-              <button class="btn btn-light me-3 position-relative">
-                <i class="fas fa-envelope fa-lg text-dark"></i>
-                <span
-                  class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary"
-                >
-                  5
-                </span>
-              </button> -->
-              <div class="dropdown">
-                <button
-                  class="btn btn-light dropdown-toggle d-flex align-items-center"
-                  type="button"
-                  id="profileDropdown"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  <img
-                    src="https://i.pravatar.cc/40?img=3"
-                    alt="User"
-                    class="rounded-circle me-2"
-                    width="35"
-                    height="35"
-                  />
-                  <span class="fw-semibold">Athar Gul</span>
-                </button>
-                <ul
-                  class="dropdown-menu dropdown-menu-end"
-                  aria-labelledby="profileDropdown"
-                >
-                  <li><a class="dropdown-item" href="#">Profile</a></li>
-                  <li><a class="dropdown-item" href="#">Settings</a></li>
+              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
+                <li><a class="dropdown-item" href="#" data-bs-toggle="modal"
+                    data-bs-target="#userProfileModal">Profile</a></li>
+                <li><a class="dropdown-item" href="#" data-bs-toggle="modal"
+                    data-bs-target="#userSettingsModal">Settings</a></li>
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+                <li><a class="dropdown-item" href="#">Logout</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- DASHBOARD -->
+      <section id="dashboard" class="page-section container-fluid px-4 mt-4 d-none">
+        <!-- Quick Stats -->
+        <div class="row mb-4 g-3">
+          <div class="col-md-3 ">
+            <div class="card bg-light border-0 shadow-sm">
+              <div class="card-body text-center">
+                <h6>Total Clients</h6>
+                <h4 class="text-primary">1,024</h4>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 ">
+            <div class="card bg-light border-0 shadow-sm">
+              <div class="card-body text-center">
+                <h6>Total Sales</h6>
+                <h4 class="text-success">AED 150,000</h4>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 ">
+            <div class="card bg-light border-0 shadow-sm">
+              <div class="card-body text-center">
+                <h6>Pending Invoices</h6>
+                <h4 class="text-warning">35</h4>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 ">
+            <div class="card bg-light border-0 shadow-sm">
+              <div class="card-body text-center">
+                <h6>New Messages</h6>
+                <h4 class="text-danger">12</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Departmental Pie Charts -->
+        <div class="row g-4">
+          <div class="col-md-6 col-xl-4">
+            <div class="card shadow-sm">
+              <div class="card-header text-center fw-bold">
+                SALES DEPARTMENT
+              </div>
+              <div class="card-body">
+                <canvas id="salesChart"></canvas>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-xl-4">
+            <div class="card shadow-sm">
+              <div class="card-header text-center fw-bold">
+                PURCHASE DEPARTMENT
+              </div>
+              <div class="card-body">
+                <canvas id="purchaseChart"></canvas>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-xl-4">
+            <div class="card shadow-sm">
+              <div class="card-header text-center fw-bold">
+                ACCOUNTS DEPARTMENT
+              </div>
+              <div class="card-body">
+                <canvas id="accountsChart"></canvas>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-xl-4">
+            <div class="card shadow-sm">
+              <div class="card-header text-center fw-bold">HR DEPARTMENT</div>
+              <div class="card-body">
+                <canvas id="hrChart"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Profile Section -->
+      <section id="profile" class="page-section container-fluid px-4 mt-4 d-none">
+        <h5 class="fw-bold text-primary mb-3">
+          Profile | <span class="text-muted">Update your information</span>
+        </h5>
+        <!-- <div>
+          <label class="form-label">Content Section</label>
+          <select class="form-select" id="display-section">
+            <option value="company-section">Company Details</option>
+            <option value="contractor-section">Contractor Details</option>
+            <option value="package-section">Package Details</option>
+            <option value="history-section">Payment History</option>
+            <option value="password-section">Change Password</option>
+          </select>
+        </div> -->
+        <div class="row g-4">
+          <!-- Sidebar -->
+          <div class="col-md-4">
+            <div class="card shadow-sm">
+              <div class="card-body">
+                <div class="text-center mb-4">
+                  <img src="images/companylogo.jpg" id="profileImage" class="rounded-circle" width="120" height="120"
+                    alt="Profile Image" />
+                </div>
+                <p>
+                  <strong>Portal Name:</strong><br />
+                  Daw Al Jabal
+                </p>
+                <p>
+                  <strong>Company Name:</strong><br />
+                  Daw Al Jabal Technical Services (Dubai)
+                </p>
+                <p>
+                  <strong>Email Address:</strong><br />
+                  xyz@gmail.com
+                </p>
+                <p>
+                  <strong>Contact Number:</strong><br />
+                  +971-507648636
+                </p>
+                <p>
+                  <strong>Location:</strong><br />
+                  Office HMD120-380B, Cold Crown Business Center, Deira, Dubai
+                </p>
+                <p>
+                  <strong>Expiry Date:</strong><br />
+                  31-12-2025
+                </p>
+                <p>
+                  <strong>Client Status:</strong><br />
+                  <span class="badge bg-success">Approved</span>
+                </p>
+                <hr />
+                <!-- Profile Navigation (Sidebar) -->
+                <ul class="list-unstyled">
                   <li>
-                    <hr class="dropdown-divider" />
+                    <a href="#" class="profile-link active" data-section="company-section">Company Details</a>
                   </li>
-                  <li><a class="dropdown-item" href="#">Logout</a></li>
+                  <li>
+                    <a href="#" class="profile-link" data-section="contractor-section">Contractor Details</a>
+                  </li>
+                  <li>
+                    <a href="#" class="profile-link" data-section="package-section">Package Details</a>
+                  </li>
+                  <li>
+                    <a href="#" class="profile-link" data-section="history-section">Payment History</a>
+                  </li>
+                  <li>
+                    <a href="#" class="profile-link" data-section="password-section">Change Password</a>
+                  </li>
                 </ul>
               </div>
             </div>
           </div>
-        </nav>
-        <!-- DASHBOARD -->
-        <section
-          id="dashboard"
-          class="page-section container-fluid px-4 mt-4 d-none"
-        >
-          <!-- Quick Stats -->
-          <div class="row mb-4 g-3">
-            <div class="col-md-3">
-              <div class="card bg-light border-0 shadow-sm">
-                <div class="card-body text-center">
-                  <h6>Total Clients</h6>
-                  <h4 class="text-primary">1,024</h4>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="card bg-light border-0 shadow-sm">
-                <div class="card-body text-center">
-                  <h6>Total Sales</h6>
-                  <h4 class="text-success">AED 150,000</h4>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="card bg-light border-0 shadow-sm">
-                <div class="card-body text-center">
-                  <h6>Pending Invoices</h6>
-                  <h4 class="text-warning">35</h4>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="card bg-light border-0 shadow-sm">
-                <div class="card-body text-center">
-                  <h6>New Messages</h6>
-                  <h4 class="text-danger">12</h4>
-                </div>
-              </div>
-            </div>
-          </div>
 
-          <!-- Departmental Pie Charts -->
-          <div class="row g-4">
-            <div class="col-md-6 col-xl-4">
-              <div class="card shadow-sm">
-                <div class="card-header text-center fw-bold">
-                  SALES DEPARTMENT
-                </div>
-                <div class="card-body">
-                  <canvas id="salesChart"></canvas>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-xl-4">
-              <div class="card shadow-sm">
-                <div class="card-header text-center fw-bold">
-                  PURCHASE DEPARTMENT
-                </div>
-                <div class="card-body">
-                  <canvas id="purchaseChart"></canvas>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-xl-4">
-              <div class="card shadow-sm">
-                <div class="card-header text-center fw-bold">
-                  ACCOUNTS DEPARTMENT
-                </div>
-                <div class="card-body">
-                  <canvas id="accountsChart"></canvas>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-xl-4">
-              <div class="card shadow-sm">
-                <div class="card-header text-center fw-bold">HR DEPARTMENT</div>
-                <div class="card-body">
-                  <canvas id="hrChart"></canvas>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+          <!-- Dynamic Profile Content -->
+          <div class="col-md-8">
+            <div class="card shadow-sm">
+              <div class="card-body" id="profile-content">
+                <!-- Dynamic content loads here -->
+                <!-- Right Panel Content -->
+                <div id="company-section" class="profile-tab">
+                  <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h5 class="fw-bold">Company Details</h5>
+                    <button class="btn btn-outline-primary btn-sm" onclick="enableEdit('company-section')">
+                      Edit
+                    </button>
+                  </div>
+                  <form class="row g-3">
+                    <div class="col-md-6 form-floating">
+                      <input type="text" class="form-control" id="tradeLicense" value="TLN-548754" readonly />
+                      <label for="tradeLicense">Trade License No</label>
+                    </div>
+                    <div class="col-md-6 form-floating">
+                      <input type="date" class="form-control" id="expiryDate" value="2025-12-31" readonly />
+                      <label for="expiryDate">Trade License Expiry</label>
+                    </div>
+                    <div class="col-md-6 form-floating">
+                      <input type="text" class="form-control" id="comProtalName" value="Daw Al Jabal" readonly />
+                      <label for="comProtalName">Company Portal Name</label>
+                    </div>
+                    <div class="col-md-6 form-floating">
+                      <input type="text" class="form-control" id="vatNo" value="VAT-2548996" readonly />
+                      <label for="vatNo">VAT Registration No</label>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label">Trade License Copy</label><br />
+                      <button class="viewbtn btn btn-outline-secondary btn-sm">
+                        View
+                      </button>
+                      <input type="file" class="btn btn btn-outline-secondary btn-sm me-2 d-none">
+                    </div>
 
-        <!-- Profile Section -->
-        <section
-          id="profile"
-          class="page-section container-fluid px-4 mt-4 d-none"
-        >
-          <h5 class="fw-bold text-primary mb-3">
-            Profile | <span class="text-muted">Update your information</span>
-          </h5>
-          <div class="row g-4">
-            <!-- Sidebar -->
-            <div class="col-md-4">
-              <div class="card shadow-sm">
-                <div class="card-body">
-                  <p>
-                    <strong>Company Name:</strong><br />
-                    Daw Al Jabal Technical Services (Dubai)
-                  </p>
-                  <p>
-                    <strong>Email Address:</strong><br />
-                    xyz@gmail.com
-                  </p>
-                  <p>
-                    <strong>Contact Number:</strong><br />
-                    +971-507648636
-                  </p>
-                  <p>
-                    <strong>Location:</strong><br />
-                    Office HMD120-380B, Cold Crown Business Center, Deira, Dubai
-                  </p>
-                  <p>
-                    <strong>Client Status:</strong><br />
-                    <span class="badge bg-success">Approved</span>
-                  </p>
-                  <hr />
-                  <!-- Profile Navigation (Sidebar) -->
-                  <ul class="list-unstyled">
-                    <li>
-                      <a
-                        href="#"
-                        class="profile-link active"
-                        data-section="company-section"
-                        >Company Details</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        class="profile-link"
-                        data-section="contractor-section"
-                        >Contractor Details</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        class="profile-link"
-                        data-section="package-section"
-                        >Package Details</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        class="profile-link"
-                        data-section="history-section"
-                        >Payment History</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        class="profile-link"
-                        data-section="password-section"
-                        >Change Password</a
-                      >
-                    </li>
-                  </ul>
+                    <div class="col-md-6">
+                      <label class="form-label">VAT Certificate Copy</label><br />
+                      <button class="viewbtn btn btn-outline-secondary btn-sm">
+                        View
+                      </button>
+                      <input type="file" class="btn btn btn-outline-secondary btn-sm me-2 d-none">
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label">Company Logo</label><br />
+                      <button class="viewbtn btn btn-outline-secondary btn-sm">
+                        View
+                      </button>
+                      <input type="file" class="btn btn btn-outline-secondary btn-sm me-2 d-none">
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label">Company Letterhead</label><br />
+                      <button class="viewbtn btn btn-outline-secondary btn-sm">
+                        View
+                      </button>
+                      <input type="file" class="btn btn btn-outline-secondary btn-sm me-2 d-none">
+                    </div>
+                    <div class="col-12 text-end d-none" id="company-save">
+                      <button class="btn btn-success btn-sm">Update</button>
+                    </div>
+                  </form>
                 </div>
-              </div>
-            </div>
 
-            <!-- Dynamic Profile Content -->
-            <div class="col-md-8">
-              <div class="card shadow-sm">
-                <div class="card-body" id="profile-content">
-                  <!-- Dynamic content loads here -->
-                  <!-- Right Panel Content -->
-                  <div id="company-section" class="profile-tab">
-                    <div
-                      class="d-flex justify-content-between align-items-center mb-3"
-                    >
-                      <h5 class="fw-bold">Company Details</h5>
-                      <button
-                        class="btn btn-outline-primary btn-sm"
-                        onclick="enableEdit('company-section')"
-                      >
-                        Edit
+                <div id="contractor-section" class="profile-tab d-none">
+                  <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h5 class="fw-bold">Contractor Details</h5>
+                    <button class="btn btn-outline-primary btn-sm" onclick="enableEdit('contractor-section')">
+                      Edit
+                    </button>
+                  </div>
+                  <h6 class="text-primary">Manager Details</h6>
+                  <form class="row g-3">
+                    <div class="col-md-6 form-floating">
+                      <input type="text" class="form-control" value="Manager Ali" readonly />
+                      <label>Manager Name</label>
+                    </div>
+                    <div class="col-md-6 form-floating">
+                      <input type="text" class="form-control" value="+971123456789" readonly />
+                      <label>Contact No</label>
+                    </div>
+                    <div class="col-md-6 form-floating">
+                      <input type="email" class="form-control" value="ali@company.com" readonly />
+                      <label>Email</label>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label">Passport Copy</label><br />
+                      <button class="viewbtn btn btn-outline-secondary btn-sm">
+                        View
+                      </button>
+                      <input type="file" class="btn btn-outline-secondary btn-sm d-none">
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label">Emirates ID</label><br />
+                      <button class="viewbtn btn btn-outline-secondary btn-sm">
+                        View
+                      </button>
+                      <input type="file" class="btn btn-outline-secondary btn-sm d-none">
+                    </div>
+
+                    <h6 class="text-primary">Representative Details</h6>
+                    <div class="col-md-6 form-floating">
+                      <input type="text" class="form-control" value="Rep Ahmed" readonly />
+                      <label>Representative Name</label>
+                    </div>
+                    <div class="col-md-6 form-floating">
+                      <input type="text" class="form-control" value="+971987654321" readonly />
+                      <label>Contact No</label>
+                    </div>
+                    <div class="col-md-6 form-floating">
+                      <input type="email" class="form-control" value="ahmed@company.com" readonly />
+                      <label>Email</label>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label">Passport Copy</label><br />
+                      <button class="viewbtn btn btn-outline-secondary btn-sm">
+                        View
+                      </button>
+                      <input type="file" class="btn btn-outline-secondary btn-sm d-none">
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label">Emirates ID</label><br />
+                      <button class="viewbtn btn btn-outline-secondary btn-sm">
+                        View
+                      </button>
+                      <input type="file" class="btn btn-outline-secondary btn-sm d-none">
+                    </div>
+                    <div class="col-12 text-end d-none" id="contractor-save">
+                      <button class="btn btn-success btn-sm">Update</button>
+                    </div>
+                  </form>
+                </div>
+
+                <div id="package-section" class="profile-tab d-none">
+                  <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h5 class="fw-bold">Package Details</h5>
+                    <button class="btn btn-outline-primary btn-sm" onclick="enableEdit('package-section')">
+                      Edit
+                    </button>
+                  </div>
+                  <form class="row g-3">
+                    <div class="col-md-6 form-floating">
+                      <select class="form-select" id="pkgType" disabled>
+                        <option selected>Standard</option>
+                        <option>Basic</option>
+                        <option>Premium</option>
+                      </select>
+                      <label for="pkgType">Package Type</label>
+                    </div>
+                    <div class="col-md-6 form-floating">
+                      <input type="text" class="form-control" id="pkgAmount" value="500 AED" readonly />
+                      <label for="pkgAmount">Package Amount</label>
+                    </div>
+                    <div class="col-12 form-floating">
+                      <textarea class="form-control" id="pkgDetails" style="height: 100px" readonly>
+Includes dashboard access and storage</textarea>
+                      <label for="pkgDetails">Package Description</label>
+                    </div>
+                    <div class="col-12 text-end d-none" id="package-save">
+                      <button class="btn btn-success btn-sm">Update</button>
+                    </div>
+                  </form>
+                </div>
+
+                <div id="history-section" class="profile-tab d-none">
+                  <h5 class="fw-bold mb-3">Payment History</h5>
+                  <table class="table table-bordered">
+                    <thead>
+                      <tr>
+                        <th>Reciept NO</th>
+                        <th>Payment Type</th>
+                        <th>Package Type</th>
+                        <th>Amount</th>
+                        <th>Status</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Pay-1234567</td>
+                        <td>Registration</td>
+                        <td>Basic</td>
+                        <td>500</td>
+                        <td><span class="badge bg-success">Paid</span></td>
+                      </tr>
+                      <tr>
+                        <td>Pay-1234567</td>
+                        <td>Renewal</td>
+                        <td>Standard</td>
+                        <td>1000</td>
+                        <td><span class="badge bg-success">Paid</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div id="password-section" class="profile-tab d-none">
+                  <h5 class="fw-bold mb-3">Change Password</h5>
+                  <form class="row g-3">
+                    <div class="col-md-12 form-floating">
+                      <input type="password" class="form-control" placeholder="Current" />
+                      <label class="text-secondary">Current Password</label>
+                    </div>
+                    <div class="col-md-12 form-floating">
+                      <input type="password" class="form-control" placeholder="New" />
+                      <label>New Password</label>
+                    </div>
+                    <div class="col-md-12 form-floating">
+                      <input type="password" class="form-control" placeholder="Confirm" />
+                      <label>Confirm Password</label>
+                    </div>
+                    <div class="text-end">
+                      <button class="btn btn-success btn-sm">
+                        Update Password
                       </button>
                     </div>
-                    <form class="row g-3">
-                      <div class="col-md-6 form-floating">
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="tradeLicense"
-                          value="TLN-548754"
-                          readonly
-                        />
-                        <label for="tradeLicense">Trade License No</label>
-                      </div>
-                      <div class="col-md-6 form-floating">
-                        <input
-                          type="date"
-                          class="form-control"
-                          id="expiryDate"
-                          value="2025-12-31"
-                          readonly
-                        />
-                        <label for="expiryDate">Trade License Expiry</label>
-                      </div>
-                      <div class="col-md-6">
-                        <label class="form-label">Trade License Copy</label
-                        ><br />
-                        <button class="btn btn-outline-secondary btn-sm">
-                          View
-                        </button>
-                      </div>
-                      <div class="col-md-6 form-floating">
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="vatNo"
-                          value="VAT-2548996"
-                          readonly
-                        />
-                        <label for="vatNo">VAT Registration No</label>
-                      </div>
-                      <div class="col-md-6">
-                        <label class="form-label">VAT Certificate Copy</label
-                        ><br />
-                        <button class="btn btn-outline-secondary btn-sm">
-                          View
-                        </button>
-                      </div>
-                      <div class="col-md-6">
-                        <label class="form-label">Company Logo</label><br />
-                        <button class="btn btn-outline-secondary btn-sm">
-                          View
-                        </button>
-                      </div>
-                      <div class="col-md-6">
-                        <label class="form-label">Company Letterhead</label
-                        ><br />
-                        <button class="btn btn-outline-secondary btn-sm">
-                          View
-                        </button>
-                      </div>
-                      <div class="col-12 text-end d-none" id="company-save">
-                        <button class="btn btn-success btn-sm">Update</button>
-                      </div>
-                    </form>
-                  </div>
-
-                  <div id="contractor-section" class="profile-tab d-none">
-                    <div
-                      class="d-flex justify-content-between align-items-center mb-3"
-                    >
-                      <h5 class="fw-bold">Contractor Details</h5>
-                      <button
-                        class="btn btn-outline-primary btn-sm"
-                        onclick="enableEdit('contractor-section')"
-                      >
-                        Edit
-                      </button>
-                    </div>
-                    <h6 class="text-primary">Manager Details</h6>
-                    <form class="row g-3">
-                      <div class="col-md-6 form-floating">
-                        <input
-                          type="text"
-                          class="form-control"
-                          value="Manager Ali"
-                          readonly
-                        />
-                        <label>Manager Name</label>
-                      </div>
-                      <div class="col-md-6 form-floating">
-                        <input
-                          type="text"
-                          class="form-control"
-                          value="+971123456789"
-                          readonly
-                        />
-                        <label>Contact No</label>
-                      </div>
-                      <div class="col-md-6 form-floating">
-                        <input
-                          type="email"
-                          class="form-control"
-                          value="ali@company.com"
-                          readonly
-                        />
-                        <label>Email</label>
-                      </div>
-                      <div class="col-md-6">
-                        <label class="form-label">Passport Copy</label><br />
-                        <button class="btn btn-outline-secondary btn-sm">
-                          View
-                        </button>
-                      </div>
-                      <div class="col-md-6">
-                        <label class="form-label">Emirates ID (Front)</label
-                        ><br />
-                        <button class="btn btn-outline-secondary btn-sm">
-                          View
-                        </button>
-                      </div>
-                      <div class="col-md-6">
-                        <label class="form-label">Emirates ID (Back)</label
-                        ><br />
-                        <button class="btn btn-outline-secondary btn-sm">
-                          View
-                        </button>
-                      </div>
-                      <h6 class="text-primary">Representative Details</h6>
-                      <div class="col-md-6 form-floating">
-                        <input
-                          type="text"
-                          class="form-control"
-                          value="Rep Ahmed"
-                          readonly
-                        />
-                        <label>Representative Name</label>
-                      </div>
-                      <div class="col-md-6 form-floating">
-                        <input
-                          type="text"
-                          class="form-control"
-                          value="+971987654321"
-                          readonly
-                        />
-                        <label>Contact No</label>
-                      </div>
-                      <div class="col-md-6 form-floating">
-                        <input
-                          type="email"
-                          class="form-control"
-                          value="ahmed@company.com"
-                          readonly
-                        />
-                        <label>Email</label>
-                      </div>
-                      <div class="col-md-6">
-                        <label class="form-label">Passport Copy</label><br />
-                        <button class="btn btn-outline-secondary btn-sm">
-                          View
-                        </button>
-                      </div>
-                      <div class="col-md-6">
-                        <label class="form-label">Emirates ID (Front)</label
-                        ><br />
-                        <button class="btn btn-outline-secondary btn-sm">
-                          View
-                        </button>
-                      </div>
-                      <div class="col-md-6">
-                        <label class="form-label">Emirates ID (Back)</label
-                        ><br />
-                        <button class="btn btn-outline-secondary btn-sm">
-                          View
-                        </button>
-                      </div>
-                      <div class="col-12 text-end d-none" id="contractor-save">
-                        <button class="btn btn-success btn-sm">Update</button>
-                      </div>
-                    </form>
-                  </div>
-
-                  <div id="package-section" class="profile-tab d-none">
-                    <div
-                      class="d-flex justify-content-between align-items-center mb-3"
-                    >
-                      <h5 class="fw-bold">Package Details</h5>
-                      <button
-                        class="btn btn-outline-primary btn-sm"
-                        onclick="enableEdit('package-section')"
-                      >
-                        Edit
-                      </button>
-                    </div>
-                    <form class="row g-3">
-                      <div class="col-md-6 form-floating">
-                        <select class="form-select" id="pkgType" disabled>
-                          <option selected>Standard</option>
-                          <option>Basic</option>
-                          <option>Premium</option>
-                        </select>
-                        <label for="pkgType">Package Type</label>
-                      </div>
-                      <div class="col-md-6 form-floating">
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="pkgAmount"
-                          value="500 AED"
-                          readonly
-                        />
-                        <label for="pkgAmount">Package Amount</label>
-                      </div>
-                      <div class="col-12 form-floating">
-                        <textarea
-                          class="form-control"
-                          id="pkgDetails"
-                          style="height: 100px"
-                          readonly
-                        >
-Includes dashboard access and storage</textarea
-                        >
-                        <label for="pkgDetails">Package Description</label>
-                      </div>
-                      <div class="col-12 text-end d-none" id="package-save">
-                        <button class="btn btn-success btn-sm">Update</button>
-                      </div>
-                    </form>
-                  </div>
-
-                  <div id="history-section" class="profile-tab d-none">
-                    <h5 class="fw-bold mb-3">Payment History</h5>
-                    <table class="table table-bordered">
-                      <thead>
-                        <tr>
-                          <th>Date</th>
-                          <th>Amount</th>
-                          <th>Method</th>
-                          <th>Status</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>2025-06-01</td>
-                          <td>500</td>
-                          <td>Card</td>
-                          <td><span class="badge bg-success">Paid</span></td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-
-                  <div id="password-section" class="profile-tab d-none">
-                    <h5 class="fw-bold mb-3">Change Password</h5>
-                    <form class="row g-3">
-                      <div class="col-md-12 form-floating">
-                        <input
-                          type="password"
-                          class="form-control"
-                          placeholder="Current"
-                        />
-                        <label>Current Password</label>
-                      </div>
-                      <div class="col-md-12 form-floating">
-                        <input
-                          type="password"
-                          class="form-control"
-                          placeholder="New"
-                        />
-                        <label>New Password</label>
-                      </div>
-                      <div class="col-md-12 form-floating">
-                        <input
-                          type="password"
-                          class="form-control"
-                          placeholder="Confirm"
-                        />
-                        <label>Confirm Password</label>
-                      </div>
-                      <div class="text-end">
-                        <button class="btn btn-success btn-sm">
-                          Update Password
-                        </button>
-                      </div>
-                    </form>
-                  </div>
+                  </form>
                 </div>
               </div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <!-- Sales Quotations Section -->
-        <section
-          id="quotation"
-          class="page-section container-fluid px-4 mt-4 d-none"
-        >
-          <div class="card shadow-sm">
-            <div class="card-body">
-              <!-- Header: Title + Search + Create -->
-              <div class="row align-items-center mb-4 g-2">
-                <div class="col-lg-5 col-md-12">
-                  <h4 class="fw-bold text-primary mb-0">
-                    Sales Department - Quotations
-                  </h4>
-                </div>
-                <div class="col-lg-5 col-md-8">
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Search quotations..."
-                  />
-                </div>
-                <div class="col-lg-2 col-md-4 text-end">
-                  <button
-                    id="createQuotationBtn"
-                    class="btn btn-success w-100 w-md-auto"
-                    data-bs-toggle="modal"
-                    data-bs-target="#quotationModal"
-                  >
-                    <i class="fas fa-plus me-2"></i>Create
-                  </button>
-                </div>
+      <!-- Sales Quotations Section -->
+      <section id="quotation" class="page-section container-fluid px-4 mt-4 d-none">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <!-- Header: Title + Search + Create -->
+            <div class="row align-items-center mb-4 g-2">
+              <div class="col-lg-5 col-md-12">
+                <h4 class="fw-bold text-primary mb-0">
+                  Sales Department - Quotations
+                </h4>
               </div>
-
-              <!-- Table -->
-              <div class="table-responsive">
-                <table
-                  class="table table-bordered table-hover align-middle text-nowrap"
-                >
-                  <thead class="table-light">
-                    <tr>
-                      <th class="px-3">Action</th>
-                      <th class="px-3">Status</th>
-                      <th class="px-3">Quotation No</th>
-                      <th class="px-3">Date</th>
-                      <th class="px-3">Amount (AED)</th>
-                      <th class="px-3">Name</th>
-                      <th class="px-3">Email</th>
-                      <th class="px-3">Mobile No</th>
-                      <th class="px-3">Prepared By</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td class="px-3">
-                        <button
-                          class="btn btn-outline-primary btn-sm view-quotation"
-                          data-bs-toggle="modal"
-                          data-bs-target="#quotationModal"
-                          data-ref="QTN-1001"
-                          data-date="2025-06-01"
-                          data-valid="2025-06-10"
-                          data-location="Dubai"
-                          data-name="Ali Khan"
-                          data-contact="+971501234567"
-                          data-email="ali@example.com"
-                          data-address="Office 301, Dubai Marina"
-                          data-items='[{"description":"AC Repair","price":200,"qty":2},{"description":"Filter Replacement","price":50,"qty":1}]'
-                        >
-                          <i class="fas fa-eye"></i>
-                        </button>
-
-                        <button
-                          class="btn btn-outline-secondary btn-sm edit-quotation"
-                          data-bs-toggle="modal"
-                          data-bs-target="#quotationModal"
-                          data-ref="QTN-1001"
-                          data-date="2025-06-01"
-                          data-valid="2025-06-10"
-                          data-location="Dubai"
-                          data-name="Ali Khan"
-                          data-contact="+971501234567"
-                          data-email="ali@example.com"
-                          data-address="Dubai Marina, Office 301"
-                        >
-                          <i class="fas fa-edit"></i>
-                        </button>
-                      </td>
-                      <td class="px-3">
-                        <span class="badge bg-success">Approved</span>
-                      </td>
-                      <td class="px-3">QTN-1001</td>
-                      <td class="px-3">2025-06-01</td>
-                      <td class="px-3">1500.00</td>
-                      <td class="px-3">Ali Khan</td>
-                      <td class="px-3">ali@example.com</td>
-                      <td class="px-3">+971501234567</td>
-                      <td class="px-3">Nabeel</td>
-                    </tr>
-                    <tr>
-                      <td class="px-3">
-                        <button
-                          class="btn btn-outline-primary btn-sm view-quotation"
-                          data-bs-toggle="modal"
-                          data-bs-target="#quotationModal"
-                          data-ref="QTN-1001"
-                          data-date="2025-06-01"
-                          data-valid="2025-06-10"
-                          data-location="Dubai"
-                          data-name="Ali Khan"
-                          data-contact="+971501234567"
-                          data-email="ali@example.com"
-                          data-address="Office 301, Dubai Marina"
-                          data-items='[{"description":"AC Repair","price":200,"qty":2},{"description":"Filter Replacement","price":50,"qty":1}]'
-                        >
-                          <i class="fas fa-eye"></i>
-                        </button>
-
-                        <button
-                          class="btn btn-outline-secondary btn-sm edit-quotation"
-                          data-bs-toggle="modal"
-                          data-bs-target="#quotationModal"
-                          data-ref="QTN-1001"
-                          data-date="2025-06-01"
-                          data-valid="2025-06-10"
-                          data-location="Dubai"
-                          data-name="Ali Khan"
-                          data-contact="+971501234567"
-                          data-email="ali@example.com"
-                          data-address="Dubai Marina, Office 301"
-                        >
-                          <i class="fas fa-edit"></i>
-                        </button>
-                      </td>
-                      <td class="px-3">
-                        <span class="badge bg-warning text-dark">Pending</span>
-                      </td>
-                      <td class="px-3">QTN-1002</td>
-                      <td class="px-3">2025-06-02</td>
-                      <td class="px-3">700.00</td>
-                      <td class="px-3">Fatima Noor</td>
-                      <td class="px-3">fatima@example.com</td>
-                      <td class="px-3">+971504321654</td>
-                      <td class="px-3">Nabeel</td>
-                    </tr>
-                    <tr>
-                      <td class="px-3">
-                        <button
-                          class="btn btn-outline-primary btn-sm view-quotation"
-                          data-bs-toggle="modal"
-                          data-bs-target="#quotationModal"
-                          data-ref="QTN-1001"
-                          data-date="2025-06-01"
-                          data-valid="2025-06-10"
-                          data-location="Dubai"
-                          data-name="Ali Khan"
-                          data-contact="+971501234567"
-                          data-email="ali@example.com"
-                          data-address="Office 301, Dubai Marina"
-                          data-items='[{"description":"AC Repair","price":200,"qty":2},{"description":"Filter Replacement","price":50,"qty":1}]'
-                        >
-                          <i class="fas fa-eye"></i>
-                        </button>
-
-                        <button
-                          class="btn btn-outline-secondary btn-sm edit-quotation"
-                          data-bs-toggle="modal"
-                          data-bs-target="#quotationModal"
-                          data-ref="QTN-1001"
-                          data-date="2025-06-01"
-                          data-valid="2025-06-10"
-                          data-location="Dubai"
-                          data-name="Ali Khan"
-                          data-contact="+971501234567"
-                          data-email="ali@example.com"
-                          data-address="Dubai Marina, Office 301"
-                        >
-                          <i class="fas fa-edit"></i>
-                        </button>
-                      </td>
-                      <td class="px-3">
-                        <span class="badge bg-danger">Rejected</span>
-                      </td>
-                      <td class="px-3">QTN-1003</td>
-                      <td class="px-3">2025-06-03</td>
-                      <td class="px-3">1100.00</td>
-                      <td class="px-3">Ahmed Raza</td>
-                      <td class="px-3">ahmed@example.com</td>
-                      <td class="px-3">+971507654321</td>
-                      <td class="px-3">Nabeel</td>
-                    </tr>
-                  </tbody>
-                </table>
+              <div class="col-lg-5 col-md-8">
+                <input type="text" class="form-control" placeholder="Search quotations..." />
               </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- === PURCHASE DEPARTMENT: EXPENSES SECTION === -->
-        <section
-          id="expenses"
-          class="page-section container-fluid px-4 mt-5 d-none"
-        >
-          <div class="card shadow-sm">
-            <div class="card-body">
-              <!-- Header: Title + Search + Add -->
-              <div class="row align-items-center mb-4 g-2">
-                <div class="col-lg-5 col-md-12">
-                  <h4 class="fw-bold text-primary mb-0">
-                    Purchase Department - Expenses
-                  </h4>
-                </div>
-                <div class="col-lg-5 col-md-8">
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Search expenses..."
-                    id="expenseSearch"
-                  />
-                </div>
-                <div class="col-lg-2 col-md-4 text-end">
-                  <button
-                    class="btn btn-success w-100"
-                    data-bs-toggle="modal"
-                    data-bs-target="#expenseModal"
-                    onclick="openExpenseModal('add')"
-                  >
-                    <i class="fas fa-plus me-1"></i> Add Expense
-                  </button>
-                </div>
-              </div>
-
-              <!-- Expense Table -->
-              <div class="table-responsive">
-                <table
-                  class="table table-bordered table-hover align-middle text-nowrap"
-                  id="expenseTable"
-                >
-                  <thead class="table-light">
-                    <tr>
-                      <th>Actions</th>
-                      <th>Status</th>
-                      <th>Name</th>
-                      <th class="text-end">Amount (AED)</th>
-                      <th>Date</th>
-                      <th>Purpose</th>
-                      <th>Mobile No</th>
-                      <th>Approved By</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>
-                        <button
-                          class="btn btn-outline-primary btn-sm btn-expense-view"
-                          data-bs-toggle="modal"
-                          data-bs-target="#expenseModal"
-                        >
-                          <i class="fas fa-eye"></i>
-                        </button>
-                        <button
-                          class="btn btn-outline-secondary btn-sm btn-expense-edit"
-                          data-bs-toggle="modal"
-                          data-bs-target="#expenseModal"
-                        >
-                          <i class="fas fa-edit"></i>
-                        </button>
-                      </td>
-                      <td><span class="badge bg-success">Approved</span></td>
-                      <td
-                        class="text-primary"
-                        style="cursor: pointer"
-                        onclick="openExpenseModal('view')"
-                      >
-                        Athar Gul
-                      </td>
-                      <td class="text-end">100.00</td>
-                      <td>25-05-2025</td>
-                      <td>Fuel for site visit</td>
-                      <td>+971507648636</td>
-                      <td>Nabeel</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- === ACCOUNTS DEPARTMENT: INVOICES SECTION === -->
-        <section
-          id="invoice"
-          class="page-section container-fluid px-4 mt-5 d-none"
-        >
-          <div class="card shadow-sm">
-            <div class="card-body">
-              <!-- Header: Title + Search + Add -->
-              <div class="row align-items-center mb-4 g-2">
-                <div class="col-lg-5 col-md-12">
-                  <h4 class="fw-bold text-primary mb-0">
-                    Accounts Department - Invoices
-                  </h4>
-                </div>
-                <div class="col-lg-5 col-md-8">
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Search invoices..."
-                    id="invoiceSearch"
-                  />
-                </div>
-                <div class="col-lg-2 col-md-4 text-end">
-                  <button
-                    class="btn btn-success btn-invoice-add w-100"
-                    data-bs-toggle="modal"
-                    data-bs-target="#invoiceModal"
-                  >
-                    <i class="fas fa-plus me-1"></i> Add Invoice
-                  </button>
-                </div>
-              </div>
-
-              <!-- Invoice Table -->
-              <div class="table-responsive">
-                <table
-                  class="table table-bordered table-hover align-middle text-nowrap"
-                  id="invoiceTable"
-                >
-                  <thead class="table-light">
-                    <tr>
-                      <th>Actions</th>
-                      <th>Status</th>
-                      <th>Ref No</th>
-                      <th>Date</th>
-                      <th class="text-end">Amount (AED)</th>
-                      <th>Name</th>
-                      <th>Email</th>
-                      <th>Mobile No</th>
-                      <th>Prepared By</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>
-                        <button
-                          class="btn btn-outline-secondary btn-sm btn-invoice-edit"
-                          data-bs-toggle="modal"
-                          data-bs-target="#invoiceModal"
-                        >
-                          <i class="fas fa-edit"></i>
-                        </button>
-                        <button
-                          class="btn btn-outline-primary btn-sm btn-invoice-view"
-                          data-bs-toggle="modal"
-                          data-bs-target="#invoiceModal"
-                        >
-                          <i class="fas fa-eye"></i>
-                        </button>
-                      </td>
-                      <td>
-                        <span class="badge bg-warning text-dark"
-                          >In Process</span
-                        >
-                      </td>
-                      <td
-                        class="text-primary"
-                        style="cursor: pointer"
-                        onclick="openInvoiceModal('view')"
-                      >
-                        INV-1004
-                      </td>
-                      <td>04-06-2025</td>
-                      <td class="text-end">1,500.00</td>
-                      <td>Athar Gul</td>
-                      <td>agm@gmail.com</td>
-                      <td>+971507648636</td>
-                      <td>Nabeel</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- Tax Invoices Section -->
-        <section
-          id="tex-invoice"
-          class="page-section container-fluid px-4 mt-5 d-none"
-        >
-          <div class="card shadow-sm">
-            <div class="card-body">
-              <!-- Header: Title + Search + Add -->
-              <div class="row align-items-center mb-4 g-2">
-                <div class="col-lg-5 col-md-12">
-                  <h4 class="fw-bold text-primary mb-0">
-                    Account Department - Tax Invoices
-                  </h4>
-                </div>
-                <div class="col-lg-4 col-md-8">
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Search by Ref No, Name, or Status..."
-                    id="taxInvoiceSearch"
-                  />
-                </div>
-                <div class="col-lg-3 col-md-4 text-end">
-                  <button
-                    class="btn btn-success w-100"
-                    data-bs-toggle="modal"
-                    data-bs-target="#taxInvoiceModal"
-                  >
-                    <i class="fas fa-plus me-2"></i>Add Tax Invoice
-                  </button>
-                </div>
-              </div>
-
-              <!-- Table -->
-              <div class="table-responsive">
-                <table
-                  class="table table-bordered table-hover align-middle text-nowrap"
-                  id="taxInvoiceTable"
-                >
-                  <thead class="table-light">
-                    <tr>
-                      <th class="px-3">Actions</th>
-                      <th class="px-3">Status</th>
-                      <th class="px-3">Ref No</th>
-                      <th class="px-3">Date</th>
-                      <th class="px-3 text-end">Amount</th>
-                      <th class="px-3">Name</th>
-                      <th class="px-3">Email</th>
-                      <th class="px-3">Mobile No</th>
-                      <th class="px-3">Prepared By</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td class="px-3">
-                        <button
-                          data-bs-toggle="modal"
-                          data-bs-target="#taxInvoiceModal"
-                          class="btn btn-outline-secondary btn-sm"
-                        >
-                          <i class="fas fa-pen"></i>
-                        </button>
-                        <button
-                          data-bs-toggle="modal"
-                          data-bs-target="#taxInvoiceModal"
-                          class="btn btn-outline-primary btn-sm"
-                        >
-                          <i class="fas fa-eye"></i>
-                        </button>
-                      </td>
-                      <td class="px-3">
-                        <span class="badge bg-warning text-dark">Process</span>
-                      </td>
-                      <td class="px-3">CR-1004</td>
-                      <td class="px-3">04-06-2025</td>
-                      <td class="px-3 text-end">AED 1,000.00</td>
-                      <td class="px-3">Athar Gul</td>
-                      <td class="px-3">agm@gmail.com</td>
-                      <td class="px-3">+971507648636</td>
-                      <td class="px-3">Nabeel</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- === HR DEPARTMENT: EMPLOYEES SECTION === -->
-        <section
-          id="hrdeparment"
-          class="page-section container-fluid px-4 mt-5 d-none"
-        >
-          <div class="card shadow-sm">
-            <div class="card-body">
-              <!-- Header -->
-              <div class="row align-items-center mb-4 g-2">
-                <div class="col-lg-5 col-md-12">
-                  <h4 class="fw-bold text-primary mb-0">
-                    HR Department - Employees
-                  </h4>
-                </div>
-                <div class="col-lg-4 col-md-8">
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Search employees..."
-                    id="employeeSearch"
-                  />
-                </div>
-                <div class="col-lg-3 col-md-4 text-end">
-                  <button
-                    class="btn btn-success btn-employee-add w-100"
-                    data-bs-toggle="modal"
-                    data-bs-target="#employeeModal"
-                  >
-                    <i class="fas fa-plus me-1"></i> Add Employee
-                  </button>
-                </div>
-              </div>
-
-              <!-- Employee Table -->
-              <div class="table-responsive">
-                <table
-                  class="table table-bordered table-hover align-middle text-nowrap"
-                  id="employeeTable"
-                >
-                  <thead class="table-light">
-                    <tr>
-                      <th>Actions</th>
-                      <th>Status</th>
-                      <th>Name</th>
-                      <th>EID No</th>
-                      <th>Passport No</th>
-                      <th>Email</th>
-                      <th>Mobile No</th>
-                      <th>Visa Expiry</th>
-                      <th>Passport Expiry</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>
-                        <button
-                          class="btn btn-outline-primary btn-sm btn-employee-view"
-                          data-bs-toggle="modal"
-                          data-bs-target="#employeeModal"
-                        >
-                          <i class="fas fa-eye"></i>
-                        </button>
-                        <button
-                          class="btn btn-outline-secondary btn-sm btn-employee-edit"
-                          data-bs-toggle="modal"
-                          data-bs-target="#employeeModal"
-                        >
-                          <i class="fas fa-edit"></i>
-                        </button>
-                        <button
-                          class="btn btn-outline-danger btn-sm btn-employee-delete"
-                          data-bs-toggle="modal"
-                          data-bs-target="#employeeDeleteModal"
-                        >
-                          <i class="fas fa-trash"></i>
-                        </button>
-                      </td>
-                      <td><span class="badge bg-success">Active</span></td>
-                      <td
-                        class="text-primary"
-                        style="cursor: pointer"
-                        onclick="openEmployeeModal('view')"
-                      >
-                        Athar Gul
-                      </td>
-                      <td>789-1996</td>
-                      <td>GM479456</td>
-                      <td>agm@gmail.com</td>
-                      <td>+971507648636</td>
-                      <td>10-10-2025</td>
-                      <td>07-07-2031</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- === ADMIN DEPARTMENT: USER ACCESS SECTION === -->
-        <section
-          id="useraccess"
-          class="page-section container-fluid px-4 mt-5 d-none"
-        >
-          <div class="card shadow-sm">
-            <div class="card-body">
-              <!-- Header -->
-              <div class="row align-items-center mb-4 g-2">
-                <div class="col-lg-5 col-md-12">
-                  <h4 class="fw-bold text-primary mb-0">
-                    Admin Department - User Access
-                  </h4>
-                </div>
-                <div class="col-lg-5 col-md-8">
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Search users..."
-                    id="userAccessSearch"
-                  />
-                </div>
-                <div class="col-lg-2 col-md-4 text-end">
-                  <button
-                    class="btn btn-success btn-user-add w-100"
-                    data-bs-toggle="modal"
-                    data-bs-target="#userAccessModal"
-                  >
-                    <i class="fas fa-plus me-1"></i> Add User
-                  </button>
-                </div>
-              </div>
-
-              <!-- User Access Table -->
-              <div class="table-responsive">
-                <table
-                  class="table table-bordered table-hover align-middle text-nowrap"
-                  id="userAccessTable"
-                >
-                  <thead class="table-light">
-                    <tr>
-                      <th>Actions</th>
-                      <th>Status</th>
-                      <th>User Name</th>
-                      <th>Mobile No</th>
-                      <th>Email</th>
-                      <th>Department</th>
-                      <th>Role</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>
-                        <button
-                          class="btn btn-outline-primary btn-sm btn-user-view"
-                          data-bs-toggle="modal"
-                          data-bs-target="#userAccessModal"
-                        >
-                          <i class="fas fa-eye"></i>
-                        </button>
-                        <button
-                          class="btn btn-outline-secondary btn-sm btn-user-edit"
-                          data-bs-toggle="modal"
-                          data-bs-target="#userAccessModal"
-                        >
-                          <i class="fas fa-edit"></i>
-                        </button>
-                        <button
-                          class="btn btn-outline-danger btn-sm btn-user-delete"
-                          data-bs-toggle="modal"
-                          data-bs-target="#userDeleteModal"
-                        >
-                          <i class="fas fa-trash"></i>
-                        </button>
-                      </td>
-                      <td>
-                        <span class="badge bg-warning text-dark">Pending</span>
-                      </td>
-                      <td class="text-primary">Athar Gul</td>
-                      <td>+971507648636</td>
-                      <td>agm@gmail.com</td>
-                      <td>Sales</td>
-                      <td>Manager</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-        </section>
-        <!-- === ADMIN DEPARTMENT: VEHICLE MANAGEMENT SECTION === -->
-        <section
-          id="vehicleSection"
-          class="page-section container-fluid px-4 mt-5 d-none"
-        >
-          <div class="card shadow-sm">
-            <div class="card-body">
-              <!-- Header -->
-              <div class="row align-items-center mb-4 g-2">
-                <div class="col-lg-5 col-md-12">
-                  <h4 class="fw-bold text-primary mb-0">
-                    Admin Department - Vehicles
-                  </h4>
-                </div>
-                <div class="col-lg-5 col-md-8">
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Search vehicles..."
-                    id="vehicleSearch"
-                  />
-                </div>
-                <div class="col-lg-2 col-md-4 text-end">
-                  <button
-                    class="btn btn-success w-100 btn-vehicle-add"
-                    data-bs-toggle="modal"
-                    data-bs-target="#vehicleModal"
-                  >
-                    <i class="fas fa-plus me-1"></i> Add Vehicle
-                  </button>
-                </div>
-              </div>
-
-              <!-- Vehicle Table -->
-              <div class="table-responsive">
-                <table
-                  class="table table-bordered table-hover align-middle text-nowrap"
-                  id="vehicleTable"
-                >
-                  <thead class="table-light">
-                    <tr>
-                      <th>Actions</th>
-                      <th>Status</th>
-                      <th>Vehicle No</th>
-                      <th>Vehicle Code</th>
-                      <th>Plate Source</th>
-                      <th>Vehicle Make</th>
-                      <th>Expiry Date</th>
-                      <th>Assigned</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>
-                        <button
-                          class="btn btn-outline-primary btn-sm btn-vehicle-view"
-                          data-bs-toggle="modal"
-                          data-bs-target="#vehicleModal"
-                        >
-                          <i class="fas fa-eye"></i>
-                        </button>
-                        <button
-                          class="btn btn-outline-secondary btn-sm btn-vehicle-edit"
-                          data-bs-toggle="modal"
-                          data-bs-target="#vehicleModal"
-                        >
-                          <i class="fas fa-edit"></i>
-                        </button>
-                        <button
-                          class="btn btn-outline-danger btn-sm btn-vehicle-delete"
-                          data-bs-toggle="modal"
-                          data-bs-target="#vehicleDeleteModal"
-                        >
-                          <i class="fas fa-trash"></i>
-                        </button>
-                      </td>
-                      <td><span class="badge bg-success">Active</span></td>
-                      <td>36852</td>
-                      <td>DXB</td>
-                      <td>C</td>
-                      <td>Honda</td>
-                      <td>30-08-2025</td>
-                      <td>Athar Gul</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-        </section>
-        <!-- === REPORTS SECTION === -->
-        <section
-          id="reportSection"
-          class="page-section container-fluid px-4 mt-5 d-none"
-        >
-          <div class="card shadow-sm">
-            <div class="card-body">
-              <!-- Header Section -->
-              <div class="row g-3 align-items-end mb-4 g-2">
-                <div class="col-lg-3 col-md-6">
-                  <label class="form-label">From</label>
-                  <input type="date" class="form-control" id="reportFromDate" />
-                </div>
-                <div class="col-lg-3 col-md-6">
-                  <label class="form-label">To</label>
-                  <input type="date" class="form-control" id="reportToDate" />
-                </div>
-                <div class="col-lg-3 col-md-6">
-                  <label class="form-label">Report Type</label>
-                  <select class="form-select" id="reportType">
-                    <option value="quotations">Quotations</option>
-                    <option value="expenses">Expenses</option>
-                    <option value="invoices">Invoices</option>
-                    <option value="tax-invoices">Tax Invoices</option>
-                    <option value="vat">VAT</option>
-                  </select>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                  <label class="form-label">Filter</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="reportFilter"
-                    placeholder="Filter by name/location..."
-                  />
-                </div>
-              </div>
-
-              <div
-                class="reporthb d-flex justify-content-md-between align-items-center mb-3"
-              >
-                <h3 id="reportTitle" class="fw-bold">Report - Quotations</h3>
-                
-                  <button
-                    class="btn btn-primary"
-                    id="downloadBtn"
-                  >
-                    <i class="fas fa-download me-1"></i> Download Report
-                  </button>
-                
-              </div>
-
-              <!-- Dynamic Table -->
-              <div
-                class="table-responsive text-nowrap"
-                id="reportTableContainer"
-              >
-                <!-- Table will be injected dynamically -->
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-    </div>
-
-    <!-- Quotation Modal -->
-    <div
-      class="modal fade"
-      id="quotationModal"
-      tabindex="-1"
-      aria-labelledby="quotationModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-xl modal-dialog-scrollable">
-        <div class="modal-content">
-          <div class="modal-header border-bottom">
-            <h5 class="modal-title w-100 text-center fw-bold">Quotation</h5>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body">
-            <!-- Reference Information -->
-            <div class="row g-3 border-bottom pb-3">
-              <div class="col-md-3 form-floating">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="refNo"
-                  value="QTN-1004"
-                  readonly
-                />
-                <label for="refNo">Ref No</label>
-              </div>
-              <div class="col-md-3 form-floating">
-                <input
-                  type="date"
-                  class="form-control"
-                  id="quotationDate"
-                  value="2025-06-04"
-                />
-                <label for="quotationDate">Date</label>
-              </div>
-              <div class="col-md-3 form-floating">
-                <input
-                  type="date"
-                  class="form-control"
-                  id="validTill"
-                  value="2025-06-04"
-                />
-                <label for="validTill">Valid Till</label>
-              </div>
-              <div class="col-md-3 form-floating">
-                <select class="form-select" id="location">
-                  <option selected>Dubai</option>
-                  <option>Abu Dhabi</option>
-                  <option>Sharjah</option>
-                </select>
-                <label for="location">Location</label>
+              <div class="col-lg-2 col-md-4 text-end">
+                <button id="createQuotationBtn" class="btn btn-success w-100 w-md-auto" data-bs-toggle="modal"
+                  data-bs-target="#quotationModal">
+                  <i class="fas fa-plus me-2"></i>Create
+                </button>
               </div>
             </div>
 
-            <!-- Client Details -->
-            <div class="row g-3 border-bottom py-3">
-              <div class="col-md-6 form-floating">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="clientName"
-                  placeholder="Athar Gul"
-                />
-                <label for="clientName">To</label>
-              </div>
-              <div class="col-md-6 form-floating">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="contactNo"
-                  placeholder="+971507648636"
-                />
-                <label for="contactNo">Contact No</label>
-              </div>
-              <div class="col-md-6 form-floating">
-                <input
-                  type="email"
-                  class="form-control"
-                  id="clientEmail"
-                  placeholder="email"
-                />
-                <label for="clientEmail">Email</label>
-              </div>
-              <div class="col-md-6 form-floating">
-                <textarea
-                  class="form-control"
-                  id="clientAddress"
-                  style="height: 58px"
-                ></textarea>
-                <label for="clientAddress">Address</label>
-              </div>
-            </div>
-
-            <!-- Item Table -->
-            <div class="table-responsive border-bottom py-3">
-              <table
-                class="table table-bordered align-middle text-center"
-                id="itemsTable"
-              >
+            <!-- Table -->
+            <div class="table-responsive">
+              <table class="table table-bordered table-hover align-middle text-nowrap">
                 <thead class="table-light">
                   <tr>
-                    <th>Sr. No</th>
-                    <th>Description</th>
-                    <th>Price</th>
-                    <th>Quantity</th>
-                    <th>Amount</th>
-                    <th>Action</th>
+                    <th class="px-3">Action</th>
+                    <th class="px-3">Status</th>
+                    <th class="px-3">Quotation No</th>
+                    <th class="px-3">Date</th>
+                    <th class="px-3">Amount (AED)</th>
+                    <th class="px-3">Name</th>
+                    <th class="px-3">Email</th>
+                    <th class="px-3">Mobile No</th>
+                    <th class="px-3">Prepared By</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td>1</td>
-                    <td>
-                      <input type="text" class="form-control description" />
-                    </td>
-                    <td>
-                      <input
-                        type="number"
-                        class="form-control price"
-                        value="0"
-                      />
-                    </td>
-                    <td>
-                      <input type="number" class="form-control qty" value="1" />
-                    </td>
-                    <td>
-                      <input
-                        type="text"
-                        class="form-control amount"
-                        value="0"
-                        readonly
-                      />
-                    </td>
-                    <td>
-                      <button
-                        class="btn btn-danger btn-sm"
-                        onclick="deleteRow(this)"
-                      >
-                        <i class="fas fa-trash"></i>
+                    <td class="px-3">
+                      <button class="btn btn-outline-primary btn-sm view-quotation" data-bs-toggle="modal"
+                        data-bs-target="#quotationModal" data-ref="QTN-1001" data-date="2025-06-01"
+                        data-valid="2025-06-10" data-location="Dubai" data-name="Ali Khan" data-contact="+971501234567"
+                        data-email="ali@example.com" data-address="Office 301, Dubai Marina"
+                        data-items='[{"description":"AC Repair","price":200,"qty":2},{"description":"Filter Replacement","price":50,"qty":1}]'>
+                        <i class="fas fa-eye"></i>
+                      </button>
+
+                      <button class="btn btn-outline-secondary btn-sm edit-quotation" data-bs-toggle="modal"
+                        data-bs-target="#quotationModal" data-ref="QTN-1001" data-date="2025-06-01"
+                        data-valid="2025-06-10" data-location="Dubai" data-name="Ali Khan" data-contact="+971501234567"
+                        data-email="ali@example.com" data-address="Dubai Marina, Office 301">
+                        <i class="fas fa-edit"></i>
                       </button>
                     </td>
+                    <td class="px-3">
+                      <span class="badge bg-success">Approved</span>
+                    </td>
+                    <td class="px-3">QTN-1001</td>
+                    <td class="px-3">2025-06-01</td>
+                    <td class="px-3">1500.00</td>
+                    <td class="px-3">Ali Khan</td>
+                    <td class="px-3">ali@example.com</td>
+                    <td class="px-3">+971501234567</td>
+                    <td class="px-3">Nabeel</td>
+                  </tr>
+                  <tr>
+                    <td class="px-3">
+                      <button class="btn btn-outline-primary btn-sm view-quotation" data-bs-toggle="modal"
+                        data-bs-target="#quotationModal" data-ref="QTN-1001" data-date="2025-06-01"
+                        data-valid="2025-06-10" data-location="Dubai" data-name="Ali Khan" data-contact="+971501234567"
+                        data-email="ali@example.com" data-address="Office 301, Dubai Marina"
+                        data-items='[{"description":"AC Repair","price":200,"qty":2},{"description":"Filter Replacement","price":50,"qty":1}]'>
+                        <i class="fas fa-eye"></i>
+                      </button>
+
+                      <button class="btn btn-outline-secondary btn-sm edit-quotation" data-bs-toggle="modal"
+                        data-bs-target="#quotationModal" data-ref="QTN-1001" data-date="2025-06-01"
+                        data-valid="2025-06-10" data-location="Dubai" data-name="Ali Khan" data-contact="+971501234567"
+                        data-email="ali@example.com" data-address="Dubai Marina, Office 301">
+                        <i class="fas fa-edit"></i>
+                      </button>
+                    </td>
+                    <td class="px-3">
+                      <span class="badge bg-warning text-dark">Pending</span>
+                    </td>
+                    <td class="px-3">QTN-1002</td>
+                    <td class="px-3">2025-06-02</td>
+                    <td class="px-3">700.00</td>
+                    <td class="px-3">Fatima Noor</td>
+                    <td class="px-3">fatima@example.com</td>
+                    <td class="px-3">+971504321654</td>
+                    <td class="px-3">Nabeel</td>
+                  </tr>
+                  <tr>
+                    <td class="px-3">
+                      <button class="btn btn-outline-primary btn-sm view-quotation" data-bs-toggle="modal"
+                        data-bs-target="#quotationModal" data-ref="QTN-1001" data-date="2025-06-01"
+                        data-valid="2025-06-10" data-location="Dubai" data-name="Ali Khan" data-contact="+971501234567"
+                        data-email="ali@example.com" data-address="Office 301, Dubai Marina"
+                        data-items='[{"description":"AC Repair","price":200,"qty":2},{"description":"Filter Replacement","price":50,"qty":1}]'>
+                        <i class="fas fa-eye"></i>
+                      </button>
+
+                      <button class="btn btn-outline-secondary btn-sm edit-quotation" data-bs-toggle="modal"
+                        data-bs-target="#quotationModal" data-ref="QTN-1001" data-date="2025-06-01"
+                        data-valid="2025-06-10" data-location="Dubai" data-name="Ali Khan" data-contact="+971501234567"
+                        data-email="ali@example.com" data-address="Dubai Marina, Office 301">
+                        <i class="fas fa-edit"></i>
+                      </button>
+                    </td>
+                    <td class="px-3">
+                      <span class="badge bg-danger">Rejected</span>
+                    </td>
+                    <td class="px-3">QTN-1003</td>
+                    <td class="px-3">2025-06-03</td>
+                    <td class="px-3">1100.00</td>
+                    <td class="px-3">Ahmed Raza</td>
+                    <td class="px-3">ahmed@example.com</td>
+                    <td class="px-3">+971507654321</td>
+                    <td class="px-3">Nabeel</td>
                   </tr>
                 </tbody>
               </table>
-              <button class="btn btn-outline-primary btn-sm" onclick="addRow()">
-                <i class="fas fa-plus"></i> Add Row
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- === PURCHASE DEPARTMENT: EXPENSES SECTION === -->
+      <section id="expenses" class="page-section container-fluid px-4 mt-5 d-none">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <!-- Header: Title + Search + Add -->
+            <div class="row align-items-center mb-4 g-2">
+              <div class="col-lg-5 col-md-12">
+                <h4 class="fw-bold text-primary mb-0">
+                  Purchase Department - Expenses
+                </h4>
+              </div>
+              <div class="col-lg-5 col-md-8">
+                <input type="text" class="form-control" placeholder="Search expenses..." id="expenseSearch" />
+              </div>
+              <div class="col-lg-2 col-md-4 text-end">
+                <button class="btn btn-success w-100" data-bs-toggle="modal" data-bs-target="#expenseModal"
+                  onclick="openExpenseModal('add')">
+                  <i class="fas fa-plus me-1"></i> Add Expense
+                </button>
+              </div>
+            </div>
+
+            <!-- Expense Table -->
+            <div class="table-responsive">
+              <table class="table table-bordered table-hover align-middle text-nowrap" id="expenseTable">
+                <thead class="table-light">
+                  <tr>
+                    <th>Actions</th>
+                    <th>Status</th>
+                    <th>Name</th>
+                    <th class="text-end">Amount (AED)</th>
+                    <th>Date</th>
+                    <th>Purpose</th>
+                    <th>Mobile No</th>
+                    <th>Approved By</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <button class="btn btn-outline-primary btn-sm btn-expense-view" data-bs-toggle="modal"
+                        data-bs-target="#expenseModal">
+                        <i class="fas fa-eye"></i>
+                      </button>
+                      <button class="btn btn-outline-secondary btn-sm btn-expense-edit" data-bs-toggle="modal"
+                        data-bs-target="#expenseModal">
+                        <i class="fas fa-edit"></i>
+                      </button>
+                    </td>
+                    <td><span class="badge bg-success">Approved</span></td>
+                    <td class="text-primary" style="cursor: pointer" onclick="openExpenseModal('view')">
+                      Athar Gul
+                    </td>
+                    <td class="text-end">100.00</td>
+                    <td>25-05-2025</td>
+                    <td>Fuel for site visit</td>
+                    <td>+971507648636</td>
+                    <td>Nabeel</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- === ACCOUNTS DEPARTMENT: INVOICES SECTION === -->
+      <section id="invoice" class="page-section container-fluid px-4 mt-5 d-none">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <!-- Header: Title + Search + Add -->
+            <div class="row align-items-center mb-4 g-2">
+              <div class="col-lg-5 col-md-12">
+                <h4 class="fw-bold text-primary mb-0">
+                  Accounts Department - Invoices
+                </h4>
+              </div>
+              <div class="col-lg-5 col-md-8">
+                <input type="text" class="form-control" placeholder="Search invoices..." id="invoiceSearch" />
+              </div>
+              <div class="col-lg-2 col-md-4 text-end">
+                <button class="btn btn-success btn-invoice-add w-100" data-bs-toggle="modal"
+                  data-bs-target="#invoiceModal">
+                  <i class="fas fa-plus me-1"></i> Add Invoice
+                </button>
+              </div>
+            </div>
+
+            <!-- Invoice Table -->
+            <div class="table-responsive">
+              <table class="table table-bordered table-hover align-middle text-nowrap" id="invoiceTable">
+                <thead class="table-light">
+                  <tr>
+                    <th>Actions</th>
+                    <th>Status</th>
+                    <th>Invoice No</th>
+                    <th>Date</th>
+                    <th class="text-end">Amount (AED)</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Mobile No</th>
+                    <th>Prepared By</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <button class="btn btn-outline-secondary btn-sm btn-invoice-edit" data-bs-toggle="modal"
+                        data-bs-target="#invoiceModal">
+                        <i class="fas fa-edit"></i>
+                      </button>
+                      <button class="btn btn-outline-primary btn-sm btn-invoice-view" data-bs-toggle="modal"
+                        data-bs-target="#invoiceModal">
+                        <i class="fas fa-eye"></i>
+                      </button>
+                    </td>
+                    <td>
+                      <span class="badge bg-warning text-dark">In Process</span>
+                    </td>
+                    <td class="text-primary" style="cursor: pointer" onclick="openInvoiceModal('view')">
+                      INV-1004
+                    </td>
+                    <td>04-06-2025</td>
+                    <td class="text-end">1,500.00</td>
+                    <td>Athar Gul</td>
+                    <td>agm@gmail.com</td>
+                    <td>+971507648636</td>
+                    <td>Nabeel</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tax Invoices Section -->
+      <section id="tex-invoice" class="page-section container-fluid px-4 mt-5 d-none">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <!-- Header: Title + Search + Add -->
+            <div class="row align-items-center mb-4 g-2">
+              <div class="col-lg-5 col-md-12">
+                <h4 class="fw-bold text-primary mb-0">
+                  Account Department - Tax Invoices
+                </h4>
+              </div>
+              <div class="col-lg-4 col-md-8">
+                <input type="text" class="form-control" placeholder="Search by Ref No, Name, or Status..."
+                  id="taxInvoiceSearch" />
+              </div>
+              <div class="col-lg-3 col-md-4 text-end">
+                <button class="btn btn-success w-100" data-bs-toggle="modal" data-bs-target="#taxInvoiceModal">
+                  <i class="fas fa-plus me-2"></i>Add Tax Invoice
+                </button>
+              </div>
+            </div>
+
+            <!-- Table -->
+            <div class="table-responsive">
+              <table class="table table-bordered table-hover align-middle text-nowrap" id="taxInvoiceTable">
+                <thead class="table-light">
+                  <tr>
+                    <th class="px-3">Actions</th>
+                    <th class="px-3">Status</th>
+                    <th class="px-3">Tax Invoice No</th>
+                    <th class="px-3">Date</th>
+                    <th class="px-3 text-end">Amount</th>
+                    <th class="px-3">Name</th>
+                    <th class="px-3">Email</th>
+                    <th class="px-3">Mobile No</th>
+                    <th class="px-3">Prepared By</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="px-3">
+                      <button data-bs-toggle="modal" data-bs-target="#taxInvoiceModal"
+                        class="btn btn-outline-secondary btn-sm">
+                        <i class="fas fa-pen"></i>
+                      </button>
+                      <button data-bs-toggle="modal" data-bs-target="#taxInvoiceModal"
+                        class="btn btn-outline-primary btn-sm">
+                        <i class="fas fa-eye"></i>
+                      </button>
+                    </td>
+                    <td class="px-3">
+                      <span class="badge bg-warning text-dark">Process</span>
+                    </td>
+                    <td class="px-3">CR-1004</td>
+                    <td class="px-3">04-06-2025</td>
+                    <td class="px-3 text-end">AED 1,000.00</td>
+                    <td class="px-3">Athar Gul</td>
+                    <td class="px-3">agm@gmail.com</td>
+                    <td class="px-3">+971507648636</td>
+                    <td class="px-3">Nabeel</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- === HR DEPARTMENT: EMPLOYEES SECTION === -->
+      <section id="hrdeparment" class="page-section container-fluid px-4 mt-5 d-none">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <!-- Header -->
+            <div class="row align-items-center mb-4 g-2">
+              <div class="col-lg-5 col-md-12">
+                <h4 class="fw-bold text-primary mb-0">
+                  HR Department - Employees
+                </h4>
+              </div>
+              <div class="col-lg-4 col-md-8">
+                <input type="text" class="form-control" placeholder="Search employees..." id="employeeSearch" />
+              </div>
+              <div class="col-lg-3 col-md-4 text-end">
+                <button class="btn btn-success btn-employee-add w-100" data-bs-toggle="modal"
+                  data-bs-target="#employeeModal">
+                  <i class="fas fa-plus me-1"></i> Add Employee
+                </button>
+              </div>
+            </div>
+
+            <!-- Employee Table -->
+            <div class="table-responsive">
+              <table class="table table-bordered table-hover align-middle text-nowrap" id="employeeTable">
+                <thead class="table-light">
+                  <tr>
+                    <th>Actions</th>
+                    <th>Status</th>
+                    <th>Name</th>
+                    <th>EID No</th>
+                    <th>Passport No</th>
+                    <th>Email</th>
+                    <th>Mobile No</th>
+                    <th>Visa Expiry</th>
+                    <th>Passport Expiry</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <button class="btn btn-outline-primary btn-sm btn-employee-view" data-bs-toggle="modal"
+                        data-bs-target="#employeeModal">
+                        <i class="fas fa-eye"></i>
+                      </button>
+                      <button class="btn btn-outline-secondary btn-sm btn-employee-edit" data-bs-toggle="modal"
+                        data-bs-target="#employeeModal">
+                        <i class="fas fa-edit"></i>
+                      </button>
+                      <button class="btn btn-outline-danger btn-sm btn-employee-delete" data-bs-toggle="modal"
+                        data-bs-target="#employeeDeleteModal">
+                        <i class="fas fa-trash"></i>
+                      </button>
+                    </td>
+                    <td><span class="badge bg-success">Active</span></td>
+                    <td class="text-primary" style="cursor: pointer" onclick="openEmployeeModal('view')">
+                      Athar Gul
+                    </td>
+                    <td>789-1996</td>
+                    <td>GM479456</td>
+                    <td>agm@gmail.com</td>
+                    <td>+971507648636</td>
+                    <td>10-10-2025</td>
+                    <td>07-07-2031</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- === ADMIN DEPARTMENT: USER ACCESS SECTION === -->
+      <section id="useraccess" class="page-section container-fluid px-4 mt-5 d-none">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <!-- Header -->
+            <div class="row align-items-center mb-4 g-2">
+              <div class="col-lg-5 col-md-12">
+                <h4 class="fw-bold text-primary mb-0">
+                  Admin Department - User Access
+                </h4>
+              </div>
+              <div class="col-lg-5 col-md-8">
+                <input type="text" class="form-control" placeholder="Search users..." id="userAccessSearch" />
+              </div>
+              <div class="col-lg-2 col-md-4 text-end">
+                <button class="btn btn-success btn-user-add w-100" data-bs-toggle="modal"
+                  data-bs-target="#userAccessModal">
+                  <i class="fas fa-plus me-1"></i> Add User
+                </button>
+              </div>
+            </div>
+
+            <!-- User Access Table -->
+            <div class="table-responsive">
+              <table class="table table-bordered table-hover align-middle text-nowrap" id="userAccessTable">
+                <thead class="table-light">
+                  <tr>
+                    <th>Actions</th>
+                    <th>Status</th>
+                    <th>User Name</th>
+                    <th>Mobile No</th>
+                    <th>Email</th>
+                    <th>Department</th>
+                    <th>Role</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <button class="btn btn-outline-primary btn-sm btn-user-view" data-bs-toggle="modal"
+                        data-bs-target="#userAccessModal">
+                        <i class="fas fa-eye"></i>
+                      </button>
+                      <button class="btn btn-outline-secondary btn-sm btn-user-edit" data-bs-toggle="modal"
+                        data-bs-target="#userAccessModal">
+                        <i class="fas fa-edit"></i>
+                      </button>
+                      <button class="btn btn-outline-danger btn-sm btn-user-delete" data-bs-toggle="modal"
+                        data-bs-target="#userDeleteModal">
+                        <i class="fas fa-trash"></i>
+                      </button>
+                    </td>
+                    <td>
+                      <span class="badge bg-warning text-dark">Pending</span>
+                    </td>
+                    <td class="text-primary">Athar Gul</td>
+                    <td>+971507648636</td>
+                    <td>agm@gmail.com</td>
+                    <td>Sales</td>
+                    <td>Manager</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- === ADMIN DEPARTMENT: VEHICLE MANAGEMENT SECTION === -->
+      <section id="vehicleSection" class="page-section container-fluid px-4 mt-5 d-none">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <!-- Header -->
+            <div class="row align-items-center mb-4 g-2">
+              <div class="col-lg-5 col-md-12">
+                <h4 class="fw-bold text-primary mb-0">
+                  Admin Department - Vehicles
+                </h4>
+              </div>
+              <div class="col-lg-5 col-md-8">
+                <input type="text" class="form-control" placeholder="Search vehicles..." id="vehicleSearch" />
+              </div>
+              <div class="col-lg-2 col-md-4 text-end">
+                <button class="btn btn-success w-100 btn-vehicle-add" data-bs-toggle="modal"
+                  data-bs-target="#vehicleModal">
+                  <i class="fas fa-plus me-1"></i> Add Vehicle
+                </button>
+              </div>
+            </div>
+
+            <!-- Vehicle Table -->
+            <div class="table-responsive">
+              <table class="table table-bordered table-hover align-middle text-nowrap" id="vehicleTable">
+                <thead class="table-light">
+                  <tr>
+                    <th>Actions</th>
+                    <th>Status</th>
+                    <th>Vehicle No</th>
+                    <th>Vehicle Code</th>
+                    <th>Plate Source</th>
+                    <th>Vehicle Make</th>
+                    <th>Expiry Date</th>
+                    <th>Assigned</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <button class="btn btn-outline-primary btn-sm btn-vehicle-view" data-bs-toggle="modal"
+                        data-bs-target="#vehicleModal">
+                        <i class="fas fa-eye"></i>
+                      </button>
+                      <button class="btn btn-outline-secondary btn-sm btn-vehicle-edit" data-bs-toggle="modal"
+                        data-bs-target="#vehicleModal">
+                        <i class="fas fa-edit"></i>
+                      </button>
+                      <button class="btn btn-outline-danger btn-sm btn-vehicle-delete" data-bs-toggle="modal"
+                        data-bs-target="#vehicleDeleteModal">
+                        <i class="fas fa-trash"></i>
+                      </button>
+                    </td>
+                    <td><span class="badge bg-success">Active</span></td>
+                    <td>36852</td>
+                    <td>DXB</td>
+                    <td>C</td>
+                    <td>Honda</td>
+                    <td>30-08-2025</td>
+                    <td>Athar Gul</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- === REPORTS SECTION === -->
+      <section id="reportSection" class="page-section container-fluid px-4 mt-5 d-none">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <!-- Header Section -->
+            <div class="row g-3 align-items-end mb-4 g-2">
+              <div class="col-lg-3 col-md-6">
+                <label class="form-label">From</label>
+                <input type="date" class="form-control" id="reportFromDate" />
+              </div>
+              <div class="col-lg-3 col-md-6">
+                <label class="form-label">To</label>
+                <input type="date" class="form-control" id="reportToDate" />
+              </div>
+              <div class="col-lg-3 col-md-6">
+                <label class="form-label">Report Type</label>
+                <select class="form-select" id="reportType">
+                  <option value="quotations">Quotations</option>
+                  <option value="expenses">Expenses</option>
+                  <option value="invoices">Invoices</option>
+                  <option value="tax-invoices">Tax Invoices</option>
+                  <option value="vat">VAT</option>
+                </select>
+              </div>
+              <div class="col-lg-3 col-md-6">
+                <label class="form-label">Filter</label>
+                <input type="text" class="form-control" id="reportFilter" placeholder="Filter by name/location..." />
+              </div>
+            </div>
+
+            <div class="reporthb d-flex justify-content-md-between align-items-center mb-3">
+              <h3 id="reportTitle" class="fw-bold">Report - Quotations</h3>
+
+              <button class="btn btn-primary" id="downloadBtn">
+                <i class="fas fa-download me-1"></i> Download Report
               </button>
             </div>
 
-            <!-- Notes and Totals -->
-            <div class="row g-3 pt-3">
-              <div class="col-12 form-floating">
-                <textarea
-                  class="form-control"
-                  placeholder="Note"
-                  id="note"
-                  style="height: 58px"
-                ></textarea>
-                <label for="note">Note</label>
-              </div>
-              <div class="col-12">
-                <div class="row g-2">
-                  <div class="col-3 form-floating">
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="subTotal"
-                      value="0"
-                      readonly
-                    />
-                    <label for="subTotal">Sub Total</label>
-                  </div>
-                  <div class="col-3 form-floating">
-                    <input
-                      type="number"
-                      class="form-control"
-                      id="vatPercent"
-                      value="5"
-                    />
-                    <label for="vatPercent">VAT %</label>
-                  </div>
-                  <div class="col-3 form-floating">
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="vatAmount"
-                      value="0"
-                      readonly
-                    />
-                    <label for="vatAmount">VAT Amount</label>
-                  </div>
-                  <div class="col-3 form-floating">
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="totalAmount"
-                      value="0"
-                      readonly
-                    />
-                    <label for="totalAmount">Total</label>
-                  </div>
+            <!-- Dynamic Table -->
+            <div class="table-responsive text-nowrap" id="reportTableContainer">
+              <!-- Table will be injected dynamically -->
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <!-- Quotation Modal -->
+  <div class="modal fade" id="quotationModal" tabindex="-1" aria-labelledby="quotationModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header border-bottom">
+          <h5 class="modal-title w-100 text-center fw-bold">Quotation</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <!-- Reference Information -->
+          <div class="row g-3 border-bottom pb-3">
+            <div class="col-md-3 form-floating">
+              <input type="text" class="form-control" id="refNo" value="QTN-1004" readonly />
+              <label for="refNo">Ref No</label>
+            </div>
+            <div class="col-md-3 form-floating">
+              <input type="date" class="form-control" id="quotationDate" value="2025-06-04" />
+              <label for="quotationDate">Date</label>
+            </div>
+            <div class="col-md-3 form-floating">
+              <input type="date" class="form-control" id="validTill" value="2025-06-04" />
+              <label for="validTill">Valid Till</label>
+            </div>
+            <div class="col-md-3 form-floating">
+              <select class="form-select" id="location">
+                <option selected>Dubai</option>
+                <option>Abu Dhabi</option>
+                <option>Sharjah</option>
+              </select>
+              <label for="location">Location</label>
+            </div>
+          </div>
+
+          <!-- Client Details -->
+          <div class="row g-3 border-bottom py-3">
+            <div class="col-md-6 form-floating">
+              <input type="text" class="form-control" id="clientName" placeholder="Athar Gul" />
+              <label for="clientName">To</label>
+            </div>
+            <div class="col-md-6 form-floating">
+              <input type="text" class="form-control" id="contactNo" placeholder="+971507648636" />
+              <label for="contactNo">Contact No</label>
+            </div>
+            <div class="col-md-6 form-floating">
+              <input type="email" class="form-control" id="clientEmail" placeholder="email" />
+              <label for="clientEmail">Email</label>
+            </div>
+            <div class="col-md-6 form-floating">
+              <textarea class="form-control" id="clientAddress" style="height: 58px"></textarea>
+              <label for="clientAddress">Address</label>
+            </div>
+          </div>
+
+          <!-- Item Table -->
+          <div class="table-responsive border-bottom py-3">
+            <table class="table table-bordered align-middle text-center" id="itemsTable">
+              <thead class="table-light">
+                <tr>
+                  <th>Sr. No</th>
+                  <th>Description</th>
+                  <th>Price</th>
+                  <th>Quantity</th>
+                  <th>Amount</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>
+                    <input type="text" class="form-control description" />
+                  </td>
+                  <td>
+                    <input type="number" class="form-control price" value="0" />
+                  </td>
+                  <td>
+                    <input type="number" class="form-control qty" value="1" />
+                  </td>
+                  <td>
+                    <input type="text" class="form-control amount" value="0" readonly />
+                  </td>
+                  <td>
+                    <button class="btn btn-danger btn-sm" onclick="deleteRow(this)">
+                      <i class="fas fa-trash"></i>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <button class="btn btn-outline-primary btn-sm" onclick="addRow()">
+              <i class="fas fa-plus"></i> Add Row
+            </button>
+          </div>
+
+          <!-- Notes and Totals -->
+          <div class="row g-3 pt-3">
+            <div class="col-12 form-floating">
+              <textarea class="form-control" placeholder="Note" id="note" style="height: 58px"></textarea>
+              <label for="note">Note</label>
+            </div>
+            <div class="col-12">
+              <div class="row g-2">
+                <div class="col-3 form-floating">
+                  <input type="text" class="form-control" id="subTotal" value="0" readonly />
+                  <label for="subTotal">Sub Total</label>
+                </div>
+                <div class="col-3 form-floating">
+                  <input type="number" class="form-control" id="vatPercent" value="5" />
+                  <label for="vatPercent">VAT %</label>
+                </div>
+                <div class="col-3 form-floating">
+                  <input type="text" class="form-control" id="vatAmount" value="0" readonly />
+                  <label for="vatAmount">VAT Amount</label>
+                </div>
+                <div class="col-3 form-floating">
+                  <input type="text" class="form-control" id="totalAmount" value="0" readonly />
+                  <label for="totalAmount">Total</label>
                 </div>
               </div>
             </div>
           </div>
-          <div class="modal-footer">
-            <button class="btn btn-secondary" data-bs-dismiss="modal">
-              Cancel
-            </button>
-            <button id="qmsBtn" class="btn btn-success">Save</button>
-            <button
-              id="downloadPDF"
-              class="btn btn-outline-secondary d-none"
-              onclick="downloadPDF()"
-            >
-              <i class="fas fa-download"></i> Download PDF
-            </button>
-          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" data-bs-dismiss="modal">
+            Cancel
+          </button>
+          <button id="qmsBtn" class="btn btn-success">Save</button>
+          <button id="downloadPDF" class="btn btn-outline-secondary d-none" onclick="downloadPDF()">
+            <i class="fas fa-download"></i> Download PDF
+          </button>
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- === EXPENSE MODAL (Add/Edit/View) === -->
-    <div
-      class="modal fade"
-      id="expenseModal"
-      tabindex="-1"
-      aria-labelledby="expenseModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-          <div class="modal-header bg-light">
-            <h5 class="modal-title fw-bold" id="expenseModalLabel">
-              Add Expense
-            </h5>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body">
-            <form class="row g-3">
-              <div class="col-md-6 form-floating">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="expenseName"
-                  placeholder="Name"
-                />
-                <label for="expenseName">Name</label>
-              </div>
-              <div class="col-md-6 form-floating">
-                <input
-                  type="number"
-                  class="form-control"
-                  id="expenseAmount"
-                  placeholder="Amount"
-                  min="1"
-                />
-                <label for="expenseAmount">Amount (AED)</label>
-              </div>
-              <div class="col-md-6 form-floating">
-                <input type="date" class="form-control" id="expenseDate" />
-                <label for="expenseDate">Date</label>
-              </div>
-              <div class="col-md-6 form-floating">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="expensePurpose"
-                  placeholder="Purpose"
-                />
-                <label for="expensePurpose">Purpose</label>
-              </div>
-              <div class="col-md-6 form-floating">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="expenseMobile"
-                  placeholder="Mobile No"
-                />
-                <label for="expenseMobile">Mobile No</label>
-              </div>
-              <div class="col-12">
-                <label class="form-label">Receipt Upload</label>
-                <input
-                  type="file"
-                  class="form-control"
-                  id="expenseReceipt"
-                  accept="image/*,application/pdf"
-                />
-              </div>
-            </form>
-            <div class="mt-3" id="receiptPreview" style="display: none">
-              <label class="form-label">Uploaded Receipt:</label>
-              <div id="receiptDisplay"></div>
+  <!-- === EXPENSE MODAL (Add/Edit/View) === -->
+  <div class="modal fade" id="expenseModal" tabindex="-1" aria-labelledby="expenseModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header bg-light">
+          <h5 class="modal-title fw-bold" id="expenseModalLabel">
+            Add Expense
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form class="row g-3">
+            <div class="col-md-6 form-floating">
+              <input type="text" class="form-control" id="expenseName" placeholder="Name" />
+              <label for="expenseName">Name</label>
             </div>
+            <div class="col-md-6 form-floating">
+              <input type="number" class="form-control" id="expenseAmount" placeholder="Amount" min="1" />
+              <label for="expenseAmount">Amount (AED)</label>
+            </div>
+            <div class="col-md-6 form-floating">
+              <input type="date" class="form-control" id="expenseDate" />
+              <label for="expenseDate">Date</label>
+            </div>
+            <div class="col-md-6 form-floating">
+              <input type="text" class="form-control" id="expensePurpose" placeholder="Purpose" />
+              <label for="expensePurpose">Purpose</label>
+            </div>
+            <div class="col-md-6 form-floating">
+              <input type="text" class="form-control" id="expenseMobile" placeholder="Mobile No" />
+              <label for="expenseMobile">Mobile No</label>
+            </div>
+            <div class="col-12">
+              <label class="form-label">Receipt Upload</label>
+              <input type="file" class="form-control" id="expenseReceipt" accept="image/*,application/pdf" />
+            </div>
+          </form>
+          <div class="mt-3" id="receiptPreview" style="display: none">
+            <label class="form-label">Uploaded Receipt:</label>
+            <div id="receiptDisplay"></div>
           </div>
-          <div class="modal-footer">
-            <button class="btn btn-secondary" data-bs-dismiss="modal">
-              Cancel
-            </button>
-            <button class="btn btn-success d-none" id="updateExpenseBtn">
-              Update
-            </button>
-            <button class="btn btn-success d-none" id="addExpenseBtn">
-              Submit
-            </button>
-          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" data-bs-dismiss="modal">
+            Cancel
+          </button>
+          <button class="btn btn-success d-none" id="updateExpenseBtn">
+            Update
+          </button>
+          <button class="btn btn-success d-none" id="addExpenseBtn">
+            Submit
+          </button>
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- === INVOICE MODAL (Add/Edit/View) === -->
-    <div
-      class="modal fade"
-      id="invoiceModal"
-      tabindex="-1"
-      aria-labelledby="invoiceModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-xl modal-dialog-scrollable">
-        <div class="modal-content">
-          <div class="modal-header bg-light">
-            <h5 class="modal-title fw-bold" id="invoiceModalLabel">
-              Add Invoice
-            </h5>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body">
-            <form class="row g-3">
-              <!-- A. Header Section -->
-              <div class="col-lg-3 col-md-6 form-floating">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="invoiceNo"
-                  readonly
-                />
-                <label for="invoiceNo">Invoice No</label>
-              </div>
-              <div class="col-lg-3 col-md-6 form-floating">
-                <input type="text" class="form-control" id="qtnRef" />
-                <label for="qtnRef">QTN Ref</label>
-              </div>
-              <div class="col-lg-3 col-md-6 form-floating">
-                <input type="date" class="form-control" id="invoiceDate" />
-                <label for="invoiceDate">Date</label>
-              </div>
-              <div class="col-lg-3 col-md-6 form-floating">
-                <select class="form-select" id="invoiceLocation">
-                  <option selected disabled>Select Location</option>
-                  <option>Dubai</option>
-                  <option>Abu Dhabi</option>
-                  <option>Sharjah</option>
-                </select>
-                <label for="invoiceLocation">Location</label>
-              </div>
-
-              <!-- B. Customer Details -->
-              <div class="col-lg-3 col-md-6 form-floating">
-                <input type="text" class="form-control" id="customerName" />
-                <label for="customerName">Name</label>
-              </div>
-              <div class="col-lg-3 col-md-6 form-floating">
-                <input type="text" class="form-control" id="customerContact" />
-                <label for="customerContact">Contact No</label>
-              </div>
-              <div class="col-lg-3 col-md-6 form-floating">
-                <input type="email" class="form-control" id="customerEmail" />
-                <label for="customerEmail">Email</label>
-              </div>
-              <div class="col-lg-3 col-md-6 form-floating">
-                <input type="text" class="form-control" id="trnNo" />
-                <label for="trnNo">TRN No</label>
-              </div>
-              <div class="col-lg-3 col-md-6 form-floating">
-                <textarea
-                  class="form-control"
-                  id="customerAddress"
-                  style="height: 58px"
-                ></textarea>
-                <label for="customerAddress">Address</label>
-              </div>
-
-              <!-- C. Line Items -->
-              <div class="col-12">
-                <label class="form-label fw-bold">Line Items</label>
-                <div class="table-responsive">
-                  <table
-                    class="table table-bordered align-middle text-center"
-                    id="invoiceItemsTable"
-                  >
-                    <thead class="table-light">
-                      <tr>
-                        <th>Sr. No</th>
-                        <th>Description</th>
-                        <th>Price (AED)</th>
-                        <th>Quantity</th>
-                        <th>Amount</th>
-                        <th>Action</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <!-- Dynamically added rows -->
-                    </tbody>
-                  </table>
-                  <button
-                    type="button"
-                    class="btn btn-outline-primary btn-sm"
-                    id="addInvoiceRow"
-                  >
-                    <i class="fas fa-plus"></i> Add Row
-                  </button>
-                </div>
-              </div>
-
-              <!-- D. Totals & Notes -->
-              <div class="col-12">
-                <div class="row g-2">
-                  <div class="col-md-3 form-floating">
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="invoiceSubTotal"
-                      readonly
-                    />
-                    <label for="invoiceSubTotal">Sub Total</label>
-                  </div>
-                  <div class="col-md-3 form-floating">
-                    <input
-                      type="number"
-                      class="form-control"
-                      id="invoiceVATPercent"
-                      value="5"
-                    />
-                    <label for="invoiceVATPercent">VAT %</label>
-                  </div>
-                  <div class="col-md-3 form-floating">
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="invoiceVATAmount"
-                      readonly
-                    />
-                    <label for="invoiceVATAmount">VAT Amount</label>
-                  </div>
-                  <div class="col-md-3 form-floating">
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="invoiceTotal"
-                      readonly
-                    />
-                    <label for="invoiceTotal">Total</label>
-                  </div>
-                </div>
-                <div class="form-floating mt-3">
-                  <textarea
-                    class="form-control"
-                    id="invoiceNote"
-                    style="height: 58px"
-                  ></textarea>
-                  <label for="invoiceNote">Note</label>
-                </div>
-              </div>
-            </form>
-          </div>
-          <div class="modal-footer">
-            <button class="btn btn-secondary" data-bs-dismiss="modal">
-              Cancel
-            </button>
-            <button
-              type="button"
-              class="btn btn-success d-none"
-              id="addInvoiceBtn"
-            >
-              Submit
-            </button>
-            <button
-              type="button"
-              class="btn btn-primary d-none"
-              id="updateInvoiceBtn"
-            >
-              Update
-            </button>
-          </div>
+  <!-- === INVOICE MODAL (Add/Edit/View) === -->
+  <div class="modal fade" id="invoiceModal" tabindex="-1" aria-labelledby="invoiceModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header bg-light">
+          <h5 class="modal-title fw-bold" id="invoiceModalLabel">
+            Add Invoice
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-      </div>
-    </div>
+        <div class="modal-body">
+          <form class="row g-3">
+            <!-- A. Header Section -->
+            <div class="col-lg-3 col-md-6 form-floating">
+              <input type="text" class="form-control" id="invoiceNo" readonly />
+              <label for="invoiceNo">Invoice No</label>
+            </div>
+            <div class="col-lg-3 col-md-6 form-floating">
+              <input type="text" class="form-control" id="qtnRef" />
+              <label for="qtnRef">QTN Ref</label>
+            </div>
+            <div class="col-lg-3 col-md-6 form-floating">
+              <input type="date" class="form-control" id="invoiceDate" />
+              <label for="invoiceDate">Date</label>
+            </div>
+            <div class="col-lg-3 col-md-6 form-floating">
+              <select class="form-select" id="invoiceLocation">
+                <option selected disabled>Select Location</option>
+                <option>Dubai</option>
+                <option>Abu Dhabi</option>
+                <option>Sharjah</option>
+              </select>
+              <label for="invoiceLocation">Location</label>
+            </div>
 
-    <!-- Tax Invoice Modal -->
-    <div
-      class="modal fade"
-      id="taxInvoiceModal"
-      tabindex="-1"
-      aria-labelledby="taxInvoiceModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-lg modal-dialog-scrollable">
-        <div class="modal-content">
-          <div class="modal-header border-bottom">
-            <h5
-              class="modal-title w-100 text-center fw-bold"
-              id="taxInvoiceModalLabel"
-            >
-              Tax Invoice
-            </h5>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body">
-            <!-- Header Section -->
-            <div class="row g-3 mb-3">
-              <div class="col-md-6 form-floating">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="invoiceRef"
-                  value="INV-1004"
-                  readonly
-                />
-                <label for="invoiceRef">Invoice Ref</label>
-              </div>
-              <div class="col-md-6 form-floating">
-                <input
-                  type="date"
-                  class="form-control"
-                  id="invoiceDate"
-                  value="2025-06-04"
-                />
-                <label for="invoiceDate">Date</label>
+            <!-- B. Customer Details -->
+            <div class="col-lg-3 col-md-6 form-floating">
+              <input type="text" class="form-control" id="customerName" />
+              <label for="customerName">Name</label>
+            </div>
+            <div class="col-lg-3 col-md-6 form-floating">
+              <input type="text" class="form-control" id="customerContact" />
+              <label for="customerContact">Contact No</label>
+            </div>
+            <div class="col-lg-3 col-md-6 form-floating">
+              <input type="email" class="form-control" id="customerEmail" />
+              <label for="customerEmail">Email</label>
+            </div>
+            <div class="col-lg-3 col-md-6 form-floating">
+              <input type="text" class="form-control" id="trnNo" />
+              <label for="trnNo">TRN No</label>
+            </div>
+            <div class="col-lg-3 col-md-6 form-floating">
+              <textarea class="form-control" id="customerAddress" style="height: 58px"></textarea>
+              <label for="customerAddress">Address</label>
+            </div>
+
+            <!-- C. Line Items -->
+            <div class="col-12">
+              <label class="form-label fw-bold">Line Items</label>
+              <div class="table-responsive">
+                <table class="table table-bordered align-middle text-center" id="invoiceItemsTable">
+                  <thead class="table-light">
+                    <tr>
+                      <th>Sr. No</th>
+                      <th>Description</th>
+                      <th>Price (AED)</th>
+                      <th>Quantity</th>
+                      <th>Amount</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!-- Dynamically added rows -->
+                  </tbody>
+                </table>
+                <button type="button" class="btn btn-outline-primary btn-sm" id="addInvoiceRow">
+                  <i class="fas fa-plus"></i> Add Row
+                </button>
               </div>
             </div>
 
-            <!-- Payment Details -->
+            <!-- D. Totals & Notes -->
+            <div class="col-12">
+              <div class="row g-2">
+                <div class="col-md-3 form-floating">
+                  <input type="text" class="form-control" id="invoiceSubTotal" readonly />
+                  <label for="invoiceSubTotal">Sub Total</label>
+                </div>
+                <div class="col-md-3 form-floating">
+                  <input type="number" class="form-control" id="invoiceVATPercent" value="5" />
+                  <label for="invoiceVATPercent">VAT %</label>
+                </div>
+                <div class="col-md-3 form-floating">
+                  <input type="text" class="form-control" id="invoiceVATAmount" readonly />
+                  <label for="invoiceVATAmount">VAT Amount</label>
+                </div>
+                <div class="col-md-3 form-floating">
+                  <input type="text" class="form-control" id="invoiceTotal" readonly />
+                  <label for="invoiceTotal">Total</label>
+                </div>
+              </div>
+              <div class="form-floating mt-3">
+                <textarea class="form-control" id="invoiceNote" style="height: 58px"></textarea>
+                <label for="invoiceNote">Note</label>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" data-bs-dismiss="modal">
+            Cancel
+          </button>
+          <button type="button" class="btn btn-success d-none" id="addInvoiceBtn">
+            Submit
+          </button>
+          <button type="button" class="btn btn-primary d-none" id="updateInvoiceBtn">
+            Update
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tax Invoice Modal -->
+  <div class="modal fade" id="taxInvoiceModal" tabindex="-1" aria-labelledby="taxInvoiceModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header border-bottom">
+          <h5 class="modal-title w-100 text-center fw-bold" id="taxInvoiceModalLabel">
+            Tax Invoice
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <!-- Header Section -->
+          <div class="row g-3 mb-3">
+            <div class="col-md-6 form-floating">
+              <input type="text" class="form-control" id="invoiceRef" value="INV-1004" readonly />
+              <label for="invoiceRef">Invoice Ref</label>
+            </div>
+            <div class="col-md-6 form-floating">
+              <input type="date" class="form-control" id="invoiceDate" value="2025-06-04" />
+              <label for="invoiceDate">Date</label>
+            </div>
+          </div>
+
+          <!-- Payment Details -->
+          <div class="row g-3">
+            <div class="col-md-6 form-floating">
+              <input type="text" class="form-control" id="previouslyPaid" value="0.00" readonly />
+              <label for="previouslyPaid">Previously Paid</label>
+            </div>
+            <div class="col-md-6 form-floating">
+              <input type="text" class="form-control" id="amountDue" value="1000.00" readonly />
+              <label for="amountDue">Amount Due</label>
+            </div>
+            <div class="col-md-6 form-floating">
+              <input type="number" class="form-control" id="paidAmount" placeholder="Enter Paid Amount" />
+              <label for="paidAmount">Paid (AED)</label>
+            </div>
+            <div class="col-md-6 form-floating">
+              <select class="form-select" id="paidBy">
+                <option selected disabled>Select Method</option>
+                <option>Cash</option>
+                <option>Card</option>
+                <option>Bank Transfer</option>
+              </select>
+              <label for="paidBy">Paid by</label>
+            </div>
+            <div class="col-12 form-floating">
+              <textarea class="form-control" id="paymentRemarks" style="height: 70px" placeholder="Remarks"></textarea>
+              <label for="paymentRemarks">Payment Remarks</label>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+            Cancel
+          </button>
+          <button type="button" class="btn btn-success">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- === EMPLOYEE MODAL (Add/Edit/View) === -->
+  <div class="modal fade" id="employeeModal" tabindex="-1" aria-labelledby="employeeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header bg-light">
+          <h5 class="modal-title fw-bold" id="employeeModalLabel">
+            Add Employee
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form class="row g-3" id="employeeForm">
+            <div class="col-md-6 form-floating">
+              <input type="text" class="form-control" id="empName" placeholder="Name" />
+              <label for="empName">Name</label>
+            </div>
+            <div class="col-md-6 form-floating">
+              <input type="tel" class="form-control" id="empMobile" placeholder="Mobile No" />
+              <label for="empMobile">Mobile No</label>
+            </div>
+            <div class="col-md-6 form-floating">
+              <input type="email" class="form-control" id="empEmail" placeholder="Email" />
+              <label for="empEmail">Email</label>
+            </div>
+            <div class="col-md-6 form-floating">
+              <input type="text" class="form-control" id="empEID" placeholder="EID No" />
+              <label for="empEID">EID No</label>
+            </div>
+            <div class="col-md-6 form-floating">
+              <input type="text" class="form-control" id="empPassport" placeholder="Passport No" />
+              <label for="empPassport">Passport No</label>
+            </div>
+            <div class="col-md-6 form-floating">
+              <select class="form-select" id="empDepartment">
+                <option selected disabled>Select Department</option>
+                <option>Sales</option>
+                <option>HR</option>
+                <option>Accounts</option>
+                <option>Purchase</option>
+              </select>
+              <label for="empDepartment">Department</label>
+            </div>
+            <div class="col-md-6 form-floating">
+              <input type="date" class="form-control" id="empJoinDate" />
+              <label for="empJoinDate">Joined On</label>
+            </div>
+            <div class="col-md-6 form-floating">
+              <input type="date" class="form-control" id="empVisaExpiry" />
+              <label for="empVisaExpiry">Visa Expiry</label>
+            </div>
+            <div class="col-md-6 form-floating">
+              <input type="date" class="form-control" id="empPassportExpiry" />
+              <label for="empPassportExpiry">Passport Expiry</label>
+            </div>
+            <div class="col-md-6 form-floating">
+              <input type="text" class="form-control" id="empRole" placeholder="Role" />
+              <label for="empRole">Role</label>
+            </div>
+            <div class="col-12">
+              <label for="empPhoto" class="form-label">Photo (JPG/PNG, max 5MB)</label>
+              <input type="file" class="form-control" id="empPhoto" accept="image/jpeg,image/png" />
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" data-bs-dismiss="modal">
+            Cancel
+          </button>
+          <button class="btn btn-success d-none" id="updateEmpBtn">
+            Update
+          </button>
+          <button class="btn btn-success d-none" id="addEmpBtn">Save</button>
+          <button class="btn btn-outline-secondary d-none" id="closeEmpViewBtn" data-bs-dismiss="modal">
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- === DELETE CONFIRMATION MODAL === -->
+  <div class="modal fade" id="employeeDeleteModal" tabindex="-1" aria-labelledby="employeeDeleteModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header bg-danger text-white">
+          <h5 class="modal-title text-white fw-bold" id="employeeDeleteModalLabel">
+            Delete Employee
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Are you sure you want to delete
+          <strong id="deleteEmpName">this employee</strong>?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+            Cancel
+          </button>
+          <button type="button" class="btn btn-danger" id="confirmDeleteBtn">
+            Delete
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- === USER ACCESS MODAL (Add/Edit/View) === -->
+  <div class="modal fade" id="userAccessModal" tabindex="-1" aria-labelledby="userAccessModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header bg-light">
+          <h5 class="modal-title fw-bold" id="userAccessModalLabel">
+            Add User
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="userAccessForm" class="row g-3">
+            <!-- A. User Details -->
+            <div class="col-md-6 form-floating">
+              <input type="text" class="form-control" id="userName" placeholder="Name" />
+              <label for="userName">Name</label>
+            </div>
+            <div class="col-md-6 form-floating">
+              <input type="tel" class="form-control" id="userMobile" placeholder="Mobile No" />
+              <label for="userMobile">Mobile No</label>
+            </div>
+            <div class="col-md-6 form-floating">
+              <input type="email" class="form-control" id="userEmail" placeholder="Email" />
+              <label for="userEmail">Email</label>
+            </div>
+            <div class="col-md-6 form-floating">
+              <select class="form-select" id="userDept">
+                <option selected disabled>Select Department</option>
+                <option>Sales</option>
+                <option>HR</option>
+                <option>Accounts</option>
+                <option>Purchase</option>
+                <option>Admin</option>
+              </select>
+              <label for="userDept">Department</label>
+            </div>
+            <div class="col-md-6 form-floating">
+              <select class="form-select" id="userRole">
+                <option selected disabled>Select Role</option>
+                <option>Manager</option>
+                <option>Staff</option>
+              </select>
+              <label for="userRole">Role</label>
+            </div>
+            <div class="col-md-6 form-floating position-relative">
+              <input type="password" class="form-control pe-5" id="userPassword" placeholder="Password" />
+              <label for="userPassword">Password</label>
+              <span class="position-absolute end-0 top-50 translate-middle-y me-3 cursor-pointer"
+                onclick="togglePasswordVisibility('userPassword')">
+                <i class="fas fa-eye text-muted"></i>
+              </span>
+            </div>
+
+            <!-- B. Permissions Section -->
+            <div class="col-12">
+              <label class="form-label fw-bold">Department Access</label>
+              <div class="d-flex flex-wrap gap-3">
+                <div class="form-check">
+                  <input class="form-check-input permission-check" type="checkbox" value="Sales" id="accessSales" />
+                  <label class="form-check-label" for="accessSales">Sales</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input permission-check" type="checkbox" value="Purchase"
+                    id="accessPurchase" />
+                  <label class="form-check-label" for="accessPurchase">Purchase</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input permission-check" type="checkbox" value="Accounts"
+                    id="accessAccounts" />
+                  <label class="form-check-label" for="accessAccounts">Accounts</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input permission-check" type="checkbox" value="HR" id="accessHR" />
+                  <label class="form-check-label" for="accessHR">HR</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input permission-check" type="checkbox" value="Admin" id="accessAdmin"
+                    disabled />
+                  <label class="form-check-label text-muted" for="accessAdmin">Admin (Restricted)</label>
+                </div>
+              </div>
+            </div>
+
+            <!-- C. Status Toggle -->
+            <div class="col-12 mt-3">
+              <label class="form-label me-3">Status:</label>
+              <div class="form-check form-switch d-inline-block">
+                <input class="form-check-input" type="checkbox" id="userStatus" checked />
+                <label class="form-check-label" for="userStatus">ACTIVE</label>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" data-bs-dismiss="modal">
+            Cancel
+          </button>
+          <button class="btn btn-success d-none" id="updateUserBtn">
+            Update
+          </button>
+          <button class="btn btn-success d-none" id="addUserBtn">Save</button>
+          <button class="btn btn-outline-secondary d-none" id="closeUserViewBtn" data-bs-dismiss="modal">
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- === USER DELETE MODAL === -->
+  <div class="modal fade" id="userDeleteModal" tabindex="-1" aria-labelledby="userDeleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header bg-danger text-white">
+          <h5 class="modal-title text-white" id="userDeleteModalLabel">
+            Delete User
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Are you sure you want to delete
+          <strong id="deleteUserName">this user</strong>?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+            Cancel
+          </button>
+          <button type="button" class="btn btn-danger" id="confirmDeleteUserBtn">
+            Delete
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- === VEHICLE DETAIL MODAL (Add/Edit/View) === -->
+  <div class="modal fade" id="vehicleModal" tabindex="-1" aria-labelledby="vehicleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header bg-light">
+          <h5 class="modal-title fw-bold" id="vehicleModalLabel">
+            Add Vehicle
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="vehicleForm" class="row g-3">
+            <!-- Vehicle Info -->
+            <div class="col-md-6 form-floating">
+              <input type="text" class="form-control" id="vehicleNo" placeholder="Vehicle No" />
+              <label for="vehicleNo">Vehicle No</label>
+            </div>
+            <div class="col-md-6 form-floating">
+              <select class="form-select" id="vehicleCode">
+                <option selected disabled>Select Code</option>
+                <option>DXB</option>
+                <option>AUH</option>
+                <option>SHJ</option>
+              </select>
+              <label for="vehicleCode">Vehicle Code</label>
+            </div>
+            <div class="col-md-6 form-floating">
+              <select class="form-select" id="plateSource">
+                <option selected disabled>Select Source</option>
+                <option value="C">Commercial</option>
+                <option value="P">Private</option>
+              </select>
+              <label for="plateSource">Plate Source</label>
+            </div>
+            <div class="col-md-6 form-floating">
+              <input type="text" class="form-control" id="vehicleMake" placeholder="Vehicle Make" />
+              <label for="vehicleMake">Vehicle Make</label>
+            </div>
+            <div class="col-md-6 form-floating">
+              <input type="date" class="form-control" id="vehicleExpiry" />
+              <label for="vehicleExpiry">Expiry Date</label>
+            </div>
+            <div class="col-md-6 form-floating">
+              <select class="form-select" id="assignedTo">
+                <option selected disabled>Assign to Employee</option>
+                <option>Athar Gul</option>
+                <option>Sarah Khan</option>
+                <option>Mohammed Ali</option>
+              </select>
+              <label for="assignedTo">Assigned To</label>
+            </div>
+
+            <!-- Ownership Card -->
+            <div class="col-12">
+              <label for="ownershipCard" class="form-label">Ownership Card (PDF/Image)</label>
+              <input type="file" class="form-control" id="ownershipCard" accept="application/pdf,image/*" />
+            </div>
+
+            <!-- Status Toggle -->
+            <div class="col-12 mt-3">
+              <label class="form-label me-3">Status:</label>
+              <div class="form-check form-switch d-inline-block">
+                <input class="form-check-input" type="checkbox" id="vehicleStatusToggle" checked />
+                <label class="form-check-label" for="vehicleStatusToggle">Active</label>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" data-bs-dismiss="modal">
+            Cancel
+          </button>
+          <button class="btn btn-success d-none" id="updateVehicleBtn">
+            Update
+          </button>
+          <button class="btn btn-success d-none" id="addVehicleBtn">
+            Save
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- === VEHICLE DELETE MODAL === -->
+  <div class="modal fade" id="vehicleDeleteModal" tabindex="-1" aria-labelledby="vehicleDeleteModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header bg-danger text-white">
+          <h5 class="modal-title text-white" id="vehicleDeleteModalLabel">
+            Delete Vehicle
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Are you sure you want to delete
+          <strong id="deleteVehicleNo">this vehicle</strong>?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+            Cancel
+          </button>
+          <button type="button" class="btn btn-danger" id="confirmDeleteVehicleBtn">
+            Delete
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- User Profile Modal -->
+  <div class="modal fade" id="userProfileModal" tabindex="-1" aria-labelledby="userProfileModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-md modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title w-100 text-center fw-bold" id="userProfileModalLabel">Profile</h5>
+          <button type="button" class="btn-close position-absolute end-0 me-3 mt-2" data-bs-dismiss="modal"
+            aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-center">
+          <!-- Profile Picture -->
+          <img src="images/companylogo.jpg" alt="User Photo" class="rounded-circle mb-3 border"
+            style="width: 100px; height: 100px; object-fit: cover;">
+
+          <!-- User Info -->
+          <h6 class="fw-bold mb-1">John Doe</h6>
+          <p class="text-muted mb-2">johndoe@example.com</p>
+          <p class="mb-0"><strong>Role:</strong> Administrator</p>
+          <p><strong>Member since:</strong> Jan 2024</p>
+        </div>
+        <div class="modal-footer justify-content-center">
+          <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- User Settings Modal -->
+  <div class="modal fade" id="userSettingsModal" tabindex="-1" aria-labelledby="userSettingsModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title w-100 text-center fw-bold" id="userSettingsModalLabel">Profile Settings</h5>
+          <button type="button" class="btn-close position-absolute end-0 me-3 mt-2" data-bs-dismiss="modal"
+            aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <!-- Profile Picture Upload -->
+
+          <div class="text-center mb-4">
+            <div class="position-relative d-inline-block">
+              <img src="images/companylogo.jpg" id="profileImageUpdate" class="rounded-circle" width="120" height="120"
+                alt="Profile Image" />
+              <label for="uploadPhoto"
+                class="btn btn-sm btn-dark rounded-circle position-absolute bottom-0 end-0 mb-0 me-0"
+                style="width: 36px; height: 36px">
+                <i class="fas fa-camera"></i>
+                <input type="file" id="uploadPhoto" accept="image/*" class="d-none" />
+              </label>
+            </div>
+          </div>
+
+          <!-- Form Inputs -->
+          <form>
             <div class="row g-3">
               <div class="col-md-6 form-floating">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="previouslyPaid"
-                  value="0.00"
-                  readonly
-                />
-                <label for="previouslyPaid">Previously Paid</label>
+                <input type="text" class="form-control" id="nameField" value="Athar Gul" readonly>
+                <label for="nameField">Name</label>
               </div>
               <div class="col-md-6 form-floating">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="amountDue"
-                  value="1000.00"
-                  readonly
-                />
-                <label for="amountDue">Amount Due</label>
+                <input type="text" class="form-control" id="eidField" value="789-1996" readonly>
+                <label for="eidField">EID No</label>
               </div>
               <div class="col-md-6 form-floating">
-                <input
-                  type="number"
-                  class="form-control"
-                  id="paidAmount"
-                  placeholder="Enter Paid Amount"
-                />
-                <label for="paidAmount">Paid (AED)</label>
+                <input type="text" class="form-control" id="passportField" value="GM479456" readonly>
+                <label for="passportField">Passport No</label>
               </div>
               <div class="col-md-6 form-floating">
-                <select class="form-select" id="paidBy">
-                  <option selected disabled>Select Method</option>
-                  <option>Cash</option>
-                  <option>Card</option>
-                  <option>Bank Transfer</option>
-                </select>
-                <label for="paidBy">Paid by</label>
-              </div>
-              <div class="col-12 form-floating">
-                <textarea
-                  class="form-control"
-                  id="paymentRemarks"
-                  style="height: 70px"
-                  placeholder="Remarks"
-                ></textarea>
-                <label for="paymentRemarks">Payment Remarks</label>
-              </div>
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-bs-dismiss="modal"
-            >
-              Cancel
-            </button>
-            <button type="button" class="btn btn-success">Save</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- === EMPLOYEE MODAL (Add/Edit/View) === -->
-    <div
-      class="modal fade"
-      id="employeeModal"
-      tabindex="-1"
-      aria-labelledby="employeeModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-          <div class="modal-header bg-light">
-            <h5 class="modal-title fw-bold" id="employeeModalLabel">
-              Add Employee
-            </h5>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body">
-            <form class="row g-3" id="employeeForm">
-              <div class="col-md-6 form-floating">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="empName"
-                  placeholder="Name"
-                />
-                <label for="empName">Name</label>
+                <input type="email" class="form-control" id="emailField" value="agm@gmail.com" readonly>
+                <label for="emailField">Email</label>
               </div>
               <div class="col-md-6 form-floating">
-                <input
-                  type="tel"
-                  class="form-control"
-                  id="empMobile"
-                  placeholder="Mobile No"
-                />
-                <label for="empMobile">Mobile No</label>
+                <input type="text" class="form-control" id="mobileField" value="+971507648636">
+                <label for="mobileField">Mobile No</label>
               </div>
-              <div class="col-md-6 form-floating">
-                <input
-                  type="email"
-                  class="form-control"
-                  id="empEmail"
-                  placeholder="Email"
-                />
-                <label for="empEmail">Email</label>
-              </div>
-              <div class="col-md-6 form-floating">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="empEID"
-                  placeholder="EID No"
-                />
-                <label for="empEID">EID No</label>
-              </div>
-              <div class="col-md-6 form-floating">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="empPassport"
-                  placeholder="Passport No"
-                />
-                <label for="empPassport">Passport No</label>
-              </div>
-              <div class="col-md-6 form-floating">
-                <select class="form-select" id="empDepartment">
-                  <option selected disabled>Select Department</option>
-                  <option>Sales</option>
-                  <option>HR</option>
-                  <option>Accounts</option>
-                  <option>Purchase</option>
-                </select>
-                <label for="empDepartment">Department</label>
-              </div>
-              <div class="col-md-6 form-floating">
-                <input type="date" class="form-control" id="empJoinDate" />
-                <label for="empJoinDate">Joined On</label>
-              </div>
-              <div class="col-md-6 form-floating">
-                <input type="date" class="form-control" id="empVisaExpiry" />
-                <label for="empVisaExpiry">Visa Expiry</label>
-              </div>
-              <div class="col-md-6 form-floating">
-                <input
-                  type="date"
-                  class="form-control"
-                  id="empPassportExpiry"
-                />
-                <label for="empPassportExpiry">Passport Expiry</label>
-              </div>
-              <div class="col-md-6 form-floating">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="empRole"
-                  placeholder="Role"
-                />
-                <label for="empRole">Role</label>
-              </div>
-              <div class="col-12">
-                <label for="empPhoto" class="form-label"
-                  >Photo (JPG/PNG, max 5MB)</label
-                >
-                <input
-                  type="file"
-                  class="form-control"
-                  id="empPhoto"
-                  accept="image/jpeg,image/png"
-                />
-              </div>
-            </form>
-          </div>
-          <div class="modal-footer">
-            <button class="btn btn-secondary" data-bs-dismiss="modal">
-              Cancel
-            </button>
-            <button class="btn btn-success d-none" id="updateEmpBtn">
-              Update
-            </button>
-            <button class="btn btn-success d-none" id="addEmpBtn">Save</button>
-            <button
-              class="btn btn-outline-secondary d-none"
-              id="closeEmpViewBtn"
-              data-bs-dismiss="modal"
-            >
-              Close
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- === DELETE CONFIRMATION MODAL === -->
-    <div
-      class="modal fade"
-      id="employeeDeleteModal"
-      tabindex="-1"
-      aria-labelledby="employeeDeleteModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header bg-danger text-white">
-            <h5
-              class="modal-title text-white fw-bold"
-              id="employeeDeleteModalLabel"
-            >
-              Delete Employee
-            </h5>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body">
-            Are you sure you want to delete
-            <strong id="deleteEmpName">this employee</strong>?
-          </div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-bs-dismiss="modal"
-            >
-              Cancel
-            </button>
-            <button type="button" class="btn btn-danger" id="confirmDeleteBtn">
-              Delete
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- === USER ACCESS MODAL (Add/Edit/View) === -->
-    <div
-      class="modal fade"
-      id="userAccessModal"
-      tabindex="-1"
-      aria-labelledby="userAccessModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-          <div class="modal-header bg-light">
-            <h5 class="modal-title fw-bold" id="userAccessModalLabel">
-              Add User
-            </h5>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body">
-            <form id="userAccessForm" class="row g-3">
-              <!-- A. User Details -->
-              <div class="col-md-6 form-floating">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="userName"
-                  placeholder="Name"
-                />
-                <label for="userName">Name</label>
-              </div>
-              <div class="col-md-6 form-floating">
-                <input
-                  type="tel"
-                  class="form-control"
-                  id="userMobile"
-                  placeholder="Mobile No"
-                />
-                <label for="userMobile">Mobile No</label>
-              </div>
-              <div class="col-md-6 form-floating">
-                <input
-                  type="email"
-                  class="form-control"
-                  id="userEmail"
-                  placeholder="Email"
-                />
-                <label for="userEmail">Email</label>
-              </div>
-              <div class="col-md-6 form-floating">
-                <select class="form-select" id="userDept">
-                  <option selected disabled>Select Department</option>
-                  <option>Sales</option>
-                  <option>HR</option>
-                  <option>Accounts</option>
-                  <option>Purchase</option>
-                  <option>Admin</option>
-                </select>
-                <label for="userDept">Department</label>
-              </div>
-              <div class="col-md-6 form-floating">
-                <select class="form-select" id="userRole">
-                  <option selected disabled>Select Role</option>
-                  <option>Manager</option>
-                  <option>Staff</option>
-                </select>
-                <label for="userRole">Role</label>
-              </div>
+              <hr>
+              <!-- New Password Field -->
               <div class="col-md-6 form-floating position-relative">
-                <input
-                  type="password"
-                  class="form-control pe-5"
-                  id="userPassword"
-                  placeholder="Password"
-                />
-                <label for="userPassword">Password</label>
-                <span
-                  class="position-absolute end-0 top-50 translate-middle-y me-3 cursor-pointer"
-                  onclick="togglePasswordVisibility('userPassword')"
-                >
-                  <i class="fas fa-eye text-muted"></i>
-                </span>
+                <input type="password" class="form-control" id="newPassword" placeholder="New Password">
+                <label for="newPassword">New Password</label>
+                <button type="button"
+                  class="btn btn-sm position-absolute top-50 end-0 translate-middle-y me-3 border-0 bg-transparent toggle-password"
+                  data-target="newPassword">
+                  <i class="fas fa-eye"></i>
+                </button>
               </div>
 
-              <!-- B. Permissions Section -->
-              <div class="col-12">
-                <label class="form-label fw-bold">Department Access</label>
-                <div class="d-flex flex-wrap gap-3">
-                  <div class="form-check">
-                    <input
-                      class="form-check-input permission-check"
-                      type="checkbox"
-                      value="Sales"
-                      id="accessSales"
-                    />
-                    <label class="form-check-label" for="accessSales"
-                      >Sales</label
-                    >
-                  </div>
-                  <div class="form-check">
-                    <input
-                      class="form-check-input permission-check"
-                      type="checkbox"
-                      value="Purchase"
-                      id="accessPurchase"
-                    />
-                    <label class="form-check-label" for="accessPurchase"
-                      >Purchase</label
-                    >
-                  </div>
-                  <div class="form-check">
-                    <input
-                      class="form-check-input permission-check"
-                      type="checkbox"
-                      value="Accounts"
-                      id="accessAccounts"
-                    />
-                    <label class="form-check-label" for="accessAccounts"
-                      >Accounts</label
-                    >
-                  </div>
-                  <div class="form-check">
-                    <input
-                      class="form-check-input permission-check"
-                      type="checkbox"
-                      value="HR"
-                      id="accessHR"
-                    />
-                    <label class="form-check-label" for="accessHR">HR</label>
-                  </div>
-                  <div class="form-check">
-                    <input
-                      class="form-check-input permission-check"
-                      type="checkbox"
-                      value="Admin"
-                      id="accessAdmin"
-                      disabled
-                    />
-                    <label class="form-check-label text-muted" for="accessAdmin"
-                      >Admin (Restricted)</label
-                    >
-                  </div>
-                </div>
+              <!-- Confirm Password Field -->
+              <div class="col-md-6 form-floating position-relative">
+                <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm Password">
+                <label for="confirmPassword">Confirm Password</label>
+                <button type="button"
+                  class="btn btn-sm position-absolute top-50 end-0 translate-middle-y me-3 border-0 bg-transparent toggle-password"
+                  data-target="confirmPassword">
+                  <i class="fas fa-eye"></i>
+                </button>
               </div>
 
-              <!-- C. Status Toggle -->
-              <div class="col-12 mt-3">
-                <label class="form-label me-3">Status:</label>
-                <div class="form-check form-switch d-inline-block">
-                  <input
-                    class="form-check-input"
-                    type="checkbox"
-                    id="userStatus"
-                    checked
-                  />
-                  <label class="form-check-label" for="userStatus"
-                    >ACTIVE</label
-                  >
-                </div>
-              </div>
-            </form>
-          </div>
-          <div class="modal-footer">
-            <button class="btn btn-secondary" data-bs-dismiss="modal">
-              Cancel
-            </button>
-            <button class="btn btn-success d-none" id="updateUserBtn">
-              Update
-            </button>
-            <button class="btn btn-success d-none" id="addUserBtn">Save</button>
-            <button
-              class="btn btn-outline-secondary d-none"
-              id="closeUserViewBtn"
-              data-bs-dismiss="modal"
-            >
-              Close
-            </button>
-          </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer justify-content-center">
+          <button class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+          <button class="btn btn-primary">Save Changes</button>
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- === USER DELETE MODAL === -->
-    <div
-      class="modal fade"
-      id="userDeleteModal"
-      tabindex="-1"
-      aria-labelledby="userDeleteModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header bg-danger text-white">
-            <h5 class="modal-title text-white" id="userDeleteModalLabel">
-              Delete User
-            </h5>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body">
-            Are you sure you want to delete
-            <strong id="deleteUserName">this user</strong>?
-          </div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-bs-dismiss="modal"
-            >
-              Cancel
-            </button>
-            <button
-              type="button"
-              class="btn btn-danger"
-              id="confirmDeleteUserBtn"
-            >
-              Delete
-            </button>
-          </div>
-        </div>
+
+
+
+  <!-- Toast Notification -->
+  <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 1055">
+    <div id="toastMessage" class="toast align-items-center text-white bg-success border-0" role="alert"
+      aria-live="assertive" aria-atomic="true">
+      <div class="d-flex">
+        <div class="toast-body"></div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+          aria-label="Close"></button>
       </div>
     </div>
+  </div>
 
-    <!-- === VEHICLE DETAIL MODAL (Add/Edit/View) === -->
-    <div
-      class="modal fade"
-      id="vehicleModal"
-      tabindex="-1"
-      aria-labelledby="vehicleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-          <div class="modal-header bg-light">
-            <h5 class="modal-title fw-bold" id="vehicleModalLabel">
-              Add Vehicle
-            </h5>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body">
-            <form id="vehicleForm" class="row g-3">
-              <!-- Vehicle Info -->
-              <div class="col-md-6 form-floating">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="vehicleNo"
-                  placeholder="Vehicle No"
-                />
-                <label for="vehicleNo">Vehicle No</label>
-              </div>
-              <div class="col-md-6 form-floating">
-                <select class="form-select" id="vehicleCode">
-                  <option selected disabled>Select Code</option>
-                  <option>DXB</option>
-                  <option>AUH</option>
-                  <option>SHJ</option>
-                </select>
-                <label for="vehicleCode">Vehicle Code</label>
-              </div>
-              <div class="col-md-6 form-floating">
-                <select class="form-select" id="plateSource">
-                  <option selected disabled>Select Source</option>
-                  <option value="C">Commercial</option>
-                  <option value="P">Private</option>
-                </select>
-                <label for="plateSource">Plate Source</label>
-              </div>
-              <div class="col-md-6 form-floating">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="vehicleMake"
-                  placeholder="Vehicle Make"
-                />
-                <label for="vehicleMake">Vehicle Make</label>
-              </div>
-              <div class="col-md-6 form-floating">
-                <input type="date" class="form-control" id="vehicleExpiry" />
-                <label for="vehicleExpiry">Expiry Date</label>
-              </div>
-              <div class="col-md-6 form-floating">
-                <select class="form-select" id="assignedTo">
-                  <option selected disabled>Assign to Employee</option>
-                  <option>Athar Gul</option>
-                  <option>Sarah Khan</option>
-                  <option>Mohammed Ali</option>
-                </select>
-                <label for="assignedTo">Assigned To</label>
-              </div>
+  <!-- Chart.js CDN in -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-              <!-- Ownership Card -->
-              <div class="col-12">
-                <label for="ownershipCard" class="form-label"
-                  >Ownership Card (PDF/Image)</label
-                >
-                <input
-                  type="file"
-                  class="form-control"
-                  id="ownershipCard"
-                  accept="application/pdf,image/*"
-                />
-              </div>
+  <!-- Bootstrap Bundle with Popper (required for modal) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-              <!-- Status Toggle -->
-              <div class="col-12 mt-3">
-                <label class="form-label me-3">Status:</label>
-                <div class="form-check form-switch d-inline-block">
-                  <input
-                    class="form-check-input"
-                    type="checkbox"
-                    id="vehicleStatusToggle"
-                    checked
-                  />
-                  <label class="form-check-label" for="vehicleStatusToggle"
-                    >Active</label
-                  >
-                </div>
-              </div>
-            </form>
-          </div>
-          <div class="modal-footer">
-            <button class="btn btn-secondary" data-bs-dismiss="modal">
-              Cancel
-            </button>
-            <button class="btn btn-success d-none" id="updateVehicleBtn">
-              Update
-            </button>
-            <button class="btn btn-success d-none" id="addVehicleBtn">
-              Save
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
+  <!-- CDN for eport data as pdf -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 
-    <!-- === VEHICLE DELETE MODAL === -->
-    <div
-      class="modal fade"
-      id="vehicleDeleteModal"
-      tabindex="-1"
-      aria-labelledby="vehicleDeleteModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header bg-danger text-white">
-            <h5 class="modal-title text-white" id="vehicleDeleteModalLabel">
-              Delete Vehicle
-            </h5>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body">
-            Are you sure you want to delete
-            <strong id="deleteVehicleNo">this vehicle</strong>?
-          </div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-bs-dismiss="modal"
-            >
-              Cancel
-            </button>
-            <button
-              type="button"
-              class="btn btn-danger"
-              id="confirmDeleteVehicleBtn"
-            >
-              Delete
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Toast Notification -->
-    <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 1055">
-      <div
-        id="toastMessage"
-        class="toast align-items-center text-white bg-success border-0"
-        role="alert"
-        aria-live="assertive"
-        aria-atomic="true"
-      >
-        <div class="d-flex">
-          <div class="toast-body"></div>
-          <button
-            type="button"
-            class="btn-close btn-close-white me-2 m-auto"
-            data-bs-dismiss="toast"
-            aria-label="Close"
-          ></button>
-        </div>
-      </div>
-    </div>
-
-    <!-- Chart.js CDN in -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-    <!-- Bootstrap Bundle with Popper (required for modal) -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- CDN for eport data as pdf -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-
-    <script src="javascript/script.js"></script>
-    <script src="javascript/dashboard.js"></script>
-    <script src="javascript/profile.js"></script>
-    <script src="javascript/salesdepartment.js"></script>
-    <script src="javascript/purchasedpt.js"></script>
-    <script src="javascript/invoices.js"></script>
-    <script src="javascript/taxinvoice.js"></script>
-    <script src="javascript/hrdeparment.js"></script>
-    <script src="javascript/useraccess.js"></script>
-    <script src="javascript/vehicle.js"></script>
-    <script src="javascript/report.js"></script>
-  </body>
+  <script src="javascript/script.js"></script>
+  <script src="javascript/dashboard.js"></script>
+  <script src="javascript/profile.js"></script>
+  <script src="javascript/salesdepartment.js"></script>
+  <script src="javascript/purchasedpt.js"></script>
+  <script src="javascript/invoices.js"></script>
+  <script src="javascript/taxinvoice.js"></script>
+  <script src="javascript/hrdeparment.js"></script>
+  <script src="javascript/useraccess.js"></script>
+  <script src="javascript/vehicle.js"></script>
+  <script src="javascript/report.js"></script>
+</body>
 </html>

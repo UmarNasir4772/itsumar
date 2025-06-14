@@ -87,6 +87,17 @@ input:focus {
   height: auto;
 }
 
+#profileImage {
+  transition: all 0.3s ease;
+  object-fit: cover;
+  border: 3px solid var(--color-secondary);
+}
+
+#userSettingsModal .modal-dialog.modal-dialog-centered{
+  max-width: 75%;
+}
+
+
 /* === HEADER === */
 .navbar {
   z-index: 5;
@@ -133,6 +144,7 @@ align-items: center;
   font-weight: bold;
   color: var(--color-primary);
 }
+
 
 /* === QUOTATIONS === */
 #quotationModal label {
@@ -296,6 +308,10 @@ align-items: center;
   .nav-NL h5{
     display: none;
   }
+  #userSettingsModal .modal-dialog.modal-dialog-centered{
+    max-width: 100%;
+  }
+  
   .navbar{
     padding: 5px !important;
   }

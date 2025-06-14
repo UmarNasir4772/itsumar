@@ -94,3 +94,77 @@ style.textContent = `
   }
 `;
 document.head.appendChild(style);
+
+document.addEventListener("DOMContentLoaded", function () {
+  const uploadInput = document.getElementById("uploadPhoto");
+  const profileImg = document.getElementById("profileImageUpdate");
+  const saveBtn = document.querySelector("#userSettingsModal .btn-primary");
+  const newPassword = document.getElementById("newPassword");
+  const confirmPassword = document.getElementById("confirmPassword");
+
+  // Image Preview
+  uploadInput.addEventListener("change", function () {
+    const file = this.files[0];
+    if (file && file.type.startsWith("image/")) {
+      const reader = new FileReader();
+      reader.onload = function (e) {
+        profileImg.src = e.target.result;
+      };
+      reader.readAsDataURL(file);
+    }
+  });
+
+  // Toast Function
+  function showToast(message, type = "success") {
+    const toast = document.getElementById("toastMessage");
+    const body = toast?.querySelector(".toast-body");
+    if (!toast || !body) return;
+
+    body.textContent = message;
+    toast.classList.remove("bg-success", "bg-danger", "bg-warning");
+    toast.classList.add(`bg-${type}`);
+    new bootstrap.Toast(toast).show();
+  }
+
+  // Save Button Action
+  saveBtn.addEventListener("click", function () {
+    const pass1 = newPassword.value.trim();
+    const pass2 = confirmPassword.value.trim();
+
+    if (pass1 !== pass2) {
+      newPassword.classList.add("is-invalid");
+      confirmPassword.classList.add("is-invalid");
+      showToast("Passwords do not match", "danger");
+      return;
+    } else {
+      newPassword.classList.remove("is-invalid");
+      confirmPassword.classList.remove("is-invalid");
+    }
+
+    showToast("Profile updated successfully", "success");
+
+    // You can optionally reset password fields here
+    // newPassword.value = "";
+    // confirmPassword.value = "";
+
+    // Close modal (optional)
+    const modal = bootstrap.Modal.getInstance(document.getElementById("userSettingsModal"));
+    if (modal) modal.hide();
+  });
+
+  document.querySelectorAll(".toggle-password").forEach((button) => {
+    button.addEventListener("click", function () {
+      const input = document.getElementById(this.dataset.target);
+      const icon = this.querySelector("i");
+      const type =
+        input.getAttribute("type") === "password" ? "text" : "password";
+      input.setAttribute("type", type);
+      icon.classList.toggle("fa-eye");
+      icon.classList.toggle("fa-eye-slash");
+    });
+  });
+});
+
+
+
+
