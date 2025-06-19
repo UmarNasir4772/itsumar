@@ -206,7 +206,7 @@ function generateTableData() {
       date: "01-01-2025",
       name: "David Miller",
       amount: "$850.00",
-      method: "Cash",
+      method: "",
       status: "Pending",
       PayDate: " ",
     },
@@ -233,7 +233,7 @@ function generateTableData() {
       date: "01-01-2025",
       name: "Patricia Thomas",
       amount: "$3,000.00",
-      method: "Cash",
+      method: "",
       status: "Pending",
       PayDate: " ",
     },
@@ -338,7 +338,6 @@ function generateTableData() {
     <td>${account.date}</td>
     <td>${account.name}</td>
     <td>${account.amount}</td>
-    <td>${account.method}</td>
     <td>
       <span class="tdBadge badge ${statusClass} ${
       isPending ? "clickable-status" : ""
@@ -349,6 +348,7 @@ function generateTableData() {
         ${account.status}
       </span>
     </td>
+    <td>${account.method}</td>
     <td>${account.PayDate}</td>
     <td><a target="_blank" href="#">View</a></td>
   `;

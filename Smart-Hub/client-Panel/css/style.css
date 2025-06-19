@@ -16,7 +16,7 @@
 label {
   left: 3px !important;
 }
-
+select:focus,
 textarea:focus,
 input:focus {
   box-shadow: none !important;
@@ -145,6 +145,12 @@ align-items: center;
   color: var(--color-primary);
 }
 
+#profile .form-floating.Select-Form{
+  width: 40%;
+}
+#profile .form-floating.Select-Form-1{
+  display: none;
+}
 
 /* === QUOTATIONS === */
 #quotationModal label {
@@ -304,6 +310,15 @@ align-items: center;
 @media (max-width: 425px) {
   #sidebar-wrapper {
     width: 75%;
+  }
+  #profile .form-floating.Select-Form{
+    display: none;
+  }
+
+  #profile .form-floating.Select-Form-1{
+    display: block;
+    width: 100%;
+    margin-top: 10px;
   }
   .nav-NL h5{
     display: none;

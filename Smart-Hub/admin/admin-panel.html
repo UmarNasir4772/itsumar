@@ -58,7 +58,10 @@
             <i class="fas fa-align-left"></i>
           </button>
 
-          <img class="headerLogo" src="images/sh-logo.png" alt="Admin" />
+          <div class="d-md-flex flex-row align-items-center d-none">
+            <img class="headerLogo me-3" src="images/logo-icon.ico" alt="Admin" />
+          <h4 class="m-0">SMART HUB | Management Services</h4>
+          </div>
 
           <div class="adminSec d-flex align-items-center">
             <div class="dropdown">
@@ -237,8 +240,8 @@
                       <th>Registration Date</th>
                       <th>Client Name</th>
                       <th>Amount</th>
-                      <th>Payment Method</th>
                       <th>Payment Status</th>
+                      <th>Payment Method</th>
                       <th>Payment Date</th>
                       <th>View Invoice</th>
                     </tr>
@@ -298,6 +301,14 @@
           </div>
           <div class="card">
             <div class="card-body">
+              <div class="search-box mb-4">
+                <div class="form-floating position-relative">
+                  <input type="search" class="form-control ps-5" id="ProductSearch" placeholder=" "
+                    aria-label="Search" />
+                  <label for="ProductSearch">Search Records...</label>
+                  <i class="fas fa-search search-icon"></i>
+                </div>
+              </div>
               <div class="table-responsive">
                 <table class="table table-hover">
                   <thead>
@@ -494,16 +505,11 @@
       <div class="row">
         <div class="col-md-6">
           <div class="info-item">
-            <span class="info-label">Name:</span>
+            <span class="info-label">Representative Name:</span>
             <span class="info-value">John Smith</span>
           </div>
         </div>
-        <div class="col-md-6">
-          <div class="info-item">
-            <span class="info-label">Company Name:</span>
-            <span class="info-value">Tech Solutions Inc.</span>
-          </div>
-        </div>
+        
         <div class="col-md-6">
           <div class="info-item">
             <span class="info-label">Phone Number:</span>
@@ -528,13 +534,39 @@
             <span class="info-value">31-12-2015</span>
           </div>
         </div>
+        <div class="col-md-6">
+          <div class="info-item">
+            <span class="info-label">Representative Id:</span>
+            <div class="document-info">
+              <button class="btn btn-sm btn-outline-primary view-btn" data-doc="manager_id_back.jpg">
+                <i class="fas fa-eye me-1"></i> View
+              </button>
+              <button class="btn btn-sm btn-outline-danger del-btn" data-doc="manager_id_front.jpg">
+                <i class="fas fa-trash me-1"></i> delete
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="info-item">
+            <span class="info-label">Representative Passport:</span>
+            <div class="document-info">
+              <button class="btn btn-sm btn-outline-primary view-btn" data-doc="manager_id_back.jpg">
+                <i class="fas fa-eye me-1"></i> View
+              </button>
+              <button class="btn btn-sm btn-outline-danger del-btn" data-doc="manager_id_front.jpg">
+                <i class="fas fa-trash me-1"></i> delete
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
-    <!-- Company Information Section -->
+    <!-- Company Manager Section -->
     <div class="client-section">
       <div class="section-header">
-        <h2><i class="fas fa-building me-2"></i>Company Information</h2>
+        <h2><i class="fa-solid fa-user me-2"></i>Manager Information</h2>
       </div>
       <div class="row">
         <div class="col-md-6">
@@ -557,173 +589,155 @@
         </div>
         <div class="col-md-6">
           <div class="info-item">
+            <span class="info-label">Manager ID:</span>
+            <div class="document-info">
+              <button class="btn btn-sm btn-outline-primary view-btn" data-doc="manager_id_back.jpg">
+                <i class="fas fa-eye me-1"></i> View
+              </button>
+              <button class="btn btn-sm btn-outline-danger del-btn" data-doc="manager_id_front.jpg">
+                <i class="fas fa-trash me-1"></i> delete
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="info-item">
+            <span class="info-label">Manager Passport:</span>
+            <div class="document-info">
+              <button class="btn btn-sm btn-outline-primary view-btn" data-doc="manager_id_back.jpg">
+                <i class="fas fa-eye me-1"></i> View
+              </button>
+              <button class="btn btn-sm btn-outline-danger del-btn" data-doc="manager_id_front.jpg">
+                <i class="fas fa-trash me-1"></i> delete
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Company Information Section -->
+    <div class="client-section">
+      <div class="section-header">
+        <h2><i class="fas fa-building me-2"></i>Company Information</h2>
+      </div>
+      <div class="row">
+        
+        <div class="col-md-6">
+          <div class="info-item">
+            <span class="info-label">Company Name:</span>
+            <span class="info-value">Tech Solutions Inc.</span>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="info-item">
+            <span class="info-label">Company Portal Name:</span>
+            <span class="info-value">Tech Solutions</span>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="info-item">
             <span class="info-label">Trade License No:</span>
             <span class="info-value">TL-2023-456789</span>
           </div>
         </div>
         <div class="col-md-6">
           <div class="info-item">
-            <span class="info-label">Representative Name:</span>
-            <span class="info-value">Michael Brown</span>
+            <span class="info-label">Trade License Expiry:</span>
+            <span class="info-value">31-12-2025</span>
           </div>
         </div>
         <div class="col-md-6">
           <div class="info-item">
-            <span class="info-label">Representative Email:</span>
-            <span class="info-value">michael.b@techsolutions.com</span>
+            <span class="info-label">Vat Registration No:</span>
+            <span class="info-value">Vat-12345678</span>
           </div>
         </div>
         <div class="col-md-6">
           <div class="info-item">
-            <span class="info-label">Representative Phone:</span>
-            <span class="info-value">+1 (555) 456-7890</span>
+            <span class="info-label">Trade License:</span>
+            <div class="document-info">
+              <button class="btn btn-sm btn-outline-primary view-btn" data-doc="manager_id_back.jpg">
+                <i class="fas fa-eye me-1"></i> View
+              </button>
+              <button class="btn btn-sm btn-outline-danger del-btn" data-doc="manager_id_front.jpg">
+                <i class="fas fa-trash me-1"></i> delete
+              </button>
+            </div>
           </div>
         </div>
-        <div class="col-md-12">
+        <div class="col-md-6">
           <div class="info-item">
-            <span class="info-label">Address:</span>
-            <span class="info-value">123 Business Ave, Suite 400, Tech City, TC 12345, United
-              States</span>
+            <span class="info-label">VAT Certificate:</span>
+            <div class="document-info">
+              <button class="btn btn-sm btn-outline-primary view-btn" data-doc="manager_id_back.jpg">
+                <i class="fas fa-eye me-1"></i> View
+              </button>
+              <button class="btn btn-sm btn-outline-danger del-btn" data-doc="manager_id_front.jpg">
+                <i class="fas fa-trash me-1"></i> delete
+              </button>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-
-    <!-- Documents Section -->
-    <div class="client-section">
-      <div class="section-header">
-        <h2><i class="fas fa-file-alt me-2"></i>Documents</h2>
-      </div>
-      <div class="documents-grid">
-        <!-- Manager Documents -->
-        <div class="document-card">
-          <div class="document-icon">
-            <i class="fas fa-id-card"></i>
-          </div>
-          <div class="document-info">
-            <span class="document-title">Manager ID (Front)</span>
-            <button class="btn btn-sm btn-outline-primary view-btn" data-doc="manager_id_front.jpg">
-              <i class="fas fa-eye me-1"></i> View
-            </button>
-            <button class="btn btn-sm btn-outline-danger del-btn mt-1" data-doc="manager_id_front.jpg">
-              <i class="fas fa-trash me-1"></i> delete
-            </button>
+        <div class="col-md-6">
+          <div class="info-item">
+            <span class="info-label">Compnay Logo:</span>
+            <div class="document-info">
+              <button class="btn btn-sm btn-outline-primary view-btn" data-doc="manager_id_back.jpg">
+                <i class="fas fa-eye me-1"></i> View
+              </button>
+              <button class="btn btn-sm btn-outline-danger del-btn" data-doc="manager_id_front.jpg">
+                <i class="fas fa-trash me-1"></i> delete
+              </button>
+            </div>
           </div>
         </div>
-
-        <div class="document-card">
-          <div class="document-icon">
-            <i class="fas fa-id-card"></i>
-          </div>
-          <div class="document-info">
-            <span class="document-title">Manager ID (Back)</span>
-            <button class="btn btn-sm btn-outline-primary view-btn" data-doc="manager_id_back.jpg">
-              <i class="fas fa-eye me-1"></i> View
-            </button>
-            <button class="btn btn-sm btn-outline-danger del-btn mt-1" data-doc="manager_id_front.jpg">
-              <i class="fas fa-trash me-1"></i> delete
-            </button>
+        <div class="col-md-6">
+          <div class="info-item">
+            <span class="info-label">Company Letterhead:</span>
+            <div class="document-info">
+              <button class="btn btn-sm btn-outline-primary view-btn" data-doc="manager_id_back.jpg">
+                <i class="fas fa-eye me-1"></i> View
+              </button>
+              <button class="btn btn-sm btn-outline-danger del-btn" data-doc="manager_id_front.jpg">
+                <i class="fas fa-trash me-1"></i> delete
+              </button>
+            </div>
           </div>
         </div>
-
-        <div class="document-card">
-          <div class="document-icon">
-            <i class="fas fa-passport"></i>
-          </div>
-          <div class="document-info">
-            <span class="document-title">Manager Passport</span>
-            <button class="btn btn-sm btn-outline-primary view-btn" data-doc="manager_passport.jpg">
-              <i class="fas fa-eye me-1"></i> View
-            </button>
-            <button class="btn btn-sm btn-outline-danger del-btn mt-1" data-doc="manager_id_front.jpg">
-              <i class="fas fa-trash me-1"></i> delete
-            </button>
+        <div class="col-md-6">
+          <div class="info-item">
+            <span class="info-label">E-Stamp:</span>
+            <div class="document-info">
+              <button class="btn btn-sm btn-outline-primary view-btn" data-doc="manager_id_back.jpg">
+                <i class="fas fa-eye me-1"></i> View
+              </button>
+              <button class="btn btn-sm btn-outline-danger del-btn" data-doc="manager_id_front.jpg">
+                <i class="fas fa-trash me-1"></i> delete
+              </button>
+            </div>
           </div>
         </div>
-
-        <!-- Representative Documents -->
-        <div class="document-card">
-          <div class="document-icon">
-            <i class="fas fa-passport"></i>
-          </div>
-          <div class="document-info">
-            <span class="document-title">Representative Passport</span>
-            <button class="btn btn-sm btn-outline-primary view-btn" data-doc="rep_passport.jpg">
-              <i class="fas fa-eye me-1"></i> View
-            </button>
-            <button class="btn btn-sm btn-outline-danger del-btn mt-1" data-doc="manager_id_front.jpg">
-              <i class="fas fa-trash me-1"></i> delete
-            </button>
-          </div>
-        </div>
-
-        <!-- Company Documents -->
-        <div class="document-card">
-          <div class="document-icon">
-            <i class="fas fa-file-contract"></i>
-          </div>
-          <div class="document-info">
-            <span class="document-title">Trade License</span>
-            <button class="btn btn-sm btn-outline-primary view-btn" data-doc="trade_license.pdf">
-              <i class="fas fa-eye me-1"></i> View
-            </button>
-            <button class="btn btn-sm btn-outline-danger del-btn mt-1" data-doc="manager_id_front.jpg">
-              <i class="fas fa-trash me-1"></i> delete
-            </button>
-          </div>
-        </div>
-
-        <div class="document-card">
-          <div class="document-icon">
-            <i class="fas fa-file-signature"></i>
-          </div>
-          <div class="document-info">
-            <span class="document-title">Company Letterhead</span>
-            <button class="btn btn-sm btn-outline-primary view-btn" data-doc="letterhead.pdf">
-              <i class="fas fa-eye me-1"></i> View
-            </button>
-            <button class="btn btn-sm btn-outline-danger del-btn mt-1" data-doc="manager_id_front.jpg">
-              <i class="fas fa-trash me-1"></i> delete
-            </button>
-          </div>
-        </div>
-
-        <div class="document-card">
-          <div class="document-icon">
-            <i class="fas fa-receipt"></i>
-          </div>
-          <div class="document-info">
-            <span class="document-title">Company VAT</span>
-            <button class="btn btn-sm btn-outline-primary view-btn" data-doc="vat_certificate.pdf">
-              <i class="fas fa-eye me-1"></i> View
-            </button>
-            <button class="btn btn-sm btn-outline-danger del-btn mt-1" data-doc="manager_id_front.jpg">
-              <i class="fas fa-trash me-1"></i> delete
-            </button>
-          </div>
-        </div>
-
-        <div class="document-card">
-          <div class="document-icon">
-            <i class="fas fa-image"></i>
-          </div>
-          <div class="document-info">
-            <span class="document-title">Company Logo</span>
-            <button class="btn btn-sm btn-outline-primary view-btn" data-doc="company_logo.png">
-              <i class="fas fa-eye me-1"></i> View
-            </button>
-            <button class="btn btn-sm btn-outline-danger del-btn mt-1" data-doc="manager_id_front.jpg">
-              <i class="fas fa-trash me-1"></i> delete
-            </button>
+        <div class="col-md-6">
+          <div class="info-item">
+            <span class="info-label">E-Signature:</span>
+            <div class="document-info">
+              <button class="btn btn-sm btn-outline-primary view-btn" data-doc="manager_id_back.jpg">
+                <i class="fas fa-eye me-1"></i> View
+              </button>
+              <button class="btn btn-sm btn-outline-danger del-btn" data-doc="manager_id_front.jpg">
+                <i class="fas fa-trash me-1"></i> delete
+              </button>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
     <!-- Button Section -->
-    <div class="client-section">
-      <button class="btn btn-primary w-100 m-2">Approved</button>
-      <button class="btn btn-danger w-100 m-2">Rejected</button>
+    <div class="client-section d-flex flex-md-row flex-column mt-3">
+      <button class="btn btn-primary w-50 me-2">Approved</button>
+      <button class="btn btn-danger w-50">Rejected</button>
     </div>
   </div>
 
@@ -1083,6 +1097,10 @@
             <span class="info-value">Basic</span>
           </div>
           <div class="info-item">
+            <span class="info-label">Product Cost:</span>
+            <span class="info-value">500</span>
+          </div>
+          <div class="info-item">
             <span class="info-label">Product Details:</span>
             <span class="info-value">Invoices: 1 to 100 <br> Quatations: 1 to 100 <br> Staff: 1 to 10 <br> Vehicle: 1 to 5</span>
           </div>
@@ -1115,11 +1133,20 @@
 
             <div class="row g-3">
               <!-- Name Field -->
-              <div class="col-12">
+              <div class="col-md-6">
                 <div class="form-floating">
                   <input type="text" class="form-control" id="ProductName" placeholder=" " value="Sarah Johnson"
                     required />
                   <label for="ProductName">Product Name</label>
+                </div>
+              </div>
+
+              <!-- Cost Field -->
+              <div class="col-md-6">
+                <div class="form-floating">
+                  <input type="text" class="form-control" id="ProductCost" placeholder=" " value="500"
+                    required />
+                  <label for="ProductCost">Product Cost</label>
                 </div>
               </div>
 
@@ -1175,6 +1202,16 @@
                 <div class="form-floating">
                   <input type="text" class="form-control" id="addProductName" placeholder=" " required />
                   <label for="addProductName">Product Name</label>
+                  <div class="invalid-feedback">
+                    Please enter a valid name
+                  </div>
+                </div>
+              </div>
+              <!-- Name Field -->
+              <div class="col-md-6">
+                <div class="form-floating">
+                  <input type="text" class="form-control" id="addProductCost" placeholder=" " required />
+                  <label for="addProductCost">Product Cost</label>
                   <div class="invalid-feedback">
                     Please enter a valid name
                   </div>
