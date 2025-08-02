@@ -1,0 +1,33 @@
+// Background video transition using array
+const video = document.getElementById("heroVideo");
+const sources = ["assets/bg1.mp4", "assets/bg2.mp4"];
+let current = 0;
+
+setInterval(() => {
+  current = (current + 1) % sources.length;
+  const newSource = sources[current];
+
+  // Fade out
+  video.style.opacity = 0;
+
+  setTimeout(() => {
+    video.src = newSource;
+    video.load();
+    video.play();
+
+    // Fade in
+    video.style.opacity = 1;
+  }, 1000);
+}, 10000); // 10s interval
+
+// Typed.js initialization
+const typed = new Typed("#typedText", {
+  strings: [
+    "Creating Unforgettable Experiences",
+    "Delivering Event Brilliance",
+    "Your Moment, Our Mission",
+  ],
+  typeSpeed: 50,
+  backSpeed: 30,
+  loop: true,
+});
