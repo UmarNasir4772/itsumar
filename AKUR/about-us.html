@@ -35,7 +35,8 @@
         </div>
 
         <!-- Navbar -->
-        <nav class="custom-navbar navbar navbar-expand-lg navbar-dark position-absolute w-100 py-4" style="margin-top: 35px;">
+        <nav class="custom-navbar navbar navbar-expand-lg navbar-dark position-absolute w-100 py-4"
+            style="margin-top: 35px;">
             <div class="container justify-content-center">
                 <ul class="navbar-nav gap-4">
                     <li class="nav-item">
@@ -48,225 +49,76 @@
                         </a>
                         <ul class="dropdown-menu custom-dropdown">
                             <li><a class="dropdown-item" href="about-us.html">Our Company</a></li>
-                            <li><a class="dropdown-item" href="#">Our Team</a></li>
+                            <li><a class="dropdown-item" href="our-team.html">Our Team</a></li>
                         </ul>
                     </li>
-
                     <li class="nav-item">
-                        <a class="nav-link fancy-link" href="#">Projects</a>
+                        <a class="nav-link fancy-link " href="services.html"
+                          >Services</a
+                        >
+                      </li>
+                    <li class="nav-item">
+                        <a class="nav-link fancy-link" href="project.html">Projects</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link fancy-link" href="#">Contact Us</a>
+                        <a class="nav-link fancy-link" href="contact-us.html">Contact Us</a>
                     </li>
                 </ul>
             </div>
         </nav>
 
         <!-- Hero Content -->
-        <div class="container text-center hero-content">
-            <h1 class="display-4 fw-bold welcome-text">
+        <div class="container text-center about-page hero-content">
+            <h1 class="display-4 fw-bold  welcome-text">
                 About Us
             </h1>
         </div>
     </section>
 
-    <!-- OUR SERVICES SECTION -->
-    <section class="our-services py-5">
+    <!-- about company -->
+    <section id="about-us" class="about-section py-5">
         <div class="container">
-            <h2 class="text-center fw-bold">Our Services</h2>
-            <p class="section-subtitle text-center">
-                AL KARAM ULFAT RASOOL TECHNICAL SERVICES, Delivers exceptional
-                manpower solutions — expertly tailored to elevate every event with
-                precision and professionalism.
-            </p>
-            <div class="row mt-4 g-4">
-                <!-- Service Card: A/V Technician -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="service-card shadow-sm">
-                        <div class="service-img">
-                            <img src="assets/images/avtechnicain.jpg" alt="A/V Technician" class="img-fluid" />
-                        </div>
-                        <div class="service-content p-3">
-                            <h4 class="fw-bold">A/V Technicians</h4>
-                            <p>
-                                Expert setup of audio systems, projectors, and displays to
-                                ensure seamless sound and visual experiences.
-                            </p>
-                            <a href="#" class="btn btn-readmore">READ MORE</a>
-                        </div>
-                    </div>
+          <div class="row align-items-center">
+            
+            <!-- Left Column - Text -->
+            <div class="col-lg-6 text-content mb-2 mb-lg-0">
+              <h2 class="section-title mb-4">Who We Are</h2>
+              <p class="about-description mb-4">
+                At <strong>Al Karam Ulfat Rasool Technical Services LLC</strong>, we specialize in delivering seamless manpower solutions for the events industry. Our commitment lies in providing exceptional service, strict adherence to timelines, and maintaining the highest standards of quality — all tailored to exceed client expectations.
+              </p>
+              <p class="about-description mb-4">
+                Backed by a dedicated team and a track record of success, we offer reliable, efficient, and scalable support designed to bring your vision to life with precision and professionalism.
+              </p>
+      
+              <!-- Features -->
+              <div class="row features-list">
+                <div class="col-md-6">
+                  <div class="feature-item"><i class="fas fa-user-tie feature-icon"></i> Professional & Certified Team</div>
+                  <div class="feature-item"><i class="fas fa-thumbs-up feature-icon"></i> 100% Client Satisfaction</div>
+                  <div class="feature-item"><i class="fas fa-eye feature-icon"></i> Future-Ready Vision</div>
                 </div>
-
-                <!-- Service Card: Technical Crew -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="service-card shadow-sm">
-                        <div class="service-img">
-                            <img src="assets/images/technician.jpg" alt="Technical Crew" class="img-fluid" />
-                        </div>
-                        <div class="service-content p-3">
-                            <h4 class="fw-bold">Technical Crew</h4>
-                            <p>
-                                Professional hands-on support for managing live setups,
-                                wiring, and backstage coordination with precision.
-                            </p>
-                            <a href="#" class="btn btn-readmore">READ MORE</a>
-                        </div>
-                    </div>
+                <div class="col-md-6">
+                  <div class="feature-item"><i class="fas fa-cogs feature-icon"></i> Quality Control Systems</div>
+                  <div class="feature-item"><i class="fas fa-bolt feature-icon"></i> Operational Excellence</div>
+                  <div class="feature-item"><i class="fas fa-star feature-icon"></i> Proven Expertise</div>
                 </div>
-
-                <!-- Service Card: Show Crew -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="service-card shadow-sm">
-                        <div class="service-img">
-                            <img src="assets/images/show-crew.jpg" alt="Show Crew" class="img-fluid" />
-                        </div>
-                        <div class="service-content p-3">
-                            <h4 class="fw-bold">Show Crew</h4>
-                            <p>
-                                From rehearsals to curtain call, our team ensures every
-                                element of your event runs flawlessly on stage.
-                            </p>
-                            <a href="#" class="btn btn-readmore">READ MORE</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Service Card: Runner -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="service-card shadow-sm">
-                        <div class="service-img">
-                            <img src="assets/images/runner.jpg" alt="Runner" class="img-fluid" />
-                        </div>
-                        <div class="service-content p-3">
-                            <h4 class="fw-bold">Event Runners</h4>
-                            <p>
-                                Reliable on-ground support for urgent logistics, coordination,
-                                and smooth flow throughout your event day.
-                            </p>
-                            <a href="#" class="btn btn-readmore">READ MORE</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Service Card: Lighting Technician -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="service-card shadow-sm">
-                        <div class="service-img">
-                            <img src="assets/images/light.jpg" alt="Lighting Technician" class="img-fluid" />
-                        </div>
-                        <div class="service-content p-3">
-                            <h4 class="fw-bold">Lighting Technicians</h4>
-                            <p>
-                                Design and control lighting systems to create stunning visual
-                                effects and ambiance for every scene.
-                            </p>
-                            <a href="#" class="btn btn-readmore">READ MORE</a>
-                        </div>
-                    </div>
-                </div>
+              </div>
             </div>
-            <div class="row mt-3 g-4">
-                <div class="col-12 d-flex flex-column align-items-center">
-                    <a href="#" class="btn btn-readmore ">READ MORE</a>
-                </div>
+      
+            <!-- Right Column - Background Image and Experience -->
+            <div class="col-lg-6 experience-area">
+              <div class="experience-card text-center p-4">
+                <div class="experience-number">10+</div>
+                <div class="experience-label">Years of Trusted Experience</div>
+                <a href="contact-us.html" class="btn btn-cta mt-3 ">Get in Touch</a>
+              </div>
             </div>
+          </div>
         </div>
-    </section>
-
-    <!-- Why Us -->
-    <section id="why-us" class="why-us-section py-5">
-        <div class="container-fluid px-md-5">
-            <div class="row align-items-center g-5">
-                <div class="col-12 text-center">
-                    <h1 class="section-title text-capitalize">Our Vision</h2>
-                        <h4 class="section-title mb-3">
-                            Uncompromising Quality, Exceptional Service!
-                        </h4>
-                        <p class="section-subtitle mb-4">
-                            At <strong>AL KARAM ULFAT RASOOL TECHNICAL SERVICES</strong>, we
-                            are committed to delivering the highest standards of excellence,
-                            with tailored solutions designed to meet your precise needs.
-                        </p>
-                </div>
-
-                <!-- Left Content -->
-                <div class="col-lg-6">
-                    <div class="row gy-4">
-                        <div class="col-md-6">
-                            <div class="feature-box">
-                                <i class="fas fa-mountain fa-2x icon"></i>
-                                <h5>Exceeding Expectations</h5>
-                                <p>Delivering flawless events beyond your imagination.</p>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="feature-box">
-                                <i class="fas fa-user-cog fa-2x icon"></i>
-                                <h5>Personalized Service</h5>
-                                <p>Tailored solutions reflecting your vision and goals.</p>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="feature-box">
-                                <i class="fas fa-thumbs-up fa-2x icon"></i>
-                                <h5>Reliable Support</h5>
-                                <p>Stress-free event experiences from meticulous planning.</p>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="feature-box">
-                                <i class="fas fa-lightbulb fa-2x icon"></i>
-                                <h5>Continuous Innovation</h5>
-                                <p>Staying ahead with cutting-edge technologies.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Right Image -->
-                <div class="col-lg-6">
-                    <div class="image-wrapper">
-                        <img src="assets/images/hero1.jpg" alt="Creative Force Crew"
-                            class="img-fluid rounded shadow-lg" />
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Our Projects Section -->
-    <section class="p-0 m-0 our-project position-relative">
-        <!-- Background Image Slideshow -->
-        <div class="project-backgrounds"></div>
-
-        <!-- Overlay -->
-        <div class="project-hero-overlay"></div>
-
-        <!-- Foreground Content -->
-        <div class="container project-content py-5 text-white text-center position-relative">
-            <h2 class="fw-bold mb-3">Our Projects</h2>
-            <p class="mb-5 text-white">
-                At <strong>AL KARAM ULFAT RASOOL TECHNICAL SERVICES</strong>, we are working on exciting
-                projects tailored to the events industry. Stay tuned for upcoming
-                showcases.
-            </p>
-
-            <div class="row g-4 justify-content-center">
-                <!-- Placeholder Cards -->
-                <div class="col-6 col-md-4 col-lg-3">
-                    <div class="border border-secondary rounded-3 p-4 bg-secondary bg-opacity-10">
-                        <span>Coming Soon</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Disabled Button -->
-            <button class="btn btn-cta mt-5" disabled>View All Projects</button>
-        </div>
-    </section>
+      </section>
 
     <!-- Our Clients Section -->
-    <section id="our-clients" class="clients-section py-5 bg-white">
+    <section id="our-clients" class="clients-section py-5 bg-light">
         <div class="container">
             <div class="text-center mb-5">
                 <h2 class="section-title fw-bold">Our Clients</h2>
@@ -324,7 +176,56 @@
             </div>
         </div>
     </section>
+      
+    <!-- Experts Advice Section -->
+    <section id="expert-advice" class="expert-section py-5">
+        <div class="container">
+        <div class="row align-items-center g-4">
+            <!-- Text Content Column -->
+            <div class="col-lg-6 order-1 order-lg-1">
+            <h2 class="section-title mb-2">Expert Guidance You Can Trust</h2>
+            <p class="expert-text">
+                At <strong>Al Karam Ulfat Rasool Technical Services LLC</strong>, we take pride in delivering top-tier solutions backed by years of experience. Our team of seasoned professionals is always ready to offer you strategic advice tailored to your needs.
+            </p>
+            <p class="expert-text">
+                Whether it’s technical consultation, project planning, or efficient implementation — we are here to support your goals with passion and precision.
+            </p>
+            <a href="contact-us.html" class="btn btn-cta mt-2">Get In Touch</a>
+            </div>
 
+            <!-- Stats Column -->
+            <div class="col-lg-6 state-col order-2 order-lg-3">
+            <div class="row g-4 z-2">
+                <div class="col-12 col-md-6">
+                <div class="stat-card text-center p-2 animate-up">
+                    <div class="stat-number">0</div>
+                    <div class="stat-label">Satisfied Clients</div>
+                </div>
+                </div>
+                <div class="col-12 col-md-6">
+                <div class="stat-card text-center p-2 animate-up delay-1">
+                    <div class="stat-number">0</div>
+                    <div class="stat-label">Projects Delivered</div>
+                </div>
+                </div>
+                <div class="col-12 col-md-6">
+                <div class="stat-card text-center p-2 animate-up delay-2">
+                    <div class="stat-number">0</div>
+                    <div class="stat-label">Skilled Experts</div>
+                </div>
+                </div>
+                <div class="col-12 col-md-6">
+                <div class="stat-card text-center p-2 animate-up delay-3">
+                    <div class="stat-number">0</div>
+                    <div class="stat-label">Awards Won</div>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+    </section>
+  
     <!-- Let's Connect Section -->
     <section class="elevate-section">
         <div class="container">
@@ -342,9 +243,9 @@
                     <div class="divider animate-fade delay-2"></div>
 
                     <div class="animate-fade delay-3 mt-4">
-                        <button class="contact-btn btn-lg px-4">
+                        <a href="contact-us.html" class="contact-btn btn-lg px-4">
                             Contact Us <i class="fas fa-arrow-right ms-2"></i>
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>
