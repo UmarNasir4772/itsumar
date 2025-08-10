@@ -421,6 +421,15 @@ p {
   display: none !important;
 }
 
+@media (max-width: 1200px) {
+  .custom-navbar {
+    top: 28%;
+  }
+  .hero-content {
+    margin-top: 25%;
+  }
+}
+
 @media (max-width: 1024px) {
   .custom-navbar {
     top: 28%;
@@ -466,7 +475,7 @@ p {
 }
 
 /* Responsive fix for mobile */
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .hero-section {
     padding: 2rem;
   }
@@ -3727,7 +3736,7 @@ strong {
 }
 
 /* Show toggle button on medium screens and up */
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .side-navbar-toggle {
       display: flex ;
       align-items: center;
