@@ -1,0 +1,443 @@
+<!-- ==============================================
+    CLIENT PORTFOLIO GALLERY
+    Professional Project Showcase with Before/After
+============================================== -->
+<section id="client-portfolio" class="section bg-light">
+    <div class="container">
+        <!-- Section Header -->
+        <div class="section-header text-center mb-5">
+            <span class="section-badge">Our Portfolio</span>
+            <h2 class="section-title">Trusted by Dubai's Leading Properties</h2>
+            <p class="section-subtitle">Showcasing our premium maintenance work for luxury villas, commercial buildings, and high-rise towers across Dubai.</p>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="portfolio-filter mb-5">
+            <div class="filter-buttons text-center">
+                <button class="filter-btn btn btn-outline-primary active" data-filter="all">All Projects</button>
+                <button class="filter-btn btn btn-outline-primary" data-filter="villa">Luxury Villas</button>
+                <button class="filter-btn btn btn-outline-primary" data-filter="commercial">Commercial</button>
+                <button class="filter-btn btn btn-outline-primary" data-filter="tower">High-Rise Towers</button>
+                <button class="filter-btn btn btn-outline-primary" data-filter="hotel">Hotels</button>
+                <button class="filter-btn btn btn-outline-primary" data-filter="mall">Shopping Malls</button>
+            </div>
+        </div>
+
+        <!-- Portfolio Grid -->
+        <div class="portfolio-grid">
+            <!-- Project 1: Palm Jumeirah Villa -->
+            <div class="portfolio-item" data-category="villa" data-location="Palm Jumeirah">
+                <div class="portfolio-card">
+                    <div class="portfolio-image">
+                        <img src="images/portfolio/palm-jumeirah-after.webp" 
+                             alt="Electrical renovation Palm Jumeirah villa Dubai - Methaq Almajara"
+                             class="img-fluid"
+                             loading="lazy">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-badge">Villa Maintenance</div>
+                            <div class="portfolio-actions">
+                                <button class="view-btn" data-bs-toggle="modal" data-bs-target="#projectModal1">
+                                    <i class="fas fa-expand"></i> View Project
+                                </button>
+                                <button class="compare-btn" data-before="images/portfolio/palm-jumeirah-before.webp" 
+                                        data-after="images/portfolio/palm-jumeirah-after.webp">
+                                    <i class="fas fa-exchange-alt"></i> Compare
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <div class="property-info">
+                            <span class="property-type">Luxury Villa</span>
+                            <span class="property-location">
+                                <i class="fas fa-map-marker-alt"></i> Palm Jumeirah
+                            </span>
+                        </div>
+                        <h3 class="portfolio-title">Complete Electrical Renovation</h3>
+                        <p class="portfolio-desc">Full electrical system upgrade including smart home integration and lighting design.</p>
+                        <div class="portfolio-services">
+                            <span class="service-tag">Electrical</span>
+                            <span class="service-tag">Lighting</span>
+                            <span class="service-tag">Smart Home</span>
+                        </div>
+                        <div class="portfolio-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-calendar"></i>
+                                <span>Completed: Jan 2024</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-clock"></i>
+                                <span>Duration: 3 Weeks</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2: Dubai Marina Tower -->
+            <div class="portfolio-item" data-category="tower" data-location="Dubai Marina">
+                <div class="portfolio-card">
+                    <div class="portfolio-image">
+                        <img src="images/portfolio/dubai-marina-after.webp" 
+                             alt="HVAC maintenance Dubai Marina tower - Methaq Almajara"
+                             class="img-fluid"
+                             loading="lazy">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-badge">Tower Maintenance</div>
+                            <div class="portfolio-actions">
+                                <button class="view-btn" data-bs-toggle="modal" data-bs-target="#projectModal2">
+                                    <i class="fas fa-expand"></i> View Project
+                                </button>
+                                <button class="compare-btn" data-before="images/portfolio/dubai-marina-before.webp" 
+                                        data-after="images/portfolio/dubai-marina-after.webp">
+                                    <i class="fas fa-exchange-alt"></i> Compare
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <div class="property-info">
+                            <span class="property-type">High-Rise Tower</span>
+                            <span class="property-location">
+                                <i class="fas fa-map-marker-alt"></i> Dubai Marina
+                            </span>
+                        </div>
+                        <h3 class="portfolio-title">HVAC System Maintenance</h3>
+                        <p class="portfolio-desc">Central HVAC system servicing and optimization for 40-story residential tower.</p>
+                        <div class="portfolio-services">
+                            <span class="service-tag">HVAC</span>
+                            <span class="service-tag">Cooling</span>
+                            <span class="service-tag">Maintenance</span>
+                        </div>
+                        <div class="portfolio-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-calendar"></i>
+                                <span>Completed: Dec 2023</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-clock"></i>
+                                <span>Duration: 2 Weeks</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3: Downtown Commercial -->
+            <div class="portfolio-item" data-category="commercial" data-location="Downtown Dubai">
+                <div class="portfolio-card">
+                    <div class="portfolio-image">
+                        <img src="images/portfolio/downtown-after.webp" 
+                             alt="Commercial building maintenance Downtown Dubai - Methaq Almajara"
+                             class="img-fluid"
+                             loading="lazy">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-badge">Commercial</div>
+                            <div class="portfolio-actions">
+                                <button class="view-btn" data-bs-toggle="modal" data-bs-target="#projectModal3">
+                                    <i class="fas fa-expand"></i> View Project
+                                </button>
+                                <button class="compare-btn" data-before="images/portfolio/downtown-before.webp" 
+                                        data-after="images/portfolio/downtown-after.webp">
+                                    <i class="fas fa-exchange-alt"></i> Compare
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <div class="property-info">
+                            <span class="property-type">Commercial Building</span>
+                            <span class="property-location">
+                                <i class="fas fa-map-marker-alt"></i> Downtown Dubai
+                            </span>
+                        </div>
+                        <h3 class="portfolio-title">Complete Building Maintenance</h3>
+                        <p class="portfolio-desc">Comprehensive maintenance contract for 25-story office building including all technical systems.</p>
+                        <div class="portfolio-services">
+                            <span class="service-tag">Electrical</span>
+                            <span class="service-tag">Plumbing</span>
+                            <span class="service-tag">HVAC</span>
+                        </div>
+                        <div class="portfolio-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-calendar"></i>
+                                <span>Completed: Nov 2023</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-clock"></i>
+                                <span>Ongoing Contract</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 4: Emirates Hills Villa -->
+            <div class="portfolio-item" data-category="villa" data-location="Emirates Hills">
+                <div class="portfolio-card">
+                    <div class="portfolio-image">
+                        <img src="images/portfolio/emirates-hills-after.webp" 
+                             alt="Plumbing renovation Emirates Hills villa - Methaq Almajara"
+                             class="img-fluid"
+                             loading="lazy">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-badge">Villa Renovation</div>
+                            <div class="portfolio-actions">
+                                <button class="view-btn" data-bs-toggle="modal" data-bs-target="#projectModal4">
+                                    <i class="fas fa-expand"></i> View Project
+                                </button>
+                                <button class="compare-btn" data-before="images/portfolio/emirates-hills-before.webp" 
+                                        data-after="images/portfolio/emirates-hills-after.webp">
+                                    <i class="fas fa-exchange-alt"></i> Compare
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <div class="property-info">
+                            <span class="property-type">Premium Villa</span>
+                            <span class="property-location">
+                                <i class="fas fa-map-marker-alt"></i> Emirates Hills
+                            </span>
+                        </div>
+                        <h3 class="portfolio-title">Plumbing System Renovation</h3>
+                        <p class="portfolio-desc">Complete plumbing system replacement with premium fixtures and leak detection system.</p>
+                        <div class="portfolio-services">
+                            <span class="service-tag">Plumbing</span>
+                            <span class="service-tag">Waterproofing</span>
+                            <span class="service-tag">Renovation</span>
+                        </div>
+                        <div class="portfolio-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-calendar"></i>
+                                <span>Completed: Oct 2023</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-clock"></i>
+                                <span>Duration: 2 Weeks</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 5: Shopping Mall -->
+            <div class="portfolio-item" data-category="mall" data-location="Deira">
+                <div class="portfolio-card">
+                    <div class="portfolio-image">
+                        <img src="images/portfolio/mall-after.webp" 
+                             alt="Shopping mall maintenance Dubai - Methaq Almajara"
+                             class="img-fluid"
+                             loading="lazy">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-badge">Retail Maintenance</div>
+                            <div class="portfolio-actions">
+                                <button class="view-btn" data-bs-toggle="modal" data-bs-target="#projectModal5">
+                                    <i class="fas fa-expand"></i> View Project
+                                </button>
+                                <button class="compare-btn" data-before="images/portfolio/mall-before.webp" 
+                                        data-after="images/portfolio/mall-after.webp">
+                                    <i class="fas fa-exchange-alt"></i> Compare
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <div class="property-info">
+                            <span class="property-type">Shopping Mall</span>
+                            <span class="property-location">
+                                <i class="fas fa-map-marker-alt"></i> Deira, Dubai
+                            </span>
+                        </div>
+                        <h3 class="portfolio-title">Retail Space Maintenance</h3>
+                        <p class="portfolio-desc">Regular maintenance and emergency repairs for large shopping mall with 200+ stores.</p>
+                        <div class="portfolio-services">
+                            <span class="service-tag">Electrical</span>
+                            <span class="service-tag">AC Maintenance</span>
+                            <span class="service-tag">Civil Works</span>
+                        </div>
+                        <div class="portfolio-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-calendar"></i>
+                                <span>Completed: Sep 2023</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-clock"></i>
+                                <span>Annual Contract</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 6: Hotel Maintenance -->
+            <div class="portfolio-item" data-category="hotel" data-location="JBR">
+                <div class="portfolio-card">
+                    <div class="portfolio-image">
+                        <img src="images/portfolio/hotel-after.webp" 
+                             alt="Hotel maintenance Jumeirah Beach Residence - Methaq Almajara"
+                             class="img-fluid"
+                             loading="lazy">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-badge">Hotel Services</div>
+                            <div class="portfolio-actions">
+                                <button class="view-btn" data-bs-toggle="modal" data-bs-target="#projectModal6">
+                                    <i class="fas fa-expand"></i> View Project
+                                </button>
+                                <button class="compare-btn" data-before="images/portfolio/hotel-before.webp" 
+                                        data-after="images/portfolio/hotel-after.webp">
+                                    <i class="fas fa-exchange-alt"></i> Compare
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <div class="property-info">
+                            <span class="property-type">5-Star Hotel</span>
+                            <span class="property-location">
+                                <i class="fas fa-map-marker-alt"></i> JBR, Dubai
+                            </span>
+                        </div>
+                        <h3 class="portfolio-title">Hotel Facility Management</h3>
+                        <p class="portfolio-desc">24/7 facility management and preventive maintenance for 300-room luxury hotel.</p>
+                        <div class="portfolio-services">
+                            <span class="service-tag">Facility Management</span>
+                            <span class="service-tag">Preventive Maintenance</span>
+                            <span class="service-tag">24/7 Support</span>
+                        </div>
+                        <div class="portfolio-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-calendar"></i>
+                                <span>Completed: Aug 2023</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-clock"></i>
+                                <span>Ongoing Contract</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- View More Button -->
+        <div class="text-center mt-5">
+            <a href="portfolio.html" class="btn btn-primary btn-lg">
+                <i class="fas fa-images me-2"></i>View Complete Portfolio
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ==============================================
+    MODALS FOR EACH PROJECT (At bottom of page)
+============================================== -->
+
+<!-- Modal 1: Palm Jumeirah Villa -->
+<div class="modal fade portfolio-modal" id="projectModal1" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Palm Jumeirah Villa - Electrical Renovation</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="before-after-container">
+                            <div class="image-comparison">
+                                <div class="image-wrapper">
+                                    <img src="images/portfolio/palm-jumeirah-before.webp" alt="Before electrical renovation" class="before-image">
+                                    <img src="images/portfolio/palm-jumeirah-after.webp" alt="After electrical renovation" class="after-image">
+                                </div>
+                                <input type="range" class="comparison-slider" min="0" max="100" value="50">
+                                <div class="comparison-label before-label">Before</div>
+                                <div class="comparison-label after-label">After</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="project-details">
+                            <h3>Project Details</h3>
+                            <ul class="project-info">
+                                <li><strong>Client:</strong> Private Villa Owner</li>
+                                <li><strong>Location:</strong> Palm Jumeirah, Dubai</li>
+                                <li><strong>Property Type:</strong> Luxury Villa (5 Bedrooms)</li>
+                                <li><strong>Services Provided:</strong> Complete Electrical Renovation</li>
+                                <li><strong>Duration:</strong> 3 Weeks</li>
+                                <li><strong>Completion:</strong> January 2024</li>
+                            </ul>
+                            <div class="project-description">
+                                <h4>Scope of Work</h4>
+                                <p>Complete electrical system overhaul including:</p>
+                                <ul>
+                                    <li>New wiring throughout the villa</li>
+                                    <li>Smart home automation system installation</li>
+                                    <li>LED lighting design and installation</li>
+                                    <li>DB panel upgrade to latest standards</li>
+                                    <li>Backup power system integration</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Similar modals for other projects would be added here -->
+<!-- For now, we'll create one more as example -->
+
+<!-- Modal 2: Dubai Marina Tower -->
+<div class="modal fade portfolio-modal" id="projectModal2" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Dubai Marina Tower - HVAC Maintenance</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="before-after-container">
+                            <div class="image-comparison">
+                                <div class="image-wrapper">
+                                    <img src="images/portfolio/dubai-marina-before.webp" alt="Before HVAC maintenance" class="before-image">
+                                    <img src="images/portfolio/dubai-marina-after.webp" alt="After HVAC maintenance" class="after-image">
+                                </div>
+                                <input type="range" class="comparison-slider" min="0" max="100" value="50">
+                                <div class="comparison-label before-label">Before</div>
+                                <div class="comparison-label after-label">After</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="project-details">
+                            <h3>Project Details</h3>
+                            <ul class="project-info">
+                                <li><strong>Client:</strong> Marina Tower Management</li>
+                                <li><strong>Location:</strong> Dubai Marina</li>
+                                <li><strong>Property Type:</strong> 40-Story Residential Tower</li>
+                                <li><strong>Services Provided:</strong> HVAC System Maintenance</li>
+                                <li><strong>Duration:</strong> 2 Weeks</li>
+                                <li><strong>Completion:</strong> December 2023</li>
+                            </ul>
+                            <div class="project-description">
+                                <h4>Scope of Work</h4>
+                                <p>Comprehensive HVAC maintenance including:</p>
+                                <ul>
+                                    <li>Chiller plant inspection and servicing</li>
+                                    <li>Cooling tower maintenance</li>
+                                    <li>AHU filter replacement across 40 floors</li>
+                                    <li>Thermostat calibration and optimization</li>
+                                    <li>Energy efficiency improvements</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

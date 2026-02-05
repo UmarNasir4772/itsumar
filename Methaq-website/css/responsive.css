@@ -1,0 +1,164 @@
+/* ==============================================
+   RESPONSIVE STYLESHEET
+   Mobile-First Professional Responsiveness
+   ============================================== */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+    
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    .btn-lg {
+        padding: 1.125rem 2.25rem;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+    
+    h1 {
+        font-size: 3rem;
+    }
+    
+    h2 {
+        font-size: 2.5rem;
+    }
+    
+    .section {
+        padding: var(--space-xxl) 0;
+    }
+    
+    /* Two column layout for medium screens */
+    .grid-2 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-lg);
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    
+    /* Three column layout for large screens */
+    .grid-3 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--space-lg);
+    }
+    
+    .grid-4 {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: var(--space-md);
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+    
+    h1 {
+        font-size: 3.5rem;
+    }
+    
+    /* Four column layout for extra large screens */
+    .grid-4-lg {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: var(--space-xl);
+    }
+}
+
+/* Extra extra large devices (1400px and up) */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1320px;
+    }
+}
+
+/* ==============================================
+   MOBILE-SPECIFIC ADJUSTMENTS
+   ============================================== */
+
+@media (max-width: 767.98px) {
+    /* Stack grids on mobile */
+    .grid-2,
+    .grid-3,
+    .grid-4,
+    .grid-4-lg {
+        grid-template-columns: 1fr;
+        gap: var(--space-md);
+    }
+    
+    /* Adjust spacing for mobile */
+    .section-title {
+        margin-bottom: var(--space-lg);
+    }
+    
+    .section-title h2::after {
+        bottom: -8px;
+    }
+    
+    /* Center text on mobile */
+    .text-center-mobile {
+        text-align: center;
+    }
+    
+    /* Full width buttons on mobile */
+    .btn-full-mobile {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* ==============================================
+   TABLET-SPECIFIC ADJUSTMENTS
+   ============================================== */
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    /* Adjust container padding */
+    .container {
+        padding: 0 var(--space-lg);
+    }
+    
+    /* Adjust section padding */
+    .section {
+        padding: var(--space-xl) 0;
+    }
+}
+
+/* ==============================================
+   PRINT STYLES
+   ============================================== */
+
+@media print {
+    *,
+    *::before,
+    *::after {
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+    
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+    
+    a[href]::after {
+        content: " (" attr(href) ")";
+    }
+    
+    .no-print {
+        display: none !important;
+    }
+    
+    .container {
+        max-width: 100% !important;
+        padding: 0 !important;
+    }
+}
