@@ -18,58 +18,59 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    // Mobile Menu Dropdown Enhancement
-    const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+    // // Mobile Menu Dropdown Enhancement
+    // const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
     
-    dropdownToggles.forEach(toggle => {
-        toggle.addEventListener('click', function(e) {
-            if (window.innerWidth < 992) {
-                e.preventDefault();
-                const dropdownMenu = this.nextElementSibling;
-                dropdownMenu.classList.toggle('show');
-            }
-        });
-    });
+    // dropdownToggles.forEach(toggle => {
+    //     toggle.addEventListener('click', function(e) {
+    //         if (window.innerWidth < 992) {
+    //             e.preventDefault();
+    //             const dropdownMenu = this.nextElementSibling;
+                
+    //         }
+    //     });
+    // });
     
     // Close dropdown when clicking outside (mobile)
-    document.addEventListener('click', function(e) {
-        if (window.innerWidth < 992) {
-            if (!e.target.closest('.dropdown')) {
-                document.querySelectorAll('.dropdown-menu').forEach(menu => {
-                    menu.classList.remove('show');
-                });
-            }
-        }
-    });
+    // document.addEventListener('click', function(e) {
+    //     if (window.innerWidth < 992) {
+    //         if (!e.target.closest('.dropdown')) {
+    //             document.querySelectorAll('.dropdown-menu').forEach(menu => {
+    //                 menu.classList.remove('show');
+    //                 console.log('Dropdown menu closed');
+    //             });
+    //         }
+    //     }
+    // });
     
     // Smooth scroll for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            const href = this.getAttribute('href');
+    // document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    //     anchor.addEventListener('click', function(e) {
+    //         const href = this.getAttribute('href');
             
-            if (href === '#' || href.startsWith('#!')) return;
+    //         if (href === '#' || href.startsWith('#!')) return;
             
-            if (href.startsWith('#')) {
-                e.preventDefault();
-                const targetElement = document.querySelector(href);
+    //         if (href.startsWith('#')) {
+    //             e.preventDefault();
+    //             const targetElement = document.querySelector(href);
                 
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
+    //             if (targetElement) {
+    //                 window.scrollTo({
+    //                     top: targetElement.offsetTop - 80,
+    //                     behavior: 'smooth'
+    //                 });
                     
-                    // Close mobile menu if open
-                    if (window.innerWidth < 992) {
-                        const navbarCollapse = document.getElementById('mainNavbar');
-                        if (navbarCollapse.classList.contains('show')) {
-                            new bootstrap.Collapse(navbarCollapse).toggle();
-                        }
-                    }
-                }
-            }
-        });
-    });
+    //                 // Close mobile menu if open
+    //                 if (window.innerWidth < 992) {
+    //                     const navbarCollapse = document.getElementById('mainNavbar');
+    //                     if (navbarCollapse.classList.contains('show')) {
+    //                         new bootstrap.Collapse(navbarCollapse).toggle();
+    //                     }
+    //                 }
+    //             }
+    //         }
+    //     });
+    // });
 });
 
 // ==============================================
@@ -1623,3 +1624,8 @@ window.footerUtils = {
         }
     }
 };
+
+
+
+
+

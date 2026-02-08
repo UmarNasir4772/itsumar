@@ -24,6 +24,12 @@
     /* Typography - Professional Enterprise Fonts */
     --heading-font: 'Poppins', sans-serif;
     --body-font: 'Roboto', sans-serif;
+
+    /* Status Colors */
+    --success-color: #28A745;
+    --danger-color: #DC3545;
+    --warning-color: #FFC107;
+    --info-color: #17A2B8;
     
     /* Spacing Scale (8px grid system) */
     --space-xs: 0.5rem;      /* 8px */
@@ -38,6 +44,7 @@
     --border-radius-md: 8px;
     --border-radius-lg: 12px;
     --border-radius-xl: 20px;
+    --border-radius-circle: 50%;
     
     /* Shadows - Subtle Professional Depth */
     --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
@@ -56,6 +63,12 @@
     --container-lg: 960px;
     --container-xl: 1140px;
     --container-xxl: 1320px;
+
+        /* Form Specific */
+    --input-height: 48px;
+    --input-border: 1px solid #D1D5DB;
+    --input-focus-border: 2px solid var(--primary-color);
+    --input-focus-shadow: 0 0 0 3px rgba(31, 79, 122, 0.1);
 }
 
 /* ==============================================
@@ -485,12 +498,6 @@ p {
     }
 }
 
-@media (max-width: 480px) {
-    .container {
-        padding: 0 var(--space-sm);
-    }
-}
-
 /* ==============================================
    HEADER & NAVIGATION STYLES
    Professional Corporate Design
@@ -580,12 +587,13 @@ p {
 }
 
 .nav-link:hover,
+.nav-link.sev-link,
 .nav-link.active {
     color: var(--primary-color) !important;
     background-color: rgba(31, 79, 122, 0.05);
 }
 
-.nav-link.active::after {
+.navbar-nav .nav-link.active::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -705,7 +713,7 @@ p {
         margin: 0.1rem 0;
     }
     
-    .nav-link.active::after {
+    .navbar-nav.nav-link.active::after {
         left: 0.5rem;
         right: auto;
         width: 3px;
@@ -1286,7 +1294,8 @@ p {
 /* Extra Small Mobile (Below 400px) */
 @media (max-width: 400px) {
     .hero-section {
-        min-height: 380px;
+        min-height: 360px;
+        max-width: 420px;
     }
     
     .hero-title {
@@ -4333,19 +4342,16 @@ p {
         align-self: flex-start;
     }
     
-    .footer-widget .contact-item {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.5rem;
-    }
-    
     .contact-icon {
         width: 35px;
         height: 35px;
         font-size: 1rem;
     }
-    
+        .social-media {
+        text-align: center;
+    }
     .social-links {
+        justify-content: center;
         gap: 0.5rem;
     }
     
