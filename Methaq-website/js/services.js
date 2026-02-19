@@ -838,9 +838,10 @@ function calculateProject() {
 function showCalculationResult(elementId, message, type = 'success') {
     const element = document.getElementById(elementId);
     if (!element) return;
-    
+    element.classList.remove('d-none');
     element.innerHTML = message;
-    element.className = 'calculation-result ' + type;
+    element.className = 'calculation-result  ' + type;
+    
 }
 
 // Clean up event listeners on page unload

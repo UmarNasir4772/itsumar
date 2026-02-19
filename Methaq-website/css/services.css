@@ -17,6 +17,11 @@
     overflow: hidden;
 }
 
+.btn i{
+    margin-right: 0.5rem;
+    transition: transform var(--transition-medium);
+}
+
 .hero-background {
     position: absolute;
     top: 0;
@@ -450,6 +455,7 @@
     border-radius: var(--border-radius-lg);
     padding: 1.5rem;
     box-shadow: var(--shadow-md);
+    margin-top: 1.5rem;
 }
 
 .gallery-preview h4 {
@@ -1116,6 +1122,8 @@
     border-radius: var(--border-radius-md);
     font-size: 0.9rem;
     color: var(--dark-color);
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .brands-section {

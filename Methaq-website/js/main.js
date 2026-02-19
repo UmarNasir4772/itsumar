@@ -19,151 +19,29 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// ==============================================
-// HERO CAROUSEL ENHANCEMENTS - FIXED VERSION
-// ==============================================
-
-document.addEventListener("DOMContentLoaded", function () {
-  const heroCarousel = document.getElementById("heroCarousel");
-
-  if (heroCarousel) {
-    // Initialize Bootstrap Carousel
-    const carousel = new bootstrap.Carousel(heroCarousel, {
-      interval: 5000,
-      wrap: true,
-      touch: true,
-      pause: "hover",
-    });
-
-    // Touch/Swipe Support for Mobile
-    let touchStartX = 0;
-    let touchEndX = 0;
-    const swipeThreshold = 50;
-
-    heroCarousel.addEventListener(
-      "touchstart",
-      function (e) {
-        touchStartX = e.changedTouches[0].screenX;
-      },
-      { passive: true },
-    );
-
-    heroCarousel.addEventListener(
-      "touchend",
-      function (e) {
-        touchEndX = e.changedTouches[0].screenX;
-        handleSwipe();
-      },
-      { passive: true },
-    );
-
-    function handleSwipe() {
-      const diff = touchEndX - touchStartX;
-
-      if (Math.abs(diff) > swipeThreshold) {
-        if (diff > 0) {
-          // Swipe right - previous slide
-          carousel.prev();
-        } else {
-          // Swipe left - next slide
-          carousel.next();
-        }
-      }
-    }
-
-    // Keyboard Navigation Support
-    document.addEventListener("keydown", function (e) {
-      if (document.activeElement.tagName === "BODY") {
-        if (e.key === "ArrowLeft") {
-          carousel.prev();
-        } else if (e.key === "ArrowRight") {
-          carousel.next();
-        }
-      }
-    });
-
-    // Add animation to content on slide change
-    heroCarousel.addEventListener("slide.bs.carousel", function (event) {
-      const nextSlide = event.relatedTarget;
-      const content = nextSlide.querySelector(".hero-content");
-
-      // Reset animation
-      if (content) {
-        content.classList.remove("animate-fade-in");
-        void content.offsetWidth; // Trigger reflow
-        content.classList.add("animate-fade-in");
-      }
-    });
-
-    // Scroll down functionality
-    const scrollDown = document.querySelector(".scroll-down-indicator");
-    if (scrollDown) {
-      scrollDown.addEventListener("click", function (e) {
-        e.preventDefault();
-        const targetId = this.getAttribute("href");
-        const targetElement = document.querySelector(targetId);
-
-        if (targetElement) {
-          window.scrollTo({
-            top: targetElement.offsetTop - 80,
-            behavior: "smooth",
-          });
+/**
+ * Hero Section Interactions
+ * (minimal – ensures smooth performance and lazy loads background if needed)
+ */
+document.addEventListener('DOMContentLoaded', function() {
+  // Optional: Add a class to body when hero is in view for any animations
+  const hero = document.querySelector('.hero');
+  
+  if (hero) {
+    // Simple intersection observer to preload background if not already
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // The background is already set in CSS; this could trigger
+          // additional tracking or analytics if needed
+          entry.target.classList.add('hero-visible');
+          observer.unobserve(entry.target);
         }
       });
-    }
-
-    // Pause carousel when not in viewport for performance
-    const observer = new IntersectionObserver(
-      function (entries) {
-        entries.forEach((entry) => {
-          if (!entry.isIntersecting) {
-            carousel.pause();
-          } else {
-            carousel.cycle();
-          }
-        });
-      },
-      { threshold: 0.3 },
-    );
-
-    observer.observe(heroCarousel);
-
-    // Preload next image for smoother transitions
-    const preloadImage = function (src) {
-      const img = new Image();
-      img.src = src;
-    };
-
-    // Preload all carousel images
-    const carouselImages = heroCarousel.querySelectorAll("source, img");
-    carouselImages.forEach((img) => {
-      const src = img.getAttribute("srcset") || img.getAttribute("src");
-      if (src) {
-        preloadImage(src);
-      }
-    });
+    }, { threshold: 0.1 });
+    
+    observer.observe(hero);
   }
-
-  // // Fix for mobile viewport height
-  // function setHeroHeight() {
-  //     const heroSection = document.querySelector('.hero-section');
-  //     if (heroSection) {
-  //         // Set height to window height minus header
-  //         const headerHeight = document.querySelector('header').offsetHeight || 0;
-  //         const vh = window.innerHeight * 0.01;
-  //         document.documentElement.style.setProperty('--vh', `${vh}px`);
-
-  //         heroSection.style.height = `calc(var(--vh, 1vh) * 100 - ${headerHeight}px)`;
-  //         heroSection.style.minHeight = 'fit-content'; // Minimum fallback
-  //     }
-  // }
-
-  // // Set initial height
-  // setHeroHeight();
-
-  // Update on resize and orientation change
-  window.addEventListener("resize", setHeroHeight);
-  window.addEventListener("orientationchange", setHeroHeight);
 });
 
 // ==============================================
