@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+    <!-- ============================================================
+    HOME PAGE IMAGES
+    ============================================================ -->
+    <url>
+        <loc>https://virexon.ae/</loc>
+        <image:image>
+            <image:loc>https://virexon.ae/assets/images/hero/hero-banner.webp</image:loc>
+            <image:caption>Virexon Technical Services - Premium Property Maintenance Dubai</image:caption>
+            <image:title>Virexon Hero Banner</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://virexon.ae/assets/images/about/team-excellence.webp</image:loc>
+            <image:caption>Virexon Professional Team at Work</image:caption>
+            <image:title>Virexon Team Excellence</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://virexon.ae/assets/images/logos/logo.svg</image:loc>
+            <image:caption>Virexon Technical Services LLC Logo</image:caption>
+            <image:title>Virexon Logo</image:title>
+        </image:image>
+    </url>
+
+    <!-- ============================================================
+    ABOUT PAGE IMAGES
+    ============================================================ -->
+    <url>
+        <loc>https://virexon.ae/about.html</loc>
+        <image:image>
+            <image:loc>https://virexon.ae/assets/images/about/about-hero.webp</image:loc>
+            <image:caption>Virexon About Page - Luxury Dubai Villa</image:caption>
+            <image:title>Virexon About Hero</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://virexon.ae/assets/images/about/company-overview.webp</image:loc>
+            <image:caption>Virexon Professional Technicians Working on Dubai Villa</image:caption>
+            <image:title>Virexon Company Overview</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://virexon.ae/assets/images/about/why-choose-us.webp</image:loc>
+            <image:caption>Virexon Technicians Working on Modern Dubai Property</image:caption>
+            <image:title>Virexon Why Choose Us</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://virexon.ae/assets/images/about/safety-quality.webp</image:loc>
+            <image:caption>Virexon Safety Equipment and Quality Standards</image:caption>
+            <image:title>Virexon Safety &amp; Quality</image:title>
+        </image:image>
+    </url>
+
+    <!-- ============================================================
+    SERVICES PAGE IMAGES
+    ============================================================ -->
+    <url>
+        <loc>https://virexon.ae/services.html</loc>
+        <image:image>
+            <image:loc>https://virexon.ae/assets/images/services/services-hero.webp</image:loc>
+            <image:caption>Virexon Services - Premium Technical Services in Dubai</image:caption>
+            <image:title>Virexon Services Hero</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://virexon.ae/assets/images/services/painting-service.webp</image:loc>
+            <image:caption>Virexon Professional Painting Services Dubai</image:caption>
+            <image:title>Virexon Painting Services</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://virexon.ae/assets/images/services/plumbing-service.webp</image:loc>
+            <image:caption>Virexon Professional Plumbing Services Dubai</image:caption>
+            <image:title>Virexon Plumbing Services</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://virexon.ae/assets/images/services/tile-service.webp</image:loc>
+            <image:caption>Virexon Professional Tile Masonry Services Dubai</image:caption>
+            <image:title>Virexon Tile Masonry Services</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://virexon.ae/assets/images/services/brick-service.webp</image:loc>
+            <image:caption>Virexon Professional Brick Masonry Services Dubai</image:caption>
+            <image:title>Virexon Brick Masonry Services</image:title>
+        </image:image>
+    </url>
+
+    <!-- ============================================================
+    PAINTING PAGE IMAGES
+    ============================================================ -->
+    <url>
+        <loc>https://virexon.ae/painting.html</loc>
+        <image:image>
+            <image:loc>https://virexon.ae/assets/images/services/painting-hero.webp</image:loc>
+            <image:caption>Virexon Professional Painting Services in Dubai</image:caption>
+            <image:title>Virexon Painting Hero</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://virexon.ae/assets/images/services/painting-overview.webp</image:loc>
+            <image:caption>Virexon Painter Working on Luxury Villa</image:caption>
+            <image:title>Virexon Painting Overview</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://virexon.ae/assets/images/services/painting-benefits.webp</image:loc>
+            <image:caption>Virexon Premium Painting Finish</image:caption>
+            <image:title>Virexon Painting Benefits</image:title>
+        </image:image>
+    </url>
+
+    <!-- ============================================================
+    PLUMBING PAGE IMAGES
+    ============================================================ -->
+    <url>
+        <loc>https://virexon.ae/plumbing.html</loc>
+        <image:image>
+            <image:loc>https://virexon.ae/assets/images/services/plumbing-hero.webp</image:loc>
+            <image:caption>Virexon Professional Plumbing Services in Dubai</image:caption>
+            <image:title>Virexon Plumbing Hero</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://virexon.ae/assets/images/services/plumbing-service.webp</image:loc>
+            <image:caption>Virexon Plumber Working on Dubai Property</image:caption>
+            <image:title>Virexon Plumbing Overview</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://virexon.ae/assets/images/services/plumbing-detail.webp</image:loc>
+            <image:caption>Virexon Professional Plumbing Installation</image:caption>
+            <image:title>Virexon Plumbing Benefits</image:title>
+        </image:image>
+    </url>
+
+    <!-- ============================================================
+    TILE MASON PAGE IMAGES
+    ============================================================ -->
+    <url>
+        <loc>https://virexon.ae/tile-mason.html</loc>
+        <image:image>
+            <image:loc>https://virexon.ae/assets/images/services/tile-hero.webp</image:loc>
+            <image:caption>Virexon Professional Tile Masonry Services in Dubai</image:caption>
+            <image:title>Virexon Tile Mason Hero</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://virexon.ae/assets/images/services/tile-service.webp</image:loc>
+            <image:caption>Virexon Tile Mason Installing Tiles on Luxury Property</image:caption>
+            <image:title>Virexon Tile Mason Overview</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://virexon.ae/assets/images/services/tile-detail.webp</image:loc>
+            <image:caption>Virexon Precision Tile Installation</image:caption>
+            <image:title>Virexon Tile Mason Benefits</image:title>
+        </image:image>
+    </url>
+
+    <!-- ============================================================
+    BRICK MASON PAGE IMAGES
+    ============================================================ -->
+    <url>
+        <loc>https://virexon.ae/brick-mason.html</loc>
+        <image:image>
+            <image:loc>https://virexon.ae/assets/images/services/brick-hero.webp</image:loc>
+            <image:caption>Virexon Professional Brick Masonry Services in Dubai</image:caption>
+            <image:title>Virexon Brick Mason Hero</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://virexon.ae/assets/images/services/brick-detail.webp</image:loc>
+            <image:caption>Virexon Brick Mason Working on Dubai Property</image:caption>
+            <image:title>Virexon Brick Mason Overview</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://virexon.ae/assets/images/services/brick-service.webp</image:loc>
+            <image:caption>Virexon Precision Brick Masonry</image:caption>
+            <image:title>Virexon Brick Mason Benefits</image:title>
+        </image:image>
+    </url>
+
+    <!-- ============================================================
+    PROJECTS PAGE IMAGES
+    ============================================================ -->
+    <url>
+        <loc>https://virexon.ae/projects.html</loc>
+        <image:image>
+            <image:loc>https://virexon.ae/assets/images/projects/projects-hero.webp</image:loc>
+            <image:caption>Virexon Projects - Premium Property Maintenance Dubai</image:caption>
+            <image:title>Virexon Projects Hero</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://virexon.ae/assets/images/projects/project-1.webp</image:loc>
+            <image:caption>Virexon Villa Painting Project in Jumeirah</image:caption>
+            <image:title>Virexon Project 1 - Villa Painting</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://virexon.ae/assets/images/projects/project-2.webp</image:loc>
+            <image:caption>Virexon Plumbing Installation in Downtown Dubai</image:caption>
+            <image:title>Virexon Project 2 - Plumbing</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://virexon.ae/assets/images/projects/project-3.webp</image:loc>
+            <image:caption>Virexon Tile Masonry in Palm Jumeirah</image:caption>
+            <image:title>Virexon Project 3 - Tile Masonry</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://virexon.ae/assets/images/projects/project-4.webp</image:loc>
+            <image:caption>Virexon Brick Masonry in Business Bay</image:caption>
+            <image:title>Virexon Project 4 - Brick Masonry</image:title>
+        </image:image>
+    </url>
+
+    <!-- ============================================================
+    SERVICE AREAS PAGE IMAGES
+    ============================================================ -->
+    <url>
+        <loc>https://virexon.ae/service-areas.html</loc>
+        <image:image>
+            <image:loc>https://virexon.ae/assets/images/service-areas/areas-hero.webp</image:loc>
+            <image:caption>Virexon Service Areas - Dubai and Across the UAE</image:caption>
+            <image:title>Virexon Service Areas Hero</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://virexon.ae/assets/images/service-areas/uae-map.webp</image:loc>
+            <image:caption>Virexon UAE Service Areas Map</image:caption>
+            <image:title>Virexon UAE Map</image:title>
+        </image:image>
+    </url>
+
+    <!-- ============================================================
+    BLOG PAGE IMAGES
+    ============================================================ -->
+    <url>
+        <loc>https://virexon.ae/blog.html</loc>
+        <image:image>
+            <image:loc>https://virexon.ae/assets/images/blog/blog-hero.webp</image:loc>
+            <image:caption>Virexon Blog - Property Maintenance Insights</image:caption>
+            <image:title>Virexon Blog Hero</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://virexon.ae/assets/images/blog/blog-1.webp</image:loc>
+            <image:caption>Tips for Choosing Paint Colors for Dubai Villa</image:caption>
+            <image:title>Virexon Blog 1 - Painting Tips</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://virexon.ae/assets/images/blog/blog-2.webp</image:loc>
+            <image:caption>Common Plumbing Issues in Dubai Properties</image:caption>
+            <image:title>Virexon Blog 2 - Plumbing Issues</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://virexon.ae/assets/images/blog/blog-3.webp</image:loc>
+            <image:caption>Tile Selection Guide for Luxury Dubai Properties</image:caption>
+            <image:title>Virexon Blog 3 - Tile Selection</image:title>
+        </image:image>
+    </url>
+
+    <!-- ============================================================
+    CONTACT PAGE IMAGES
+    ============================================================ -->
+    <url>
+        <loc>https://virexon.ae/contact.html</loc>
+        <image:image>
+            <image:loc>https://virexon.ae/assets/images/contact/contact-hero.webp</image:loc>
+            <image:caption>Virexon Contact - Get in Touch</image:caption>
+            <image:title>Virexon Contact Hero</image:title>
+        </image:image>
+    </url>
+
+    <!-- ============================================================
+    LOGO & BRANDING IMAGES
+    ============================================================ -->
+    <url>
+        <loc>https://virexon.ae/</loc>
+        <image:image>
+            <image:loc>https://virexon.ae/assets/images/logos/logo-white.svg</image:loc>
+            <image:caption>Virexon Technical Services White Logo</image:caption>
+            <image:title>Virexon White Logo</image:title>
+        </image:image>
+    </url>
+
+    <url>
+        <loc>https://virexon.ae/</loc>
+        <image:image>
+            <image:loc>https://virexon.ae/assets/images/og-image.jpg</image:loc>
+            <image:caption>Virexon Open Graph Image</image:caption>
+            <image:title>Virexon OG Image</image:title>
+        </image:image>
+    </url>
+
+</urlset>

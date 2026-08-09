@@ -1,0 +1,413 @@
+/* ============================================================
+   CONTACT.CSS - Contact Page Specific Styles
+   ============================================================ */
+
+/* ============================================================
+   PAGE HERO
+   ============================================================ */
+   .contact-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url('../images/contact/contact-hero.webp') center center / cover no-repeat;
+    opacity: 0.35;
+    z-index: 1;
+}
+
+.page-hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-lg);
+}
+
+.page-hero-actions .btn {
+    min-width: 200px;
+}
+
+/* ============================================================
+   SECTION 1: CONTACT INFORMATION
+   ============================================================ */
+.contact-info {
+    background: var(--color-white);
+}
+
+.contact-card {
+    background: var(--color-white);
+    border-radius: var(--radius-xl);
+    padding: var(--spacing-xl);
+    text-align: center;
+    border: 1px solid var(--color-gray-100);
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-base);
+    height: 100%;
+}
+
+.contact-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-xl);
+    border-color: var(--color-accent-light);
+}
+
+.contact-card-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 72px;
+    height: 72px;
+    background: rgba(200, 164, 90, 0.08);
+    border-radius: 50%;
+    color: var(--color-accent);
+    margin-bottom: var(--spacing-md);
+    transition: all var(--transition-base);
+}
+
+.contact-card:hover .contact-card-icon {
+    background: var(--color-accent);
+    color: var(--color-white);
+    transform: scale(1.05);
+}
+
+.contact-card-title {
+    font-family: var(--font-heading);
+    font-size: var(--fs-xl);
+    font-weight: 700;
+    color: var(--color-heading);
+    margin-bottom: var(--spacing-xs);
+}
+
+.contact-card-desc {
+    font-family: var(--font-body);
+    font-size: var(--fs-sm);
+    color: var(--color-body);
+    line-height: 1.6;
+    margin-bottom: var(--spacing-sm);
+}
+
+.contact-card-link {
+    font-family: var(--font-heading);
+    font-size: var(--fs-base);
+    font-weight: 600;
+    color: var(--color-accent);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+.contact-card-link:hover {
+    color: var(--color-accent-dark);
+}
+
+.contact-hours {
+    margin-top: var(--spacing-xs);
+}
+
+.contact-hours span {
+    display: block;
+    font-family: var(--font-body);
+    font-size: var(--fs-sm);
+    color: var(--color-body);
+}
+
+.contact-hours strong {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: var(--fs-base);
+    color: var(--color-heading);
+    margin-top: 2px;
+}
+
+/* ============================================================
+   SECTION 2: LOCATION & MAP
+   ============================================================ */
+.location-map {
+    background: var(--color-bg-light);
+}
+
+.location-details {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.location-item {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-md);
+    padding: var(--spacing-sm) 0;
+    border-bottom: 1px solid var(--color-gray-100);
+}
+
+.location-item:last-child {
+    border-bottom: none;
+}
+
+.location-icon {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background: rgba(200, 164, 90, 0.08);
+    border-radius: 50%;
+    color: var(--color-accent);
+}
+
+.location-item h4 {
+    font-family: var(--font-heading);
+    font-size: var(--fs-sm);
+    font-weight: 600;
+    color: var(--color-heading);
+    margin: 0 0 2px 0;
+}
+
+.location-item p {
+    font-family: var(--font-body);
+    font-size: var(--fs-sm);
+    color: var(--color-body);
+    margin: 0;
+}
+
+.location-item p a {
+    color: var(--color-accent);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+.location-item p a:hover {
+    color: var(--color-accent-dark);
+}
+
+.location-cta .btn {
+    min-width: 220px;
+}
+
+/* Map Wrapper */
+.map-wrapper {
+    position: relative;
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    box-shadow: var(--shadow-xl);
+}
+
+.map-container {
+    width: 100%;
+    height: 450px;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.map-badge {
+    position: absolute;
+    bottom: var(--spacing-lg);
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(8px);
+    padding: 0.6rem 1.5rem;
+    border-radius: var(--radius-full);
+    box-shadow: var(--shadow-md);
+}
+
+.badge-pin {
+    font-family: var(--font-heading);
+    font-size: var(--fs-sm);
+    font-weight: 600;
+    color: var(--color-heading);
+}
+
+/* ============================================================
+   SECTION 3: GET IN TOUCH CTA
+   ============================================================ */
+.contact-cta .cta-box {
+    background: var(--color-primary);
+    padding: var(--spacing-2xl) var(--spacing-xl);
+    border-radius: var(--radius-xl);
+    color: var(--color-white);
+}
+
+.contact-cta .cta-badge {
+    display: inline-block;
+    font-size: var(--fs-sm);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--color-accent);
+    background: rgba(200, 164, 90, 0.15);
+    padding: 0.25rem 1rem;
+    border-radius: var(--radius-full);
+    margin-bottom: var(--spacing-sm);
+}
+
+.contact-cta .cta-title {
+    font-family: var(--font-heading);
+    font-size: var(--fs-4xl);
+    font-weight: 700;
+    margin-bottom: var(--spacing-md);
+}
+
+.contact-cta .cta-title .text-accent {
+    color: var(--color-accent);
+}
+
+.contact-cta .cta-desc {
+    font-family: var(--font-body);
+    font-size: var(--fs-base);
+    color: var(--color-gray-300);
+    line-height: 1.7;
+    max-width: 500px;
+    margin: 0;
+}
+
+.cta-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    align-items: flex-end;
+}
+
+.cta-buttons .btn {
+    min-width: 220px;
+}
+
+.cta-buttons .btn-outline-light {
+    border-color: rgba(255, 255, 255, 0.3);
+    color: var(--color-white);
+}
+
+.cta-buttons .btn-outline-light:hover {
+    background: var(--color-white);
+    color: var(--color-primary);
+    border-color: var(--color-white);
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 991.98px) {
+    .page-hero-actions {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .page-hero-actions .btn {
+        min-width: 100%;
+    }
+    
+    .contact-card {
+        padding: var(--spacing-lg);
+    }
+    
+    .map-container {
+        height: 350px;
+    }
+    
+    .contact-cta .cta-box {
+        padding: var(--spacing-xl);
+        text-align: center;
+    }
+    
+    .contact-cta .cta-desc {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    
+    .cta-buttons {
+        align-items: center;
+    }
+    
+    .cta-buttons .btn {
+        min-width: 100%;
+    }
+    
+    .location-cta .btn {
+        min-width: 100%;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .contact-card-icon {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .contact-card-title {
+        font-size: var(--fs-lg);
+    }
+    
+    .map-container {
+        height: 280px;
+    }
+    
+    .map-badge {
+        bottom: var(--spacing-md);
+        padding: 0.4rem 1rem;
+    }
+    
+    .badge-pin {
+        font-size: var(--fs-xs);
+    }
+    
+    .contact-cta .cta-title {
+        font-size: var(--fs-3xl);
+    }
+    
+    .contact-cta .cta-desc {
+        font-size: var(--fs-sm);
+    }
+    
+    .contact-cta .cta-box {
+        padding: var(--spacing-lg);
+    }
+    
+    .location-item {
+        padding: var(--spacing-xs) 0;
+    }
+    
+    .location-icon {
+        width: 36px;
+        height: 36px;
+    }
+    
+    .location-icon svg {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .contact-cta .cta-title {
+        font-size: var(--fs-2xl);
+    }
+    
+    .map-container {
+        height: 220px;
+    }
+    
+    .map-badge {
+        bottom: var(--spacing-sm);
+        padding: 0.3rem 0.8rem;
+    }
+    
+    .contact-card {
+        padding: var(--spacing-md);
+    }
+    
+    .contact-card-icon {
+        width: 52px;
+        height: 52px;
+    }
+    
+    .contact-card-icon svg {
+        width: 24px;
+        height: 24px;
+    }
+    
+    .contact-card-title {
+        font-size: var(--fs-base);
+    }
+}

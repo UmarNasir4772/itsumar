@@ -1,0 +1,29 @@
+# ============================================================
+# robots.txt - Virexon Technical Services LLC
+# ============================================================
+
+User-agent: *
+Allow: /
+
+# ============================================================
+# Sitemap
+# ============================================================
+
+Sitemap: https://virexon.ae/sitemap.xml
+
+# ============================================================
+# Private / Internal Directories
+# ============================================================
+
+Disallow: /admin/
+Disallow: /includes/
+Disallow: /docs/
+
+# Do not index the 404 page
+Disallow: /404.html
+
+# ============================================================
+# Important:
+# CSS, JavaScript and Images are intentionally NOT blocked.
+# Search engines need these resources to render the website.
+# ============================================================

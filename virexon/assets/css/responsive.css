@@ -1,0 +1,238 @@
+/* ============================================================
+   RESPONSIVE.CSS - Additional Responsive Overrides
+   ============================================================ */
+
+/* ----- Extra Small Devices (phones, < 576px) ----- */
+@media (max-width: 575.98px) {
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .navbar-brand img {
+        height: 40px;
+    }
+
+    .btn-lg {
+        padding: 0.75rem 1.5rem;
+        font-size: var(--fs-sm);
+    }
+
+    .section-tag {
+        font-size: var(--fs-xs);
+        padding: 0.2rem 0.75rem;
+    }
+
+    .stat-item {
+        padding: var(--spacing-sm) 0;
+    }
+
+    .process-step {
+        padding: var(--spacing-md);
+    }
+
+    .step-number {
+        font-size: var(--fs-2xl);
+        top: var(--spacing-xs);
+        right: var(--spacing-md);
+    }
+
+    .area-item {
+        padding: var(--spacing-md) var(--spacing-sm);
+    }
+
+    .area-icon {
+        font-size: 2rem;
+    }
+
+    .accordion-button {
+        padding: 1rem;
+        font-size: var(--fs-sm);
+    }
+
+    .accordion-body {
+        padding: 0 1rem 1rem;
+        font-size: var(--fs-sm);
+    }
+
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        bottom: 1rem;
+        right: 1rem;
+    }
+
+    .whatsapp-float svg {
+        width: 26px;
+        height: 26px;
+    }
+
+    .footer h5 {
+        font-size: var(--fs-sm);
+    }
+}
+
+/* ----- Small Devices (tablets, 576px - 767px) ----- */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .hero-title {
+        font-size: var(--fs-4xl);
+    }
+
+    .section-title {
+        font-size: var(--fs-3xl);
+    }
+
+    .stat-number {
+        font-size: var(--fs-4xl);
+    }
+}
+
+/* ----- Medium Devices (desktops, 768px - 991px) ----- */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .hero-title {
+        font-size: var(--fs-5xl);
+    }
+
+    .section-title {
+        font-size: var(--fs-4xl);
+    }
+
+    .process-step {
+        padding: var(--spacing-lg);
+    }
+}
+
+/* ----- Large Devices (large desktops, 992px - 1199px) ----- */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .hero-title {
+        font-size: var(--fs-5xl);
+    }
+
+    .section-title {
+        font-size: var(--fs-4xl);
+    }
+}
+
+/* ----- Extra Large Devices (1200px+) ----- */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1200px;
+    }
+
+    .hero-title {
+        font-size: var(--fs-6xl);
+    }
+}
+
+/* ============================================================
+   PRINT STYLES
+   ============================================================ */
+@media print {
+    .header,
+    .footer,
+    .whatsapp-float,
+    .preloader,
+    .cta-whatsapp {
+        display: none !important;
+    }
+
+    body {
+        padding-top: 0 !important;
+        background: var(--color-white) !important;
+        color: var(--color-heading) !important;
+    }
+
+    .hero {
+        min-height: auto !important;
+        padding: 2rem 0 !important;
+        background: var(--color-white) !important;
+    }
+
+    .hero::before,
+    .hero-overlay {
+        display: none !important;
+    }
+
+    .hero-title {
+        color: var(--color-heading) !important;
+    }
+
+    .hero-subtitle {
+        color: var(--color-body) !important;
+    }
+
+    .section {
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+
+    .section-padding {
+        padding-top: 1rem !important;
+        padding-bottom: 1rem !important;
+    }
+
+    img {
+        max-width: 100% !important;
+        break-inside: avoid;
+    }
+}
+
+/* ============================================================
+   REDUCED MOTION
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+    [data-aos] {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+
+    .service-card:hover,
+    .process-step:hover,
+    .area-item:hover {
+        transform: none !important;
+    }
+
+    .whatsapp-float:hover {
+        transform: none !important;
+    }
+}
+
+/* ============================================================
+   HIGH CONTRAST
+   ============================================================ */
+@media (prefers-contrast: high) {
+    .hero-title {
+        color: var(--color-white) !important;
+    }
+
+    .hero-subtitle {
+        color: var(--color-white) !important;
+    }
+
+    .section-title {
+        color: var(--color-heading) !important;
+    }
+
+    .section-desc {
+        color: var(--color-body) !important;
+    }
+
+    .btn-primary {
+        background: var(--color-accent-dark) !important;
+        border-color: var(--color-accent-dark) !important;
+    }
+
+    .btn-outline-primary {
+        border-color: var(--color-accent-dark) !important;
+        color: var(--color-accent-dark) !important;
+    }
+}

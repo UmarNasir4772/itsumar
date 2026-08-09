@@ -1,0 +1,98 @@
+# ============================================================
+# .htaccess - Virexon Technical Services LLC
+# ============================================================
+
+# Enable Rewrite Engine
+RewriteEngine On
+
+# ============================================================
+# REDIRECTS
+# ============================================================
+
+# Force HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+# Force www to non-www
+RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+
+# Remove trailing slash for files
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)/$ /$1 [L,R=301]
+
+# Redirect 404 to custom page
+ErrorDocument 404 /404.html
+
+# ============================================================
+# CACHE CONTROL
+# ============================================================
+
+# Cache static assets for 1 year
+<FilesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|js|css|swf|webp|svg|woff|woff2|ttf|eot)$">
+    Header set Cache-Control "max-age=31536000, public, immutable"
+</FilesMatch>
+
+# Cache HTML files for 1 day
+<FilesMatch "\.(html|htm)$">
+    Header set Cache-Control "max-age=86400, public, must-revalidate"
+</FilesMatch>
+
+# ============================================================
+# GZIP COMPRESSION
+# ============================================================
+
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript
+    AddOutputFilterByType DEFLATE application/javascript application/x-javascript application/json
+    AddOutputFilterByType DEFLATE application/xml application/rss+xml application/atom+xml
+    AddOutputFilterByType DEFLATE image/svg+xml application/font-woff application/font-woff2
+</IfModule>
+
+# ============================================================
+# MIME TYPES
+# ============================================================
+
+AddType application/json .json
+AddType application/x-web-app-manifest+json .webapp
+AddType image/webp .webp
+AddType image/svg+xml .svg
+AddType font/woff .woff
+AddType font/woff2 .woff2
+AddType font/ttf .ttf
+AddType application/vnd.ms-fontobject .eot
+
+# ============================================================
+# SECURITY HEADERS
+# ============================================================
+
+# Prevent MIME type sniffing
+Header set X-Content-Type-Options "nosniff"
+
+# Enable XSS protection
+Header set X-XSS-Protection "1; mode=block"
+
+# Prevent clickjacking
+Header set X-Frame-Options "SAMEORIGIN"
+
+# Referrer Policy
+Header set Referrer-Policy "strict-origin-when-cross-origin"
+
+# ============================================================
+# PERFORMANCE
+# ============================================================
+
+# Enable Keep-Alive
+<IfModule mod_headers.c>
+    Header set Connection keep-alive
+</IfModule>
+
+# Disable ETags for performance
+FileETag None
+
+# ============================================================
+# SEO REDIRECTS (Example - Update as needed)
+# ============================================================
+
+# Redirect old URL to new URL (if any)
+# Redirect 301 /old-page.html /new-page.html

@@ -1,0 +1,487 @@
+/* ============================================================
+   PLUMBING.CSS - Plumbing Services Page Specific Styles
+   ============================================================ */
+
+/* ============================================================
+   PAGE HERO
+   ============================================================ */
+   .plumbing-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url('../images/services/plumbing-hero.webp') center center / cover no-repeat;
+    opacity: 0.35;
+    z-index: 1;
+}
+
+.page-hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-lg);
+}
+
+.page-hero-actions .btn {
+    min-width: 200px;
+}
+
+/* ============================================================
+   SECTION 1: SERVICE OVERVIEW
+   ============================================================ */
+.plumbing-overview {
+    background: var(--color-white);
+}
+
+.overview-image-wrapper {
+    position: relative;
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    box-shadow: var(--shadow-xl);
+}
+
+.overview-image {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    display: block;
+}
+
+.overview-trust-float {
+    position: absolute;
+    bottom: var(--spacing-lg);
+    left: var(--spacing-lg);
+    right: var(--spacing-lg);
+    display: flex;
+    gap: var(--spacing-sm);
+    flex-wrap: wrap;
+}
+
+.trust-pill {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(8px);
+    padding: 0.4rem 1rem;
+    border-radius: var(--radius-full);
+    font-family: var(--font-body);
+    font-size: var(--fs-sm);
+    font-weight: 500;
+    color: var(--color-heading);
+    box-shadow: var(--shadow-md);
+}
+
+.overview-content p {
+    font-family: var(--font-body);
+    font-size: var(--fs-base);
+    color: var(--color-body);
+    line-height: 1.8;
+    margin-bottom: var(--spacing-md);
+}
+
+.overview-content p:last-child {
+    margin-bottom: 0;
+}
+
+.overview-trust {
+    display: flex;
+    gap: var(--spacing-sm);
+    flex-wrap: wrap;
+    margin-top: var(--spacing-lg);
+}
+
+.overview-trust .trust-pill {
+    background: var(--color-bg-light);
+    border: 1px solid var(--color-gray-100);
+}
+
+/* ============================================================
+   SECTION 2: PLUMBING SERVICES
+   ============================================================ */
+.plumbing-services {
+    background: var(--color-bg-light);
+}
+
+.plumbing-service-card {
+    background: var(--color-white);
+    border-radius: var(--radius-xl);
+    padding: var(--spacing-xl);
+    height: 100%;
+    border: 1px solid var(--color-gray-100);
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-base);
+    position: relative;
+    overflow: hidden;
+}
+
+.plumbing-service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--color-accent);
+    transform: scaleX(0);
+    transition: transform var(--transition-base);
+    transform-origin: left;
+}
+
+.plumbing-service-card:hover::before {
+    transform: scaleX(1);
+}
+
+.plumbing-service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-xl);
+    border-color: var(--color-accent-light);
+}
+
+.plumbing-service-number {
+    font-family: var(--font-heading);
+    font-size: var(--fs-3xl);
+    font-weight: 800;
+    color: var(--color-gray-700);
+    line-height: 1;
+    margin-bottom: var(--spacing-sm);
+}
+
+.plumbing-service-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    background: rgba(200, 164, 90, 0.08);
+    border-radius: 50%;
+    color: var(--color-accent);
+    margin-bottom: var(--spacing-sm);
+    transition: all var(--transition-base);
+}
+
+.plumbing-service-card:hover .plumbing-service-icon {
+    background: var(--color-accent);
+    color: var(--color-white);
+}
+
+.plumbing-service-title {
+    font-family: var(--font-heading);
+    font-size: var(--fs-xl);
+    font-weight: 700;
+    color: var(--color-heading);
+    margin-bottom: var(--spacing-xs);
+}
+
+.plumbing-service-desc {
+    font-family: var(--font-body);
+    font-size: var(--fs-sm);
+    color: var(--color-body);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ============================================================
+   SECTION 3: BENEFITS
+   ============================================================ */
+.plumbing-benefits {
+    background: var(--color-white);
+}
+
+.benefits-desc {
+    font-family: var(--font-body);
+    font-size: var(--fs-base);
+    color: var(--color-body);
+    line-height: 1.8;
+    margin-bottom: var(--spacing-lg);
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-md);
+}
+
+.benefit-item {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-sm) 0;
+}
+
+.benefit-icon {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    background: var(--color-accent);
+    color: var(--color-white);
+    border-radius: 50%;
+    font-size: var(--fs-sm);
+    font-weight: 700;
+    margin-top: 2px;
+}
+
+.benefit-item h4 {
+    font-family: var(--font-heading);
+    font-size: var(--fs-sm);
+    font-weight: 600;
+    color: var(--color-heading);
+    margin: 0 0 2px 0;
+}
+
+.benefit-item p {
+    font-family: var(--font-body);
+    font-size: var(--fs-sm);
+    color: var(--color-body);
+    margin: 0;
+    line-height: 1.4;
+}
+
+.benefits-image-wrapper {
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    box-shadow: var(--shadow-xl);
+}
+
+.benefits-image {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    display: block;
+}
+
+/* ============================================================
+   SECTION 4: FAQ
+   ============================================================ */
+.plumbing-faq {
+    background: var(--color-bg-light);
+}
+
+.faq-desc {
+    font-family: var(--font-body);
+    font-size: var(--fs-base);
+    color: var(--color-body);
+    line-height: 1.7;
+    margin-top: var(--spacing-md);
+}
+
+.plumbing-faq .accordion-item {
+    border: none;
+    border-radius: var(--radius-md) !important;
+    margin-bottom: var(--spacing-md);
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+}
+
+.plumbing-faq .accordion-button {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    color: var(--color-heading);
+    padding: 1.25rem 1.5rem;
+    background: var(--color-white);
+    border: none;
+    box-shadow: none;
+}
+
+.plumbing-faq .accordion-button:not(.collapsed) {
+    color: var(--color-accent);
+    background: var(--color-white);
+    box-shadow: none;
+}
+
+.plumbing-faq .accordion-button:focus {
+    box-shadow: none;
+    border-color: transparent;
+}
+
+.plumbing-faq .accordion-body {
+    font-family: var(--font-body);
+    color: var(--color-body);
+    padding: 0 1.5rem 1.25rem;
+    line-height: 1.7;
+}
+
+/* ============================================================
+   SECTION 5: WHATSAPP CTA
+   ============================================================ */
+.plumbing-cta .cta-box {
+    background: var(--color-primary);
+    padding: var(--spacing-2xl) var(--spacing-xl);
+    border-radius: var(--radius-xl);
+    color: var(--color-white);
+}
+
+.plumbing-cta .cta-badge {
+    display: inline-block;
+    font-size: var(--fs-sm);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--color-accent);
+    background: rgba(200, 164, 90, 0.15);
+    padding: 0.25rem 1rem;
+    border-radius: var(--radius-full);
+    margin-bottom: var(--spacing-sm);
+}
+
+.plumbing-cta .cta-title {
+    font-family: var(--font-heading);
+    font-size: var(--fs-4xl);
+    font-weight: 700;
+    margin-bottom: var(--spacing-md);
+}
+
+.plumbing-cta .cta-title .text-accent {
+    color: var(--color-accent);
+}
+
+.plumbing-cta .cta-desc {
+    font-family: var(--font-body);
+    font-size: var(--fs-base);
+    color: var(--color-gray-300);
+    line-height: 1.7;
+    max-width: 500px;
+    margin: 0;
+}
+
+.cta-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    align-items: flex-end;
+}
+
+.cta-buttons .btn {
+    min-width: 220px;
+}
+
+.cta-buttons .btn-outline-light {
+    border-color: rgba(255, 255, 255, 0.3);
+    color: var(--color-white);
+}
+
+.cta-buttons .btn-outline-light:hover {
+    background: var(--color-white);
+    color: var(--color-primary);
+    border-color: var(--color-white);
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 991.98px) {
+    .page-hero-actions {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .page-hero-actions .btn {
+        min-width: 100%;
+    }
+    
+    .overview-image {
+        height: 350px;
+    }
+    
+    .overview-trust-float {
+        position: relative;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin-top: var(--spacing-md);
+    }
+    
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .benefits-image {
+        height: 350px;
+    }
+    
+    .plumbing-cta .cta-box {
+        padding: var(--spacing-xl);
+        text-align: center;
+    }
+    
+    .plumbing-cta .cta-desc {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    
+    .cta-buttons {
+        align-items: center;
+    }
+    
+    .cta-buttons .btn {
+        min-width: 100%;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .overview-image {
+        height: 250px;
+    }
+    
+    .overview-trust-float {
+        flex-direction: column;
+        gap: var(--spacing-xs);
+        align-items: center;
+    }
+    
+    .overview-trust {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .plumbing-service-card {
+        padding: var(--spacing-lg);
+    }
+    
+    .plumbing-service-title {
+        font-size: var(--fs-lg);
+    }
+    
+    .benefits-image {
+        height: 250px;
+    }
+    
+    .plumbing-cta .cta-title {
+        font-size: var(--fs-3xl);
+    }
+    
+    .plumbing-cta .cta-desc {
+        font-size: var(--fs-sm);
+    }
+    
+    .plumbing-cta .cta-box {
+        padding: var(--spacing-lg);
+    }
+    
+    .faq-desc {
+        font-size: var(--fs-sm);
+    }
+}
+
+@media (max-width: 575.98px) {
+    .plumbing-cta .cta-title {
+        font-size: var(--fs-2xl);
+    }
+    
+    .plumbing-service-number {
+        font-size: var(--fs-2xl);
+    }
+    
+    .benefit-item h4 {
+        font-size: var(--fs-xs);
+    }
+    
+    .benefit-item p {
+        font-size: var(--fs-xs);
+    }
+    
+    .trust-pill {
+        font-size: var(--fs-xs);
+        padding: 0.3rem 0.75rem;
+    }
+}

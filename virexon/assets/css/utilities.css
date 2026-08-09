@@ -1,0 +1,184 @@
+/* ============================================================
+   UTILITIES.CSS - Helper Classes
+   ============================================================ */
+
+/* ----- Typography Helpers ----- */
+.text-accent {
+    color: var(--color-accent) !important;
+}
+
+.text-accent-light {
+    color: var(--color-accent-light) !important;
+}
+
+.text-heading {
+    color: var(--color-heading) !important;
+}
+
+.text-body-color {
+    color: var(--color-body) !important;
+}
+
+/* ----- Background Helpers ----- */
+.bg-primary {
+    background-color: var(--color-primary) !important;
+}
+
+.bg-accent {
+    background-color: var(--color-accent) !important;
+}
+
+.bg-light-gray {
+    background-color: var(--color-bg-light) !important;
+}
+
+/* ----- Spacing Helpers ----- */
+.section-padding {
+    padding-top: var(--spacing-3xl);
+    padding-bottom: var(--spacing-3xl);
+}
+
+.section-padding-sm {
+    padding-top: var(--spacing-2xl);
+    padding-bottom: var(--spacing-2xl);
+}
+
+/* ----- Section Header ----- */
+.section-header {
+    max-width: 700px;
+    margin: 0 auto var(--spacing-2xl);
+}
+
+.section-tag {
+    display: inline-block;
+    font-family: var(--font-heading);
+    font-size: var(--fs-sm);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-accent);
+    background: rgba(200, 164, 90, 0.1);
+    padding: 0.35rem 1rem;
+    border-radius: var(--radius-full);
+    margin-bottom: var(--spacing-sm);
+}
+
+.section-title {
+    font-family: var(--font-heading);
+    font-size: var(--fs-4xl);
+    font-weight: 700;
+    color: var(--color-heading);
+    line-height: 1.2;
+    margin-bottom: var(--spacing-md);
+}
+
+.section-title .text-accent {
+    color: var(--color-accent);
+}
+
+.section-desc {
+    font-family: var(--font-body);
+    font-size: var(--fs-lg);
+    color: var(--color-body);
+    line-height: 1.7;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* ----- Buttons ----- */
+.btn {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    border-radius: var(--radius-md);
+    padding: 0.75rem 1.75rem;
+    transition: all var(--transition-base);
+    text-transform: none;
+}
+
+.btn-primary {
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+    color: var(--color-white);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: var(--color-accent-dark);
+    border-color: var(--color-accent-dark);
+    color: var(--color-white);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+.btn-outline-primary {
+    color: var(--color-accent);
+    border-color: var(--color-accent);
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus {
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+    color: var(--color-white);
+    transform: translateY(-2px);
+}
+
+.btn-lg {
+    padding: 1rem 2.5rem;
+    font-size: var(--fs-base);
+}
+
+.btn-whatsapp {
+    background-color: #25D366;
+    border-color: #25D366;
+    color: var(--color-white);
+}
+
+.btn-whatsapp:hover,
+.btn-whatsapp:focus {
+    background-color: #1DA851;
+    border-color: #1DA851;
+    color: var(--color-white);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* ----- Cards ----- */
+.card-hover {
+    transition: all var(--transition-base);
+}
+
+.card-hover:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-xl);
+}
+
+/* ----- Images ----- */
+.img-rounded {
+    border-radius: var(--radius-lg);
+}
+
+.object-fit-cover {
+    object-fit: cover;
+}
+
+/* ----- Accessibility ----- */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/* ----- Animations ----- */
+[data-aos] {
+    pointer-events: none;
+}
+
+[data-aos].aos-animate {
+    pointer-events: auto;
+}

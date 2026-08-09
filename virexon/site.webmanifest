@@ -1,0 +1,136 @@
+{
+  "name": "Virexon Technical Services LLC",
+  "short_name": "Virexon",
+  "description": "Premium property maintenance and technical services in Dubai. Expert painting, plumbing, tile & brick masonry for villas, apartments & commercial buildings.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "theme_color": "#0F172A",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "categories": ["business", "services", "maintenance", "construction", "plumbing", "painting"],
+  "lang": "en",
+  "dir": "ltr",
+  "icons": [
+    {
+      "src": "assets/images/favicon/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/images/favicon/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/images/favicon/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/images/favicon/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/images/favicon/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Contact Us",
+      "short_name": "Contact",
+      "description": "Get in touch with Virexon Technical Services",
+      "url": "/contact.html",
+      "icons": [
+        {
+          "src": "assets/images/favicon/favicon-32x32.png",
+          "sizes": "32x32"
+        }
+      ]
+    },
+    {
+      "name": "Our Services",
+      "short_name": "Services",
+      "description": "View our technical services",
+      "url": "/services.html",
+      "icons": [
+        {
+          "src": "assets/images/favicon/favicon-32x32.png",
+          "sizes": "32x32"
+        }
+      ]
+    },
+    {
+      "name": "Get a Quote",
+      "short_name": "Quote",
+      "description": "Request a free quote for your property",
+      "url": "/contact.html",
+      "icons": [
+        {
+          "src": "assets/images/favicon/favicon-32x32.png",
+          "sizes": "32x32"
+        }
+      ]
+    },
+    {
+      "name": "Our Projects",
+      "short_name": "Projects",
+      "description": "View our premium projects",
+      "url": "/projects.html",
+      "icons": [
+        {
+          "src": "assets/images/favicon/favicon-32x32.png",
+          "sizes": "32x32"
+        }
+      ]
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "assets/images/screenshots/mobile-home.webp",
+      "sizes": "1080x1920",
+      "type": "image/webp",
+      "form_factor": "narrow",
+      "label": "Virexon Home Page - Mobile View"
+    },
+    {
+      "src": "assets/images/screenshots/desktop-home.webp",
+      "sizes": "1920x1080",
+      "type": "image/webp",
+      "form_factor": "wide",
+      "label": "Virexon Website - Desktop View"
+    },
+    {
+      "src": "assets/images/screenshots/mobile-services.webp",
+      "sizes": "1080x1920",
+      "type": "image/webp",
+      "form_factor": "narrow",
+      "label": "Virexon Services Page - Mobile View"
+    }
+  ],
+  "display_override": ["standalone", "minimal-ui"],
+  "prefer_related_applications": false,
+  "related_applications": [],
+  "share_target": {
+    "action": "/share-target/",
+    "method": "GET",
+    "enctype": "application/x-www-form-urlencoded",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url"
+    }
+  },
+  "launch_handler": {
+    "client_mode": ["navigate-existing", "auto"]
+  },
+  "handle_links": "preferred",
+  "edge_side_panel": {
+    "preferred_width": 320
+  }
+}
