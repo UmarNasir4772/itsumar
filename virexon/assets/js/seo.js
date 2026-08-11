@@ -158,21 +158,6 @@
         }
     }
 
-    // ============================================================
-    // Canonical URL Check
-    // ============================================================
-    function checkCanonical() {
-        const canonical = document.querySelector('link[rel="canonical"]');
-        if (!canonical) {
-            console.warn('SEO: No canonical URL found');
-            
-            // Add canonical if missing
-            const link = document.createElement('link');
-            link.rel = 'canonical';
-            link.href = window.location.href.split('?')[0];
-            document.head.appendChild(link);
-        }
-    }
 
     // ============================================================
     // Meta Description Check
@@ -210,7 +195,6 @@
     // Run all SEO checks
     // ============================================================
     setTimeout(function() {
-        checkCanonical();
         checkMetaDescription();
         checkOpenGraph();
     }, 1000);

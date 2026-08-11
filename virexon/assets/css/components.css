@@ -88,6 +88,13 @@
    padding: 6px 10px;
 }
 
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler:focus-visible {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
 /* Change the 3 hamburger lines to White */
 .navbar-toggler-icon {
    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
@@ -269,7 +276,7 @@
    font-family: var(--font-heading);
    font-size: var(--fs-3xl);
    font-weight: 800;
-   color: rgba(200, 164, 90, 0.15);
+   color: var(--color-gray-700);
    position: absolute;
    top: var(--spacing-sm);
    right: var(--spacing-lg);
@@ -637,3 +644,153 @@
 .footer-legal a:hover {
    color: var(--color-accent);
 }
+
+
+/* ============================================================
+   SECTION 1: SERVICE OVERVIEW
+   ============================================================ */
+  .overview-image-wrapper {
+      position: relative;
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      box-shadow: var(--shadow-xl);
+  }
+  
+  .overview-image {
+      width: 100%;
+      height: 450px;
+      object-fit: cover;
+      display: block;
+  }
+  
+  
+  .trust-pill {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(8px);
+      padding: 0.4rem 1rem;
+      border-radius: var(--radius-full);
+      font-family: var(--font-body);
+      font-size: var(--fs-sm);
+      font-weight: 500;
+      color: var(--color-heading);
+      box-shadow: var(--shadow-md);
+  }
+  
+  .overview-content p {
+      font-family: var(--font-body);
+      font-size: var(--fs-base);
+      color: var(--color-body);
+      line-height: 1.8;
+      margin-bottom: var(--spacing-md);
+  }
+  
+  .overview-content p:last-child {
+      margin-bottom: 0;
+  }
+  
+  .overview-trust {
+      display: flex;
+      gap: var(--spacing-sm);
+      flex-wrap: wrap;
+      margin-top: var(--spacing-lg);
+  }
+  
+  .overview-trust .trust-pill {
+      background: var(--color-bg-light);
+      border: 1px solid var(--color-gray-100);
+  }
+
+  /* ============================================================
+   SECTION 3: BENEFITS
+   ============================================================ */
+
+.benefits-desc {
+   font-family: var(--font-body);
+   font-size: var(--fs-base);
+   color: var(--color-body);
+   line-height: 1.8;
+   margin-bottom: var(--spacing-lg);
+}
+
+.benefits-grid {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   gap: var(--spacing-md);
+}
+
+.benefit-item {
+   display: flex;
+   align-items: flex-start;
+   gap: var(--spacing-sm);
+   padding: var(--spacing-sm) 0;
+}
+
+.benefit-icon {
+   flex-shrink: 0;
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   width: 28px;
+   height: 28px;
+   background: var(--color-accent);
+   color: var(--color-white);
+   border-radius: 50%;
+   font-size: var(--fs-sm);
+   font-weight: 700;
+   margin-top: 2px;
+}
+
+.benefit-item h4 {
+   font-family: var(--font-heading);
+   font-size: var(--fs-sm);
+   font-weight: 600;
+   color: var(--color-heading);
+   margin: 0 0 2px 0;
+}
+
+.benefit-item p {
+   font-family: var(--font-body);
+   font-size: var(--fs-sm);
+   color: var(--color-body);
+   margin: 0;
+   line-height: 1.4;
+}
+
+.benefits-image-wrapper {
+   border-radius: var(--radius-xl);
+   overflow: hidden;
+   box-shadow: var(--shadow-xl);
+}
+
+.benefits-image {
+   width: 100%;
+   height: 450px;
+   object-fit: cover;
+   display: block;
+}
+
+/* ============================================================
+   SECTION 5: WHATSAPP CTA
+   ============================================================ */
+  .cta-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-sm);
+      align-items: flex-end;
+  }
+  
+  .cta-buttons .btn {
+      min-width: 220px;
+  }
+  
+  .cta-buttons .btn-outline-light {
+      border-color: rgba(255, 255, 255, 0.3);
+      color: var(--color-white);
+  }
+  
+  .cta-buttons .btn-outline-light:hover {
+      background: var(--color-white);
+      color: var(--color-primary);
+      border-color: var(--color-white);
+  }

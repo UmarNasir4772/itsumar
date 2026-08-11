@@ -67,22 +67,22 @@
     // ============================================================
     // Phone Number Formatting (Optional)
     // ============================================================
-    function formatPhoneNumber(phone) {
-        // Remove any non-digit characters
-        const cleaned = phone.replace(/\D/g, '');
+    // function formatPhoneNumber(phone) {
+    //     // Remove any non-digit characters
+    //     const cleaned = phone.replace(/\D/g, '');
         
-        // Check if it's a UAE number
-        if (cleaned.startsWith('971')) {
-            return '+' + cleaned;
-        }
+    //     // Check if it's a UAE number
+    //     if (cleaned.startsWith('971')) {
+    //         return '+' + cleaned;
+    //     }
         
-        // If it starts with 0, replace with +971
-        if (cleaned.startsWith('0')) {
-            return '+971' + cleaned.substring(1);
-        }
+    //     // If it starts with 0, replace with +971
+    //     if (cleaned.startsWith('0')) {
+    //         return '+971' + cleaned.substring(1);
+    //     }
         
-        return phone;
-    }
+    //     return phone;
+    // }
 
     // ============================================================
     // WhatsApp Click Tracking (Optional)

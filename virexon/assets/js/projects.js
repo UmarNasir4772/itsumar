@@ -104,15 +104,18 @@
             const windowHeight = window.innerHeight;
             const triggerPoint = windowHeight * 0.8;
 
-            counters.forEach(function(counter) {
+            counters.forEach(function (counter) {
+                if (counter.dataset.animated === 'true') return;
+            
                 const rect = counter.getBoundingClientRect();
                 const isVisible = rect.top < triggerPoint && rect.bottom > 0;
-
+            
                 if (isVisible) {
                     const target = parseInt(counter.getAttribute('data-count'), 10);
+            
                     if (isNaN(target) || target === 0) return;
-
-                    animated = true;
+            
+                    counter.dataset.animated = 'true';
                     animateCounter(counter, target);
                 }
             });

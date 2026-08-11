@@ -110,23 +110,26 @@
     // ============================================================
     // Mobile Navigation
     // ============================================================
+
     function initMobileNav() {
-        const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
         const navbarToggler = document.querySelector('.navbar-toggler');
         const navbarCollapse = document.querySelector('.navbar-collapse');
-
+    
         if (!navbarToggler || !navbarCollapse) return;
-
-        // Close mobile menu when a link is clicked
-        navLinks.forEach(function (link) {
-            link.addEventListener('click', function () {
+    
+        // Target all links & buttons inside the menu EXCEPT the dropdown toggle trigger ("Services")
+        const clickableItems = navbarCollapse.querySelectorAll('a:not(.dropdown-toggle), button:not(.navbar-toggler)');
+    
+        // Close mobile menu when any regular link, dropdown sub-item, or CTA button is clicked
+        clickableItems.forEach(function (item) {
+            item.addEventListener('click', function () {
                 if (navbarCollapse.classList.contains('show')) {
                     navbarToggler.click();
                 }
             });
         });
-
-        // Close mobile menu on outside click
+    
+        // Close mobile menu when clicking outside the navigation bar
         document.addEventListener('click', function (e) {
             const isNavbar = e.target.closest('.navbar');
             if (!isNavbar && navbarCollapse.classList.contains('show')) {
@@ -151,14 +154,17 @@
             const triggerPoint = windowHeight * 0.8;
 
             counters.forEach(function (counter) {
+                if (counter.dataset.animated === 'true') return;
+            
                 const rect = counter.getBoundingClientRect();
                 const isVisible = rect.top < triggerPoint && rect.bottom > 0;
-
+            
                 if (isVisible) {
                     const target = parseInt(counter.getAttribute('data-count'), 10);
+            
                     if (isNaN(target) || target === 0) return;
-
-                    animated = true;
+            
+                    counter.dataset.animated = 'true';
                     animateCounter(counter, target);
                 }
             });
@@ -217,9 +223,9 @@
         if (projectsSlider) {
             // Dynamic check for loop safety based on actual slide count (4 slides)
             const slideCount = projectsSlider.querySelectorAll('.swiper-slide').length;
-            const enableLoop = slideCount > 3;
+            // const enableLoop = slideCount > 3;
 
-            const projectsSwiper = new Swiper(projectsSlider, {
+            new Swiper(projectsSlider, {
                 // Base Swiper Options
                 slidesPerView: 1,
                 spaceBetween: 24,
@@ -230,11 +236,11 @@
                 // loopedSlides: enableLoop ? slideCount : null,
 
                 // Autoplay Configuration
-                autoplay: {
-                    delay: 5000,
-                    disableOnInteraction: false,
-                    pauseOnMouseEnter: true, // Pauses when user hovers to view details
-                },
+                // autoplay: {
+                //     delay: 1000,
+                //     disableOnInteraction: false,
+                //     pauseOnMouseEnter: true, // Pauses when user hovers to view details
+                // },
 
                 pagination: {
                     el: projectsSlider.querySelector('.swiper-pagination'),
@@ -275,7 +281,7 @@
             const slideCount = testimonialsSlider.querySelectorAll('.swiper-slide').length;
             const enableLoop = slideCount > 4;
 
-            const testimonialsSwiper = new Swiper(testimonialsSlider, {
+            new Swiper(testimonialsSlider, {
                 // Base Layout
                 slidesPerView: 1,
                 spaceBetween: 24,
@@ -332,7 +338,7 @@
     function initGLightbox() {
         if (typeof GLightbox === 'undefined') return;
 
-        const lightbox = GLightbox({
+        GLightbox({
             selector: '.glightbox',
             touchNavigation: true,
             loop: true,

@@ -28,9 +28,14 @@ ErrorDocument 404 /404.html
 # CACHE CONTROL
 # ============================================================
 
-# Cache static assets for 1 year
-<FilesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|js|css|swf|webp|svg|woff|woff2|ttf|eot)$">
+# Cache images, media, and fonts for 1 year (Immutable)
+<FilesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|swf|webp|svg|woff|woff2|ttf|eot)$">
     Header set Cache-Control "max-age=31536000, public, immutable"
+</FilesMatch>
+
+# Cache CSS and JavaScript for 7 days with revalidation
+<FilesMatch "\.(css|js)$">
+    Header set Cache-Control "max-age=604800, public, must-revalidate"
 </FilesMatch>
 
 # Cache HTML files for 1 day
@@ -69,23 +74,25 @@ AddType application/vnd.ms-fontobject .eot
 # Prevent MIME type sniffing
 Header set X-Content-Type-Options "nosniff"
 
-# Enable XSS protection
-Header set X-XSS-Protection "1; mode=block"
-
 # Prevent clickjacking
 Header set X-Frame-Options "SAMEORIGIN"
 
 # Referrer Policy
 Header set Referrer-Policy "strict-origin-when-cross-origin"
 
+# HTTP Strict Transport Security (HSTS) - Force HTTPS for 1 year
+Header set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+
+# Permissions Policy - Disable unused device APIs
+Header set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+
+# Content Security Policy (CSP) - Configured for CDNs, Google Fonts, and Google Maps
+Header set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com data:; img-src 'self' data: https:; frame-src 'self' https://www.google.com https://maps.google.com;"
+
 # ============================================================
 # PERFORMANCE
 # ============================================================
 
-# Enable Keep-Alive
-<IfModule mod_headers.c>
-    Header set Connection keep-alive
-</IfModule>
 
 # Disable ETags for performance
 FileETag None

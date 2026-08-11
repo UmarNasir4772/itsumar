@@ -406,7 +406,7 @@
 .blog-modal-category {
     position: absolute;
     top: var(--spacing-lg);
-    right: var(--spacing-lg);
+    left: var(--spacing-lg);
     background: var(--color-accent);
     color: var(--color-white);
     padding: 0.4rem 1rem;
@@ -544,7 +544,7 @@
         font-size: var(--fs-xs);
         padding: 0.2rem 0.6rem;
         top: var(--spacing-sm);
-        right: var(--spacing-sm);
+        left: var(--spacing-sm);
     }
 }
 /* ============================================================

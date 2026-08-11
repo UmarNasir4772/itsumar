@@ -236,3 +236,73 @@
         color: var(--color-accent-dark) !important;
     }
 }
+
+
+@media (max-width: 991.98px) {
+    .page-hero-actions {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .page-hero-actions .btn {
+        min-width: 100%;
+    }
+    
+    .overview-image {
+        height: 350px;
+    }
+    
+    
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .benefits-image {
+        height: 350px;
+    }
+    
+    
+    .cta-buttons {
+        align-items: center;
+    }
+    
+    .cta-buttons .btn {
+        min-width: 100%;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .overview-image {
+        height: 250px;
+    }
+    
+    
+    .overview-trust {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .benefits-image {
+        height: 250px;
+    }
+    
+    .faq-desc {
+        font-size: var(--fs-sm);
+    }
+}
+
+@media (max-width: 575.98px) {
+    
+    .benefit-item h4 {
+        font-size: var(--fs-xs);
+    }
+    
+    .benefit-item p {
+        font-size: var(--fs-xs);
+    }
+    
+    .trust-pill {
+        font-size: var(--fs-xs);
+        padding: 0.3rem 0.75rem;
+    }
+}

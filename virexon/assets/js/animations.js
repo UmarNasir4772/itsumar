@@ -11,40 +11,26 @@
     // DOM Ready
     // ============================================================
     document.addEventListener('DOMContentLoaded', function() {
-        initHoverEffects();
+        // initHoverEffects();
         initStaggerAnimation();
-        initParallaxHero();
+        // initParallaxHero();
     });
 
     // ============================================================
     // Hover Effects
     // ============================================================
-    function initHoverEffects() {
-        // Service cards - subtle glow on hover
-        const serviceCards = document.querySelectorAll('.service-card');
-        serviceCards.forEach(function(card) {
-            card.addEventListener('mouseenter', function(e) {
-                const icon = this.querySelector('.service-icon');
-                if (icon) {
-                    icon.style.transition = 'all 0.4s ease';
-                }
-            });
-        });
-
-        // Project cards - overlay animation
-        const projectCards = document.querySelectorAll('.project-card');
-        projectCards.forEach(function(card) {
-            const overlay = card.querySelector('.project-overlay');
-            if (overlay) {
-                card.addEventListener('mouseenter', function() {
-                    overlay.style.opacity = '1';
-                });
-                card.addEventListener('mouseleave', function() {
-                    overlay.style.opacity = '0';
-                });
-            }
-        });
-    }
+    // function initHoverEffects() {
+    //     // Service cards - subtle glow on hover
+    //     const serviceCards = document.querySelectorAll('.service-card');
+    //     serviceCards.forEach(function(card) {
+    //         card.addEventListener('mouseenter', function(e) {
+    //             const icon = this.querySelector('.service-icon');
+    //             if (icon) {
+    //                 icon.style.transition = 'all 0.4s ease';
+    //             }
+    //         });
+    //     });
+    // }
 
     // ============================================================
     // Stagger Animation for Grid Items
@@ -66,84 +52,84 @@
     // ============================================================
     // Parallax Hero Effect
     // ============================================================
-    function initParallaxHero() {
-        const hero = document.querySelector('.hero');
-        if (!hero) return;
+    // function initParallaxHero() {
+    //     const hero = document.querySelector('.hero');
+    //     if (!hero) return;
 
-        const heroBg = hero.querySelector('::before');
-        if (!heroBg) return;
+    //     const heroBg = hero.querySelector('::before');
+    //     if (!heroBg) return;
 
-        let isTouching = false;
+    //     let isTouching = false;
 
-        window.addEventListener('scroll', function() {
-            // Only apply on larger screens
-            if (window.innerWidth < 992) return;
-            if (isTouching) return;
+    //     window.addEventListener('scroll', function() {
+    //         // Only apply on larger screens
+    //         if (window.innerWidth < 992) return;
+    //         if (isTouching) return;
 
-            const scrollPos = window.pageYOffset;
-            const heroHeight = hero.offsetHeight;
-            const maxScroll = heroHeight * 0.5;
-            const parallaxOffset = Math.min(scrollPos * 0.3, maxScroll);
+    //         const scrollPos = window.pageYOffset;
+    //         const heroHeight = hero.offsetHeight;
+    //         const maxScroll = heroHeight * 0.5;
+    //         const parallaxOffset = Math.min(scrollPos * 0.3, maxScroll);
 
-            hero.style.backgroundPosition = 'center ' + (-parallaxOffset) + 'px';
-        }, { passive: true });
+    //         hero.style.backgroundPosition = 'center ' + (-parallaxOffset) + 'px';
+    //     }, { passive: true });
 
-        // Disable parallax on touch devices
-        document.addEventListener('touchstart', function() {
-            isTouching = true;
-        });
+    //     // Disable parallax on touch devices
+    //     document.addEventListener('touchstart', function() {
+    //         isTouching = true;
+    //     });
 
-        document.addEventListener('touchend', function() {
-            setTimeout(function() {
-                isTouching = false;
-            }, 100);
-        });
-    }
+    //     document.addEventListener('touchend', function() {
+    //         setTimeout(function() {
+    //             isTouching = false;
+    //         }, 100);
+    //     });
+    // }
 
     // ============================================================
     // Number Animation for Statistics (Enhanced)
     // ============================================================
     // This is a backup/alternative to the counter in main.js
-    function animateNumbers() {
-        const numbers = document.querySelectorAll('.stat-number');
+    // function animateNumbers() {
+    //     const numbers = document.querySelectorAll('.stat-number');
         
-        numbers.forEach(function(el) {
-            const target = parseInt(el.getAttribute('data-count'), 10);
-            if (isNaN(target)) return;
+    //     numbers.forEach(function(el) {
+    //         const target = parseInt(el.getAttribute('data-count'), 10);
+    //         if (isNaN(target)) return;
 
-            const suffix = el.getAttribute('data-suffix') || '';
-            const isPercentage = target === 98;
+    //         const suffix = el.getAttribute('data-suffix') || '';
+    //         const isPercentage = target === 98;
 
-            const observer = new IntersectionObserver(function(entries) {
-                entries.forEach(function(entry) {
-                    if (entry.isIntersecting) {
-                        let current = 0;
-                        const increment = target / 60;
-                        const timer = setInterval(function() {
-                            current += increment;
-                            if (current >= target) {
-                                current = target;
-                                clearInterval(timer);
-                            }
-                            if (isPercentage) {
-                                el.textContent = Math.round(current) + '%';
-                            } else {
-                                el.textContent = Math.round(current) + '+' + suffix;
-                            }
-                        }, 30);
-                        observer.unobserve(el);
-                    }
-                });
-            }, { threshold: 0.5 });
+    //         const observer = new IntersectionObserver(function(entries) {
+    //             entries.forEach(function(entry) {
+    //                 if (entry.isIntersecting) {
+    //                     let current = 0;
+    //                     const increment = target / 60;
+    //                     const timer = setInterval(function() {
+    //                         current += increment;
+    //                         if (current >= target) {
+    //                             current = target;
+    //                             clearInterval(timer);
+    //                         }
+    //                         if (isPercentage) {
+    //                             el.textContent = Math.round(current) + '%';
+    //                         } else {
+    //                             el.textContent = Math.round(current) + '+' + suffix;
+    //                         }
+    //                     }, 30);
+    //                     observer.unobserve(el);
+    //                 }
+    //             });
+    //         }, { threshold: 0.5 });
 
-            observer.observe(el);
-        });
-    }
+    //         observer.observe(el);
+    //     });
+    // }
 
     // Run enhanced animation as fallback
-    if (document.querySelectorAll('.stat-number').length) {
-        // Wait for main counter to finish, then run this as backup
-        setTimeout(animateNumbers, 3000);
-    }
+    // if (document.querySelectorAll('.stat-number').length) {
+    //     // Wait for main counter to finish, then run this as backup
+    //     setTimeout(animateNumbers, 3000);
+    // }
 
 })();

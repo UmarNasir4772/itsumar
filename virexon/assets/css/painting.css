@@ -5,14 +5,6 @@
 /* ============================================================
    PAGE HERO
    ============================================================ */
-   .painting-hero{
-    position: relative;
-    min-height: 100vh;
-    background: var(--color-primary);
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-   }
    
    .painting-hero::before {
     content: '';
@@ -23,83 +15,11 @@
     z-index: 1;
 }
 
-.page-hero-actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--spacing-md);
-    margin-top: var(--spacing-lg);
-}
-
-.page-hero-actions .btn {
-    min-width: 200px;
-}
-
 /* ============================================================
    SECTION 1: SERVICE OVERVIEW
    ============================================================ */
 .painting-overview {
     background: var(--color-white);
-}
-
-.overview-image-wrapper {
-    position: relative;
-    border-radius: var(--radius-xl);
-    overflow: hidden;
-    box-shadow: var(--shadow-xl);
-}
-
-.overview-image {
-    width: 100%;
-    height: 450px;
-    object-fit: cover;
-    display: block;
-}
-
-.overview-trust-float {
-    position: absolute;
-    bottom: var(--spacing-lg);
-    left: var(--spacing-lg);
-    right: var(--spacing-lg);
-    display: flex;
-    gap: var(--spacing-sm);
-    flex-wrap: wrap;
-}
-
-.trust-pill {
-    display: inline-block;
-    background: rgba(255, 255, 255, 0.92);
-    backdrop-filter: blur(8px);
-    padding: 0.4rem 1rem;
-    border-radius: var(--radius-full);
-    font-family: var(--font-body);
-    font-size: var(--fs-sm);
-    font-weight: 500;
-    color: var(--color-heading);
-    box-shadow: var(--shadow-md);
-}
-
-.overview-content p {
-    font-family: var(--font-body);
-    font-size: var(--fs-base);
-    color: var(--color-body);
-    line-height: 1.8;
-    margin-bottom: var(--spacing-md);
-}
-
-.overview-content p:last-child {
-    margin-bottom: 0;
-}
-
-.overview-trust {
-    display: flex;
-    gap: var(--spacing-sm);
-    flex-wrap: wrap;
-    margin-top: var(--spacing-lg);
-}
-
-.overview-trust .trust-pill {
-    background: var(--color-bg-light);
-    border: 1px solid var(--color-gray-100);
 }
 
 /* ============================================================
@@ -194,70 +114,6 @@
     background: var(--color-white);
 }
 
-.benefits-desc {
-    font-family: var(--font-body);
-    font-size: var(--fs-base);
-    color: var(--color-body);
-    line-height: 1.8;
-    margin-bottom: var(--spacing-lg);
-}
-
-.benefits-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--spacing-md);
-}
-
-.benefit-item {
-    display: flex;
-    align-items: flex-start;
-    gap: var(--spacing-sm);
-    padding: var(--spacing-sm) 0;
-}
-
-.benefit-icon {
-    flex-shrink: 0;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 28px;
-    height: 28px;
-    background: var(--color-accent);
-    color: var(--color-white);
-    border-radius: 50%;
-    font-size: var(--fs-sm);
-    font-weight: 700;
-    margin-top: 2px;
-}
-
-.benefit-item h4 {
-    font-family: var(--font-heading);
-    font-size: var(--fs-sm);
-    font-weight: 600;
-    color: var(--color-heading);
-    margin: 0 0 2px 0;
-}
-
-.benefit-item p {
-    font-family: var(--font-body);
-    font-size: var(--fs-sm);
-    color: var(--color-body);
-    margin: 0;
-    line-height: 1.4;
-}
-
-.benefits-image-wrapper {
-    border-radius: var(--radius-xl);
-    overflow: hidden;
-    box-shadow: var(--shadow-xl);
-}
-
-.benefits-image {
-    width: 100%;
-    height: 450px;
-    object-fit: cover;
-    display: block;
-}
 
 /* ============================================================
    SECTION 4: FAQ
@@ -353,61 +209,11 @@
     margin: 0;
 }
 
-.cta-buttons {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-sm);
-    align-items: flex-end;
-}
-
-.cta-buttons .btn {
-    min-width: 220px;
-}
-
-.cta-buttons .btn-outline-light {
-    border-color: rgba(255, 255, 255, 0.3);
-    color: var(--color-white);
-}
-
-.cta-buttons .btn-outline-light:hover {
-    background: var(--color-white);
-    color: var(--color-primary);
-    border-color: var(--color-white);
-}
 
 /* ============================================================
    RESPONSIVE
    ============================================================ */
 @media (max-width: 991.98px) {
-    .page-hero-actions {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    
-    .page-hero-actions .btn {
-        min-width: 100%;
-    }
-    
-    .overview-image {
-        height: 350px;
-    }
-    
-    .overview-trust-float {
-        position: relative;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        margin-top: var(--spacing-md);
-    }
-    
-    .benefits-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .benefits-image {
-        height: 350px;
-    }
-    
     .painting-cta .cta-box {
         padding: var(--spacing-xl);
         text-align: center;
@@ -418,31 +224,9 @@
         margin: 0 auto;
     }
     
-    .cta-buttons {
-        align-items: center;
-    }
-    
-    .cta-buttons .btn {
-        min-width: 100%;
-    }
 }
 
 @media (max-width: 767.98px) {
-    .overview-image {
-        height: 250px;
-    }
-    
-    .overview-trust-float {
-        flex-direction: column;
-        gap: var(--spacing-xs);
-        align-items: center;
-    }
-    
-    .overview-trust {
-        flex-direction: column;
-        align-items: center;
-    }
-    
     .painting-service-card {
         padding: var(--spacing-lg);
     }
@@ -451,9 +235,6 @@
         font-size: var(--fs-lg);
     }
     
-    .benefits-image {
-        height: 250px;
-    }
     
     .painting-cta .cta-title {
         font-size: var(--fs-3xl);
@@ -467,9 +248,6 @@
         padding: var(--spacing-lg);
     }
     
-    .faq-desc {
-        font-size: var(--fs-sm);
-    }
 }
 
 @media (max-width: 575.98px) {
@@ -481,16 +259,4 @@
         font-size: var(--fs-2xl);
     }
     
-    .benefit-item h4 {
-        font-size: var(--fs-xs);
-    }
-    
-    .benefit-item p {
-        font-size: var(--fs-xs);
-    }
-    
-    .trust-pill {
-        font-size: var(--fs-xs);
-        padding: 0.3rem 0.75rem;
-    }
 }
